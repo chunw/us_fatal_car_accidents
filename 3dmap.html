@@ -1,100 +1,127 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8' />
-    <title>U.S. Fatal Car Accidents 3D Map</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:80%; }
-    </style>
-</head>
-<body>
+  <head>
+      <meta charset='utf-8' />
+      <title>U.S. Fatal Car Accidents 3D Map</title>
+      <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+      <style>
+          body { margin:0; padding:0; }
+          #map { position:absolute; top:0; bottom:0; width:80%; }
+      </style>
+  </head>
+  <body>
 
-<div id='map'></div>
+    <div id='map'></div>
 
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiY2h1bnciLCJhIjoiY2pvbmJwNmdkMDRpNjNycXl2dHhnMTdxNCJ9.Of_HdcCD_P9YC32HaROiSg';
-var map = new mapboxgl.Map({
-    style: 'mapbox://styles/mapbox/light-v9',
-    center: [-74.0066, 40.7135],//[-96.78188889, 32.77831667],
-    zoom: 4,//15.5,
-    pitch: 45, // https://www.mapbox.com/mapbox-gl-js/style-spec/#root-pitch. Default pitch, in degrees. Zero is perpendicular to the surface, for a look straight down at the map, while a greater value like 60 looks ahead towards the horizon.
-    bearing: -17.6,
-    container: 'map'
-});
-
-// The 'building' layer in the mapbox-streets vector source contains building-height
-// data from OpenStreetMap.
-map.on('load', function() {
-    // Insert the layer beneath any symbol layer.
-    var layers = map.getStyle().layers;
-
-    var labelLayerId;
-    for (var i = 0; i < layers.length; i++) {
-        if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
-            labelLayerId = layers[i].id;
-            break;
-        }
-    }
-
-    map.addLayer({
-        'id': '3d-buildings',
-        'source': 'composite',
-        'source-layer': 'building',
-        'filter': ['==', 'extrude', 'true'],
-        'type': 'fill-extrusion',
-        'minzoom': 15,
-        'paint': {
-            'fill-extrusion-color': '#aaa',
-
-            // use an 'interpolate' expression to add a smooth transition effect to the
-            // buildings as the user zooms in
-            'fill-extrusion-height': [
-                "interpolate", ["linear"], ["zoom"],
-                15, 0,
-                15.05, ["get", "height"]
-            ],
-            'fill-extrusion-base': [
-                "interpolate", ["linear"], ["zoom"],
-                15, 0,
-                15.05, ["get", "min_height"]
-            ],
-            'fill-extrusion-opacity': .6
-        }
-    }, labelLayerId);
-
-    map.addLayer({
-        'id': 'accidents',
-        'type': 'circle',
-        'source': {
-            type: 'vector',
-            url: 'mapbox://chunw.3pmdy2l0' // map ID for the tileset (data source file) as shown in https://www.mapbox.com/studio/tilesets/
-        },
-        'source-layer': 'geo2-dkjqox',
-        'paint': {
-            // make circles larger as the user zooms from z12 to z22
-            'circle-radius': {
-                'base': 1.75,
-                'stops': [[12, 2], [22, 180]]
-            },
-            // color circles by ethnicity, using a match expression
-            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-            'circle-color': [
-                'match',
-                ['get', 'ethnicity'],
-                'White', '#fbb03b',
-                'Black', '#223b53',
-                'Hispanic', '#e55e5e',
-                'Asian', '#3bb2d0',
-                /* other */ '#e55e5e'//'#ccc'
-            ]
-        }
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY2h1bnciLCJhIjoiY2pvbmJwNmdkMDRpNjNycXl2dHhnMTdxNCJ9.Of_HdcCD_P9YC32HaROiSg';
+    var map = new mapboxgl.Map({
+        style: 'mapbox://styles/mapbox/light-v9',
+        center: [-74.0066, 40.7135],//[-96.78188889, 32.77831667],
+        zoom: 4,//15.5,
+        pitch: 45, // https://www.mapbox.com/mapbox-gl-js/style-spec/#root-pitch. Default pitch, in degrees. Zero is perpendicular to the surface, for a look straight down at the map, while a greater value like 60 looks ahead towards the horizon.
+        bearing: -17.6,
+        container: 'map'
     });
-});
-</script>
 
-</body>
+    // The 'building' layer in the mapbox-streets vector source contains building-height
+    // data from OpenStreetMap.
+    map.on('load', function() {
+        // Insert the layer beneath any symbol layer.
+        var layers = map.getStyle().layers;
+
+        var labelLayerId;
+        for (var i = 0; i < layers.length; i++) {
+            if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
+                labelLayerId = layers[i].id;
+                break;
+            }
+        }
+
+        map.addLayer({
+            'id': '3d-buildings',
+            'source': 'composite',
+            'source-layer': 'building',
+            'filter': ['==', 'extrude', 'true'],
+            'type': 'fill-extrusion',
+            'minzoom': 15,
+            'paint': {
+                'fill-extrusion-color': '#aaa',
+                // use an 'interpolate' expression to add a smooth transition effect to the
+                // buildings as the user zooms in
+                'fill-extrusion-height': [
+                    "interpolate", ["linear"], ["zoom"],
+                    15, 0,
+                    15.05, ["get", "height"]
+                ],
+                'fill-extrusion-base': [
+                    "interpolate", ["linear"], ["zoom"],
+                    15, 0,
+                    15.05, ["get", "min_height"]
+                ],
+                'fill-extrusion-opacity': .6
+            }
+        }, labelLayerId);
+
+        map.addLayer({
+            'id': 'accidents',
+            'type': 'circle',
+            'source': {
+                type: 'vector',
+                url: 'mapbox://chunw.3pmdy2l0' // map ID for the tileset (data source file) as shown in https://www.mapbox.com/studio/tilesets/
+            },
+            'source-layer': 'geo2-dkjqox',
+            'paint': {
+                // make circles larger as the user zooms from z12 to z22
+                'circle-radius': {
+                    'base': 1.75,
+                    'stops': [[12, 2], [22, 180]]
+                },
+                // color circles by ethnicity, using a match expression
+                // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
+                'circle-color': [
+                    'match',
+                    ['get', 'ethnicity'],
+                    'White', '#fbb03b',
+                    'Black', '#223b53',
+                    'Hispanic', '#e55e5e',
+                    'Asian', '#3bb2d0',
+                    /* other */ '#e55e5e'//'#ccc'
+                ]
+            }
+        });
+
+        map.on('click', 'accidents', function (e) {
+           const properties = e.features[0].properties;
+           var coordinates = [properties.longitude, properties.latitude];
+           const description = `
+            <strong>longitude</strong>: ${properties.longitude},
+            <strong>latitude</strong>: ${properties.latitude}`;
+           // Ensure that if the map is zoomed out such that multiple
+           // copies of the feature are visible, the popup appears
+           // over the copy being pointed to.
+           while (Math.abs(e.longitude - coordinates[0]) > 180) {
+               coordinates[0] += e.longitude > coordinates[0] ? 360 : -360;
+           }
+           new mapboxgl.Popup()
+               .setLngLat(coordinates)
+               .setHTML(description)
+               .addTo(map);
+       });
+
+       // Change the cursor to a pointer when the mouse is over the places layer.
+       map.on('mouseenter', 'places', function () {
+           map.getCanvas().style.cursor = 'pointer';
+       });
+
+       // Change it back to a pointer when it leaves.
+       map.on('mouseleave', 'places', function () {
+           map.getCanvas().style.cursor = '';
+       });
+    });
+    </script>
+
+  </body>
 </html>
