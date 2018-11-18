@@ -1,1 +1,1 @@
-# U.S. Fatal car crash data visualization
+# U.S. fatal car crash data visualization
