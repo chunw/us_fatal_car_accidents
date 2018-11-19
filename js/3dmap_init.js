@@ -5,8 +5,8 @@ d3.csv("/data/all-2016.csv").then(function(data) {
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2h1bnciLCJhIjoiY2pvbmJwNmdkMDRpNjNycXl2dHhnMTdxNCJ9.Of_HdcCD_P9YC32HaROiSg';
 var map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/light-v9',
-    center: [-74.0066, 40.7135],//[-96.78188889, 32.77831667],
-    zoom: 4,//15.5,
+    center: [-122.13866944, 37.44341389], //central USA [-74.0066, 40.7135],
+    zoom: 9,//15.5,
     pitch: 45, // https://www.mapbox.com/mapbox-gl-js/style-spec/#root-pitch. Default pitch, in degrees. Zero is perpendicular to the surface, for a look straight down at the map, while a greater value like 60 looks ahead towards the horizon.
     bearing: -17.6,
     container: 'map'
