@@ -19,15 +19,20 @@
           .mapboxgl-popup-content {
             padding: 10px 20px 10px 10px;
           }
+          .small_link {
+            font-size: 12px;
+          }
           #map { position:absolute; top:0; bottom:0; left: 0; width:70%; }
           #case-details {
             width: 29%;
             position:absolute;
             top:0; bottom:0; right: 0;
+          }
+          #case-details-header {
             padding-top: 12px;
           }
           #case-details-body {
-            height: calc(100% - 12px);
+            height: calc(100% - 24px);
             overflow-y: scroll;
             font-size: 12px;
             padding-top: 4px;
@@ -38,7 +43,8 @@
 
     <div id='map'></div>
     <div id='case-details'>
-      <div>Case Details</div>
+      <a class="small_link" target="_blank" href="https://bigquery.cloud.google.com/dataset/bigquery-public-data:nhtsa_traffic_fatalities">data source</a>
+      <div id="case-details-header">Case Details</div>
       <div id="case-details-body"></div>
     </div>
 
