@@ -6,7 +6,7 @@ import csv
 import os
 
 # File paths
-YEAR = 2016
+YEAR = 2015
 ROOT = '../data/nhtsa_traffic_fatalities'
 OUTPUT_FILE_ALL = '../data/all-{}.csv'.format(YEAR)
 OUTPUT_FILE_TILESET = '../data/all-{}-tileset.csv'.format(YEAR)
@@ -33,20 +33,24 @@ def handle_file(fname, verbose = False):
     csv_headers = None
     with open(fname) as csvfile:
         reader = csv.DictReader(csvfile, skipinitialspace=True)
-        for row in reader:
-            row_count += 1
-            # get headers in this CSV file
-            if row_count == 1:
-                csv_headers = list(row.keys())
-                if verbose:
-                    print(csv_headers)
-            # store data in data map, indexed by consecutive_number
-            consecutive_number = row["consecutive_number"]
-            if consecutive_number not in data_map:
-                data_map[consecutive_number] = {}
-            for col in csv_headers:
-                attribute_set.add(col)
-                data_map[consecutive_number][col] = row[col]
+        try:
+            for row in reader:
+                row_count += 1
+                # get headers in this CSV file
+                if row_count == 1:
+                    csv_headers = list(row.keys())
+                    if verbose:
+                        print(csv_headers)
+                # store data in data map, indexed by consecutive_number
+                consecutive_number = row["consecutive_number"]
+                if consecutive_number not in data_map:
+                    data_map[consecutive_number] = {}
+                for col in csv_headers:
+                    attribute_set.add(col)
+                    data_map[consecutive_number][col] = row[col]
+        except:
+            print('cannot handle file {}'.format(fname))
+
 
 def filter_data_map():
     return {k: v for k, v in data_map.items() if float(v['longitude']) > -360 and float(v['longitude']) < 360}
