@@ -42,6 +42,7 @@
             }
         }
 
+        // Add 3D buildings layer
         map.addLayer({
             'id': '3d-buildings',
             'source': 'composite',
@@ -67,6 +68,7 @@
             }
         }, labelLayerId);
 
+        // Add data layer
         map.addLayer({
             'id': 'accidents',
             'type': 'circle',
@@ -95,6 +97,7 @@
             }
         });
 
+        // Add a tooltip for the data point clicked.
         map.on('click', 'accidents', function (e) {
            const properties = e.features[0].properties;
            var coordinates = [properties.longitude, properties.latitude];
