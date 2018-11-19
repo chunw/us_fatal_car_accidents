@@ -9,16 +9,38 @@
       <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
       <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
       <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+      <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
       <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
       <style>
-          body { margin:0; padding:0; }
-          #map { position:absolute; top:0; bottom:0; width:80%; }
+          body { font-family: 'Quicksand', sans-serif; margin:0; padding:0; }
+          strong {
+            font-weight: 600;
+          }
+          .mapboxgl-popup-content {
+            padding: 10px 20px 10px 10px;
+          }
+          #map { position:absolute; top:0; bottom:0; left: 0; width:70%; }
+          #case-details {
+            width: 29%;
+            position:absolute;
+            top:0; bottom:0; right: 0;
+            padding-top: 12px;
+          }
+          #case-details-body {
+            height: calc(100% - 12px);
+            overflow-y: scroll;
+            font-size: 12px;
+            padding-top: 4px;
+          }
       </style>
   </head>
   <body>
 
     <div id='map'></div>
-    <div id='case-details'></div>
+    <div id='case-details'>
+      <div>Case Details</div>
+      <div id="case-details-body"></div>
+    </div>
 
     <script>
       d3.csv("/data/all-2016.csv").then(function(data) {
@@ -109,9 +131,7 @@
              const properties = e.features[0].properties;
              var coordinates = [properties.longitude, properties.latitude];
              const description = `
-              <strong>Case Number</strong>: ${properties.consecutive_number},
-              <strong>longitude</strong>: ${properties.longitude},
-              <strong>latitude</strong>: ${properties.latitude}`;
+              <strong>Case Number</strong>: ${properties.consecutive_number}`;
              // Ensure that if the map is zoomed out such that multiple
              // copies of the feature are visible, the popup appears
              // over the copy being pointed to.
@@ -124,10 +144,16 @@
                  .addTo(map);
 
             // Show case details on the right
-            const container = $("#case-details");
+            const case_details = window.csvData_2016.filter(d => d.consecutive_number == properties.consecutive_number)[0];
+            const container = $("#case-details-body");
             template = ``;
-            //const case = window.csvData_2016[properties.consecutive_number];
-
+            Object.keys(case_details).forEach(k => {
+              {
+                template += `<strong>${k}</strong>: ${case_details[k]}<br>`;
+                console.log(k);
+                console.log(case_details[k]);
+              }
+            });
             container.html(template);
          });
 
