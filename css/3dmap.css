@@ -8,6 +8,10 @@ strong {
 .small_link {
   font-size: 12px;
 }
+#red-dot {
+  font-size: 0.5rem;
+    color: #F44336;
+}
 #total_count {
   color:#F44336;
 }
