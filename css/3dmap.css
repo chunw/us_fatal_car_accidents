@@ -91,6 +91,10 @@ strong {
   margin: 0 12px;
   cursor: pointer;
 }
+input:focus {
+  border-bottom: none!important;
+  box-shadow: none!important;
+}
 .weekDays-selector input {
   display: none!important;
 }
