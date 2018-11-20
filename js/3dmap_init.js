@@ -1,10 +1,19 @@
+const FEATURES = ['day_of_week', 'hour_of_crash', 'light_condition_name', 'first_harmful_event_name', 'atmospheric_conditions_2_name', 'non_cdl_license_type', 'restraint_system_helmet_use_name', 'critical_event_precrash_name', 'model_code', 'make_name', 'driver_maneuvered_to_avoid_name'];
+
+// Fetch all case details
 d3.csv("/data/all-2016.csv").then(function(data) {
   window.csvData_2016 = data;
+  window.total_accident_count_2016 = data.length;
+  $("#total_count").html(window.total_accident_count_2016);
 });
 
+// Init Materialize components
+M.AutoInit();
+
+// Init Mapbox
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2h1bnciLCJhIjoiY2pvbmJwNmdkMDRpNjNycXl2dHhnMTdxNCJ9.Of_HdcCD_P9YC32HaROiSg';
 var map = new mapboxgl.Map({
-    style: 'mapbox://styles/mapbox/light-v9',
+    style: 'mapbox://styles/mapbox/light-v9', // 'satellite-v9' for satellite, 'light-v9' for better data distribution visibility
     center: [-122.13866944, 37.44341389], //central USA [-74.0066, 40.7135],
     zoom: 9,//15.5,
     pitch: 45, // https://www.mapbox.com/mapbox-gl-js/style-spec/#root-pitch. Default pitch, in degrees. Zero is perpendicular to the surface, for a look straight down at the map, while a greater value like 60 looks ahead towards the horizon.
@@ -52,15 +61,16 @@ map.on('load', function() {
         }
     }, labelLayerId);
 
-    // Add data layer
+    // Add data layer.
+    // Data are uploaded to https://www.mapbox.com/studio/tilesets/.
     map.addLayer({
         'id': 'accidents',
         'type': 'circle',
         'source': {
             type: 'vector',
-            url: 'mapbox://chunw.06p1kjkd' // map ID for the tileset (data source file) as shown in https://www.mapbox.com/studio/tilesets/
+            url: 'mapbox://chunw.3n6xswru' // map ID for the tileset (data source file) as shown in https://www.mapbox.com/studio/tilesets/
         },
-        'source-layer': 'all-2016-tileset-03iswl',
+        'source-layer': 'all-2016-tileset-b6934n',
         'paint': {
             // make circles larger as the user zooms from z12 to z22
             'circle-radius': {
@@ -103,7 +113,12 @@ map.on('load', function() {
       const container = $("#case-details-body");
       template = ``;
       Object.keys(case_details).forEach(k => {
-        template += `<strong>${k}</strong>: ${case_details[k]}<br>`;
+        template += `<strong class="cap-first-letter feature" data="${k}">${normalizeFeatureName(k)}</strong>: <span class="value" data="${case_details[k]}">${case_details[k]}</span>`;
+        if (FEATURES.indexOf(k) > -1) {
+          // feature filterable
+          template += `<i onclick="filterBy(this)" class="filter-icon tiny material-icons">find_in_page</i>`;
+        }
+        template += `<br>`;
       });
       container.html(template);
    });
@@ -123,3 +138,68 @@ map.on('load', function() {
       accessToken: mapboxgl.accessToken
    }));
 });
+
+// Set up filters
+// Filtering with Mapbox reference:
+// https://www.mapbox.com/mapbox-gl-js/example/filter-features-within-map-view/
+$(document).ready(function(){
+  /* $('.collapsible').collapsible();
+  $('.dropdown-trigger').dropdown();
+  $( ".weekday" ).change(function(e) {
+    const day = e.target.id.split("weekday-")[1];
+    const selected = e.target.checked;
+
+    let accidents = map.queryRenderedFeatures({layers:['accidents']});
+
+    // Filter visible accidents that don't match the input value.
+    var filtered = accidents.filter(function(feature) {
+        var name = normalize(feature.properties.name);
+        var code = normalize(feature.properties.abbrev);
+        return name.indexOf(value) > -1 || code.indexOf(value) > -1;
+    });
+
+    // Set the filter to populate features into the layer.
+    map.setFilter('accidents', ['match', ['get', 'abbrev'],
+    filtered.map(function(feature) {
+        return feature.properties.abbrev;
+    }), true, false]);
+  });*/
+});
+
+function filterBy(e) {
+  const feature_name = $(e).prev().prev().attr("data");
+  let feature_value = $(e).prev().attr("data");
+  if (!isNaN(feature_value)) { // need to convert numeric values to numeric types so they match the raw data types
+    feature_value = Number(feature_value);
+  }
+  map.setFilter('accidents', null); // reset prev filters first
+  map.setFilter('accidents', ['==', feature_name, feature_value]);
+  updateActiveFiltersDisplay();
+}
+
+function onResetFilters() {
+  map.setFilter('accidents', null); // reset all filters
+  updateActiveFiltersDisplay();
+}
+
+function normalizeFeatureName(x) {
+  return x.split("_").join(" ");
+}
+
+function updateActiveFiltersDisplay() {
+  const filters = map.getFilter("accidents");   // e.g.["==", "hour_of_crash", 14]
+  const feature_name = filters[1];
+  const feature_value = filters[2];
+  const feature_relation = filters[0];
+  const tag = filters ? `<span class="cap-first-letter">${normalizeFeatureName(feature_name)}</span> ${feature_relation} ${feature_value}` : ``;
+  const container = $("#active-filters");
+  const filteredDataLength = window.csvData_2016.filter(d => {
+    return d[feature_name] == feature_value;
+  }).length;
+  const percent = (filteredDataLength/window.total_accident_count_2016*100).toFixed(2);
+  var html = tag? `
+  <div class="chip filter-chip">
+    ${tag} <span class="filter-chip-stats"> (${filteredDataLength}/${window.total_accident_count_2016}, <span class="filter-chip-percent">${percent}%</span>)</span>
+  </div> ` : `<div>None</div>`
+  container.html(html);
+}
