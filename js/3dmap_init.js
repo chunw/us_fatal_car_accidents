@@ -187,16 +187,19 @@ function normalizeFeatureName(x) {
 }
 
 function updateActiveFiltersDisplay() {
-  const filters = map.getFilter("accidents");   // e.g.["==", "hour_of_crash", 14]
-  const feature_name = filters[1];
-  const feature_value = filters[2];
-  const feature_relation = filters[0];
-  const tag = filters ? `<span class="cap-first-letter">${normalizeFeatureName(feature_name)}</span> ${feature_relation} ${feature_value}` : ``;
   const container = $("#active-filters");
-  const filteredDataLength = window.csvData_2016.filter(d => {
-    return d[feature_name] == feature_value;
-  }).length;
-  const percent = (filteredDataLength/window.total_accident_count_2016*100).toFixed(2);
+  let tag = ``;
+  const filters = map.getFilter("accidents");   // e.g.["==", "hour_of_crash", 14]
+  if (filters) {
+    const feature_name = filters[1];
+    const feature_value = filters[2];
+    const feature_relation = filters[0];
+    tag = `<span class="cap-first-letter">${normalizeFeatureName(feature_name)}</span> ${feature_relation} ${feature_value}`;
+    const filteredDataLength = window.csvData_2016.filter(d => {
+      return d[feature_name] == feature_value;
+    }).length;
+    const percent = (filteredDataLength/window.total_accident_count_2016*100).toFixed(2);
+  }
   var html = tag? `
   <div class="chip filter-chip">
     ${tag} <span class="filter-chip-stats"> (${filteredDataLength}/${window.total_accident_count_2016}, <span class="filter-chip-percent">${percent}%</span>)</span>
