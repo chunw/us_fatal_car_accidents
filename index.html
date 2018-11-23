@@ -13,10 +13,114 @@
       <script src="https://cdn.jsdelivr.net/npm/vega@4.3.0"></script>
       <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc8"></script>
       <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.20.0"></script>
-  </head>
+      <link rel="stylesheet" href="css/main.css">
+   </head>
   <body>
-    <div id="test"></div>
+    <main id="main" class="main" role="main">
+      <!-- HEADER -->
+      <h1 class="header story-heading interactive-headline">Lessons from the 2016<br>U.S. Fatal Car Crashes</h1>
+      <div class="header interactive-byline">
+        <p class="byline-dateline">
+          <span class="byline">By <span class="byline-author">CHUN WANG, KEXIN YU</span></span>
+          <span class="dateline">Dec 5, 2018</span>
+        </p>
+      </div>
 
-    <script src="js/main.js"></script>
+      <!-- INTRO -->
+      <div class="g-item g-text ">
+        <p class="g-body">[TODO] Motor vehicle travel is a major means of transportation in the United States, providing an unparalleled degree of mobility. Yet for all its advantages, motor vehicle crashes were the leading cause of death ... information on fatal motor vehicle crashes and fatalities based on data from the Fatality Analysis Reporting System (FARS). FARS is a census of fatal crashes in the 50 States, the District of Columbia, and Puerto Rico.
+          ...
+          These reports focus on vehicles, drivers, passengers, pedestrians, and motorcyclists and use that to develop and refine countermeasures to deter unsafe behaviors and promote safe alternatives.
+        </p>
+      </div>
+
+      <!-- BIG PICTURE -->
+      <div class="g-item g-subhed ">
+        <h2 style=""><strong>Anatomy of a Car Crash</strong></h2>
+      </div>
+
+      <div class="g-item g-text ">
+        <div class="anatomy">
+          <div class="inline">
+            <div class="blockline">
+              <div class="icon-block">
+                <img class="icon" style="width: 43px;" src="img/calendar.svg"/>
+                <div class="text">Day & Time</div>
+              </div>
+              <div class="icon-block">
+                <img class="icon" src="img/weather.svg"/>
+                <div class="text">Weather <br>Condition</div>
+              </div>
+              <div class="icon-block">
+                <img class="icon" src="img/roadcondi.svg"/>
+                <div class="text">Road <br> Condition</div>
+              </div>
+            </div>
+
+            <div class="blockline" >
+              <div class="icon-block">
+                <img class="icon" style="    height: 38px; width: 58px;" src="img/vehicle.svg"/>
+                <div class="text">Vehicle <br>Condition</div>
+              </div>
+              <div class="icon-block">
+                <img class="icon" src="img/driv.svg"/>
+                <div class="text">Driver <br>Behavior</div>
+              </div>
+              <div class="icon-block">
+                <img class="icon" style="height: 39px;" src="img/passenger.svg"/>
+                <div class="text">Passenger <br>Behavior</div>
+              </div>
+            </div>
+
+            <div class="blockline" style="margin-left: 184px">
+              <div class="icon-block">
+                <img class="icon" style="width: 20px;" src="img/pedestrain.svg"/>
+                <div class="text">Pedestrian <br>Behavior</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="inline">
+            <img class="icon" style="width:300px" src="img/onroad.svg"/>
+          </div>
+
+          <div class="inline" >
+            <div class="icon-block" style="margin-top: -27px;  margin-left: -20px;">
+              <img class="icon" style="width: 98px;" src="img/rescue.svg"/>
+              <div class="text" style="margin-top: -8px;">Rescue <br>Delay</div>
+            </div>
+          </div>
+
+          <div style="margin-left: 400px; margin-top: -40px;">
+            <div class="icon-block">
+              <img class="icon" style="width: 73px;" src="img/crash.svg"/>
+            </div>
+
+            <div class="icon-block">
+              <img class="icon" style="padding-top: 20px; width: 250px;" src="img/arrow.svg"/>
+            </div>
+
+            <div class="icon-block" style="    margin-top: -20px;">
+              <img class="icon"  src="img/fatal.svg"/>
+              <div class="text">Fatalities <br> & Injuries</div>
+            </div>
+          </div>
+        </div>
+
+        <section>
+            <div class="analysis">
+              <div class="viz ">
+                <div id="vehicleModelYear"></div>
+                <p>Hover over each circle to view details.</p>
+              </div>
+              <div class="text">
+                how does Passenger Vehicle Occupant Fatality correlate to Vehicle Model Year in Fatal Crashes?
+                We compute the percentage of killed (i.e., {[fatality in vehicle] / [all occupants in vehicle]} × 100%) of a vehicle and see how this percentage correlates with the vehicle's model year. The above analysis supports the conclusion that a higher proportion of the occupants of older model-year vehicles suffered fatality / a fatal injury.
+            </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/main-vega.js"></script>
   </body>
 </html>
