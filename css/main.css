@@ -1,4 +1,6 @@
 body {
+  position: relative;
+  background: #fffffb;
   font-family: nyt-cheltenham-sh,georgia,times new roman,times,serif;
   padding-bottom: 100px;
 }
@@ -37,10 +39,18 @@ p {
 section {
       margin: 2em;
 }
+#analysis-nav {
+position: fixed;
+top: 0;
+}
+#analysis-nav .anatomy {
+  transform: scale(0.7);
+}
 .main .threedmap {
   overflow: inherit;
   width: 70%;
 }
+
 .threedmap-container {
   height: 400px;
 }
@@ -54,7 +64,7 @@ section {
   display: none;
 }
 .analysis {
-      padding: 20px;
+  padding: 20px 160px;
   display: table;
 }
 .analysis .viz {
@@ -74,6 +84,11 @@ section {
   padding-left: 2em;
   display: table-cell;
   vertical-align: top;
+}
+.anatomy .icon-block .text.active {
+      padding: 8px 12px;
+    background: #C9DAF8;
+    border-radius: 8px;
 }
 .vega-actions {
   display: none;
@@ -114,7 +129,7 @@ vertical-align: top;
 
 .byline {
     font-size: 11px;
-    font-size: .6875rem;
+    font-size: 0.9rem;
     line-height: 12px;
     line-height: .75rem;
     font-weight: 700;
@@ -124,7 +139,6 @@ vertical-align: top;
 .dateline {
       margin-left: 8px;
     font-size: 11px;
-    font-size: .6875rem;
     line-height: 12px;
     line-height: .75rem;
     font-weight: 300;

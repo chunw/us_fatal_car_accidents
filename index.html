@@ -6,21 +6,75 @@
       <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script src="https://d3js.org/d3.v5.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <link rel="stylesheet" href="css/3dmap.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/vega@4.3.0"></script>
       <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc8"></script>
       <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.20.0"></script>
-      <link rel="stylesheet" href="css/main.css">
       <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
       <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
       <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css'/>
       <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
-      <link rel="stylesheet" href="css/3dmap.css">
    </head>
   <body>
+
+    <!-- navbar -->
+    <div id="analysis-nav"  data-spy="scroll" data-target="#analysis-nav" data-offset="20">
+      <div class="anatomy">
+        <div class="inline">
+          <div class="blockline">
+            <div class="icon-block">
+              <img class="icon" style="width: 43px;" src="img/calendar.svg"/>
+              <a class="text active" href="#section-time">Day & Time</a>
+            </div>
+            <div class="icon-block">
+              <img class="icon" src="img/weather.svg"/>
+              <div class="text">Weather <br>Condition</div>
+            </div>
+            <div class="icon-block">
+              <img class="icon" src="img/roadcondi.svg"/>
+              <div class="text">Road <br> Condition</div>
+            </div>
+          </div>
+
+          <div class="blockline">
+            <div class="icon-block">
+              <img class="icon" style="height: 38px; width: 58px;" src="img/vehicle.svg"/>
+              <a class="text" href="#section-vehicle">Vehicle <br>Condition</a>
+            </div>
+            <div class="icon-block">
+              <img class="icon" src="img/driv.svg"/>
+              <div class="text">Driver <br>Behavior</div>
+            </div>
+            <div class="icon-block">
+              <img class="icon" style="height: 39px;" src="img/passenger.svg"/>
+              <div class="text">Passenger <br>Behavior</div>
+            </div>
+          </div>
+
+          <div class="blockline">
+            <div class="icon-block">
+              <img class="icon" style="width: 20px;" src="img/pedestrain.svg"/>
+              <div class="text">Pedestrian <br>Behavior</div>
+            </div>
+            <div class="icon-block" >
+              <img class="icon" style="width: 63px; padding-top: 4px;transform: scale(1.4);" src="img/rescue.svg"/>
+              <div class="text" style="margin-top: 10px;">Rescue <br>Delay</div>
+            </div>
+            <div class="icon-block" >
+              <img class="icon"  style="width: 32px;"src="img/fatal.svg"/>
+              <div class="text">Fatalities <br> & Injuries</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
     <main id="main" class="main" role="main">
       <!-- HEADER -->
       <h1 class="header story-heading interactive-headline">Lessons from the 2016<br>U.S. Fatal Car Crashes</h1>
@@ -39,12 +93,13 @@
         </p>
       </div>
 
-      <!-- BIG PICTURE -->
+      <!-- Anatomy -->
       <div class="g-item g-subhed ">
         <h2 style=""><strong>Anatomy of a Car Crash</strong></h2>
       </div>
 
       <div class="g-item g-text ">
+
         <div class="anatomy">
           <div class="inline">
             <div class="blockline">
@@ -85,18 +140,18 @@
             </div>
           </div>
 
-          <div class="inline">
+          <div class="inline" style="vertical-align: top; padding-top: 50px;">
             <img class="icon" style="width:300px" src="img/onroad.svg"/>
           </div>
 
           <div class="inline" >
-            <div class="icon-block" style="margin-top: -27px;  margin-left: -20px;">
+            <div class="icon-block" style="margin-top: 28px;  margin-left: -20px;">
               <img class="icon" style="width: 98px;" src="img/rescue.svg"/>
               <div class="text" style="margin-top: -8px;">Rescue <br>Delay</div>
             </div>
           </div>
 
-          <div style="margin-left: 400px; margin-top: -40px;">
+          <div style="margin-left: 400px; margin-top: -10px;">
             <div class="icon-block">
               <img class="icon" style="width: 73px;" src="img/crash.svg"/>
             </div>
@@ -112,20 +167,60 @@
           </div>
         </div>
 
-        <section>
-            <div class="analysis">
-              <div class="viz ">
-                <div id="vehicleModelYear"></div>
-                <p>Hover on circles to view details.</p>
-                <p class="method">
-                  <strong>Methodology:</strong> The average fatality percentage is computed as {[fatality in vehicle] / [all occupants in vehicle]} × 100%. </p>
-                </p>
+        <p class="g-body">
+            A road traffic crash results from a
+            combination of factors related to the
+            components of the system comprising roads, the
+            environment, vehicles and road users, and the
+            way they interact. Some factors contribute to the
+            occurrence of a collision and are therefore part of
+            crash causation. Other factors aggravate the
+            effects of the collision and thus contribute to
+            trauma severity. Some
+            causes are immediate, but they may be
+            underpinned by medium-term and long-term
+            structural causes. Identifying the risk factors that
+            contribute to road traffic crashes is important in
+            identifying interventions that can reduce the risks associated with those factors.
+        </p>
+
+        <!-- Analysis -->
+        <div id="section-collection">
+          <section id="section-time">
+              <div class="g-item g-subhed ">
+                <h2><strong>Day & Time</strong></h2>
               </div>
-              <div class="text">
-                A higher proportion of the occupants of older model-year vehicles suffered fatality / a fatal injury.
+              <div class="analysis">
+                <div class="viz ">
+                  <p>Hover on circles to view details.</p>
+                  <p class="method">
+                    <strong>Methodology:</strong> The average fatality percentage is computed as {[fatality in vehicle] / [all occupants in vehicle]} × 100%. </p>
+                  </p>
+                </div>
+                <div class="text">
+                  A higher proportion of the occupants of older model-year vehicles suffered fatality / a fatal injury.
+                </div>
               </div>
-            </div>
-        </section>
+          </section>
+          <section id="section-vehicle">
+              <div class="g-item g-subhed ">
+                <h2><strong>Vehicle Condition</strong></h2>
+              </div>
+              <div class="analysis">
+                <div class="viz ">
+                  <div id="vehicleModelYear"></div>
+                  <p>Hover on circles to view details.</p>
+                  <p class="method">
+                    <strong>Methodology:</strong> The average fatality percentage is computed as {[fatality in vehicle] / [all occupants in vehicle]} × 100%. </p>
+                  </p>
+                </div>
+                <div class="text">
+                  A higher proportion of the occupants of older model-year vehicles suffered fatality / a fatal injury.
+                </div>
+              </div>
+          </section>
+        </div>
+
 
       <!-- 3D Map -->
       <div class="g-item g-subhed ">
@@ -133,11 +228,12 @@
       </div>
       <div class="threedmap-container">
         <div class="threedmap" id='map' style="position: relative;"></div>
-    </div>
+      </div>
     </main>
 
 
-
+    <!-- Javascripts -->
+    <script src="js/main.js"></script>
     <script src="js/main-vega.js"></script>
     <script src="js/3dmap_init.js"></script>
   </body>

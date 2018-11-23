@@ -7,9 +7,6 @@ d3.csv("/data/all-2016.csv").then(function(data) {
   $("#total_count").html(window.total_accident_count_2016);
 });
 
-// Init Materialize components
-M.AutoInit();
-
 // Init Mapbox
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2h1bnciLCJhIjoiY2pvbmJwNmdkMDRpNjNycXl2dHhnMTdxNCJ9.Of_HdcCD_P9YC32HaROiSg';
 var map = new mapboxgl.Map({
