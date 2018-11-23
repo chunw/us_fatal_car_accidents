@@ -12,26 +12,33 @@ var i = 0;
 Array.prototype.forEach.call(section, function(e) {
   sections[e.id] = e.offsetTop;
 });
-var startAnalysisPos = $("#section-collection").offset().top - scrollSpyOffset * 2;
-$(document).scroll(function (e) {
-    const currentTop = $(document).scrollTop();
-    if ( currentTop !== loadScrollTop) {
-      const nav = $("#analysis-nav");
-      if (currentTop > startAnalysisPos) {
-        nav.show();
-      } else {
-        nav.hide();
-      }
-    }
-    loadScrollTop = null;
-});
-window.onscroll = function() {
-  var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+var startAnalysisPos = $("#section-collection").offset().top - scrollSpyOffset * 4;
+var endAnalysisPos = $("#threedmap-header").offset().top;
 
+$(document).scroll(function () {
+    showHideNav();
+    selectInNav();
+});
+
+function showHideNav() {
+  const currentTop = $(document).scrollTop();
+  if ( currentTop !== loadScrollTop) {
+    const nav = $("#analysis-nav");
+    if (currentTop > startAnalysisPos && currentTop < endAnalysisPos) {
+      nav.show();
+    } else {
+      nav.hide();
+    }
+  }
+  loadScrollTop = null;
+}
+
+function selectInNav() {
+  var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
   for (i in sections) {
     if (sections[i] <= scrollPosition + scrollSpyOffset) {
        document.querySelector('.active').setAttribute('class', 'text');
       document.querySelector('a[href*=' + i + ']').setAttribute('class', 'text active');
     }
   }
-};
+}

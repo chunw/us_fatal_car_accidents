@@ -23,13 +23,13 @@
   <body>
 
     <!-- navbar -->
-    <div id="analysis-nav"  data-spy="scroll" data-target="#analysis-nav" data-offset="20">
+    <div id="analysis-nav" style="display:none" data-spy="scroll" data-target="#analysis-nav" data-offset="20">
       <div class="anatomy">
         <div class="inline">
           <div class="blockline">
             <div class="icon-block">
               <img class="icon" style="width: 43px;" src="img/calendar.svg"/>
-              <a class="text active" href="#section-time">Day & Time</a>
+              <a class="text active" href="#section-time">Day <br> & Time</a>
             </div>
             <div class="icon-block">
               <img class="icon" src="img/weather.svg"/>
@@ -77,7 +77,7 @@
     <!-- MAIN CONTENT -->
     <main id="main" class="main" role="main">
       <!-- HEADER -->
-      <h1 class="header story-heading interactive-headline">Lessons from the 2016<br>U.S. Fatal Car Crashes</h1>
+      <h1 class="header story-heading interactive-headline">Lessons Learned From 2016<br>U.S. Fatal Car Crashes</h1>
       <div class="header interactive-byline">
         <p class="byline-dateline">
           <span class="byline">By <span class="byline-author">CHUN WANG, KEXIN YU</span></span>
@@ -105,7 +105,7 @@
             <div class="blockline">
               <div class="icon-block">
                 <img class="icon" style="width: 43px;" src="img/calendar.svg"/>
-                <div class="text">Day & Time</div>
+                <div class="text">Day <br> & Time</div>
               </div>
               <div class="icon-block">
                 <img class="icon" src="img/weather.svg"/>
@@ -223,14 +223,13 @@
 
 
       <!-- 3D Map -->
-      <div class="g-item g-subhed ">
+      <div class="g-item g-subhed " id="threedmap-header">
         <h2 style=""><strong>Explore Case by Case</strong></h2>
       </div>
       <div class="threedmap-container">
         <div class="threedmap" id='map' style="position: relative;"></div>
       </div>
     </main>
-
 
     <!-- Javascripts -->
     <script src="js/main.js"></script>
