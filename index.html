@@ -14,6 +14,11 @@
       <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc8"></script>
       <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.20.0"></script>
       <link rel="stylesheet" href="css/main.css">
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+      <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+      <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css'/>
+      <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
+      <link rel="stylesheet" href="css/3dmap.css">
    </head>
   <body>
     <main id="main" class="main" role="main">
@@ -119,10 +124,21 @@
               <div class="text">
                 A higher proportion of the occupants of older model-year vehicles suffered fatality / a fatal injury.
               </div>
+            </div>
         </section>
+
+      <!-- 3D Map -->
+      <div class="g-item g-subhed ">
+        <h2 style=""><strong>Explore Case by Case</strong></h2>
       </div>
+      <div class="threedmap-container">
+        <div class="threedmap" id='map' style="position: relative;"></div>
+    </div>
     </main>
 
+
+
     <script src="js/main-vega.js"></script>
+    <script src="js/3dmap_init.js"></script>
   </body>
 </html>
