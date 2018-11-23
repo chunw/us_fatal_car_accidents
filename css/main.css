@@ -50,6 +50,10 @@ section {
   color: #999;
   font: 400 0.8em 'nyt-franklin', arial, sans-serif;
 }
+.analysis .viz .method {
+ max-width: 100%;
+  color: black;
+}
 .analysis .text {
   padding-left: 2em;
   display: table-cell;
