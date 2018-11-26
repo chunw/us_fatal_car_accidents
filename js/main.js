@@ -3,6 +3,9 @@ const scrollSpyOffset = 80;
 
 // Init Materialize components
 M.AutoInit();
+$(document).ready(function(){
+    $('.tooltipped').tooltip({html: true});
+  });
 
 // Setup scroll spy
 var loadScrollTop = ($(document).scrollTop() > 0 ? $(document).scrollTop() : null);

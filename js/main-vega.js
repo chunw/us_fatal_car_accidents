@@ -1,3 +1,50 @@
+const fatalityRateByCounty = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "data/vega/us-10m.json",
+    "format": {
+      "type": "topojson",
+      "feature": "counties"
+    }
+  },
+  "transform": [{
+    "lookup": "id",
+    "from": {
+      "data": {
+        "url": "data/county/county_fatality_data_viz.csv"
+      },
+      "key": "County code",
+      "fields": [
+        "County",
+        "Census area",
+        "County population",
+        "Fatalities",
+        'Fatalities per 100,000 Population',
+        "Fatality rate (%)"]
+    }
+  }],
+  "projection": {
+    "type": "albersUsa"
+  },
+  "mark": "geoshape",
+  "encoding": {
+    "color": {
+      "field": "Fatality rate (%)",
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {"type": "nominal", "field": "County"},
+      {"type": "nominal", "field": "Census area"},
+      {"type": "nominal", "field": "County population"},
+      {"type": "quantitative", "field": "Fatalities"},
+      {"type": "quantitative", "field": "Fatality rate (%)"},
+      {"type": "quantitative", "field": "Fatalities per 100,000 Population"},
+    ]
+  }
+};
+
 const vehicleModelYear = {
   "config": {"view": {"width": 400, "height": 300}},
   "data": {"name": "data-635ccbfd07d2faa8efc1d701713d9d60"},
@@ -288,4 +335,6 @@ const vehicleModelYear = {
     ]
   }
 }
+vegaEmbed("#fatalityRateByCounty", fatalityRateByCounty);
+
 vegaEmbed("#vehicleModelYear", vehicleModelYear);
