@@ -9,7 +9,9 @@ body {
   max-width: 1170px;
   margin: auto;
 }
-
+.quote {
+  font-style: italic;
+}
 .header {
   text-align: center;
 }
@@ -70,17 +72,18 @@ section {
   font-size: 12px;
   text-align: left;
 }
+.tiny-text {
+  font-size: 0.6em;
+}
 .small-text {
   font-size: 0.8em;
 }
 #analysis-nav .anatomy {
   transform: scale(0.7);
 }
-
 #analysis-nav a {
   color: black;
 }
-
 .main .threedmap {
   overflow: inherit;
   width: 70%;
