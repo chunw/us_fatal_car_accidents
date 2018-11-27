@@ -39,9 +39,18 @@ function showHideNav() {
 function selectInNav() {
   var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
   for (i in sections) {
+
     if (sections[i] <= scrollPosition + scrollSpyOffset) {
-       document.querySelector('.active').setAttribute('class', 'text');
-      document.querySelector('a[href*=' + i + ']').setAttribute('class', 'text active');
+      console.log(i);
+      const active = document.querySelector('.active');
+      if (active) {
+          console.log("active");
+         active.setAttribute('class', 'text');
+      }
+      if (document.querySelector('a[href*=' + i + ']')) {
+        console.log("has link");
+        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'text active');
+      }
     }
   }
 }

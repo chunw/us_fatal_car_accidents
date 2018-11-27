@@ -37,7 +37,7 @@
             </div>
             <div class="icon-block">
               <img class="icon" src="img/roadcondi.svg"/>
-              <div class="text">Road <br> Condition</div>
+              <a class="text" href="#section-road">Road <br> Condition</a>
             </div>
           </div>
 
@@ -196,7 +196,7 @@
                 <div class="viz ">
                   <p>Hover on circles to view details.</p>
                   <p class="method">
-                    <strong>Methodology:</strong> The average fatality percentage is computed as {[fatality in vehicle] / [all occupants in vehicle]} × 100%. </p>
+                    <strong>Methodology:</strong> The average fatality percentage is computed as <span class="formula">{[fatality in vehicle] / [all occupants in vehicle]} × 100%. </span></p>
                   </p>
                 </div>
                 <div class="text">
@@ -204,6 +204,25 @@
                 </div>
               </div>
           </section>
+
+          <section id="section-road">
+              <div class="g-item g-subhed ">
+                <h2><strong>Road Condition</strong></h2>
+              </div>
+              <div class="analysis">
+                <div class="viz ">
+                  <div id="fatalityRateByCounty"></div>
+                  <p>Hover on map to view details about county, population and fatalities per 100,000 population.</p>
+                  <p class="method">
+                    <strong>Methodology:</strong> The fatality rate is computed as <span class="formula">{[total fatalities in car accidents in year 2016] / [county population]} × 100% </span>.</p>
+                  </p>
+                </div>
+                <div class="text">
+                  
+                </div>
+              </div>
+          </section>
+
           <section id="section-vehicle">
               <div class="g-item g-subhed ">
                 <h2><strong>Vehicle Condition</strong></h2>
@@ -213,18 +232,13 @@
                   <div id="vehicleModelYear"></div>
                   <p>Hover on circles to view details.</p>
                   <p class="method">
-                    <strong>Methodology:</strong> The average fatality percentage is computed as {[fatality in vehicle] / [all occupants in vehicle]} × 100%. </p>
+                    <strong>Methodology:</strong> The average fatality percentage is computed as <span class="formula">{[fatality in vehicle] / [all occupants in vehicle]} × 100% </span>.</p>
                   </p>
                 </div>
                 <div class="text">
                   A higher proportion of the occupants of older model-year vehicles suffered fatality / a fatal injury.
                 </div>
               </div>
-          </section>
-
-          <section >
-              <div id="fatalityRateByCounty"></div>
-
           </section>
         </div>
 
