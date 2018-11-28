@@ -88,7 +88,7 @@
       <!-- INTRO -->
       <div class="g-item g-text ">
         <p class="g-body">
-          [TODO] Motor vehicle travel is a major means of transportation in the United States, providing an unparalleled degree of mobility. Yet for all its advantages, motor vehicle crashes were the leading cause of death ... information on fatal motor vehicle crashes and fatalities based on data encoded using the
+          Motor vehicle travel is a major means of transportation in the United States, providing an unparalleled degree of mobility. Yet for all its advantages, motor vehicle crashes were the leading cause of death ... information on fatal motor vehicle crashes and fatalities based on data encoded using the
           <a target="_blank" class="tooltipped" data-position="right" data-tooltip="<div class='custom-tooltip'>FARS is a census of fatal crashes in the 50 States, <br>the District of Columbia, and Puerto Rico.<br><br>Click the link to view how data are encoded using the FARS system.</div>"
           href="https://ire.org/media/uploads/files/datalibrary/samplefiles/DOT%20Fatality%20Analysis%20Reporting%20System%20-%20Simplified/USERGUIDE-2013.pdf">Fatality Analysis Reporting System </a>(FARS).
           These reports focus on vehicles, drivers, passengers, pedestrians, and motorcyclists and use that to develop and refine countermeasures to deter unsafe behaviors and promote safe alternatives.
@@ -217,17 +217,17 @@
                     <strong>Methodology:</strong> The fatality rate is computed as <span class="formula">{[total fatalities in car accidents in year 2016] / [county population]} × 100% </span>.</p>
                   </p>
 
-                  <div class="">
+                  <div >
                     <br>
                     One notable outlier from this map is <b> Loving, Texas</b>, a sparsely populated county with a soaring fatality rate of 3.158% (three fatal crashes in 2016).
                     The culprit is one West Texas Highway that is notorious for being dangerous -
                     Highway 285, which runs from New Mexico right on through the small town of Fort Stockton.
-                    <br><br>Recent statistics show things may be getting worse.
+
                     According to the New Mexico Department of Transportation, there were another three fatal crashes from the Texas state line to Loving in <a target="_blank" href="https://www.yourbasin.com/news/dangerous-drive-on-highway-285/862459415">2017</a>.
                     <span class="quote">
-                    "Because there are so many trucks coming off the side roads and everything else you know they don't see everybody and they will just pull off," said Sherrif Harris. "Or pull right in front of people sometimes."
+                    "Because there are so many trucks coming off the side roads and you know they don't see everybody and they will just pull off,"</span> said Sherrif Cliff Harris,<span class="quote">"Or pull right in front of people sometimes."
                     </span>
-                     It is said the construction zones in Fort Stockton
+                     It was said the construction zones in Fort Stockton
                      <span class="quote">"are not going anywhere anytime soon."</span>
                   </div>
                 </div>
@@ -239,18 +239,95 @@
               <div class="g-item g-subhed ">
                 <h2><strong>Vehicle Condition</strong></h2>
               </div>
+              <p class="g-body">
+                We investigated how passenger
+                vehicle occupant fatality correlates to various vehicle
+                conditions in fatal crashes.
+              </p>
+              <!-- The analysis shows that among all passenger vehicle (passenger cars, SUVs, pickup trucks or vans) occu- pants involved in a fatal crash, the proportion who were fatally injured increases with vehicle age, i.e., the propor- tion was higher among occupants of older vehicles as compared to the occupants of newer vehicles. Also, the pro- portion of occupants who were fatally injured was higher among occupants of older model year vehicles as compared to the occupants of newer model year vehicles. -->
+              <div class="g-item g-subhed ">
+                <h6><strong>Vehicle Model Year</strong></h6>
+              </div>
               <div class="analysis">
                 <div class="viz ">
                   <div id="vehicleModelYear"></div>
                   <p>Hover on circles to view details.</p>
                   <p class="method">
-                    <strong>Methodology:</strong> The average fatality percentage is computed as <span class="formula">{[fatality in vehicle] / [all occupants in vehicle]} × 100% </span>.</p>
+                    <strong>Methodology:</strong> The average fatality percentage for a vehicle model year is computed as <span class="formula">{[fatality in vehicle] / [all occupants in vehicle]} × 100% </span>averaged over all vehicles of that model year involved in fatal car crashes.</p>
                   </p>
                 </div>
                 <div class="text">
-                  A higher proportion of the occupants of older model-year vehicles suffered fatality / a fatal injury.
+                  A higher proportion of the occupants of older model-year vehicles suffered fatality or a fatal injury.
                 </div>
               </div>
+
+              <div class="g-item g-subhed ">
+                <h6><strong>Vehicle Age</strong></h6>
+              </div>
+              <div class="analysis">
+                <div class="viz ">
+                  <div id="vehicleAge"></div>
+                  <p>Hover on circles to view details.</p>
+                  <p class="method">
+                    <strong>Methodology:</strong> The age of a vehicle is measured by subtracting the vehicle model year from the calendar year at the time of the crash (vehicle whose age was calculated to be -1 was recoded to be age 0). <br>
+                    The average fatality percentage for a vehicle age is computed as <span class="formula">{[fatality in vehicle] / [all occupants in vehicle]} × 100% </span>averaged over all vehicles of that vehicle age involved in fatal car crashes.</p>
+                  </p>
+                </div>
+                <div class="text">
+                  There is a clear trend that the proportion who were fatally injured increases with vehicle age.
+                </div>
+              </div>
+
+              <div class="g-item g-subhed ">
+                <h6><strong>Airbag Deployment</strong></h6>
+              </div>
+              <div class="analysis">
+                <div class="viz ">
+                  <div id="airbagDeployment"></div>
+                  <p>Hover on bars to view details.</p>
+
+                  <div class="">
+                    On the surface, it seems that the portion of fatal injuries are
+                    higher in scenarios where the airbag is deployed than when it is not.
+                    Keep in mind though, that frontal and side air bags
+                    are generally designed to deploy in moderate to severe crashes
+                    (may deploy in a minor crash). In fact, <a href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812494" target="_blank"> NHTSA estimated </a> that 2,756 lives were saved by frontal air bags in 2016.
+                    This visualization is not to show that airbags are useless in terms of protecting vehicle occupants safety, as it can be
+                    assumed that the crash severity level
+                    on average is higher when airbags are deployed than when they are not.
+
+                    Rather, a fair conclusion is when an airbag is observed to be deployed during a car crash,
+                    it increases the odds of observing a fatality as well, hence airbag deployment is a fair indicator of the crash severity (<i>correlation not causation</i>).
+
+                    <br><br>
+                    It is important, however, to follow guidance on how to safely position yourself and your passengers,
+                    as well as young ones in car seats and booster seats to prevent injury from air bags in a crash.
+
+                    Generally, when there is a moderate to severe crash, a signal is sent from the air bag system's electronic control unit to inflate the air bag within the blink of an eye (less than 1/20th of a second). Because air bags deploy very rapidly, serious or sometimes fatal injuries can occur if the driver or passenger is too close to – or comes in direct contact with – the air bag when it first begins to deploy.
+                    Side-impact air bags inflate even more quickly since there is less space between the driver or passengers and the striking object, whether the interior of the vehicle, another vehicle, a tree, or a pole.
+                    See more info on airbag-related fatality
+                    <a target="_blank" href="https://www.nhtsa.gov/equipment/air-bags">here</a>,
+                    <a href="https://www.annemergmed.com/article/S0196-0644(10)00101-0/pdf" target="_blank">here</a>,
+                    and <a target="_blank" href="https://www.nhtsa.gov/sites/nhtsa.dot.gov/files/18esv-000299.pdf">here</a>
+                    .
+<br><br>
+<b>Satety tips:</b>
+<div  class="my-list">
+<ul>
+  <li>
+      Sitting as far back from the steering wheel or dashboard as possible and using seat belts help prevent drivers and passengers from being "too close" to a deploying frontal air bag. This is why rear-facing car seats should not be placed in front of an active air bag, and children under 13 should be seated in the back seat.
+  </li>
+  <li>
+      Always buckle your seat belt. The seat belt is the single most effective vehicle safety technology. Air bags are supplemental protection and are designed to work best in combination with seat belts.
+  </li>
+
+</ul>
+</div>
+                  </div>
+                </div>
+
+              </div>
+
           </section>
         </div>
 

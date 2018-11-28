@@ -32,7 +32,13 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
+.my-list ul:not(.browser-default) {
+    list-style-type: inherit;
+    padding-left: 24px;
+}
+.my-list ul:not(.browser-default)>li {
+    list-style-type: inherit;
+}
 strong, b {
   font-weight: 700 !important;
 }
@@ -57,6 +63,18 @@ p {
   position: static;
   font-size: 1.5em;
 }
+
+.g-subhed h6 {
+  margin: 2em auto 1em auto;
+  font: 700 1.2em/1.3em 'nyt-franklin', arial, sans-serif;
+  text-align: center;
+  white-space: normal;
+  float: none;
+  display: block;
+  position: static;
+  font-size: 1em;
+}
+
 
 section {
   margin: 2em;
