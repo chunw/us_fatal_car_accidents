@@ -24,7 +24,18 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
+.tooltipped, .fake-tooltipped {
+  font-weight: bold;
+  color:#b63d3d;
+}
+#tooltip-help {
+  position: absolute;
+    right: 0;
+      margin: 140px 24px 0 0;
+  text-align: left;
+  float: right;
+  font-size: 11px;
+}
 .g-body {
   font-size: 15px;
   line-height: 1.5;

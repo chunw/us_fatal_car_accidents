@@ -74,10 +74,22 @@
       </div>
     </div>
 
+    <!-- HELP -->
+    <div id="tooltip-help">
+      <div class="g-item g-subhed ">
+        <div>
+          <strong>Tip:</strong><br>Hover on
+          <span class="fake-tooltipped" >text of this color</span>
+          to see tooltips.
+        </div>
+      </div>
+
+    </div>
+
     <!-- MAIN CONTENT -->
     <main id="main" class="main" role="main">
       <!-- HEADER -->
-      <h1 class="header story-heading interactive-headline">Lessons Learned From 2016<br>U.S. Fatal Car Crashes</h1>
+      <h1 class="header story-heading interactive-headline">Lessons Learned From 2016<br>U.S. Fatal Car Crash Data</h1>
       <div class="header interactive-byline">
         <p class="byline-dateline">
           <span class="byline">By <span class="byline-author">CHUN WANG, KEXIN YU</span></span>
@@ -214,7 +226,14 @@
                   <div id="fatalityRateByCounty"></div>
                   <p>Hover on map to view details about county, population and fatalities per 100,000 population.</p>
                   <p class="method">
-                    <strong>Methodology:</strong> The fatality rate is computed as <span class="formula">{[total fatalities in car accidents in year 2016] / [county population]} × 100% </span>.</p>
+                    <strong>Methodology:</strong> The fatality rate is computed as <span class="formula">{[total fatalities in car accidents in year 2016] / [county population]} × 100%</span>. <span class="tooltipped"
+                      data-position="bottom"
+                      data-tooltip="<div class='custom-tooltip'>The United States are divided into 3,007 counties, political and geographic subdivisions of a state. <br>
+                        235 other local governments and geographic places are similar to counties,
+                        but are called by different names.
+                        <br>These are referred to collectively as county equivalents by the United States Census Bureau for statistical purposes.</div>">County</span> population data
+                    <a target="_blank" href="https://en.wikipedia.org/wiki/List_of_United_States_counties_and_county_equivalents"
+                    >source</a>.</p>
                   </p>
 
                   <div >
