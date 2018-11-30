@@ -43,7 +43,7 @@ const alcohol = {
     },
     "y": {
       "type": "nominal",
-      "axis": {"title": "Police reported alcohols involvement"},
+      "axis": {"title": ""},
       "field": "police_reported_alcohol_involvement"
     }
   },
@@ -523,7 +523,7 @@ const drug = {
     },
     "y": {
       "type": "nominal",
-      "axis": {"title": "Police reported drugs involvement"},
+      "axis": {"title": ""},
       "field": "police_reported_drug_involvement"
     }
   },
@@ -1354,12 +1354,36 @@ const vehicleAge = {
     ]
   }
 };
-const airbagDeployment = {
+const airbagDeployment =
+{
   "config": {"view": {"width": 400, "height": 300}},
-  "data": {"name": "data-8f6d497e5aeb17e1317b582f63b7889e"},
+  "data": {"name": "data-046c3ef9933dfedbb3ccc8c41e4a005d"},
   "mark": "bar",
   "encoding": {
-    "color": {"type": "nominal", "title": "Injury severity", "field": "injury_severity_name"},
+    "color": {
+      "type": "nominal",
+      "field": "injury_severity_name",
+      "legend": {"title": "Injury severity"},
+      "scale": {
+        "range": [
+          "#d73027",
+          "#f46d43",
+          "#fdae61",
+          "#ffffbf",
+          "#ffffbf",
+          "#4575b4"
+        ]
+      },
+      "sort": [
+        "Fatal Injury (K)",
+        "Suspected Serious Injury (A)",
+        "Suspected Minor Injury (B)",
+        "Possible Injury (C)",
+        "Injured, Severity Unknown (U) (Since 1978)",
+        "No Apparent Injury (O)"
+      ]
+    },
+    "order": {"type": "nominal", "field": "order"},
     "tooltip": [
       {"type": "quantitative", "aggregate": "sum", "field": "injury_count"},
       {"type": "nominal", "field": "air_bag_deployed_name"},
@@ -1368,7 +1392,7 @@ const airbagDeployment = {
     "x": {
       "type": "quantitative",
       "aggregate": "sum",
-      "axis": {"title": "Ratio in all types of injuries"},
+      "axis": {"title": "Percent in all types of injuries"},
       "field": "injury_count",
       "stack": "normalize"
     },
@@ -1378,19 +1402,20 @@ const airbagDeployment = {
       "field": "air_bag_deployed_name"
     }
   },
+  "transform": [
+    {
+      "calculate": "if(datum.injury_severity_name === 'Fatal Injury (K)', 0,            if(datum.injury_severity_name === 'Suspected Serious Injury (A)', 1,            if(datum.injury_severity_name === 'Suspected Minor Injury (B)', 2,            if(datum.injury_severity_name === 'Possible Injury (C)', 3,            if(datum.injury_severity_name === 'Injured, Severity Unknown (U) (Since 1978)', 4,            if(datum.injury_severity_name === 'No Apparent Injury (O)', 5, 6))))))",
+      "as": "order"
+    }
+  ],
   "width": DEFAULT_GRAPH_WIDTH_SMALL,
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
   "datasets": {
-    "data-8f6d497e5aeb17e1317b582f63b7889e": [
+    "data-046c3ef9933dfedbb3ccc8c41e4a005d": [
       {
         "air_bag_deployed_name": "Deployed: Combination",
         "injury_severity_name": "Possible Injury (C)",
         "injury_count": 731
-      },
-      {
-        "air_bag_deployed_name": "Deployed: Combination",
-        "injury_severity_name": "Unknown",
-        "injury_count": 28
       },
       {
         "air_bag_deployed_name": "Deployed: Combination",
@@ -1421,11 +1446,6 @@ const airbagDeployment = {
         "air_bag_deployed_name": "Deployed: Curtain (Roof)",
         "injury_severity_name": "Suspected Serious Injury (A)",
         "injury_count": 52
-      },
-      {
-        "air_bag_deployed_name": "Deployed: Curtain (Roof)",
-        "injury_severity_name": "Unknown",
-        "injury_count": 2
       },
       {
         "air_bag_deployed_name": "Deployed: Curtain (Roof)",
@@ -1474,18 +1494,8 @@ const airbagDeployment = {
       },
       {
         "air_bag_deployed_name": "Deployed: Front",
-        "injury_severity_name": "Unknown",
-        "injury_count": 68
-      },
-      {
-        "air_bag_deployed_name": "Deployed: Front",
         "injury_severity_name": "Possible Injury (C)",
         "injury_count": 1741
-      },
-      {
-        "air_bag_deployed_name": "Deployed: Front",
-        "injury_severity_name": "Died Prior to Crash",
-        "injury_count": 1
       },
       {
         "air_bag_deployed_name": "Deployed: Front",
@@ -1520,11 +1530,6 @@ const airbagDeployment = {
       {
         "air_bag_deployed_name": "Deployed: Other (Knee, Air Belt, etc.)",
         "injury_severity_name": "Suspected Serious Injury (A)",
-        "injury_count": 4
-      },
-      {
-        "air_bag_deployed_name": "Deployed: Side (Door, Seatback)",
-        "injury_severity_name": "Unknown",
         "injury_count": 4
       },
       {
@@ -1574,23 +1579,18 @@ const airbagDeployment = {
       },
       {
         "air_bag_deployed_name": "Deployed: Unknown Location",
-        "injury_severity_name": "No Apparent Injury (O)",
-        "injury_count": 332
-      },
-      {
-        "air_bag_deployed_name": "Deployed: Unknown Location",
         "injury_severity_name": "Possible Injury (C)",
         "injury_count": 473
       },
       {
         "air_bag_deployed_name": "Deployed: Unknown Location",
-        "injury_severity_name": "Suspected Serious Injury (A)",
-        "injury_count": 474
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 332
       },
       {
         "air_bag_deployed_name": "Deployed: Unknown Location",
-        "injury_severity_name": "Unknown",
-        "injury_count": 42
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 474
       },
       {
         "air_bag_deployed_name": "Deployment Unknown",
@@ -1609,11 +1609,6 @@ const airbagDeployment = {
       },
       {
         "air_bag_deployed_name": "Deployment Unknown",
-        "injury_severity_name": "Unknown",
-        "injury_count": 608
-      },
-      {
-        "air_bag_deployed_name": "Deployment Unknown",
         "injury_severity_name": "Fatal Injury (K)",
         "injury_count": 1224
       },
@@ -1628,49 +1623,9 @@ const airbagDeployment = {
         "injury_count": 126
       },
       {
-        "air_bag_deployed_name": "Not Applicable",
-        "injury_severity_name": "No Apparent Injury (O)",
-        "injury_count": 3710
-      },
-      {
-        "air_bag_deployed_name": "Not Applicable",
-        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
-        "injury_count": 47
-      },
-      {
-        "air_bag_deployed_name": "Not Applicable",
-        "injury_severity_name": "Suspected Minor Injury (B)",
-        "injury_count": 2129
-      },
-      {
-        "air_bag_deployed_name": "Not Applicable",
-        "injury_severity_name": "Suspected Serious Injury (A)",
-        "injury_count": 1918
-      },
-      {
-        "air_bag_deployed_name": "Not Applicable",
-        "injury_severity_name": "Unknown",
-        "injury_count": 106
-      },
-      {
-        "air_bag_deployed_name": "Not Applicable",
-        "injury_severity_name": "Possible Injury (C)",
-        "injury_count": 1632
-      },
-      {
-        "air_bag_deployed_name": "Not Applicable",
-        "injury_severity_name": "Fatal Injury (K)",
-        "injury_count": 8702
-      },
-      {
         "air_bag_deployed_name": "Not Deployed",
         "injury_severity_name": "Suspected Serious Injury (A)",
         "injury_count": 1702
-      },
-      {
-        "air_bag_deployed_name": "Not Deployed",
-        "injury_severity_name": "Died Prior to Crash",
-        "injury_count": 2
       },
       {
         "air_bag_deployed_name": "Not Deployed",
@@ -1681,11 +1636,6 @@ const airbagDeployment = {
         "air_bag_deployed_name": "Not Deployed",
         "injury_severity_name": "Suspected Minor Injury (B)",
         "injury_count": 2405
-      },
-      {
-        "air_bag_deployed_name": "Not Deployed",
-        "injury_severity_name": "Unknown",
-        "injury_count": 433
       },
       {
         "air_bag_deployed_name": "Not Deployed",
@@ -1701,41 +1651,6 @@ const airbagDeployment = {
         "air_bag_deployed_name": "Not Deployed",
         "injury_severity_name": "Possible Injury (C)",
         "injury_count": 2288
-      },
-      {
-        "air_bag_deployed_name": "Not Reported",
-        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
-        "injury_count": 4
-      },
-      {
-        "air_bag_deployed_name": "Not Reported",
-        "injury_severity_name": "Possible Injury (C)",
-        "injury_count": 104
-      },
-      {
-        "air_bag_deployed_name": "Not Reported",
-        "injury_severity_name": "Unknown",
-        "injury_count": 106
-      },
-      {
-        "air_bag_deployed_name": "Not Reported",
-        "injury_severity_name": "Suspected Serious Injury (A)",
-        "injury_count": 86
-      },
-      {
-        "air_bag_deployed_name": "Not Reported",
-        "injury_severity_name": "No Apparent Injury (O)",
-        "injury_count": 577
-      },
-      {
-        "air_bag_deployed_name": "Not Reported",
-        "injury_severity_name": "Suspected Minor Injury (B)",
-        "injury_count": 90
-      },
-      {
-        "air_bag_deployed_name": "Not Reported",
-        "injury_severity_name": "Fatal Injury (K)",
-        "injury_count": 264
       },
       {
         "air_bag_deployed_name": "Not a Motor Vehicle Occupant",
@@ -1766,11 +1681,6 @@ const airbagDeployment = {
         "air_bag_deployed_name": "Not a Motor Vehicle Occupant",
         "injury_severity_name": "Possible Injury (C)",
         "injury_count": 94
-      },
-      {
-        "air_bag_deployed_name": "Not a Motor Vehicle Occupant",
-        "injury_severity_name": "Unknown",
-        "injury_count": 6
       },
       {
         "air_bag_deployed_name": "Switched Off",
