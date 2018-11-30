@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset='utf-8'/>
+      <title>2016 U.S. Fatal Car Accidents</title>
+      <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://d3js.org/d3.v5.min.js"></script>
+      <link rel="stylesheet" href="css/3dmap.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega@4.3.0"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc8"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.20.0"></script>
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+      <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+      <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css'/>
+      <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
+   </head>
+  <body>
+
+    <div class="records-table-container">
+  <!----><table ng-if="rtCtrl.displaySlowContent" class="records-table" cellspacing="0">
+    <thead>
+      <tr>
+        <td class="records-header">Row</td>
+        <!----><td ng-repeat="field in rtCtrl.schema" class="records-header" jfk-tooltip="STRING" jfk-tooltip-position="TOP">
+          police_reported_drug_involvement
+        </td><!----><td ng-repeat="field in rtCtrl.schema" class="records-header" jfk-tooltip="STRING" jfk-tooltip-position="TOP">
+          person_type_name
+        </td><!----><td ng-repeat="field in rtCtrl.schema" class="records-header" jfk-tooltip="STRING" jfk-tooltip-position="TOP">
+          injury_severity_name
+        </td><!----><td ng-repeat="field in rtCtrl.schema" class="records-header" jfk-tooltip="INTEGER" jfk-tooltip-position="TOP">
+          count
+        </td><!---->
+        <td class="records-header records-filler">&nbsp;</td>
+      </tr>
+    </thead>
+    <!----><!----><tbody ng-if="!rtCtrl.loading" ng-repeat="record in rtCtrl.getDisplayRows() track by rtCtrl.getRecordId(record)">
+      <!----><tr ng-repeat="row in ::record" class="records-row records-row-last" ng-class="{'records-row-last': $last}">
+        <td class="row-number">
+          <!----><span ng-if="$first">1</span><!---->
+        </td>
+        <!----><td ng-repeat="value in ::row track by $index" class="records-cell" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">No (Drugs Not Involved)</td><!----><td ng-repeat="value in ::row track by $index" class="records-cell" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">Driver of a Motor Vehicle In-Transport</td><!----><td ng-repeat="value in ::row track by $index" class="records-cell" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">Fatal Injury (K)</td><!----><td ng-repeat="value in ::row track by $index" class="records-cell records-cell-number" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">11189</td><!---->
+        <td class="records-cell records-filler">&nbsp;</td>
+      </tr><!---->
+    </tbody><!----><!----><!----><tbody ng-if="!rtCtrl.loading" ng-repeat="record in rtCtrl.getDisplayRows() track by rtCtrl.getRecordId(record)">
+      <!----><tr ng-repeat="row in ::record" class="records-row records-row-last" ng-class="{'records-row-last': $last}">
+        <td class="row-number">
+          <!----><span ng-if="$first">2</span><!---->
+        </td>
+        <!----><td ng-repeat="value in ::row track by $index" class="records-cell" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">No (Drugs Not Involved)</td><!----><td ng-repeat="value in ::row track by $index" class="records-cell" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">Driver of a Motor Vehicle In-Transport</td><!----><td ng-repeat="value in ::row track by $index" class="records-cell" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">No Apparent Injury (O)</td><!----><td ng-repeat="value in ::row track by $index" class="records-cell records-cell-number" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">9668</td><!---->
+        <td class="records-cell records-filler">&nbsp;</td>
+      </tr><!---->
+    </tbody><!----><!----><!----><tbody ng-if="!rtCtrl.loading" ng-repeat="record in rtCtrl.getDisplayRows() track by rtCtrl.getRecordId(record)">
+      <!----><tr ng-repeat="row in ::record" class="records-row records-row-last" ng-class="{'records-row-last': $last}">
+        <td class="row-number">
+          <!----><span ng-if="$first">3</span><!---->
+        </td>
+        <!----><td ng-repeat="value in ::row track by $index" class="records-cell" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">No (Drugs Not Involved)</td><!----><td ng-repeat="value in ::row track by $index" class="records-cell" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">Driver of a Motor Vehicle In-Transport</td><!----><td ng-repeat="value in ::row track by $index" class="records-cell" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">Suspected Minor Injury (B)</td><!----><td ng-repeat="value in ::row track by $index" class="records-cell records-cell-number" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">3337</td><!---->
+        <td class="records-cell records-filler">&nbsp;</td>
+      </tr><!---->
+    </tbody><!----><!----><!----><tbody ng-if="!rtCtrl.loading" ng-repeat="record in rtCtrl.getDisplayRows() track by rtCtrl.getRecordId(record)">
+      <!----><tr ng-repeat="row in ::record" class="records-row records-row-last" ng-class="{'records-row-last': $last}">
+        <td class="row-number">
+          <!----><span ng-if="$first">4</span><!---->
+        </td>
+        <!----><td ng-repeat="value in ::row track by $index" class="records-cell" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">No (Drugs Not Involved)</td><!----><td ng-repeat="value in ::row track by $index" class="records-cell" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">Driver of a Motor Vehicle In-Transport</td><!----><td ng-repeat="value in ::row track by $index" class="records-cell" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">Possible Injury (C)</td><!----><td ng-repeat="value in ::row track by $index" class="records-cell records-cell-number" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">2664</td><!---->
+        <td class="records-cell records-filler">&nbsp;</td>
+      </tr><!---->
+    </tbody><!----><!----><!----><tbody ng-if="!rtCtrl.loading" ng-repeat="record in rtCtrl.getDisplayRows() track by rtCtrl.getRecordId(record)">
+      <!----><tr ng-repeat="row in ::record" class="records-row records-row-last" ng-class="{'records-row-last': $last}">
+        <td class="row-number">
+          <!----><span ng-if="$first">5</span><!---->
+        </td>
+        <!----><td ng-repeat="value in ::row track by $index" class="records-cell" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">No (Drugs Not Involved)</td><!----><td ng-repeat="value in ::row track by $index" class="records-cell" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">Driver of a Motor Vehicle In-Transport</td><!----><td ng-repeat="value in ::row track by $index" class="records-cell" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">Suspected Serious Injury (A)</td><!----><td ng-repeat="value in ::row track by $index" class="records-cell records-cell-number" ng-class="::{
+                        'records-cell-number': rtCtrl.isNumber($index),
+                        'records-cell-empty': value === undefined
+                      }">2482</td><!---->
+        <td class="records-cell records-filler">&nbsp;</td>
+      </tr><!---->
+    </tbody><!----><!---->
+  </table><!---->
+</div>
+
+    <!-- Javascripts -->
+    <script src="js/main.js"></script>
+    <script src="js/main-vega.js"></script>
+    <script src="js/3dmap_init.js"></script>
+  </body>
+</html>

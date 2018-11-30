@@ -48,7 +48,7 @@
             </div>
             <div class="icon-block">
               <img class="icon" src="img/driv.svg"/>
-              <div class="text">Driver <br>Behavior</div>
+              <a class="text" href='#section-driver'>Driver <br>Behavior</a>
             </div>
             <div class="icon-block">
               <img class="icon" style="height: 39px;" src="img/passenger.svg"/>
@@ -66,8 +66,8 @@
               <div class="text" style="margin-top: 10px;">Rescue <br>Delay</div>
             </div>
             <div class="icon-block" >
-              <img class="icon"  style="width: 32px;"src="img/fatal.svg"/>
-              <div class="text">Fatalities <br> & Injuries</div>
+              <img class="icon"  style="width: 32px;" />
+
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
         <div>
           <strong>Tip:</strong><br>Hover on
           <span class="fake-tooltipped" >text of this color</span>
-          to see tooltips.
+          to view tooltip.
         </div>
       </div>
 
@@ -101,8 +101,8 @@
       <div class="g-item g-text ">
         <p class="g-body">
           Motor vehicle travel is a major means of transportation in the United States, providing an unparalleled degree of mobility. Yet for all its advantages, motor vehicle crashes were the leading cause of death ... information on fatal motor vehicle crashes and fatalities based on data encoded using the
-          <a target="_blank" class="tooltipped" data-position="right" data-tooltip="<div class='custom-tooltip'>FARS is a census of fatal crashes in the 50 States, <br>the District of Columbia, and Puerto Rico.<br><br>Click the link to view how data are encoded using the FARS system.</div>"
-          href="https://ire.org/media/uploads/files/datalibrary/samplefiles/DOT%20Fatality%20Analysis%20Reporting%20System%20-%20Simplified/USERGUIDE-2013.pdf">Fatality Analysis Reporting System </a>(FARS).
+          <a target="_blank" class="tooltipped" data-position="right" data-tooltip="<div class='custom-tooltip'>Fatality Analysis Reporting System is a nationwide census providing <br> NHTSA (National Highway Traffic Safety Administration), Congress <br> and the American public yearly data regarding fatal injuries suffered <br> in motor vehicle traffic crashes.<br><br>Click the link to view how data are encoded using the FARS system.</div>"
+          href="https://ire.org/media/uploads/files/datalibrary/samplefiles/DOT%20Fatality%20Analysis%20Reporting%20System%20-%20Simplified/USERGUIDE-2013.pdf">Fatality Analysis Reporting System</a>.
           These reports focus on vehicles, drivers, passengers, pedestrians, and motorcyclists and use that to develop and refine countermeasures to deter unsafe behaviors and promote safe alternatives.
         </p>
       </div>
@@ -133,7 +133,7 @@
 
             <div class="blockline" >
               <div class="icon-block">
-                <img class="icon" style="    height: 38px; width: 58px;" src="img/vehicle.svg"/>
+                <img class="icon" style="height: 38px; width: 58px;" src="img/vehicle.svg"/>
                 <div class="text">Vehicle <br>Condition</div>
               </div>
               <div class="icon-block">
@@ -194,7 +194,7 @@
             causes are immediate, but they may be
             underpinned by medium-term and long-term
             structural causes. Identifying the risk factors that
-            contribute to road traffic crashes is important in
+            contribute to fatal road traffic crashes is important in
             identifying interventions that can reduce the risks associated with those factors.
         </p>
 
@@ -226,12 +226,8 @@
                   <div id="fatalityRateByCounty"></div>
                   <p>Hover on map to view details about county, population and fatalities per 100,000 population.</p>
                   <p class="method">
-                    <strong>Methodology:</strong> The fatality rate is computed as <span class="formula">{[total fatalities in car accidents in year 2016] / [county population]} × 100%</span>. <span class="tooltipped"
-                      data-position="bottom"
-                      data-tooltip="<div class='custom-tooltip'>The United States are divided into 3,007 counties, political and geographic subdivisions of a state. <br>
-                        235 other local governments and geographic places are similar to counties,
-                        but are called by different names.
-                        <br>These are referred to collectively as county equivalents by the United States Census Bureau for statistical purposes.</div>">County</span> population data
+                    <strong>Methodology:</strong> The fatality rate is computed as <span class="formula">{[total fatalities in car accidents in year 2016] / [county population]} × 100%</span>.
+                      County population data
                     <a target="_blank" href="https://en.wikipedia.org/wiki/List_of_United_States_counties_and_county_equivalents"
                     >source</a>.</p>
                   </p>
@@ -251,6 +247,45 @@
                   </div>
                 </div>
 
+              </div>
+          </section>
+
+          <section id="section-driver">
+              <div class="g-item g-subhed ">
+                <h2><strong>Driver Behavior</strong></h2>
+              </div>
+
+              <div class="g-item g-subhed ">
+                <h6><strong>Alcohol-Impaired Driving</strong></h6>
+              </div>
+              <div class="analysis">
+                <div class="viz ">
+                  <div id="alcohol"></div>
+                  <p>Hover on bars to view details.</p>
+                  <p class="method">
+                    <strong>Methodology:</strong> [todo]
+                  </p>
+                </div>
+                <div class="text">
+                  [todo]
+                </div>
+              </div>
+
+
+              <div class="g-item g-subhed ">
+                <h6><strong>Drug-Impaired Driving</strong></h6>
+              </div>
+              <div class="analysis">
+                <div class="viz ">
+                  <div id="drug"></div>
+                  <p>Hover on bars to view details.</p>
+                  <p class="method">
+                    <strong>Methodology:</strong> [todo]
+                  </p>
+                </div>
+                <div class="text">
+                  [todo]
+                </div>
               </div>
           </section>
 
@@ -329,25 +364,26 @@
                     <a href="https://www.annemergmed.com/article/S0196-0644(10)00101-0/pdf" target="_blank">here</a>,
                     and <a target="_blank" href="https://www.nhtsa.gov/sites/nhtsa.dot.gov/files/18esv-000299.pdf">here</a>
                     .
-<br><br>
-<b>Satety tips:</b>
-<div  class="my-list">
-<ul>
-  <li>
-      Sitting as far back from the steering wheel or dashboard as possible and using seat belts help prevent drivers and passengers from being "too close" to a deploying frontal air bag. This is why rear-facing car seats should not be placed in front of an active air bag, and children under 13 should be seated in the back seat.
-  </li>
-  <li>
-      Always buckle your seat belt. The seat belt is the single most effective vehicle safety technology. Air bags are supplemental protection and are designed to work best in combination with seat belts.
-  </li>
+                <br><br>
+                <b>Satety tips:</b>
+                <div  class="my-list">
+                <ul>
+                  <li>
+                      Sitting as far back from the steering wheel or dashboard as possible and using seat belts help prevent drivers and passengers from being "too close" to a deploying frontal air bag. This is why rear-facing car seats should not be placed in front of an active air bag, and children under 13 should be seated in the back seat.
+                  </li>
+                  <li>
+                      Always buckle your seat belt. The seat belt is the single most effective vehicle safety technology. Air bags are supplemental protection and are designed to work best in combination with seat belts.
+                  </li>
 
-</ul>
-</div>
-                  </div>
+                </ul>
                 </div>
-
               </div>
+            </div>
+          </div>
 
           </section>
+
+
         </div>
 
 

@@ -1,4 +1,941 @@
 const DEFAULT_GRAPH_WIDTH = 500;
+const DEFAULT_GRAPH_WIDTH_SMALL = DEFAULT_GRAPH_WIDTH - 200;
+const alcohol = {
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-8406a5ea26bc0ec7d871fd1d914ff5ca"},
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "injury_severity_name",
+      "legend": {"title": "Injury severity"},
+      "scale": {
+        "range": [
+          "#a50026",
+          "#d73027",
+          "#fdae61",
+          "#ffffbf",
+          "#ffffbf",
+          "#4575b4"
+        ]
+      },
+      "sort": [
+        "Fatal Injury (K)",
+        "Suspected Serious Injury (A)",
+        "Suspected Minor Injury (B)",
+        "Possible Injury (C)",
+        "Injured, Severity Unknown (U) (Since 1978)",
+        "No Apparent Injury (O)"
+      ]
+    },
+    "order": {"type": "nominal", "field": "order"},
+    "tooltip": [
+      {"type": "nominal", "field": "police_reported_alcohol_involvement"},
+      {"type": "nominal", "field": "injury_severity_name"},
+      {"type": "quantitative", "aggregate": "sum", "field": "count"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "aggregate": "sum",
+      "axis": {"title": "Ratio in all types of injuries"},
+      "field": "count",
+      "stack": "normalize"
+    },
+    "y": {
+      "type": "nominal",
+      "axis": {"title": "Police reported alcohols involvement"},
+      "field": "police_reported_alcohol_involvement"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "if(datum.injury_severity_name === 'Fatal Injury (K)', 0,            if(datum.injury_severity_name === 'Suspected Serious Injury (A)', 1,            if(datum.injury_severity_name === 'Suspected Minor Injury (B)', 2,            if(datum.injury_severity_name === 'Possible Injury (C)', 3,            if(datum.injury_severity_name === 'Injured, Severity Unknown (U) (Since 1978)', 4,            if(datum.injury_severity_name === 'No Apparent Injury (O)', 5, 6))))))",
+      "as": "order"
+    }
+  ],
+  "width": DEFAULT_GRAPH_WIDTH_SMALL,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-8406a5ea26bc0ec7d871fd1d914ff5ca": [
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 10823
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 10514
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 4457
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 3460
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 2897
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 2578
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 2107
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 1074
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 778
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 697
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 679
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 656
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 638
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 551
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 386
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 383
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 343
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 312
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 169
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 97
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 91
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 84
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Person on Personal Conveyances (Since 2007)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 80
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 76
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 55
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 50
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 44
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 33
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 33
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 24
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 18
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 18
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 16
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Person on Personal Conveyances (Since 2007)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 15
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 12
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 11
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Persons In/On Buildings (Since 2007)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 10
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 9
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 9
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Persons In/On Buildings (Since 2007)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 8
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Occupant of a Non-Motor Vehicle Transport Device",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 7
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 6
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 6
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 5
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 5
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 4
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Occupant of a Non-Motor Vehicle Transport Device",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 4
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 4
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 4
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Person on Personal Conveyances (Since 2007)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 4
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Persons In/On Buildings (Since 2007)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 4
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 4
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 3
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Occupant of a Non-Motor Vehicle Transport Device",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 3
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 3
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 2
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Occupant of a Non-Motor Vehicle Transport Device",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 2
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 2
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 2
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 2
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 2
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 2
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 1
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 1
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Other Cyclist",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Other Cyclist",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 1
+      },
+      {
+        "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 1
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Person on Personal Conveyances (Since 2007)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1
+      },
+      {
+        "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1
+      }
+    ]
+  }
+};
+const drug = {
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-3520e7d4a51bc513a1f7602af818b1f0"},
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "injury_severity_name",
+      "legend": {"title": "Injury severity"},
+      "scale": {
+        "range": [
+          "#a50026",
+          "#d73027",
+          "#fdae61",
+          "#ffffbf",
+          "#ffffbf",
+          "#4575b4"
+        ]
+      },
+      "sort": [
+        "Fatal Injury (K)",
+        "Suspected Serious Injury (A)",
+        "Suspected Minor Injury (B)",
+        "Possible Injury (C)",
+        "Injured, Severity Unknown (U) (Since 1978)",
+        "No Apparent Injury (O)"
+      ]
+    },
+    "order": {"type": "nominal", "field": "order"},
+    "tooltip": [
+      {"type": "nominal", "field": "police_reported_drug_involvement"},
+      {"type": "nominal", "field": "injury_severity_name"},
+      {"type": "quantitative", "aggregate": "sum", "field": "count"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "aggregate": "sum",
+      "axis": {"title": "Ratio in all types of injuries"},
+      "field": "count",
+      "stack": "normalize"
+    },
+    "y": {
+      "type": "nominal",
+      "axis": {"title": "Police reported drugs involvement"},
+      "field": "police_reported_drug_involvement"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "if(datum.injury_severity_name === 'Fatal Injury (K)', 0,            if(datum.injury_severity_name === 'Suspected Serious Injury (A)', 1,            if(datum.injury_severity_name === 'Suspected Minor Injury (B)', 2,            if(datum.injury_severity_name === 'Possible Injury (C)', 3,            if(datum.injury_severity_name === 'Injured, Severity Unknown (U) (Since 1978)', 4,            if(datum.injury_severity_name === 'No Apparent Injury (O)', 5, 6))))))",
+      "as": "order"
+    }
+  ],
+  "width": DEFAULT_GRAPH_WIDTH_SMALL,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-3520e7d4a51bc513a1f7602af818b1f0": [
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 11189
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 9668
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 3337
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 2664
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 2482
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 2264
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 2257
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 712
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 627
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 558
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 527
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 391
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 385
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 378
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 378
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 367
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 345
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 157
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 115
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 99
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 87
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 76
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Person on Personal Conveyances (Since 2007)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 76
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 55
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 46
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 29
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 26
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 20
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 18
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 17
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Person on Personal Conveyances (Since 2007)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 13
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 10
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 10
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 10
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Persons In/On Buildings (Since 2007)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 10
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Persons In/On Buildings (Since 2007)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 8
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 7
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 7
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Occupant of a Non-Motor Vehicle Transport Device",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 6
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 5
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 5
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 5
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 4
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 4
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Person on Personal Conveyances (Since 2007)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 4
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Persons In/On Buildings (Since 2007)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 4
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 4
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 3
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 3
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 2
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 2
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Occupant of a Non-Motor Vehicle Transport Device",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 2
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Occupant of a Non-Motor Vehicle Transport Device",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 2
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 2
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 2
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 2
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 2
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 1
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Occupant of a Non-Motor Vehicle Transport Device",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 1
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Other Cyclist",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 1
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Other Cyclist",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 1
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Person on Personal Conveyances (Since 2007)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1
+      },
+      {
+        "police_reported_drug_involvement": "No (Drugs Not Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1
+      },
+      {
+        "police_reported_drug_involvement": "Yes (Drugs Involved)",
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1
+      }
+    ]
+  }
+};
 const fatalityRateByCounty = {
   "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
   "width": 500,
@@ -441,7 +1378,7 @@ const airbagDeployment = {
       "field": "air_bag_deployed_name"
     }
   },
-  "width": DEFAULT_GRAPH_WIDTH - 200,
+  "width": DEFAULT_GRAPH_WIDTH_SMALL,
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
   "datasets": {
     "data-8f6d497e5aeb17e1317b582f63b7889e": [
@@ -858,7 +1795,8 @@ const airbagDeployment = {
     ]
   }
 };
-
+vegaEmbed("#alcohol", alcohol);
+vegaEmbed("#drug", drug);
 vegaEmbed("#fatalityRateByCounty", fatalityRateByCounty);
 vegaEmbed("#vehicleModelYear", vehicleModelYear);
 vegaEmbed("#vehicleAge", vehicleAge);
