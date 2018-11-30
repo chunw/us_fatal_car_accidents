@@ -43,23 +43,23 @@
 
           <div class="blockline">
             <div class="icon-block">
-              <img class="icon" style="height: 38px; width: 58px;" src="img/vehicle.svg"/>
-              <a class="text" href="#section-vehicle">Vehicle <br>Condition</a>
-            </div>
-            <div class="icon-block">
               <img class="icon" src="img/driv.svg"/>
               <a class="text" href='#section-driver'>Driver <br>Behavior</a>
             </div>
             <div class="icon-block">
               <img class="icon" style="height: 39px;" src="img/passenger.svg"/>
-              <div class="text">Passenger <br>Behavior</div>
+              <a class="text" href='#section-passenger'>Passenger <br>Behavior</a>
+            </div>
+            <div class="icon-block">
+              <img class="icon" style="width: 20px;" src="img/pedestrain.svg"/>
+              <a class="text">Pedestrian <br>Behavior</a>
             </div>
           </div>
 
           <div class="blockline">
             <div class="icon-block">
-              <img class="icon" style="width: 20px;" src="img/pedestrain.svg"/>
-              <div class="text">Pedestrian <br>Behavior</div>
+              <img class="icon" style="height: 38px; width: 58px;" src="img/vehicle.svg"/>
+              <a class="text" href="#section-vehicle">Vehicle <br>Condition</a>
             </div>
             <div class="icon-block" >
               <img class="icon" style="width: 63px; padding-top: 4px;transform: scale(1.4);" src="img/rescue.svg"/>
@@ -285,6 +285,48 @@
                 </div>
                 <div class="text">
                   [todo]
+                </div>
+              </div>
+          </section>
+
+          <section id="section-passenger">
+              <div class="g-item g-subhed ">
+                <h2><strong>Passenger Behavior</strong></h2>
+              </div>
+
+              <div class="g-item g-subhed ">
+                <h6><strong>Restraint System Use</strong></h6>
+              </div>
+              <p class="g-body">
+                Of the 23,714 passenger vehicle occupants killed in 2016, there were 11,282
+                (48%) who were restrained and 10,428 (44%) who were unrestrained at the time of the crashes.
+                Restraint use was not known for the remaining 2,004 (8%) of the occupants.
+                For passenger vehicle occupants involved in fatal crashes in 2016,
+                nearly half of those who were killed were unrestrained in the crash,
+                compared to only 14 percent of those that survived.
+              </p>
+              <div class="analysis">
+                <div class="viz ">
+                  <div id="passengerRestraintUse"></div>
+                  <p>Hover on bars to view details.</p>
+                  <p class="method">
+                    <strong>Methodology:</strong>
+                    The data describes restraint usage of passengers of a motor vehicle in-transport.
+                  </p>
+                  <div class="">
+                  </div>
+                </div>
+              </div>
+              <div class="analysis">
+                <div class="viz ">
+                  <div id="ejection"></div>
+                  <p>Hover on bars to view details.</p>
+                  <p class="method">
+                    <strong>Methodology:</strong> The ejection scenario describes the ejection status and degree of ejection for this person, excluding motorcycle occupants.
+                  </p>
+                  <div class="">
+                    Ejection from the vehicle is one of the most injurious events that can happen to a person in a crash. Seat belts are very effective in preventing total ejections; in 2016 only 1 percent of all passenger vehicle occupants (those killed as well as survivors) in fatal crashes reported to have been using restraints were totally ejected, compared to 29% of those unrestrained.
+                  </div>
                 </div>
               </div>
           </section>

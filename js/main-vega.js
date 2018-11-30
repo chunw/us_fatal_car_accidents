@@ -1,5 +1,723 @@
 const DEFAULT_GRAPH_WIDTH = 500;
+const DEFAULT_GRAPH_WIDTH_MEDIUM = DEFAULT_GRAPH_WIDTH - 100;
 const DEFAULT_GRAPH_WIDTH_SMALL = DEFAULT_GRAPH_WIDTH - 200;
+const passengerRestraintUse = {
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-aa135aa6718fdb28bf295a5ebd12238b"},
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "injury_severity_name",
+      "legend": {"title": "Injury severity"},
+      "scale": {
+        "range": [
+          "#d73027",
+          "#f46d43",
+          "#fdae61",
+          "#ffffbf",
+          "#ffffbf",
+          "#4575b4"
+        ]
+      },
+      "sort": [
+        "Fatal Injury (K)",
+        "Suspected Serious Injury (A)",
+        "Suspected Minor Injury (B)",
+        "Possible Injury (C)",
+        "Injured, Severity Unknown (U) (Since 1978)",
+        "No Apparent Injury (O)"
+      ]
+    },
+    "order": {"type": "nominal", "field": "order"},
+    "tooltip": [
+      {"type": "nominal", "field": "person_type_name"},
+      {"type": "nominal", "field": "restraint_system_helmet_use_name"},
+      {"type": "quantitative", "aggregate": "sum", "field": "count"},
+      {"type": "nominal", "field": "injury_severity_name"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "aggregate": "sum",
+      "axis": {"title": "Percent in all types of injuries"},
+      "field": "count",
+      "stack": "normalize"
+    },
+    "y": {
+      "type": "nominal",
+      "axis": {"title": "Restraint system & helmet usage"},
+      "field": "restraint_system_helmet_use_name"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "if(datum.injury_severity_name === 'Fatal Injury (K)', 0,            if(datum.injury_severity_name === 'Suspected Serious Injury (A)', 1,            if(datum.injury_severity_name === 'Suspected Minor Injury (B)', 2,            if(datum.injury_severity_name === 'Possible Injury (C)', 3,            if(datum.injury_severity_name === 'Injured, Severity Unknown (U) (Since 1978)', 4,            if(datum.injury_severity_name === 'No Apparent Injury (O)', 5, 6))))))",
+      "as": "order"
+    }
+  ],
+  "width": DEFAULT_GRAPH_WIDTH_SMALL,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-aa135aa6718fdb28bf295a5ebd12238b": [
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Lap and Shoulder Belt Used",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 4309
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "None Used",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 2761
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Lap and Shoulder Belt Used",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 2488
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Lap and Shoulder Belt Used",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 2477
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Lap and Shoulder Belt Used",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 1964
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Lap and Shoulder Belt Used",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1834
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "None Used",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1393
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "None Used",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 1035
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "None Used",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 482
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint Type Unknown",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 392
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "None Used",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 356
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint System – Forward Facing (Since 2008)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 246
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "No Helmet",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 227
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint System – Forward Facing (Since 2008)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 145
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint Type Unknown",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 142
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint System – Forward Facing (Since 2008)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 135
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint Type Unknown",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 131
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint Type Unknown",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 123
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint System – Rear Facing (Since 2008)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 96
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Booster Seat",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 95
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "No Helmet",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 95
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Restraint Used – Type Unknown",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 86
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Helmet, Unknown if DOT-Compliant",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 83
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint Type Unknown",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 79
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Restraint Used – Type Unknown",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 78
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Lap Belt Only Used",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 78
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Restraint Used – Type Unknown",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 76
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint System – Forward Facing (Since 2008)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 69
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Booster Seat",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 65
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "DOT-Compliant Motorcycle Helmet",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 58
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Lap Belt Only Used",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 57
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Lap Belt Only Used",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 57
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint System – Forward Facing (Since 2008)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 56
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "No Helmet",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 55
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Lap Belt Only Used",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 53
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint System – Rear Facing (Since 2008)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 52
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Restraint Used – Type Unknown",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 47
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Booster Seat",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 43
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Lap Belt Only Used",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 42
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Booster Seat",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 39
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Helmet, Unknown if DOT-Compliant",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 39
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Booster Seat",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 32
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Shoulder Belt Only Used",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 30
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Restraint Used – Type Unknown",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 28
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Lap and Shoulder Belt Used",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 28
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "No Helmet",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 28
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "DOT-Compliant Motorcycle Helmet",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 26
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint System – Rear Facing (Since 2008)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 26
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Shoulder Belt Only Used",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 25
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "None Used",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 23
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint System – Rear Facing (Since 2008)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 20
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Other",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 19
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "No Helmet",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 18
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "DOT-Compliant Motorcycle Helmet",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 17
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Helmet, Unknown if DOT-Compliant",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 14
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Helmet, Unknown if DOT-Compliant",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 13
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Shoulder Belt Only Used",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 12
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Shoulder Belt Only Used",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 11
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Helmet, Other than DOT-Compliant Motorcycle Helmet",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 10
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint System – Rear Facing (Since 2008)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 10
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Shoulder Belt Only Used",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 7
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Other",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 7
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Unknown if Helmet Worn",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 5
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Helmet, Unknown if DOT-Compliant",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 5
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Other",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 5
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Helmet, Other than DOT-Compliant Motorcycle Helmet",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 4
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Unknown if Helmet Worn",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 4
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "No Helmet",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 3
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Helmet, Other than DOT-Compliant Motorcycle Helmet",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 3
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "DOT-Compliant Motorcycle Helmet",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 3
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Unknown if Helmet Worn",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 3
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "DOT-Compliant Motorcycle Helmet",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 3
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Other",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 2
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint Type Unknown",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 2
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Helmet, Other than DOT-Compliant Motorcycle Helmet",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 1
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "DOT-Compliant Motorcycle Helmet",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 1
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Unknown if Helmet Worn",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Shoulder Belt Only Used",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 1
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Child Restraint System – Forward Facing (Since 2008)",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 1
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Restraint Used – Type Unknown",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 1
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "restraint_system_helmet_use_name": "Booster Seat",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 1
+      }
+    ]
+  }
+};
+const ejection = {
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-5fa00275eadba6beb85bc5a5397002fe"},
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "injury_severity_name",
+      "legend": {"title": "Injury severity"},
+      "scale": {
+        "range": [
+          "#d73027",
+          "#f46d43",
+          "#fdae61",
+          "#ffffbf",
+          "#ffffbf",
+          "#4575b4"
+        ]
+      },
+      "sort": [
+        "Fatal Injury (K)",
+        "Suspected Serious Injury (A)",
+        "Suspected Minor Injury (B)",
+        "Possible Injury (C)",
+        "Injured, Severity Unknown (U) (Since 1978)",
+        "No Apparent Injury (O)"
+      ]
+    },
+    "order": {"type": "nominal", "field": "order"},
+    "tooltip": [
+      {"type": "quantitative", "aggregate": "sum", "field": "count"},
+      {"type": "nominal", "field": "ejection_name"},
+      {"type": "nominal", "field": "injury_severity_name"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "aggregate": "sum",
+      "axis": {"title": "Percent in all types of injuries"},
+      "field": "count",
+      "stack": "normalize"
+    },
+    "y": {
+      "type": "nominal",
+      "axis": {"title": "Ejection scenario"},
+      "field": "ejection_name"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "if(datum.injury_severity_name === 'Fatal Injury (K)', 0,            if(datum.injury_severity_name === 'Suspected Serious Injury (A)', 1,            if(datum.injury_severity_name === 'Suspected Minor Injury (B)', 2,            if(datum.injury_severity_name === 'Possible Injury (C)', 3,            if(datum.injury_severity_name === 'Injured, Severity Unknown (U) (Since 1978)', 4,            if(datum.injury_severity_name === 'No Apparent Injury (O)', 5, 6))))))",
+      "as": "order"
+    }
+  ],
+  "width": DEFAULT_GRAPH_WIDTH_SMALL,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-5fa00275eadba6beb85bc5a5397002fe": [
+      {
+        "ejection_name": "Not Ejected",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 20575
+      },
+      {
+        "ejection_name": "Not Ejected",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 19056
+      },
+      {
+        "ejection_name": "Not Ejected",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 9083
+      },
+      {
+        "ejection_name": "Not Ejected",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 7179
+      },
+      {
+        "ejection_name": "Not Ejected",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 7174
+      },
+      {
+        "ejection_name": "Totally Ejected",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 4745
+      },
+      {
+        "ejection_name": "Partially Ejected",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 1225
+      },
+      {
+        "ejection_name": "Totally Ejected",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 699
+      },
+      {
+        "ejection_name": "Totally Ejected",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 296
+      },
+      {
+        "ejection_name": "Not Ejected",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 212
+      },
+      {
+        "ejection_name": "Partially Ejected",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 119
+      },
+      {
+        "ejection_name": "Ejected – Unknown Degree (Since 2008)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 87
+      },
+      {
+        "ejection_name": "Totally Ejected",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 71
+      },
+      {
+        "ejection_name": "Partially Ejected",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 42
+      },
+      {
+        "ejection_name": "Totally Ejected",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 25
+      },
+      {
+        "ejection_name": "Ejected – Unknown Degree (Since 2008)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 13
+      },
+      {
+        "ejection_name": "Partially Ejected",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 11
+      },
+      {
+        "ejection_name": "Totally Ejected",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 6
+      },
+      {
+        "ejection_name": "Ejected – Unknown Degree (Since 2008)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 5
+      },
+      {
+        "ejection_name": "Partially Ejected",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 4
+      },
+      {
+        "ejection_name": "Ejected – Unknown Degree (Since 2008)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1
+      },
+      {
+        "ejection_name": "Partially Ejected",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 1
+      }
+    ]
+  }
+};
 const alcohol = {
   "config": {"view": {"width": 400, "height": 300}},
   "data": {"name": "data-8406a5ea26bc0ec7d871fd1d914ff5ca"},
@@ -1705,8 +2423,10 @@ const airbagDeployment =
     ]
   }
 };
+vegaEmbed("#passengerRestraintUse", passengerRestraintUse);
 vegaEmbed("#alcohol", alcohol);
 vegaEmbed("#drug", drug);
+vegaEmbed("#ejection", ejection);
 vegaEmbed("#fatalityRateByCounty", fatalityRateByCounty);
 vegaEmbed("#vehicleModelYear", vehicleModelYear);
 vegaEmbed("#vehicleAge", vehicleAge);
