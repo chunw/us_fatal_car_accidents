@@ -6,6 +6,9 @@
       <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script src="https://d3js.org/d3.v5.min.js"></script>
+      <!--
+      <link rel="shortcut icon" href="img/favicon.png">
+      -->
       <link rel="stylesheet" href="css/3dmap.css">
       <link rel="stylesheet" href="css/main.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
@@ -77,11 +80,20 @@
     <!-- HELP -->
     <div id="tooltip-help">
       <div class="g-item g-subhed ">
-        <div>
+        <div style="margin-top: 60px;">
+          [1] <i> Motor Vehicle Traffic Crashes as a Leading Cause of Death in the United States, 2015 </i> (<a href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812499" target="_blank">NHSTA Research Note</a>).
+        </div>
+
+        <div style="margin-top: 100px;">
+          [2] Dataset accessible via <a href="https://bigquery.cloud.google.com/dataset/bigquery-public-data:nhtsa_traffic_fatalities" target="_blank">Google BigQuery</a>.
+        </div>
+
+        <div style="margin-top: 12px;">
           <strong>Tip:</strong><br>Hover on
           <span class="fake-tooltipped" >text of this color</span>
           to view tooltip.
         </div>
+
       </div>
 
     </div>
@@ -100,10 +112,21 @@
       <!-- INTRO -->
       <div class="g-item g-text ">
         <p class="g-body">
-          Motor vehicle travel is a major means of transportation in the United States, providing an unparalleled degree of mobility. Yet for all its advantages, motor vehicle crashes were the leading cause of death ... information on fatal motor vehicle crashes and fatalities based on data encoded using the
+          Motor vehicle travel is a major means of transportation in the United States, yet for all its advantages,
+          motor vehicle crashes are the leading cause of death for persons every age from 5 to 32 years old [1].
+          A motor vehicle crash results from a combination of factors related to the components of the system
+          comprising roads, the environment, vehicles and road users, and the way they interact.
+
+          Identifying the top risk factors that contribute to fatal motor vehicle crashes is important in developing
+          interventions that can reduce the risks associated with those factors.
+          We deep dived into the fatal car crash records in the U.S. in year 2016, collected by National Highway
+          Traffic Safety Administration (NHSTA) [2] and encoded using the
           <a target="_blank" class="tooltipped" data-position="right" data-tooltip="<div class='custom-tooltip'>Fatality Analysis Reporting System is a nationwide census providing <br> NHTSA (National Highway Traffic Safety Administration), Congress <br> and the American public yearly data regarding fatal injuries suffered <br> in motor vehicle traffic crashes.<br><br>Click the link to view how data are encoded using the FARS system.</div>"
-          href="https://ire.org/media/uploads/files/datalibrary/samplefiles/DOT%20Fatality%20Analysis%20Reporting%20System%20-%20Simplified/USERGUIDE-2013.pdf">Fatality Analysis Reporting System</a>.
+          href="https://ire.org/media/uploads/files/datalibrary/samplefiles/DOT%20Fatality%20Analysis%20Reporting%20System%20-%20Simplified/USERGUIDE-2013.pdf">Fatality Analysis Reporting System</a> and identified the top factors that are highly correlated to fatality in motor vehicle crashes.
+
+          <!--
           These reports focus on vehicles, drivers, passengers, pedestrians, and motorcyclists and use that to develop and refine countermeasures to deter unsafe behaviors and promote safe alternatives.
+          -->
         </p>
       </div>
 
@@ -193,9 +216,11 @@
             trauma severity. Some
             causes are immediate, but they may be
             underpinned by medium-term and long-term
-            structural causes. Identifying the risk factors that
-            contribute to fatal road traffic crashes is important in
-            identifying interventions that can reduce the risks associated with those factors.
+            structural causes.
+
+            <br>
+            As we explore how different variables correlate with fatality risk of a person,
+            and it is important to look at how fatality risk should be defined, based on the data available.
         </p>
 
         <!-- Analysis -->
