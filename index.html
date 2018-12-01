@@ -206,13 +206,16 @@
               </div>
               <div class="analysis">
                 <div class="viz ">
+                  <div id="dangerousTime"></div>
                   <p>Hover on circles to view details.</p>
                   <p class="method">
-                    <strong>Methodology:</strong> The average fatality percentage is computed as <span class="formula">{[fatality in vehicle] / [all occupants in vehicle]} × 100%. </span></p>
-                  </p>
-                </div>
+                    <strong>Methodology:</strong> The size and color indicates crash frequency during the given hour in the given month.
+                  
+                    <div class="">
+                    Fatal crashes mostly happen in rush hours with busy traffic caused by commuting, e.g. from <b>17:00 to 19:00</b>. Interestingly, they are also more frequent in winter seasons, e.g. <b>November, Decemeber and Janurary</b>, which might be related to the terrible weather conditions (snow in the East and rain on the west).
+                    </div>
+                  </div>
                 <div class="text">
-                  A higher proportion of the occupants of older model-year vehicles suffered fatality / a fatal injury.
                 </div>
               </div>
           </section>
@@ -220,6 +223,10 @@
           <section id="section-road">
               <div class="g-item g-subhed ">
                 <h2><strong>Road Condition</strong></h2>
+              </div>
+
+              <div class="g-item g-subhed ">
+                  <h6><strong>The Most Dangerous Highway</strong></h6>
               </div>
               <div class="analysis">
                 <div class="viz ">
@@ -248,7 +255,49 @@
                 </div>
 
               </div>
-          </section>
+
+              <div class="g-item g-subhed ">
+                  <h6><strong>Traffic Controls Absence in Rural Area</strong></h6>
+                </div>
+                <div class="analysis">
+                  <div class="viz ">
+                    <div id="controlRural"></div>
+                    <p>Hover on bars to view details.</p>
+                    <p class="method">
+                      <strong>Methodology:</strong> [todo] 
+                    </p>
+
+                    <div class="">
+                      ...
+                    </div>
+                  </div>
+                  <br>
+                  <div class="text">
+                    [todo]
+                  </div>
+                </div>
+              
+                <div class="g-item g-subhed ">
+                    <h6><strong>Traffic Controls Absence in Urban, Local Area</strong></h6>
+                  </div>
+                  <div class="analysis">
+                    <div class="viz ">
+                      <div id="controlLocal"></div>
+                      <p>Hover on bars to view details.</p>
+                      <p class="method">
+                        <strong>Methodology:</strong> [todo] 
+                      </p>
+  
+                      <div class="">
+                          ...
+                      </div>
+                    </div>
+                    <br>
+                    <div class="text">
+                      [todo]
+                    </div>
+                  </div>
+          </section>        
 
           <section id="section-driver">
               <div class="g-item g-subhed ">
@@ -285,6 +334,26 @@
                 </div>
                 <div class="text">
                   [todo]
+                </div>
+              </div>
+
+
+              <div class="g-item g-subhed ">
+                <h6><strong>Vehicle Speed v.s. Speeding Record</strong></h6>
+              </div>
+              <div class="analysis">
+                <div class="viz ">
+                  <div id="speeding"></div>
+                  <p>Hover on bars to view details.</p>
+                  <p class="method">
+                    <strong>Methodology:</strong> The data relates the vehicle speed to the driver’s speeding record. Vehicle speed is compared against the speed limit. e.g. '20+' means the vehicle was traveling 20 MPH more than the speed limit. Speeding record is represented by the number of previous speeding convictions for the driver that occurred within five years of the crash date, ranging from 0 to 7.
+                  </p>
+
+                  <div class="">
+                  Overall, the green bars (“no speeding”) display a downward trend, i.e. drivers who kept a good record in the past tend to behave well all the time. Note that no-speeding ratio increases significantly when the number of previous speeding convictions rises to 6. This suggests that drivers who frequently made mistakes may receive either punishment or education so that they started to respect the speed rule. The red bars (“severe speeding”) first reach a peak and then decrease. This suggests that wild drivers are less likely to be deterred from defying the rule. 
+                  </div>
+                </div>
+                <div class="text">
                 </div>
               </div>
           </section>
@@ -425,6 +494,75 @@
 
           </section>
 
+          <section id="section-rescue">
+              <div class="g-item g-subhed ">
+                <h2><strong>Rescue Delay</strong></h2>
+              </div>
+
+              <div class="g-item g-subhed ">
+                  <h6><strong>Response Time in Urban Area</strong></h6>
+                </div>
+                <div class="analysis">
+                  <div class="viz ">
+                    <div id="rescueUrban"></div>
+                    <p>Hover on bars to view details.</p>
+                    <p class="method">
+                      <strong>Methodology:</strong> [todo] 
+                    </p>
+
+                    <div class="">
+                        ...
+                    </div>
+                  </div>
+                  <br>
+                  <div class="text">
+                    [todo]
+                  </div>
+                </div>
+
+                <div class="g-item g-subhed ">
+                    <h6><strong>Response Time in Rural Area</strong></h6>
+                  </div>
+                  <div class="analysis">
+                    <div class="viz ">
+                      <div id="rescueRural"></div>
+                      <p>Hover on bars to view details.</p>
+                      <p class="method">
+                        <strong>Methodology:</strong> [todo] 
+                      </p>
+  
+                      <div class="">
+                          ...
+                      </div>
+                    </div>
+                    <br>
+                    <div class="text">
+                      [todo]
+                    </div>
+                  </div>
+              
+                  <div class="g-item g-subhed ">
+                      <h6><strong>Response Time v.s. Emergency Medical Service Facilities</strong></h6>
+                    </div>
+                    <div class="analysis">
+                      <div class="viz ">
+                        <div id="rescueEMS"></div>
+                        <p>Hover on bars to view details.</p>
+                        <p class="method">
+                          <strong>Methodology:</strong> [todo] 
+                        </p>
+    
+                        <div class="">
+                            ...
+                        </div>
+                      </div>
+                      <br>
+                      <div class="text">
+                        [todo]
+                      </div>
+                    </div>
+          </section>
+          
 
         </div>
 

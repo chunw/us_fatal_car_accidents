@@ -2423,6 +2423,2699 @@ const airbagDeployment =
     ]
   }
 };
+const speeding = 
+{
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-81b933d9d4b63fc38467ed547072996c"},
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "Speeding Type",
+      "legend": {"title": "Speeding Type"},
+      "scale": {"range": ["#98eab0", "#FFFFBF", "#FDAE61", "#d73027"]}
+    },
+    "column": {
+      "type": "quantitative",
+      "field": "Number of Previous Speeding Convictions"
+    },
+    "tooltip": [
+      {
+        "type": "quantitative",
+        "field": "Number of Previous Speeding Convictions"
+      },
+      {"type": "nominal", "field": "Speeding Type"},
+      {"type": "quantitative", "field": "Ratio"}
+    ],
+    "x": {"type": "nominal", "axis": {"title": ""}, "field": "Speeding Type"},
+    "y": {"type": "quantitative", "axis": {"grid": false}, "field": "Ratio"}
+  },
+  "width": 60,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-81b933d9d4b63fc38467ed547072996c": [
+      {
+        "Number of Previous Speeding Convictions": 0,
+        "Speeding Type": "0 or below",
+        "Ratio": 0.733
+      },
+      {
+        "Number of Previous Speeding Convictions": 0,
+        "Speeding Type": "1 ~ 10",
+        "Ratio": 0.116
+      },
+      {
+        "Number of Previous Speeding Convictions": 0,
+        "Speeding Type": "10 ~ 20",
+        "Ratio": 0.069
+      },
+      {
+        "Number of Previous Speeding Convictions": 0,
+        "Speeding Type": "20+",
+        "Ratio": 0.082
+      },
+      {
+        "Number of Previous Speeding Convictions": 1,
+        "Speeding Type": "0 or below",
+        "Ratio": 0.667
+      },
+      {
+        "Number of Previous Speeding Convictions": 1,
+        "Speeding Type": "1 ~ 10",
+        "Ratio": 0.12
+      },
+      {
+        "Number of Previous Speeding Convictions": 1,
+        "Speeding Type": "10 ~ 20",
+        "Ratio": 0.086
+      },
+      {
+        "Number of Previous Speeding Convictions": 1,
+        "Speeding Type": "20+",
+        "Ratio": 0.126
+      },
+      {
+        "Number of Previous Speeding Convictions": 2,
+        "Speeding Type": "0 or below",
+        "Ratio": 0.621
+      },
+      {
+        "Number of Previous Speeding Convictions": 2,
+        "Speeding Type": "1 ~ 10",
+        "Ratio": 0.121
+      },
+      {
+        "Number of Previous Speeding Convictions": 2,
+        "Speeding Type": "10 ~ 20",
+        "Ratio": 0.11
+      },
+      {
+        "Number of Previous Speeding Convictions": 2,
+        "Speeding Type": "20+",
+        "Ratio": 0.148
+      },
+      {
+        "Number of Previous Speeding Convictions": 3,
+        "Speeding Type": "0 or below",
+        "Ratio": 0.548
+      },
+      {
+        "Number of Previous Speeding Convictions": 3,
+        "Speeding Type": "1 ~ 10",
+        "Ratio": 0.164
+      },
+      {
+        "Number of Previous Speeding Convictions": 3,
+        "Speeding Type": "10 ~ 20",
+        "Ratio": 0.072
+      },
+      {
+        "Number of Previous Speeding Convictions": 3,
+        "Speeding Type": "20+",
+        "Ratio": 0.216
+      },
+      {
+        "Number of Previous Speeding Convictions": 4,
+        "Speeding Type": "0 or below",
+        "Ratio": 0.558
+      },
+      {
+        "Number of Previous Speeding Convictions": 4,
+        "Speeding Type": "1 ~ 10",
+        "Ratio": 0.144
+      },
+      {
+        "Number of Previous Speeding Convictions": 4,
+        "Speeding Type": "10 ~ 20",
+        "Ratio": 0.115
+      },
+      {
+        "Number of Previous Speeding Convictions": 4,
+        "Speeding Type": "20+",
+        "Ratio": 0.183
+      },
+      {
+        "Number of Previous Speeding Convictions": 5,
+        "Speeding Type": "0 or below",
+        "Ratio": 0.513
+      },
+      {
+        "Number of Previous Speeding Convictions": 5,
+        "Speeding Type": "1 ~ 10",
+        "Ratio": 0.179
+      },
+      {
+        "Number of Previous Speeding Convictions": 5,
+        "Speeding Type": "10 ~ 20",
+        "Ratio": 0.179
+      },
+      {
+        "Number of Previous Speeding Convictions": 5,
+        "Speeding Type": "20+",
+        "Ratio": 0.128
+      },
+      {
+        "Number of Previous Speeding Convictions": 6,
+        "Speeding Type": "0 or below",
+        "Ratio": 0.812
+      },
+      {
+        "Number of Previous Speeding Convictions": 6,
+        "Speeding Type": "1 ~ 10",
+        "Ratio": 0.062
+      },
+      {
+        "Number of Previous Speeding Convictions": 6,
+        "Speeding Type": "10 ~ 20",
+        "Ratio": 0
+      },
+      {
+        "Number of Previous Speeding Convictions": 6,
+        "Speeding Type": "20+",
+        "Ratio": 0.125
+      },
+      {
+        "Number of Previous Speeding Convictions": 7,
+        "Speeding Type": "0 or below",
+        "Ratio": 0.692
+      },
+      {
+        "Number of Previous Speeding Convictions": 7,
+        "Speeding Type": "1 ~ 10",
+        "Ratio": 0.077
+      },
+      {
+        "Number of Previous Speeding Convictions": 7,
+        "Speeding Type": "10 ~ 20",
+        "Ratio": 0.154
+      },
+      {
+        "Number of Previous Speeding Convictions": 7,
+        "Speeding Type": "20+",
+        "Ratio": 0.077
+      }
+    ]
+  }
+};
+const dangerousTime = 
+{
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-a77201e85a3aa10293304dea84d02bc5"},
+  "mark": "circle",
+  "encoding": {
+    "color": {
+      "type": "quantitative",
+      "aggregate": "sum",
+      "field": "Crash Count"
+    },
+    "size": {
+      "type": "quantitative",
+      "aggregate": "sum",
+      "field": "Crash Count",
+      "title": "Number of Crashes"
+    },
+    "tooltip": [
+      {"type": "quantitative", "field": "Month of Crash"},
+      {"type": "quantitative", "field": "Hour of Crash"},
+      {"type": "quantitative", "field": "Crash Count"}
+    ],
+    "x": {
+      "type": "ordinal",
+      "axis": {"title": "Hour of Crash"},
+      "field": "Hour of Crash"
+    },
+    "y": {
+      "type": "ordinal",
+      "axis": {"title": "Month of Crash"},
+      "field": "Month of Crash"
+    }
+  },
+  "title": "The Most Dangerous Month/Hour in 2016",
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-a77201e85a3aa10293304dea84d02bc5": [
+      {"Month of Crash": 1, "Hour of Crash": 0, "Crash Count": 11},
+      {"Month of Crash": 1, "Hour of Crash": 1, "Crash Count": 9},
+      {"Month of Crash": 1, "Hour of Crash": 2, "Crash Count": 13},
+      {"Month of Crash": 1, "Hour of Crash": 3, "Crash Count": 5},
+      {"Month of Crash": 1, "Hour of Crash": 4, "Crash Count": 4},
+      {"Month of Crash": 1, "Hour of Crash": 5, "Crash Count": 5},
+      {"Month of Crash": 1, "Hour of Crash": 6, "Crash Count": 10},
+      {"Month of Crash": 1, "Hour of Crash": 7, "Crash Count": 5},
+      {"Month of Crash": 1, "Hour of Crash": 8, "Crash Count": 6},
+      {"Month of Crash": 1, "Hour of Crash": 9, "Crash Count": 5},
+      {"Month of Crash": 1, "Hour of Crash": 10, "Crash Count": 8},
+      {"Month of Crash": 1, "Hour of Crash": 11, "Crash Count": 7},
+      {"Month of Crash": 1, "Hour of Crash": 12, "Crash Count": 6},
+      {"Month of Crash": 1, "Hour of Crash": 13, "Crash Count": 8},
+      {"Month of Crash": 1, "Hour of Crash": 14, "Crash Count": 10},
+      {"Month of Crash": 1, "Hour of Crash": 15, "Crash Count": 6},
+      {"Month of Crash": 1, "Hour of Crash": 16, "Crash Count": 8},
+      {"Month of Crash": 1, "Hour of Crash": 17, "Crash Count": 16},
+      {"Month of Crash": 1, "Hour of Crash": 18, "Crash Count": 25},
+      {"Month of Crash": 1, "Hour of Crash": 19, "Crash Count": 14},
+      {"Month of Crash": 1, "Hour of Crash": 20, "Crash Count": 14},
+      {"Month of Crash": 1, "Hour of Crash": 21, "Crash Count": 10},
+      {"Month of Crash": 1, "Hour of Crash": 22, "Crash Count": 10},
+      {"Month of Crash": 1, "Hour of Crash": 23, "Crash Count": 5},
+      {"Month of Crash": 2, "Hour of Crash": 0, "Crash Count": 23},
+      {"Month of Crash": 2, "Hour of Crash": 1, "Crash Count": 12},
+      {"Month of Crash": 2, "Hour of Crash": 2, "Crash Count": 8},
+      {"Month of Crash": 2, "Hour of Crash": 3, "Crash Count": 9},
+      {"Month of Crash": 2, "Hour of Crash": 4, "Crash Count": 5},
+      {"Month of Crash": 2, "Hour of Crash": 5, "Crash Count": 6},
+      {"Month of Crash": 2, "Hour of Crash": 6, "Crash Count": 10},
+      {"Month of Crash": 2, "Hour of Crash": 7, "Crash Count": 9},
+      {"Month of Crash": 2, "Hour of Crash": 8, "Crash Count": 8},
+      {"Month of Crash": 2, "Hour of Crash": 9, "Crash Count": 8},
+      {"Month of Crash": 2, "Hour of Crash": 10, "Crash Count": 7},
+      {"Month of Crash": 2, "Hour of Crash": 11, "Crash Count": 9},
+      {"Month of Crash": 2, "Hour of Crash": 12, "Crash Count": 9},
+      {"Month of Crash": 2, "Hour of Crash": 13, "Crash Count": 9},
+      {"Month of Crash": 2, "Hour of Crash": 14, "Crash Count": 12},
+      {"Month of Crash": 2, "Hour of Crash": 15, "Crash Count": 9},
+      {"Month of Crash": 2, "Hour of Crash": 16, "Crash Count": 16},
+      {"Month of Crash": 2, "Hour of Crash": 17, "Crash Count": 12},
+      {"Month of Crash": 2, "Hour of Crash": 18, "Crash Count": 26},
+      {"Month of Crash": 2, "Hour of Crash": 19, "Crash Count": 20},
+      {"Month of Crash": 2, "Hour of Crash": 20, "Crash Count": 12},
+      {"Month of Crash": 2, "Hour of Crash": 21, "Crash Count": 14},
+      {"Month of Crash": 2, "Hour of Crash": 22, "Crash Count": 7},
+      {"Month of Crash": 2, "Hour of Crash": 23, "Crash Count": 8},
+      {"Month of Crash": 3, "Hour of Crash": 0, "Crash Count": 10},
+      {"Month of Crash": 3, "Hour of Crash": 1, "Crash Count": 7},
+      {"Month of Crash": 3, "Hour of Crash": 2, "Crash Count": 12},
+      {"Month of Crash": 3, "Hour of Crash": 3, "Crash Count": 6},
+      {"Month of Crash": 3, "Hour of Crash": 4, "Crash Count": 9},
+      {"Month of Crash": 3, "Hour of Crash": 5, "Crash Count": 9},
+      {"Month of Crash": 3, "Hour of Crash": 6, "Crash Count": 16},
+      {"Month of Crash": 3, "Hour of Crash": 7, "Crash Count": 11},
+      {"Month of Crash": 3, "Hour of Crash": 8, "Crash Count": 5},
+      {"Month of Crash": 3, "Hour of Crash": 9, "Crash Count": 8},
+      {"Month of Crash": 3, "Hour of Crash": 10, "Crash Count": 8},
+      {"Month of Crash": 3, "Hour of Crash": 11, "Crash Count": 10},
+      {"Month of Crash": 3, "Hour of Crash": 12, "Crash Count": 15},
+      {"Month of Crash": 3, "Hour of Crash": 13, "Crash Count": 4},
+      {"Month of Crash": 3, "Hour of Crash": 14, "Crash Count": 5},
+      {"Month of Crash": 3, "Hour of Crash": 15, "Crash Count": 11},
+      {"Month of Crash": 3, "Hour of Crash": 16, "Crash Count": 10},
+      {"Month of Crash": 3, "Hour of Crash": 17, "Crash Count": 11},
+      {"Month of Crash": 3, "Hour of Crash": 18, "Crash Count": 18},
+      {"Month of Crash": 3, "Hour of Crash": 19, "Crash Count": 11},
+      {"Month of Crash": 3, "Hour of Crash": 20, "Crash Count": 15},
+      {"Month of Crash": 3, "Hour of Crash": 21, "Crash Count": 16},
+      {"Month of Crash": 3, "Hour of Crash": 22, "Crash Count": 14},
+      {"Month of Crash": 3, "Hour of Crash": 23, "Crash Count": 20},
+      {"Month of Crash": 4, "Hour of Crash": 0, "Crash Count": 9},
+      {"Month of Crash": 4, "Hour of Crash": 1, "Crash Count": 15},
+      {"Month of Crash": 4, "Hour of Crash": 2, "Crash Count": 16},
+      {"Month of Crash": 4, "Hour of Crash": 3, "Crash Count": 10},
+      {"Month of Crash": 4, "Hour of Crash": 4, "Crash Count": 7},
+      {"Month of Crash": 4, "Hour of Crash": 5, "Crash Count": 8},
+      {"Month of Crash": 4, "Hour of Crash": 6, "Crash Count": 4},
+      {"Month of Crash": 4, "Hour of Crash": 7, "Crash Count": 6},
+      {"Month of Crash": 4, "Hour of Crash": 8, "Crash Count": 6},
+      {"Month of Crash": 4, "Hour of Crash": 9, "Crash Count": 10},
+      {"Month of Crash": 4, "Hour of Crash": 10, "Crash Count": 8},
+      {"Month of Crash": 4, "Hour of Crash": 11, "Crash Count": 12},
+      {"Month of Crash": 4, "Hour of Crash": 12, "Crash Count": 10},
+      {"Month of Crash": 4, "Hour of Crash": 13, "Crash Count": 12},
+      {"Month of Crash": 4, "Hour of Crash": 14, "Crash Count": 12},
+      {"Month of Crash": 4, "Hour of Crash": 15, "Crash Count": 6},
+      {"Month of Crash": 4, "Hour of Crash": 16, "Crash Count": 13},
+      {"Month of Crash": 4, "Hour of Crash": 17, "Crash Count": 10},
+      {"Month of Crash": 4, "Hour of Crash": 18, "Crash Count": 10},
+      {"Month of Crash": 4, "Hour of Crash": 19, "Crash Count": 14},
+      {"Month of Crash": 4, "Hour of Crash": 20, "Crash Count": 25},
+      {"Month of Crash": 4, "Hour of Crash": 21, "Crash Count": 20},
+      {"Month of Crash": 4, "Hour of Crash": 22, "Crash Count": 15},
+      {"Month of Crash": 4, "Hour of Crash": 23, "Crash Count": 19},
+      {"Month of Crash": 5, "Hour of Crash": 0, "Crash Count": 14},
+      {"Month of Crash": 5, "Hour of Crash": 1, "Crash Count": 16},
+      {"Month of Crash": 5, "Hour of Crash": 2, "Crash Count": 16},
+      {"Month of Crash": 5, "Hour of Crash": 3, "Crash Count": 14},
+      {"Month of Crash": 5, "Hour of Crash": 4, "Crash Count": 5},
+      {"Month of Crash": 5, "Hour of Crash": 5, "Crash Count": 9},
+      {"Month of Crash": 5, "Hour of Crash": 6, "Crash Count": 7},
+      {"Month of Crash": 5, "Hour of Crash": 7, "Crash Count": 10},
+      {"Month of Crash": 5, "Hour of Crash": 8, "Crash Count": 7},
+      {"Month of Crash": 5, "Hour of Crash": 9, "Crash Count": 4},
+      {"Month of Crash": 5, "Hour of Crash": 10, "Crash Count": 9},
+      {"Month of Crash": 5, "Hour of Crash": 11, "Crash Count": 11},
+      {"Month of Crash": 5, "Hour of Crash": 12, "Crash Count": 6},
+      {"Month of Crash": 5, "Hour of Crash": 13, "Crash Count": 12},
+      {"Month of Crash": 5, "Hour of Crash": 14, "Crash Count": 15},
+      {"Month of Crash": 5, "Hour of Crash": 15, "Crash Count": 16},
+      {"Month of Crash": 5, "Hour of Crash": 16, "Crash Count": 21},
+      {"Month of Crash": 5, "Hour of Crash": 17, "Crash Count": 11},
+      {"Month of Crash": 5, "Hour of Crash": 18, "Crash Count": 13},
+      {"Month of Crash": 5, "Hour of Crash": 19, "Crash Count": 11},
+      {"Month of Crash": 5, "Hour of Crash": 20, "Crash Count": 17},
+      {"Month of Crash": 5, "Hour of Crash": 21, "Crash Count": 17},
+      {"Month of Crash": 5, "Hour of Crash": 22, "Crash Count": 15},
+      {"Month of Crash": 5, "Hour of Crash": 23, "Crash Count": 14},
+      {"Month of Crash": 6, "Hour of Crash": 0, "Crash Count": 21},
+      {"Month of Crash": 6, "Hour of Crash": 1, "Crash Count": 13},
+      {"Month of Crash": 6, "Hour of Crash": 2, "Crash Count": 17},
+      {"Month of Crash": 6, "Hour of Crash": 3, "Crash Count": 9},
+      {"Month of Crash": 6, "Hour of Crash": 4, "Crash Count": 17},
+      {"Month of Crash": 6, "Hour of Crash": 5, "Crash Count": 7},
+      {"Month of Crash": 6, "Hour of Crash": 6, "Crash Count": 8},
+      {"Month of Crash": 6, "Hour of Crash": 7, "Crash Count": 4},
+      {"Month of Crash": 6, "Hour of Crash": 8, "Crash Count": 2},
+      {"Month of Crash": 6, "Hour of Crash": 9, "Crash Count": 6},
+      {"Month of Crash": 6, "Hour of Crash": 10, "Crash Count": 13},
+      {"Month of Crash": 6, "Hour of Crash": 11, "Crash Count": 4},
+      {"Month of Crash": 6, "Hour of Crash": 12, "Crash Count": 11},
+      {"Month of Crash": 6, "Hour of Crash": 13, "Crash Count": 11},
+      {"Month of Crash": 6, "Hour of Crash": 14, "Crash Count": 8},
+      {"Month of Crash": 6, "Hour of Crash": 15, "Crash Count": 17},
+      {"Month of Crash": 6, "Hour of Crash": 16, "Crash Count": 15},
+      {"Month of Crash": 6, "Hour of Crash": 17, "Crash Count": 14},
+      {"Month of Crash": 6, "Hour of Crash": 18, "Crash Count": 18},
+      {"Month of Crash": 6, "Hour of Crash": 19, "Crash Count": 8},
+      {"Month of Crash": 6, "Hour of Crash": 20, "Crash Count": 18},
+      {"Month of Crash": 6, "Hour of Crash": 21, "Crash Count": 22},
+      {"Month of Crash": 6, "Hour of Crash": 22, "Crash Count": 10},
+      {"Month of Crash": 6, "Hour of Crash": 23, "Crash Count": 13},
+      {"Month of Crash": 7, "Hour of Crash": 0, "Crash Count": 23},
+      {"Month of Crash": 7, "Hour of Crash": 1, "Crash Count": 8},
+      {"Month of Crash": 7, "Hour of Crash": 2, "Crash Count": 14},
+      {"Month of Crash": 7, "Hour of Crash": 3, "Crash Count": 8},
+      {"Month of Crash": 7, "Hour of Crash": 4, "Crash Count": 15},
+      {"Month of Crash": 7, "Hour of Crash": 5, "Crash Count": 13},
+      {"Month of Crash": 7, "Hour of Crash": 6, "Crash Count": 7},
+      {"Month of Crash": 7, "Hour of Crash": 7, "Crash Count": 9},
+      {"Month of Crash": 7, "Hour of Crash": 8, "Crash Count": 6},
+      {"Month of Crash": 7, "Hour of Crash": 9, "Crash Count": 7},
+      {"Month of Crash": 7, "Hour of Crash": 10, "Crash Count": 7},
+      {"Month of Crash": 7, "Hour of Crash": 11, "Crash Count": 14},
+      {"Month of Crash": 7, "Hour of Crash": 12, "Crash Count": 12},
+      {"Month of Crash": 7, "Hour of Crash": 13, "Crash Count": 18},
+      {"Month of Crash": 7, "Hour of Crash": 14, "Crash Count": 19},
+      {"Month of Crash": 7, "Hour of Crash": 15, "Crash Count": 13},
+      {"Month of Crash": 7, "Hour of Crash": 16, "Crash Count": 12},
+      {"Month of Crash": 7, "Hour of Crash": 17, "Crash Count": 15},
+      {"Month of Crash": 7, "Hour of Crash": 18, "Crash Count": 13},
+      {"Month of Crash": 7, "Hour of Crash": 19, "Crash Count": 12},
+      {"Month of Crash": 7, "Hour of Crash": 20, "Crash Count": 20},
+      {"Month of Crash": 7, "Hour of Crash": 21, "Crash Count": 12},
+      {"Month of Crash": 7, "Hour of Crash": 22, "Crash Count": 13},
+      {"Month of Crash": 7, "Hour of Crash": 23, "Crash Count": 10},
+      {"Month of Crash": 8, "Hour of Crash": 0, "Crash Count": 16},
+      {"Month of Crash": 8, "Hour of Crash": 1, "Crash Count": 10},
+      {"Month of Crash": 8, "Hour of Crash": 2, "Crash Count": 9},
+      {"Month of Crash": 8, "Hour of Crash": 3, "Crash Count": 10},
+      {"Month of Crash": 8, "Hour of Crash": 4, "Crash Count": 8},
+      {"Month of Crash": 8, "Hour of Crash": 5, "Crash Count": 17},
+      {"Month of Crash": 8, "Hour of Crash": 6, "Crash Count": 9},
+      {"Month of Crash": 8, "Hour of Crash": 7, "Crash Count": 8},
+      {"Month of Crash": 8, "Hour of Crash": 8, "Crash Count": 11},
+      {"Month of Crash": 8, "Hour of Crash": 9, "Crash Count": 12},
+      {"Month of Crash": 8, "Hour of Crash": 10, "Crash Count": 10},
+      {"Month of Crash": 8, "Hour of Crash": 11, "Crash Count": 8},
+      {"Month of Crash": 8, "Hour of Crash": 12, "Crash Count": 6},
+      {"Month of Crash": 8, "Hour of Crash": 13, "Crash Count": 6},
+      {"Month of Crash": 8, "Hour of Crash": 14, "Crash Count": 17},
+      {"Month of Crash": 8, "Hour of Crash": 15, "Crash Count": 13},
+      {"Month of Crash": 8, "Hour of Crash": 16, "Crash Count": 18},
+      {"Month of Crash": 8, "Hour of Crash": 17, "Crash Count": 9},
+      {"Month of Crash": 8, "Hour of Crash": 18, "Crash Count": 18},
+      {"Month of Crash": 8, "Hour of Crash": 19, "Crash Count": 16},
+      {"Month of Crash": 8, "Hour of Crash": 20, "Crash Count": 27},
+      {"Month of Crash": 8, "Hour of Crash": 21, "Crash Count": 22},
+      {"Month of Crash": 8, "Hour of Crash": 22, "Crash Count": 13},
+      {"Month of Crash": 8, "Hour of Crash": 23, "Crash Count": 18},
+      {"Month of Crash": 9, "Hour of Crash": 0, "Crash Count": 10},
+      {"Month of Crash": 9, "Hour of Crash": 1, "Crash Count": 14},
+      {"Month of Crash": 9, "Hour of Crash": 2, "Crash Count": 17},
+      {"Month of Crash": 9, "Hour of Crash": 3, "Crash Count": 13},
+      {"Month of Crash": 9, "Hour of Crash": 4, "Crash Count": 9},
+      {"Month of Crash": 9, "Hour of Crash": 5, "Crash Count": 17},
+      {"Month of Crash": 9, "Hour of Crash": 6, "Crash Count": 13},
+      {"Month of Crash": 9, "Hour of Crash": 7, "Crash Count": 16},
+      {"Month of Crash": 9, "Hour of Crash": 8, "Crash Count": 6},
+      {"Month of Crash": 9, "Hour of Crash": 9, "Crash Count": 7},
+      {"Month of Crash": 9, "Hour of Crash": 10, "Crash Count": 6},
+      {"Month of Crash": 9, "Hour of Crash": 11, "Crash Count": 13},
+      {"Month of Crash": 9, "Hour of Crash": 12, "Crash Count": 13},
+      {"Month of Crash": 9, "Hour of Crash": 13, "Crash Count": 10},
+      {"Month of Crash": 9, "Hour of Crash": 14, "Crash Count": 9},
+      {"Month of Crash": 9, "Hour of Crash": 15, "Crash Count": 12},
+      {"Month of Crash": 9, "Hour of Crash": 16, "Crash Count": 19},
+      {"Month of Crash": 9, "Hour of Crash": 17, "Crash Count": 8},
+      {"Month of Crash": 9, "Hour of Crash": 18, "Crash Count": 11},
+      {"Month of Crash": 9, "Hour of Crash": 19, "Crash Count": 24},
+      {"Month of Crash": 9, "Hour of Crash": 20, "Crash Count": 15},
+      {"Month of Crash": 9, "Hour of Crash": 21, "Crash Count": 18},
+      {"Month of Crash": 9, "Hour of Crash": 22, "Crash Count": 21},
+      {"Month of Crash": 9, "Hour of Crash": 23, "Crash Count": 15},
+      {"Month of Crash": 10, "Hour of Crash": 0, "Crash Count": 19},
+      {"Month of Crash": 10, "Hour of Crash": 1, "Crash Count": 21},
+      {"Month of Crash": 10, "Hour of Crash": 2, "Crash Count": 16},
+      {"Month of Crash": 10, "Hour of Crash": 3, "Crash Count": 11},
+      {"Month of Crash": 10, "Hour of Crash": 4, "Crash Count": 6},
+      {"Month of Crash": 10, "Hour of Crash": 5, "Crash Count": 14},
+      {"Month of Crash": 10, "Hour of Crash": 6, "Crash Count": 20},
+      {"Month of Crash": 10, "Hour of Crash": 7, "Crash Count": 6},
+      {"Month of Crash": 10, "Hour of Crash": 8, "Crash Count": 8},
+      {"Month of Crash": 10, "Hour of Crash": 9, "Crash Count": 10},
+      {"Month of Crash": 10, "Hour of Crash": 10, "Crash Count": 12},
+      {"Month of Crash": 10, "Hour of Crash": 11, "Crash Count": 8},
+      {"Month of Crash": 10, "Hour of Crash": 12, "Crash Count": 9},
+      {"Month of Crash": 10, "Hour of Crash": 13, "Crash Count": 7},
+      {"Month of Crash": 10, "Hour of Crash": 14, "Crash Count": 6},
+      {"Month of Crash": 10, "Hour of Crash": 15, "Crash Count": 9},
+      {"Month of Crash": 10, "Hour of Crash": 16, "Crash Count": 16},
+      {"Month of Crash": 10, "Hour of Crash": 17, "Crash Count": 9},
+      {"Month of Crash": 10, "Hour of Crash": 18, "Crash Count": 17},
+      {"Month of Crash": 10, "Hour of Crash": 19, "Crash Count": 34},
+      {"Month of Crash": 10, "Hour of Crash": 20, "Crash Count": 14},
+      {"Month of Crash": 10, "Hour of Crash": 21, "Crash Count": 14},
+      {"Month of Crash": 10, "Hour of Crash": 22, "Crash Count": 17},
+      {"Month of Crash": 10, "Hour of Crash": 23, "Crash Count": 15},
+      {"Month of Crash": 11, "Hour of Crash": 0, "Crash Count": 13},
+      {"Month of Crash": 11, "Hour of Crash": 1, "Crash Count": 20},
+      {"Month of Crash": 11, "Hour of Crash": 2, "Crash Count": 14},
+      {"Month of Crash": 11, "Hour of Crash": 3, "Crash Count": 9},
+      {"Month of Crash": 11, "Hour of Crash": 4, "Crash Count": 9},
+      {"Month of Crash": 11, "Hour of Crash": 5, "Crash Count": 10},
+      {"Month of Crash": 11, "Hour of Crash": 6, "Crash Count": 10},
+      {"Month of Crash": 11, "Hour of Crash": 7, "Crash Count": 12},
+      {"Month of Crash": 11, "Hour of Crash": 8, "Crash Count": 11},
+      {"Month of Crash": 11, "Hour of Crash": 9, "Crash Count": 7},
+      {"Month of Crash": 11, "Hour of Crash": 10, "Crash Count": 4},
+      {"Month of Crash": 11, "Hour of Crash": 11, "Crash Count": 6},
+      {"Month of Crash": 11, "Hour of Crash": 12, "Crash Count": 8},
+      {"Month of Crash": 11, "Hour of Crash": 13, "Crash Count": 9},
+      {"Month of Crash": 11, "Hour of Crash": 14, "Crash Count": 12},
+      {"Month of Crash": 11, "Hour of Crash": 15, "Crash Count": 11},
+      {"Month of Crash": 11, "Hour of Crash": 16, "Crash Count": 24},
+      {"Month of Crash": 11, "Hour of Crash": 17, "Crash Count": 31},
+      {"Month of Crash": 11, "Hour of Crash": 18, "Crash Count": 27},
+      {"Month of Crash": 11, "Hour of Crash": 19, "Crash Count": 15},
+      {"Month of Crash": 11, "Hour of Crash": 20, "Crash Count": 16},
+      {"Month of Crash": 11, "Hour of Crash": 21, "Crash Count": 11},
+      {"Month of Crash": 11, "Hour of Crash": 22, "Crash Count": 14},
+      {"Month of Crash": 11, "Hour of Crash": 23, "Crash Count": 12},
+      {"Month of Crash": 12, "Hour of Crash": 0, "Crash Count": 10},
+      {"Month of Crash": 12, "Hour of Crash": 1, "Crash Count": 16},
+      {"Month of Crash": 12, "Hour of Crash": 2, "Crash Count": 6},
+      {"Month of Crash": 12, "Hour of Crash": 3, "Crash Count": 8},
+      {"Month of Crash": 12, "Hour of Crash": 4, "Crash Count": 8},
+      {"Month of Crash": 12, "Hour of Crash": 5, "Crash Count": 17},
+      {"Month of Crash": 12, "Hour of Crash": 6, "Crash Count": 14},
+      {"Month of Crash": 12, "Hour of Crash": 7, "Crash Count": 8},
+      {"Month of Crash": 12, "Hour of Crash": 8, "Crash Count": 9},
+      {"Month of Crash": 12, "Hour of Crash": 9, "Crash Count": 9},
+      {"Month of Crash": 12, "Hour of Crash": 10, "Crash Count": 3},
+      {"Month of Crash": 12, "Hour of Crash": 11, "Crash Count": 6},
+      {"Month of Crash": 12, "Hour of Crash": 12, "Crash Count": 8},
+      {"Month of Crash": 12, "Hour of Crash": 13, "Crash Count": 14},
+      {"Month of Crash": 12, "Hour of Crash": 14, "Crash Count": 4},
+      {"Month of Crash": 12, "Hour of Crash": 15, "Crash Count": 8},
+      {"Month of Crash": 12, "Hour of Crash": 16, "Crash Count": 16},
+      {"Month of Crash": 12, "Hour of Crash": 17, "Crash Count": 39},
+      {"Month of Crash": 12, "Hour of Crash": 18, "Crash Count": 26},
+      {"Month of Crash": 12, "Hour of Crash": 19, "Crash Count": 23},
+      {"Month of Crash": 12, "Hour of Crash": 20, "Crash Count": 27},
+      {"Month of Crash": 12, "Hour of Crash": 21, "Crash Count": 18},
+      {"Month of Crash": 12, "Hour of Crash": 22, "Crash Count": 9},
+      {"Month of Crash": 12, "Hour of Crash": 23, "Crash Count": 16}
+    ]
+  }
+};
+const controlRural =
+{
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-579b4809fe1ae1094e2ec266c70169f0"},
+  "mark": "point",
+  "encoding": {
+    "tooltip": [
+      {"type": "nominal", "field": "State"},
+      {"type": "quantitative", "field": "Functioning Ratio (Rural)"},
+      {"type": "quantitative", "field": "Absent Ratio (Rural)"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "axis": {
+        "title": "Traffic Controls Properly Functioning Ratio (Rural Area)"
+      },
+      "field": "Functioning Ratio (Rural)"
+    },
+    "y": {
+      "type": "quantitative",
+      "axis": {"title": "Traffic Controls Absent Ratio (Rural Area)"},
+      "field": "Absent Ratio (Rural)"
+    }
+  },
+  "width": 600,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-579b4809fe1ae1094e2ec266c70169f0": [
+      {
+        "State": "Kentucky",
+        "Functioning Ratio (Rural)": 0.37714987714987713,
+        "Absent Ratio (Rural)": 0.6203931203931204
+      },
+      {
+        "State": "Colorado",
+        "Functioning Ratio (Rural)": 0.2138728323699422,
+        "Absent Ratio (Rural)": 0.7861271676300579
+      },
+      {
+        "State": "Illinois",
+        "Functioning Ratio (Rural)": 0.21333333333333335,
+        "Absent Ratio (Rural)": 0.7783333333333333
+      },
+      {
+        "State": "Louisiana",
+        "Functioning Ratio (Rural)": 0.20987654320987653,
+        "Absent Ratio (Rural)": 0.7860082304526749
+      },
+      {
+        "State": "Georgia",
+        "Functioning Ratio (Rural)": 0.2064516129032258,
+        "Absent Ratio (Rural)": 0.7935483870967742
+      },
+      {
+        "State": "Indiana",
+        "Functioning Ratio (Rural)": 0.1867007672634271,
+        "Absent Ratio (Rural)": 0.8069053708439897
+      },
+      {
+        "State": "Iowa",
+        "Functioning Ratio (Rural)": 0.1724137931034483,
+        "Absent Ratio (Rural)": 0.8226600985221675
+      },
+      {
+        "State": "Delaware",
+        "Functioning Ratio (Rural)": 0.1650485436893204,
+        "Absent Ratio (Rural)": 0.8155339805825242
+      },
+      {
+        "State": "Ohio",
+        "Functioning Ratio (Rural)": 0.16032608695652173,
+        "Absent Ratio (Rural)": 0.8369565217391305
+      },
+      {
+        "State": "Michigan",
+        "Functioning Ratio (Rural)": 0.15304347826086956,
+        "Absent Ratio (Rural)": 0.8469565217391304
+      },
+      {
+        "State": "Wyoming",
+        "Functioning Ratio (Rural)": 0.15126050420168066,
+        "Absent Ratio (Rural)": 0.8403361344537815
+      },
+      {
+        "State": "Nebraska",
+        "Functioning Ratio (Rural)": 0.1493212669683258,
+        "Absent Ratio (Rural)": 0.8461538461538461
+      },
+      {
+        "State": "Nevada",
+        "Functioning Ratio (Rural)": 0.14685314685314685,
+        "Absent Ratio (Rural)": 0.8531468531468531
+      },
+      {
+        "State": "Florida",
+        "Functioning Ratio (Rural)": 0.14509480626545754,
+        "Absent Ratio (Rural)": 0.854080791426216
+      },
+      {
+        "State": "Pennsylvania",
+        "Functioning Ratio (Rural)": 0.13303769401330376,
+        "Absent Ratio (Rural)": 0.8636363636363636
+      },
+      {
+        "State": "Minnesota",
+        "Functioning Ratio (Rural)": 0.13095238095238096,
+        "Absent Ratio (Rural)": 0.8541666666666666
+      },
+      {
+        "State": "Wisconsin",
+        "Functioning Ratio (Rural)": 0.1303538175046555,
+        "Absent Ratio (Rural)": 0.8584729981378026
+      },
+      {
+        "State": "California",
+        "Functioning Ratio (Rural)": 0.12618724559023067,
+        "Absent Ratio (Rural)": 0.8697421981004071
+      },
+      {
+        "State": "Maryland",
+        "Functioning Ratio (Rural)": 0.12080536912751678,
+        "Absent Ratio (Rural)": 0.8791946308724832
+      },
+      {
+        "State": "Kansas",
+        "Functioning Ratio (Rural)": 0.1192214111922141,
+        "Absent Ratio (Rural)": 0.8807785888077859
+      },
+      {
+        "State": "Arkansas",
+        "Functioning Ratio (Rural)": 0.11836734693877551,
+        "Absent Ratio (Rural)": 0.8714285714285714
+      },
+      {
+        "State": "South Carolina",
+        "Functioning Ratio (Rural)": 0.11442786069651742,
+        "Absent Ratio (Rural)": 0.8843283582089553
+      },
+      {
+        "State": "Oklahoma",
+        "Functioning Ratio (Rural)": 0.10619469026548672,
+        "Absent Ratio (Rural)": 0.8920353982300885
+      },
+      {
+        "State": "Maine",
+        "Functioning Ratio (Rural)": 0.10588235294117647,
+        "Absent Ratio (Rural)": 0.8941176470588236
+      },
+      {
+        "State": "South Dakota",
+        "Functioning Ratio (Rural)": 0.09401709401709402,
+        "Absent Ratio (Rural)": 0.905982905982906
+      },
+      {
+        "State": "Hawaii",
+        "Functioning Ratio (Rural)": 0.09375,
+        "Absent Ratio (Rural)": 0.90625
+      },
+      {
+        "State": "North Dakota",
+        "Functioning Ratio (Rural)": 0.09230769230769231,
+        "Absent Ratio (Rural)": 0.8846153846153846
+      },
+      {
+        "State": "Virginia",
+        "Functioning Ratio (Rural)": 0.0890302066772655,
+        "Absent Ratio (Rural)": 0.9109697933227345
+      },
+      {
+        "State": "Texas",
+        "Functioning Ratio (Rural)": 0.08897126969416126,
+        "Absent Ratio (Rural)": 0.9101019462465245
+      },
+      {
+        "State": "Connecticut",
+        "Functioning Ratio (Rural)": 0.08771929824561403,
+        "Absent Ratio (Rural)": 0.9122807017543859
+      },
+      {
+        "State": "Idaho",
+        "Functioning Ratio (Rural)": 0.0873015873015873,
+        "Absent Ratio (Rural)": 0.9126984126984127
+      },
+      {
+        "State": "North Carolina",
+        "Functioning Ratio (Rural)": 0.08726981585268215,
+        "Absent Ratio (Rural)": 0.9127301841473179
+      },
+      {
+        "State": "Alabama",
+        "Functioning Ratio (Rural)": 0.08571428571428572,
+        "Absent Ratio (Rural)": 0.9142857142857143
+      },
+      {
+        "State": "Oregon",
+        "Functioning Ratio (Rural)": 0.07598039215686274,
+        "Absent Ratio (Rural)": 0.9240196078431373
+      },
+      {
+        "State": "Missouri",
+        "Functioning Ratio (Rural)": 0.07513661202185792,
+        "Absent Ratio (Rural)": 0.9234972677595629
+      },
+      {
+        "State": "Washington",
+        "Functioning Ratio (Rural)": 0.07453416149068323,
+        "Absent Ratio (Rural)": 0.9254658385093167
+      },
+      {
+        "State": "Montana",
+        "Functioning Ratio (Rural)": 0.07329842931937172,
+        "Absent Ratio (Rural)": 0.9267015706806283
+      },
+      {
+        "State": "Mississippi",
+        "Functioning Ratio (Rural)": 0.07204610951008646,
+        "Absent Ratio (Rural)": 0.9279538904899135
+      },
+      {
+        "State": "Arizona",
+        "Functioning Ratio (Rural)": 0.06887755102040816,
+        "Absent Ratio (Rural)": 0.8928571428571429
+      },
+      {
+        "State": "West Virginia",
+        "Functioning Ratio (Rural)": 0.06635071090047394,
+        "Absent Ratio (Rural)": 0.933649289099526
+      },
+      {
+        "State": "New York",
+        "Functioning Ratio (Rural)": 0.0631911532385466,
+        "Absent Ratio (Rural)": 0.9368088467614534
+      },
+      {
+        "State": "New Jersey",
+        "Functioning Ratio (Rural)": 0.0625,
+        "Absent Ratio (Rural)": 0.9375
+      },
+      {
+        "State": "New Hampshire",
+        "Functioning Ratio (Rural)": 0.05263157894736842,
+        "Absent Ratio (Rural)": 0.9473684210526315
+      },
+      {
+        "State": "Tennessee",
+        "Functioning Ratio (Rural)": 0.051364365971107544,
+        "Absent Ratio (Rural)": 0.9486356340288925
+      },
+      {
+        "State": "Utah",
+        "Functioning Ratio (Rural)": 0.039473684210526314,
+        "Absent Ratio (Rural)": 0.9605263157894737
+      },
+      {
+        "State": "New Mexico",
+        "Functioning Ratio (Rural)": 0.03496503496503497,
+        "Absent Ratio (Rural)": 0.958041958041958
+      },
+      {
+        "State": "Alaska",
+        "Functioning Ratio (Rural)": 0.01694915254237288,
+        "Absent Ratio (Rural)": 0.9830508474576272
+      },
+      {
+        "State": "Vermont",
+        "Functioning Ratio (Rural)": 0.01639344262295082,
+        "Absent Ratio (Rural)": 0.9836065573770492
+      }
+    ]
+  }
+};
+const controlLocal = 
+{
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-f66e4395af8ad4d3dd94f23b8d8b840a"},
+  "mark": "point",
+  "encoding": {
+    "tooltip": [
+      {"type": "nominal", "field": "State"},
+      {"type": "quantitative", "field": "Functioning Ratio (Urban, Local)"},
+      {"type": "quantitative", "field": "Absent Ratio (Urban, Local)"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "axis": {
+        "title": "Traffic Controls Properly Functioning Ratio (Urban, Local)"
+      },
+      "field": "Functioning Ratio (Urban, Local)"
+    },
+    "y": {
+      "type": "quantitative",
+      "axis": {"title": "Traffic Controls Absent Ratio (Urban, Local)"},
+      "field": "Absent Ratio (Urban, Local)"
+    }
+  },
+  "width": 600,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-f66e4395af8ad4d3dd94f23b8d8b840a": [
+      {
+        "State": "Colorado",
+        "Functioning Ratio (Urban, Local)": 0.4528301886792453,
+        "Absent Ratio (Urban, Local)": 0.5471698113207547
+      },
+      {
+        "State": "New Mexico",
+        "Functioning Ratio (Urban, Local)": 0.45054945054945056,
+        "Absent Ratio (Urban, Local)": 0.5494505494505495
+      },
+      {
+        "State": "New York",
+        "Functioning Ratio (Urban, Local)": 0.41452991452991456,
+        "Absent Ratio (Urban, Local)": 0.5790598290598291
+      },
+      {
+        "State": "Virginia",
+        "Functioning Ratio (Urban, Local)": 0.40476190476190477,
+        "Absent Ratio (Urban, Local)": 0.5714285714285714
+      },
+      {
+        "State": "Nevada",
+        "Functioning Ratio (Urban, Local)": 0.39106145251396646,
+        "Absent Ratio (Urban, Local)": 0.6089385474860335
+      },
+      {
+        "State": "Maryland",
+        "Functioning Ratio (Urban, Local)": 0.3902439024390244,
+        "Absent Ratio (Urban, Local)": 0.5853658536585366
+      },
+      {
+        "State": "Arizona",
+        "Functioning Ratio (Urban, Local)": 0.38305084745762713,
+        "Absent Ratio (Urban, Local)": 0.6135593220338983
+      },
+      {
+        "State": "Michigan",
+        "Functioning Ratio (Urban, Local)": 0.382089552238806,
+        "Absent Ratio (Urban, Local)": 0.6119402985074627
+      },
+      {
+        "State": "Kansas",
+        "Functioning Ratio (Urban, Local)": 0.38144329896907214,
+        "Absent Ratio (Urban, Local)": 0.5979381443298969
+      },
+      {
+        "State": "Pennsylvania",
+        "Functioning Ratio (Urban, Local)": 0.38144329896907214,
+        "Absent Ratio (Urban, Local)": 0.6082474226804123
+      },
+      {
+        "State": "Utah",
+        "Functioning Ratio (Urban, Local)": 0.38,
+        "Absent Ratio (Urban, Local)": 0.62
+      },
+      {
+        "State": "Illinois",
+        "Functioning Ratio (Urban, Local)": 0.3697916666666667,
+        "Absent Ratio (Urban, Local)": 0.609375
+      },
+      {
+        "State": "California",
+        "Functioning Ratio (Urban, Local)": 0.35566265060240965,
+        "Absent Ratio (Urban, Local)": 0.6380722891566265
+      },
+      {
+        "State": "Indiana",
+        "Functioning Ratio (Urban, Local)": 0.3524590163934426,
+        "Absent Ratio (Urban, Local)": 0.6475409836065574
+      },
+      {
+        "State": "Minnesota",
+        "Functioning Ratio (Urban, Local)": 0.35,
+        "Absent Ratio (Urban, Local)": 0.6
+      },
+      {
+        "State": "Missouri",
+        "Functioning Ratio (Urban, Local)": 0.3487179487179487,
+        "Absent Ratio (Urban, Local)": 0.6512820512820513
+      },
+      {
+        "State": "Wisconsin",
+        "Functioning Ratio (Urban, Local)": 0.34710743801652894,
+        "Absent Ratio (Urban, Local)": 0.6528925619834711
+      },
+      {
+        "State": "Kentucky",
+        "Functioning Ratio (Urban, Local)": 0.3469387755102041,
+        "Absent Ratio (Urban, Local)": 0.6530612244897959
+      },
+      {
+        "State": "Washington",
+        "Functioning Ratio (Urban, Local)": 0.33707865168539325,
+        "Absent Ratio (Urban, Local)": 0.6573033707865169
+      },
+      {
+        "State": "Alaska",
+        "Functioning Ratio (Urban, Local)": 0.3235294117647059,
+        "Absent Ratio (Urban, Local)": 0.6764705882352942
+      },
+      {
+        "State": "Florida",
+        "Functioning Ratio (Urban, Local)": 0.31767955801104975,
+        "Absent Ratio (Urban, Local)": 0.6740331491712708
+      },
+      {
+        "State": "Alabama",
+        "Functioning Ratio (Urban, Local)": 0.3037037037037037,
+        "Absent Ratio (Urban, Local)": 0.6962962962962963
+      },
+      {
+        "State": "Oregon",
+        "Functioning Ratio (Urban, Local)": 0.30097087378640774,
+        "Absent Ratio (Urban, Local)": 0.6893203883495146
+      },
+      {
+        "State": "Georgia",
+        "Functioning Ratio (Urban, Local)": 0.2840909090909091,
+        "Absent Ratio (Urban, Local)": 0.7045454545454546
+      },
+      {
+        "State": "Nebraska",
+        "Functioning Ratio (Urban, Local)": 0.28,
+        "Absent Ratio (Urban, Local)": 0.72
+      },
+      {
+        "State": "Iowa",
+        "Functioning Ratio (Urban, Local)": 0.2714285714285714,
+        "Absent Ratio (Urban, Local)": 0.7285714285714285
+      },
+      {
+        "State": "Texas",
+        "Functioning Ratio (Urban, Local)": 0.25302325581395346,
+        "Absent Ratio (Urban, Local)": 0.7432558139534884
+      },
+      {
+        "State": "Connecticut",
+        "Functioning Ratio (Urban, Local)": 0.24,
+        "Absent Ratio (Urban, Local)": 0.76
+      },
+      {
+        "State": "Oklahoma",
+        "Functioning Ratio (Urban, Local)": 0.2389937106918239,
+        "Absent Ratio (Urban, Local)": 0.7232704402515723
+      },
+      {
+        "State": "New Jersey",
+        "Functioning Ratio (Urban, Local)": 0.23529411764705882,
+        "Absent Ratio (Urban, Local)": 0.7647058823529411
+      },
+      {
+        "State": "Louisiana",
+        "Functioning Ratio (Urban, Local)": 0.21978021978021978,
+        "Absent Ratio (Urban, Local)": 0.7142857142857143
+      },
+      {
+        "State": "District of Columbia",
+        "Functioning Ratio (Urban, Local)": 0.21212121212121213,
+        "Absent Ratio (Urban, Local)": 0.7575757575757576
+      },
+      {
+        "State": "North Carolina",
+        "Functioning Ratio (Urban, Local)": 0.2054794520547945,
+        "Absent Ratio (Urban, Local)": 0.773972602739726
+      },
+      {
+        "State": "Ohio",
+        "Functioning Ratio (Urban, Local)": 0.18340611353711792,
+        "Absent Ratio (Urban, Local)": 0.8122270742358079
+      },
+      {
+        "State": "Arkansas",
+        "Functioning Ratio (Urban, Local)": 0.17073170731707318,
+        "Absent Ratio (Urban, Local)": 0.8292682926829268
+      },
+      {
+        "State": "Tennessee",
+        "Functioning Ratio (Urban, Local)": 0.155,
+        "Absent Ratio (Urban, Local)": 0.845
+      },
+      {
+        "State": "Mississippi",
+        "Functioning Ratio (Urban, Local)": 0.140625,
+        "Absent Ratio (Urban, Local)": 0.859375
+      }
+    ]
+  }
+};
+const rescueUrban = 
+{
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-00c12168da2a307c5775f4ffe1bc8251"},
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "interval_type",
+      "legend": {"title": "Interval Type"},
+      "scale": {"range": ["#d73027", "#FFFFBF", "#98eab0"]},
+      "sort": ["crash2notification", "notification2arrival", "arrival2hospital"]
+    },
+    "order": {"type": "nominal", "field": "order"},
+    "tooltip": [
+      {"type": "nominal", "field": "state_name"},
+      {"type": "nominal", "field": "interval_type"},
+      {"type": "quantitative", "aggregate": "sum", "field": "time"}
+    ],
+    "x": {"type": "nominal", "axis": {"title": "State"}, "field": "state_name"},
+    "y": {
+      "type": "quantitative",
+      "aggregate": "sum",
+      "axis": {"title": "Time in minutes"},
+      "field": "time"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "if(datum.interval_type === 'crash2notification', 0, if(datum.interval_type === 'notification2arrival', 1, 2))",
+      "as": "order"
+    }
+  ],
+  "width": 600,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-00c12168da2a307c5775f4ffe1bc8251": [
+      {
+        "state_name": "Oregon",
+        "interval_type": "crash2notification",
+        "time": 2
+      },
+      {
+        "state_name": "Oregon",
+        "interval_type": "notification2arrival",
+        "time": 8.217391304347826
+      },
+      {
+        "state_name": "Oregon",
+        "interval_type": "arrival2hospital",
+        "time": 27.304347826086957
+      },
+      {
+        "state_name": "South Dakota",
+        "interval_type": "crash2notification",
+        "time": 2
+      },
+      {
+        "state_name": "South Dakota",
+        "interval_type": "notification2arrival",
+        "time": 6.5
+      },
+      {
+        "state_name": "South Dakota",
+        "interval_type": "arrival2hospital",
+        "time": 22.25
+      },
+      {
+        "state_name": "Wyoming",
+        "interval_type": "crash2notification",
+        "time": 3
+      },
+      {
+        "state_name": "Wyoming",
+        "interval_type": "notification2arrival",
+        "time": 6.916666666666666
+      },
+      {
+        "state_name": "Wyoming",
+        "interval_type": "arrival2hospital",
+        "time": 23.5
+      },
+      {
+        "state_name": "West Virginia",
+        "interval_type": "crash2notification",
+        "time": 6.5
+      },
+      {
+        "state_name": "West Virginia",
+        "interval_type": "notification2arrival",
+        "time": 11.499999999999998
+      },
+      {
+        "state_name": "West Virginia",
+        "interval_type": "arrival2hospital",
+        "time": 30.11538461538462
+      },
+      {
+        "state_name": "California",
+        "interval_type": "crash2notification",
+        "time": 9
+      },
+      {
+        "state_name": "California",
+        "interval_type": "notification2arrival",
+        "time": 4.25
+      },
+      {
+        "state_name": "California",
+        "interval_type": "arrival2hospital",
+        "time": 20
+      },
+      {
+        "state_name": "North Dakota",
+        "interval_type": "crash2notification",
+        "time": 13.5
+      },
+      {
+        "state_name": "North Dakota",
+        "interval_type": "notification2arrival",
+        "time": 4.333333333333333
+      },
+      {
+        "state_name": "North Dakota",
+        "interval_type": "arrival2hospital",
+        "time": 25.333333333333332
+      },
+      {
+        "state_name": "Vermont",
+        "interval_type": "crash2notification",
+        "time": 20
+      },
+      {
+        "state_name": "Vermont",
+        "interval_type": "notification2arrival",
+        "time": 10.333333333333332
+      },
+      {
+        "state_name": "Vermont",
+        "interval_type": "arrival2hospital",
+        "time": 42.66666666666667
+      },
+      {
+        "state_name": "District of Columbia",
+        "interval_type": "crash2notification",
+        "time": 1.5
+      },
+      {
+        "state_name": "District of Columbia",
+        "interval_type": "notification2arrival",
+        "time": 2.5
+      },
+      {
+        "state_name": "District of Columbia",
+        "interval_type": "arrival2hospital",
+        "time": 13
+      },
+      {
+        "state_name": "Montana",
+        "interval_type": "crash2notification",
+        "time": 2.1250000000000004
+      },
+      {
+        "state_name": "Montana",
+        "interval_type": "notification2arrival",
+        "time": 6.375
+      },
+      {
+        "state_name": "Montana",
+        "interval_type": "arrival2hospital",
+        "time": 37.25
+      },
+      {
+        "state_name": "New Mexico",
+        "interval_type": "crash2notification",
+        "time": 5.000000000000002
+      },
+      {
+        "state_name": "New Mexico",
+        "interval_type": "notification2arrival",
+        "time": 5.304347826086957
+      },
+      {
+        "state_name": "New Mexico",
+        "interval_type": "arrival2hospital",
+        "time": 23.89855072463768
+      },
+      {
+        "state_name": "Maryland",
+        "interval_type": "crash2notification",
+        "time": 6.258064516129033
+      },
+      {
+        "state_name": "Maryland",
+        "interval_type": "notification2arrival",
+        "time": 9.516129032258062
+      },
+      {
+        "state_name": "Maryland",
+        "interval_type": "arrival2hospital",
+        "time": 29.06451612903226
+      },
+      {
+        "state_name": "Ohio",
+        "interval_type": "crash2notification",
+        "time": 12.767515923566878
+      },
+      {
+        "state_name": "Ohio",
+        "interval_type": "notification2arrival",
+        "time": 7.10191082802548
+      },
+      {
+        "state_name": "Ohio",
+        "interval_type": "arrival2hospital",
+        "time": 25.75159235668789
+      },
+      {
+        "state_name": "Alabama",
+        "interval_type": "crash2notification",
+        "time": 6.76
+      },
+      {
+        "state_name": "Alabama",
+        "interval_type": "notification2arrival",
+        "time": 7.3599999999999985
+      },
+      {
+        "state_name": "Alabama",
+        "interval_type": "arrival2hospital",
+        "time": 28.040000000000003
+      },
+      {
+        "state_name": "Oklahoma",
+        "interval_type": "crash2notification",
+        "time": 6.287356321839082
+      },
+      {
+        "state_name": "Oklahoma",
+        "interval_type": "notification2arrival",
+        "time": 22.436781609195407
+      },
+      {
+        "state_name": "Oklahoma",
+        "interval_type": "arrival2hospital",
+        "time": 31.597701149425273
+      },
+      {
+        "state_name": "Rhode Island",
+        "interval_type": "crash2notification",
+        "time": 4.2666666666666675
+      },
+      {
+        "state_name": "Rhode Island",
+        "interval_type": "notification2arrival",
+        "time": 5.333333333333333
+      },
+      {
+        "state_name": "Rhode Island",
+        "interval_type": "arrival2hospital",
+        "time": 21.733333333333334
+      },
+      {
+        "state_name": "Kansas",
+        "interval_type": "crash2notification",
+        "time": 21.39130434782609
+      },
+      {
+        "state_name": "Kansas",
+        "interval_type": "notification2arrival",
+        "time": 5.5434782608695645
+      },
+      {
+        "state_name": "Kansas",
+        "interval_type": "arrival2hospital",
+        "time": 20.673913043478258
+      },
+      {
+        "state_name": "New Jersey",
+        "interval_type": "crash2notification",
+        "time": 13.059999999999997
+      },
+      {
+        "state_name": "New Jersey",
+        "interval_type": "notification2arrival",
+        "time": 7.790000000000001
+      },
+      {
+        "state_name": "New Jersey",
+        "interval_type": "arrival2hospital",
+        "time": 31.32
+      },
+      {
+        "state_name": "Utah",
+        "interval_type": "crash2notification",
+        "time": 5.222222222222222
+      },
+      {
+        "state_name": "Utah",
+        "interval_type": "notification2arrival",
+        "time": 7.055555555555557
+      },
+      {
+        "state_name": "Utah",
+        "interval_type": "arrival2hospital",
+        "time": 27.94444444444444
+      },
+      {
+        "state_name": "Pennsylvania",
+        "interval_type": "crash2notification",
+        "time": 3.605042016806723
+      },
+      {
+        "state_name": "Pennsylvania",
+        "interval_type": "notification2arrival",
+        "time": 6.075630252100837
+      },
+      {
+        "state_name": "Pennsylvania",
+        "interval_type": "arrival2hospital",
+        "time": 29.747899159663866
+      },
+      {
+        "state_name": "Virginia",
+        "interval_type": "crash2notification",
+        "time": 27.646153846153847
+      },
+      {
+        "state_name": "Virginia",
+        "interval_type": "notification2arrival",
+        "time": 8.307692307692307
+      },
+      {
+        "state_name": "Virginia",
+        "interval_type": "arrival2hospital",
+        "time": 29.569230769230774
+      },
+      {
+        "state_name": "Colorado",
+        "interval_type": "crash2notification",
+        "time": 2.0500000000000003
+      },
+      {
+        "state_name": "Colorado",
+        "interval_type": "notification2arrival",
+        "time": 4.416666666666669
+      },
+      {
+        "state_name": "Colorado",
+        "interval_type": "arrival2hospital",
+        "time": 22.916666666666664
+      },
+      {
+        "state_name": "Nebraska",
+        "interval_type": "crash2notification",
+        "time": 3.6818181818181817
+      },
+      {
+        "state_name": "Nebraska",
+        "interval_type": "notification2arrival",
+        "time": 4.454545454545455
+      },
+      {
+        "state_name": "Nebraska",
+        "interval_type": "arrival2hospital",
+        "time": 20.09090909090909
+      },
+      {
+        "state_name": "Missouri",
+        "interval_type": "crash2notification",
+        "time": 5.992647058823531
+      },
+      {
+        "state_name": "Missouri",
+        "interval_type": "notification2arrival",
+        "time": 7.713235294117649
+      },
+      {
+        "state_name": "Missouri",
+        "interval_type": "arrival2hospital",
+        "time": 25.617647058823522
+      },
+      {
+        "state_name": "Louisiana",
+        "interval_type": "crash2notification",
+        "time": 9.740000000000002
+      },
+      {
+        "state_name": "Louisiana",
+        "interval_type": "notification2arrival",
+        "time": 8.279999999999998
+      },
+      {
+        "state_name": "Louisiana",
+        "interval_type": "arrival2hospital",
+        "time": 35.41333333333333
+      },
+      {
+        "state_name": "Kentucky",
+        "interval_type": "crash2notification",
+        "time": 4.351648351648353
+      },
+      {
+        "state_name": "Kentucky",
+        "interval_type": "notification2arrival",
+        "time": 6.56043956043956
+      },
+      {
+        "state_name": "Kentucky",
+        "interval_type": "arrival2hospital",
+        "time": 26.813186813186817
+      },
+      {
+        "state_name": "Maine",
+        "interval_type": "crash2notification",
+        "time": 4.882352941176471
+      },
+      {
+        "state_name": "Maine",
+        "interval_type": "notification2arrival",
+        "time": 8.294117647058824
+      },
+      {
+        "state_name": "Maine",
+        "interval_type": "arrival2hospital",
+        "time": 29.294117647058822
+      },
+      {
+        "state_name": "Tennessee",
+        "interval_type": "crash2notification",
+        "time": 6.5714285714285685
+      },
+      {
+        "state_name": "Tennessee",
+        "interval_type": "notification2arrival",
+        "time": 6.597402597402599
+      },
+      {
+        "state_name": "Tennessee",
+        "interval_type": "arrival2hospital",
+        "time": 34.42857142857143
+      },
+      {
+        "state_name": "Texas",
+        "interval_type": "crash2notification",
+        "time": 8.944244604316546
+      },
+      {
+        "state_name": "Texas",
+        "interval_type": "notification2arrival",
+        "time": 8.417266187050359
+      },
+      {
+        "state_name": "Texas",
+        "interval_type": "arrival2hospital",
+        "time": 27.642086330935243
+      },
+      {
+        "state_name": "Wisconsin",
+        "interval_type": "crash2notification",
+        "time": 3.823529411764706
+      },
+      {
+        "state_name": "Wisconsin",
+        "interval_type": "notification2arrival",
+        "time": 5
+      },
+      {
+        "state_name": "Wisconsin",
+        "interval_type": "arrival2hospital",
+        "time": 33.58823529411765
+      },
+      {
+        "state_name": "New York",
+        "interval_type": "crash2notification",
+        "time": 3.957894736842106
+      },
+      {
+        "state_name": "New York",
+        "interval_type": "notification2arrival",
+        "time": 5.568421052631578
+      },
+      {
+        "state_name": "New York",
+        "interval_type": "arrival2hospital",
+        "time": 27.936842105263143
+      },
+      {
+        "state_name": "Minnesota",
+        "interval_type": "crash2notification",
+        "time": 2.473684210526316
+      },
+      {
+        "state_name": "Minnesota",
+        "interval_type": "notification2arrival",
+        "time": 6.131578947368421
+      },
+      {
+        "state_name": "Minnesota",
+        "interval_type": "arrival2hospital",
+        "time": 25.000000000000004
+      },
+      {
+        "state_name": "New Hampshire",
+        "interval_type": "crash2notification",
+        "time": 1.1666666666666665
+      },
+      {
+        "state_name": "New Hampshire",
+        "interval_type": "notification2arrival",
+        "time": 11.333333333333334
+      },
+      {
+        "state_name": "New Hampshire",
+        "interval_type": "arrival2hospital",
+        "time": 24.666666666666668
+      },
+      {
+        "state_name": "Alaska",
+        "interval_type": "crash2notification",
+        "time": 2.8333333333333335
+      },
+      {
+        "state_name": "Alaska",
+        "interval_type": "notification2arrival",
+        "time": 6.333333333333333
+      },
+      {
+        "state_name": "Alaska",
+        "interval_type": "arrival2hospital",
+        "time": 27.333333333333332
+      },
+      {
+        "state_name": "Washington",
+        "interval_type": "crash2notification",
+        "time": 14.740740740740744
+      },
+      {
+        "state_name": "Washington",
+        "interval_type": "notification2arrival",
+        "time": 16.59259259259259
+      },
+      {
+        "state_name": "Washington",
+        "interval_type": "arrival2hospital",
+        "time": 45.51851851851852
+      },
+      {
+        "state_name": "Nevada",
+        "interval_type": "crash2notification",
+        "time": 2.3650793650793647
+      },
+      {
+        "state_name": "Nevada",
+        "interval_type": "notification2arrival",
+        "time": 6.063492063492066
+      },
+      {
+        "state_name": "Nevada",
+        "interval_type": "arrival2hospital",
+        "time": 23.793650793650794
+      },
+      {
+        "state_name": "South Carolina",
+        "interval_type": "crash2notification",
+        "time": 10.113636363636363
+      },
+      {
+        "state_name": "South Carolina",
+        "interval_type": "notification2arrival",
+        "time": 9.034090909090914
+      },
+      {
+        "state_name": "South Carolina",
+        "interval_type": "arrival2hospital",
+        "time": 23.727272727272716
+      },
+      {
+        "state_name": "Connecticut",
+        "interval_type": "crash2notification",
+        "time": 3.958904109589041
+      },
+      {
+        "state_name": "Connecticut",
+        "interval_type": "notification2arrival",
+        "time": 6.2465753424657535
+      },
+      {
+        "state_name": "Connecticut",
+        "interval_type": "arrival2hospital",
+        "time": 27.26027397260274
+      },
+      {
+        "state_name": "Massachusetts",
+        "interval_type": "crash2notification",
+        "time": 4.755102040816327
+      },
+      {
+        "state_name": "Massachusetts",
+        "interval_type": "notification2arrival",
+        "time": 6.081632653061225
+      },
+      {
+        "state_name": "Massachusetts",
+        "interval_type": "arrival2hospital",
+        "time": 30.05102040816326
+      },
+      {
+        "state_name": "Delaware",
+        "interval_type": "crash2notification",
+        "time": 2.4705882352941178
+      },
+      {
+        "state_name": "Delaware",
+        "interval_type": "notification2arrival",
+        "time": 4.352941176470588
+      },
+      {
+        "state_name": "Delaware",
+        "interval_type": "arrival2hospital",
+        "time": 19.705882352941174
+      },
+      {
+        "state_name": "Arkansas",
+        "interval_type": "crash2notification",
+        "time": 6.193548387096776
+      },
+      {
+        "state_name": "Arkansas",
+        "interval_type": "notification2arrival",
+        "time": 6.516129032258063
+      },
+      {
+        "state_name": "Arkansas",
+        "interval_type": "arrival2hospital",
+        "time": 27.58064516129032
+      },
+      {
+        "state_name": "North Carolina",
+        "interval_type": "crash2notification",
+        "time": 12.247422680412365
+      },
+      {
+        "state_name": "North Carolina",
+        "interval_type": "notification2arrival",
+        "time": 7.886597938144326
+      },
+      {
+        "state_name": "North Carolina",
+        "interval_type": "arrival2hospital",
+        "time": 30.979381443298966
+      },
+      {
+        "state_name": "Georgia",
+        "interval_type": "crash2notification",
+        "time": 10.719827586206899
+      },
+      {
+        "state_name": "Georgia",
+        "interval_type": "notification2arrival",
+        "time": 8.288793103448276
+      },
+      {
+        "state_name": "Georgia",
+        "interval_type": "arrival2hospital",
+        "time": 34.04741379310347
+      },
+      {
+        "state_name": "Mississippi",
+        "interval_type": "crash2notification",
+        "time": 7.763157894736842
+      },
+      {
+        "state_name": "Mississippi",
+        "interval_type": "notification2arrival",
+        "time": 8.526315789473685
+      },
+      {
+        "state_name": "Mississippi",
+        "interval_type": "arrival2hospital",
+        "time": 31.97368421052631
+      },
+      {
+        "state_name": "Iowa",
+        "interval_type": "crash2notification",
+        "time": 3.7333333333333334
+      },
+      {
+        "state_name": "Iowa",
+        "interval_type": "notification2arrival",
+        "time": 6.1000000000000005
+      },
+      {
+        "state_name": "Iowa",
+        "interval_type": "arrival2hospital",
+        "time": 21.96666666666667
+      },
+      {
+        "state_name": "Arizona",
+        "interval_type": "crash2notification",
+        "time": 2.5384615384615374
+      },
+      {
+        "state_name": "Arizona",
+        "interval_type": "notification2arrival",
+        "time": 5.2197802197802226
+      },
+      {
+        "state_name": "Arizona",
+        "interval_type": "arrival2hospital",
+        "time": 22.961538461538463
+      },
+      {
+        "state_name": "Hawaii",
+        "interval_type": "crash2notification",
+        "time": 3.999999999999999
+      },
+      {
+        "state_name": "Hawaii",
+        "interval_type": "notification2arrival",
+        "time": 7
+      },
+      {
+        "state_name": "Hawaii",
+        "interval_type": "arrival2hospital",
+        "time": 28.588235294117652
+      }
+    ]
+  }
+};
+const rescueRural = 
+{
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-8364efc43b1e0c9794a9f45c8929a614"},
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "interval_type",
+      "legend": {"title": "Interval Type"},
+      "scale": {"range": ["#d73027", "#FFFFBF", "#98eab0"]},
+      "sort": ["crash2notification", "notification2arrival", "arrival2hospital"]
+    },
+    "order": {"type": "nominal", "field": "order"},
+    "tooltip": [
+      {"type": "nominal", "field": "state_name"},
+      {"type": "nominal", "field": "interval_type"},
+      {"type": "quantitative", "aggregate": "sum", "field": "time"}
+    ],
+    "x": {"type": "nominal", "axis": {"title": "State"}, "field": "state_name"},
+    "y": {
+      "type": "quantitative",
+      "aggregate": "sum",
+      "axis": {"title": "Time in minutes"},
+      "field": "time"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "if(datum.interval_type === 'crash2notification', 0, if(datum.interval_type === 'notification2arrival', 1, 2))",
+      "as": "order"
+    }
+  ],
+  "width": 600,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-8364efc43b1e0c9794a9f45c8929a614": [
+      {
+        "state_name": "Massachusetts",
+        "interval_type": "crash2notification",
+        "time": 2
+      },
+      {
+        "state_name": "Massachusetts",
+        "interval_type": "notification2arrival",
+        "time": 4
+      },
+      {
+        "state_name": "Massachusetts",
+        "interval_type": "arrival2hospital",
+        "time": 24
+      },
+      {
+        "state_name": "Connecticut",
+        "interval_type": "crash2notification",
+        "time": 4.75
+      },
+      {
+        "state_name": "Connecticut",
+        "interval_type": "notification2arrival",
+        "time": 11.75
+      },
+      {
+        "state_name": "Connecticut",
+        "interval_type": "arrival2hospital",
+        "time": 31.75
+      },
+      {
+        "state_name": "Rhode Island",
+        "interval_type": "crash2notification",
+        "time": 6
+      },
+      {
+        "state_name": "Rhode Island",
+        "interval_type": "notification2arrival",
+        "time": 7.75
+      },
+      {
+        "state_name": "Rhode Island",
+        "interval_type": "arrival2hospital",
+        "time": 40.25
+      },
+      {
+        "state_name": "Maryland",
+        "interval_type": "crash2notification",
+        "time": 6
+      },
+      {
+        "state_name": "Maryland",
+        "interval_type": "notification2arrival",
+        "time": 9
+      },
+      {
+        "state_name": "Maryland",
+        "interval_type": "arrival2hospital",
+        "time": 35.333333333333336
+      },
+      {
+        "state_name": "Iowa",
+        "interval_type": "crash2notification",
+        "time": 8.03125
+      },
+      {
+        "state_name": "Iowa",
+        "interval_type": "notification2arrival",
+        "time": 13.421874999999996
+      },
+      {
+        "state_name": "Iowa",
+        "interval_type": "arrival2hospital",
+        "time": 33.20312500000001
+      },
+      {
+        "state_name": "New Hampshire",
+        "interval_type": "crash2notification",
+        "time": 3.0000000000000004
+      },
+      {
+        "state_name": "New Hampshire",
+        "interval_type": "notification2arrival",
+        "time": 12.333333333333336
+      },
+      {
+        "state_name": "New Hampshire",
+        "interval_type": "arrival2hospital",
+        "time": 26.761904761904763
+      },
+      {
+        "state_name": "Alabama",
+        "interval_type": "crash2notification",
+        "time": 9.635761589403973
+      },
+      {
+        "state_name": "Alabama",
+        "interval_type": "notification2arrival",
+        "time": 15.158940397350985
+      },
+      {
+        "state_name": "Alabama",
+        "interval_type": "arrival2hospital",
+        "time": 36.43046357615896
+      },
+      {
+        "state_name": "Minnesota",
+        "interval_type": "crash2notification",
+        "time": 4.719298245614036
+      },
+      {
+        "state_name": "Minnesota",
+        "interval_type": "notification2arrival",
+        "time": 10.649122807017541
+      },
+      {
+        "state_name": "Minnesota",
+        "interval_type": "arrival2hospital",
+        "time": 37.333333333333336
+      },
+      {
+        "state_name": "Kentucky",
+        "interval_type": "crash2notification",
+        "time": 4.776744186046513
+      },
+      {
+        "state_name": "Kentucky",
+        "interval_type": "notification2arrival",
+        "time": 11.255813953488374
+      },
+      {
+        "state_name": "Kentucky",
+        "interval_type": "arrival2hospital",
+        "time": 39.29767441860463
+      },
+      {
+        "state_name": "Kansas",
+        "interval_type": "crash2notification",
+        "time": 12.63076923076923
+      },
+      {
+        "state_name": "Kansas",
+        "interval_type": "notification2arrival",
+        "time": 12.153846153846159
+      },
+      {
+        "state_name": "Kansas",
+        "interval_type": "arrival2hospital",
+        "time": 33.85384615384617
+      },
+      {
+        "state_name": "Utah",
+        "interval_type": "crash2notification",
+        "time": 5.722222222222221
+      },
+      {
+        "state_name": "Utah",
+        "interval_type": "notification2arrival",
+        "time": 17.111111111111114
+      },
+      {
+        "state_name": "Utah",
+        "interval_type": "arrival2hospital",
+        "time": 55.30555555555555
+      },
+      {
+        "state_name": "Arkansas",
+        "interval_type": "crash2notification",
+        "time": 6.224489795918367
+      },
+      {
+        "state_name": "Arkansas",
+        "interval_type": "notification2arrival",
+        "time": 15.306122448979588
+      },
+      {
+        "state_name": "Arkansas",
+        "interval_type": "arrival2hospital",
+        "time": 45.93877551020408
+      },
+      {
+        "state_name": "Oregon",
+        "interval_type": "crash2notification",
+        "time": 12.194444444444445
+      },
+      {
+        "state_name": "Oregon",
+        "interval_type": "notification2arrival",
+        "time": 21.611111111111114
+      },
+      {
+        "state_name": "Oregon",
+        "interval_type": "arrival2hospital",
+        "time": 44.75
+      },
+      {
+        "state_name": "Oklahoma",
+        "interval_type": "crash2notification",
+        "time": 14.393442622950818
+      },
+      {
+        "state_name": "Oklahoma",
+        "interval_type": "notification2arrival",
+        "time": 19.24590163934426
+      },
+      {
+        "state_name": "Oklahoma",
+        "interval_type": "arrival2hospital",
+        "time": 53.721311475409834
+      },
+      {
+        "state_name": "Maine",
+        "interval_type": "crash2notification",
+        "time": 11.278688524590164
+      },
+      {
+        "state_name": "Maine",
+        "interval_type": "notification2arrival",
+        "time": 9.967213114754093
+      },
+      {
+        "state_name": "Maine",
+        "interval_type": "arrival2hospital",
+        "time": 35.24590163934426
+      },
+      {
+        "state_name": "Arizona",
+        "interval_type": "crash2notification",
+        "time": 7.40983606557377
+      },
+      {
+        "state_name": "Arizona",
+        "interval_type": "notification2arrival",
+        "time": 18.57377049180328
+      },
+      {
+        "state_name": "Arizona",
+        "interval_type": "arrival2hospital",
+        "time": 60.278688524590144
+      },
+      {
+        "state_name": "Tennessee",
+        "interval_type": "crash2notification",
+        "time": 19.08333333333334
+      },
+      {
+        "state_name": "Tennessee",
+        "interval_type": "notification2arrival",
+        "time": 12.020833333333334
+      },
+      {
+        "state_name": "Tennessee",
+        "interval_type": "arrival2hospital",
+        "time": 55.083333333333336
+      },
+      {
+        "state_name": "West Virginia",
+        "interval_type": "crash2notification",
+        "time": 7.655172413793104
+      },
+      {
+        "state_name": "West Virginia",
+        "interval_type": "notification2arrival",
+        "time": 14.206896551724139
+      },
+      {
+        "state_name": "West Virginia",
+        "interval_type": "arrival2hospital",
+        "time": 38.93103448275862
+      },
+      {
+        "state_name": "Hawaii",
+        "interval_type": "crash2notification",
+        "time": 2.5454545454545454
+      },
+      {
+        "state_name": "Hawaii",
+        "interval_type": "notification2arrival",
+        "time": 12.363636363636363
+      },
+      {
+        "state_name": "Hawaii",
+        "interval_type": "arrival2hospital",
+        "time": 36.27272727272727
+      },
+      {
+        "state_name": "New Mexico",
+        "interval_type": "crash2notification",
+        "time": 10.931818181818182
+      },
+      {
+        "state_name": "New Mexico",
+        "interval_type": "notification2arrival",
+        "time": 17.795454545454543
+      },
+      {
+        "state_name": "New Mexico",
+        "interval_type": "arrival2hospital",
+        "time": 54.56818181818182
+      },
+      {
+        "state_name": "Wyoming",
+        "interval_type": "crash2notification",
+        "time": 5.880952380952381
+      },
+      {
+        "state_name": "Wyoming",
+        "interval_type": "notification2arrival",
+        "time": 19.928571428571423
+      },
+      {
+        "state_name": "Wyoming",
+        "interval_type": "arrival2hospital",
+        "time": 46.49999999999999
+      },
+      {
+        "state_name": "Vermont",
+        "interval_type": "crash2notification",
+        "time": 5.615384615384616
+      },
+      {
+        "state_name": "Vermont",
+        "interval_type": "notification2arrival",
+        "time": 8.153846153846155
+      },
+      {
+        "state_name": "Vermont",
+        "interval_type": "arrival2hospital",
+        "time": 42.15384615384616
+      },
+      {
+        "state_name": "Virginia",
+        "interval_type": "crash2notification",
+        "time": 18.844155844155836
+      },
+      {
+        "state_name": "Virginia",
+        "interval_type": "notification2arrival",
+        "time": 15.077922077922073
+      },
+      {
+        "state_name": "Virginia",
+        "interval_type": "arrival2hospital",
+        "time": 49.597402597402606
+      },
+      {
+        "state_name": "Alaska",
+        "interval_type": "crash2notification",
+        "time": 3.2142857142857144
+      },
+      {
+        "state_name": "Alaska",
+        "interval_type": "notification2arrival",
+        "time": 10.928571428571429
+      },
+      {
+        "state_name": "Alaska",
+        "interval_type": "arrival2hospital",
+        "time": 34.92857142857143
+      },
+      {
+        "state_name": "North Dakota",
+        "interval_type": "crash2notification",
+        "time": 5.482758620689656
+      },
+      {
+        "state_name": "North Dakota",
+        "interval_type": "notification2arrival",
+        "time": 12.896551724137929
+      },
+      {
+        "state_name": "North Dakota",
+        "interval_type": "arrival2hospital",
+        "time": 41.48275862068965
+      },
+      {
+        "state_name": "New Jersey",
+        "interval_type": "crash2notification",
+        "time": 4.882352941176471
+      },
+      {
+        "state_name": "New Jersey",
+        "interval_type": "notification2arrival",
+        "time": 14.411764705882353
+      },
+      {
+        "state_name": "New Jersey",
+        "interval_type": "arrival2hospital",
+        "time": 38.94117647058823
+      },
+      {
+        "state_name": "Washington",
+        "interval_type": "crash2notification",
+        "time": 24.548387096774192
+      },
+      {
+        "state_name": "Washington",
+        "interval_type": "notification2arrival",
+        "time": 23.483870967741936
+      },
+      {
+        "state_name": "Washington",
+        "interval_type": "arrival2hospital",
+        "time": 59.35483870967741
+      },
+      {
+        "state_name": "Louisiana",
+        "interval_type": "crash2notification",
+        "time": 6.883561643835617
+      },
+      {
+        "state_name": "Louisiana",
+        "interval_type": "notification2arrival",
+        "time": 13.171232876712327
+      },
+      {
+        "state_name": "Louisiana",
+        "interval_type": "arrival2hospital",
+        "time": 46.02054794520548
+      },
+      {
+        "state_name": "Montana",
+        "interval_type": "crash2notification",
+        "time": 9.799999999999999
+      },
+      {
+        "state_name": "Montana",
+        "interval_type": "notification2arrival",
+        "time": 14.96666666666667
+      },
+      {
+        "state_name": "Montana",
+        "interval_type": "arrival2hospital",
+        "time": 45.91666666666667
+      },
+      {
+        "state_name": "Pennsylvania",
+        "interval_type": "crash2notification",
+        "time": 15.471264367816097
+      },
+      {
+        "state_name": "Pennsylvania",
+        "interval_type": "notification2arrival",
+        "time": 9.919540229885056
+      },
+      {
+        "state_name": "Pennsylvania",
+        "interval_type": "arrival2hospital",
+        "time": 55.29885057471264
+      },
+      {
+        "state_name": "New York",
+        "interval_type": "crash2notification",
+        "time": 7.159090909090907
+      },
+      {
+        "state_name": "New York",
+        "interval_type": "notification2arrival",
+        "time": 13.215909090909088
+      },
+      {
+        "state_name": "New York",
+        "interval_type": "arrival2hospital",
+        "time": 55.47727272727272
+      },
+      {
+        "state_name": "Ohio",
+        "interval_type": "crash2notification",
+        "time": 11.115879828326179
+      },
+      {
+        "state_name": "Ohio",
+        "interval_type": "notification2arrival",
+        "time": 12.347639484978545
+      },
+      {
+        "state_name": "Ohio",
+        "interval_type": "arrival2hospital",
+        "time": 39.61802575107298
+      },
+      {
+        "state_name": "Nevada",
+        "interval_type": "crash2notification",
+        "time": 9.333333333333334
+      },
+      {
+        "state_name": "Nevada",
+        "interval_type": "notification2arrival",
+        "time": 21.22222222222222
+      },
+      {
+        "state_name": "Nevada",
+        "interval_type": "arrival2hospital",
+        "time": 53.555555555555564
+      },
+      {
+        "state_name": "Wisconsin",
+        "interval_type": "crash2notification",
+        "time": 3.6379310344827576
+      },
+      {
+        "state_name": "Wisconsin",
+        "interval_type": "notification2arrival",
+        "time": 10.10344827586207
+      },
+      {
+        "state_name": "Wisconsin",
+        "interval_type": "arrival2hospital",
+        "time": 37.41379310344827
+      },
+      {
+        "state_name": "South Dakota",
+        "interval_type": "crash2notification",
+        "time": 7.275862068965516
+      },
+      {
+        "state_name": "South Dakota",
+        "interval_type": "notification2arrival",
+        "time": 13.79310344827586
+      },
+      {
+        "state_name": "South Dakota",
+        "interval_type": "arrival2hospital",
+        "time": 32.20689655172414
+      },
+      {
+        "state_name": "South Carolina",
+        "interval_type": "crash2notification",
+        "time": 11.24175824175824
+      },
+      {
+        "state_name": "South Carolina",
+        "interval_type": "notification2arrival",
+        "time": 13.285714285714286
+      },
+      {
+        "state_name": "South Carolina",
+        "interval_type": "arrival2hospital",
+        "time": 29.527472527472522
+      },
+      {
+        "state_name": "Georgia",
+        "interval_type": "crash2notification",
+        "time": 8.491666666666672
+      },
+      {
+        "state_name": "Georgia",
+        "interval_type": "notification2arrival",
+        "time": 12.241666666666664
+      },
+      {
+        "state_name": "Georgia",
+        "interval_type": "arrival2hospital",
+        "time": 44.566666666666656
+      },
+      {
+        "state_name": "North Carolina",
+        "interval_type": "crash2notification",
+        "time": 9.24285714285714
+      },
+      {
+        "state_name": "North Carolina",
+        "interval_type": "notification2arrival",
+        "time": 11.399999999999999
+      },
+      {
+        "state_name": "North Carolina",
+        "interval_type": "arrival2hospital",
+        "time": 41.6
+      },
+      {
+        "state_name": "Colorado",
+        "interval_type": "crash2notification",
+        "time": 16.428571428571434
+      },
+      {
+        "state_name": "Colorado",
+        "interval_type": "notification2arrival",
+        "time": 12.71428571428571
+      },
+      {
+        "state_name": "Colorado",
+        "interval_type": "arrival2hospital",
+        "time": 38.42857142857142
+      },
+      {
+        "state_name": "Missouri",
+        "interval_type": "crash2notification",
+        "time": 15.429347826086957
+      },
+      {
+        "state_name": "Missouri",
+        "interval_type": "notification2arrival",
+        "time": 15.706521739130432
+      },
+      {
+        "state_name": "Missouri",
+        "interval_type": "arrival2hospital",
+        "time": 46.42391304347827
+      },
+      {
+        "state_name": "Delaware",
+        "interval_type": "crash2notification",
+        "time": 3.2105263157894735
+      },
+      {
+        "state_name": "Delaware",
+        "interval_type": "notification2arrival",
+        "time": 7.7894736842105265
+      },
+      {
+        "state_name": "Delaware",
+        "interval_type": "arrival2hospital",
+        "time": 39.71052631578948
+      },
+      {
+        "state_name": "Texas",
+        "interval_type": "crash2notification",
+        "time": 12.991869918699182
+      },
+      {
+        "state_name": "Texas",
+        "interval_type": "notification2arrival",
+        "time": 17.36043360433604
+      },
+      {
+        "state_name": "Texas",
+        "interval_type": "arrival2hospital",
+        "time": 45.609756097560975
+      },
+      {
+        "state_name": "Mississippi",
+        "interval_type": "crash2notification",
+        "time": 8.11650485436893
+      },
+      {
+        "state_name": "Mississippi",
+        "interval_type": "notification2arrival",
+        "time": 12.980582524271846
+      },
+      {
+        "state_name": "Mississippi",
+        "interval_type": "arrival2hospital",
+        "time": 35.66990291262134
+      },
+      {
+        "state_name": "Nebraska",
+        "interval_type": "crash2notification",
+        "time": 4.999999999999999
+      },
+      {
+        "state_name": "Nebraska",
+        "interval_type": "notification2arrival",
+        "time": 11.159090909090908
+      },
+      {
+        "state_name": "Nebraska",
+        "interval_type": "arrival2hospital",
+        "time": 28.090909090909086
+      }
+    ]
+  }
+};
+const rescueEMS = 
+{
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-9bc763822103e9a7ab3e9edc8e3dd797"},
+  "mark": "point",
+  "encoding": {
+    "tooltip": [
+      {"type": "nominal", "field": "State"},
+      {"type": "quantitative", "field": "Total Response Time"},
+      {"type": "quantitative", "field": "Number of EMS Stations"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "axis": {"title": "Number of Emergency Medical Service Stations"},
+      "field": "Number of EMS Stations"
+    },
+    "y": {
+      "type": "quantitative",
+      "axis": {"title": "Average Rescue Response Time"},
+      "field": "Total Response Time"
+    }
+  },
+  "width": 600,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-9bc763822103e9a7ab3e9edc8e3dd797": [
+      {
+        "State": "Oregon",
+        "Total Response Time": 37.52173913043478,
+        "Number of EMS Stations": 422
+      },
+      {
+        "State": "South Dakota",
+        "Total Response Time": 30.75,
+        "Number of EMS Stations": 237
+      },
+      {
+        "State": "Wyoming",
+        "Total Response Time": 33.416666666666664,
+        "Number of EMS Stations": 173
+      },
+      {
+        "State": "West Virginia",
+        "Total Response Time": 48.11538461538461,
+        "Number of EMS Stations": 512
+      },
+      {
+        "State": "California",
+        "Total Response Time": 33.25,
+        "Number of EMS Stations": 2813
+      },
+      {
+        "State": "North Dakota",
+        "Total Response Time": 43.166666666666664,
+        "Number of EMS Stations": 281
+      },
+      {
+        "State": "Vermont",
+        "Total Response Time": 73,
+        "Number of EMS Stations": 56
+      },
+      {
+        "State": "Montana",
+        "Total Response Time": 45.75,
+        "Number of EMS Stations": 193
+      },
+      {
+        "State": "New Mexico",
+        "Total Response Time": 34.20289855072464,
+        "Number of EMS Stations": 461
+      },
+      {
+        "State": "Maryland",
+        "Total Response Time": 44.83870967741936,
+        "Number of EMS Stations": 344
+      },
+      {
+        "State": "Ohio",
+        "Total Response Time": 45.62101910828024,
+        "Number of EMS Stations": 1514
+      },
+      {
+        "State": "Alabama",
+        "Total Response Time": 42.15999999999999,
+        "Number of EMS Stations": 762
+      },
+      {
+        "State": "Oklahoma",
+        "Total Response Time": 60.32183908045976,
+        "Number of EMS Stations": 635
+      },
+      {
+        "State": "Rhode Island",
+        "Total Response Time": 31.333333333333336,
+        "Number of EMS Stations": 90
+      },
+      {
+        "State": "Kansas",
+        "Total Response Time": 47.60869565217391,
+        "Number of EMS Stations": 211
+      },
+      {
+        "State": "New Jersey",
+        "Total Response Time": 52.16999999999999,
+        "Number of EMS Stations": 1090
+      },
+      {
+        "State": "Utah",
+        "Total Response Time": 40.22222222222223,
+        "Number of EMS Stations": 242
+      },
+      {
+        "State": "Pennsylvania",
+        "Total Response Time": 39.428571428571445,
+        "Number of EMS Stations": 2274
+      },
+      {
+        "State": "Virginia",
+        "Total Response Time": 65.52307692307694,
+        "Number of EMS Stations": 599
+      },
+      {
+        "State": "Colorado",
+        "Total Response Time": 29.383333333333336,
+        "Number of EMS Stations": 629
+      },
+      {
+        "State": "Nebraska",
+        "Total Response Time": 28.22727272727273,
+        "Number of EMS Stations": 355
+      },
+      {
+        "State": "Missouri",
+        "Total Response Time": 39.323529411764696,
+        "Number of EMS Stations": 1036
+      },
+      {
+        "State": "Louisiana",
+        "Total Response Time": 53.43333333333333,
+        "Number of EMS Stations": 908
+      },
+      {
+        "State": "Kentucky",
+        "Total Response Time": 37.725274725274716,
+        "Number of EMS Stations": 890
+      },
+      {
+        "State": "Maine",
+        "Total Response Time": 42.470588235294116,
+        "Number of EMS Stations": 200
+      },
+      {
+        "State": "Tennessee",
+        "Total Response Time": 47.59740259740261,
+        "Number of EMS Stations": 749
+      },
+      {
+        "State": "Texas",
+        "Total Response Time": 45.00359712230215,
+        "Number of EMS Stations": 1828
+      },
+      {
+        "State": "Wisconsin",
+        "Total Response Time": 42.411764705882355,
+        "Number of EMS Stations": 933
+      },
+      {
+        "State": "New York",
+        "Total Response Time": 37.463157894736845,
+        "Number of EMS Stations": 2659
+      },
+      {
+        "State": "Minnesota",
+        "Total Response Time": 33.60526315789473,
+        "Number of EMS Stations": 791
+      },
+      {
+        "State": "New Hampshire",
+        "Total Response Time": 37.166666666666664,
+        "Number of EMS Stations": 254
+      },
+      {
+        "State": "Alaska",
+        "Total Response Time": 36.5,
+        "Number of EMS Stations": 243
+      },
+      {
+        "State": "Washington",
+        "Total Response Time": 76.85185185185183,
+        "Number of EMS Stations": 981
+      },
+      {
+        "State": "Nevada",
+        "Total Response Time": 32.22222222222222,
+        "Number of EMS Stations": 194
+      },
+      {
+        "State": "South Carolina",
+        "Total Response Time": 42.875,
+        "Number of EMS Stations": 428
+      },
+      {
+        "State": "Connecticut",
+        "Total Response Time": 37.46575342465753,
+        "Number of EMS Stations": 458
+      },
+      {
+        "State": "Massachusetts",
+        "Total Response Time": 40.88775510204082,
+        "Number of EMS Stations": 772
+      },
+      {
+        "State": "Delaware",
+        "Total Response Time": 26.529411764705884,
+        "Number of EMS Stations": 71
+      },
+      {
+        "State": "Arkansas",
+        "Total Response Time": 40.29032258064517,
+        "Number of EMS Stations": 193
+      },
+      {
+        "State": "North Carolina",
+        "Total Response Time": 51.113402061855645,
+        "Number of EMS Stations": 1316
+      },
+      {
+        "State": "Georgia",
+        "Total Response Time": 53.05603448275863,
+        "Number of EMS Stations": 1432
+      },
+      {
+        "State": "Mississippi",
+        "Total Response Time": 48.263157894736835,
+        "Number of EMS Stations": 618
+      },
+      {
+        "State": "Iowa",
+        "Total Response Time": 31.799999999999997,
+        "Number of EMS Stations": 681
+      },
+      {
+        "State": "Arizona",
+        "Total Response Time": 30.719780219780226,
+        "Number of EMS Stations": 659
+      },
+      {
+        "State": "Hawaii",
+        "Total Response Time": 39.588235294117645,
+        "Number of EMS Stations": 80
+      }
+    ]
+  }
+};
 vegaEmbed("#passengerRestraintUse", passengerRestraintUse);
 vegaEmbed("#alcohol", alcohol);
 vegaEmbed("#drug", drug);
@@ -2431,3 +5124,10 @@ vegaEmbed("#fatalityRateByCounty", fatalityRateByCounty);
 vegaEmbed("#vehicleModelYear", vehicleModelYear);
 vegaEmbed("#vehicleAge", vehicleAge);
 vegaEmbed("#airbagDeployment", airbagDeployment);
+vegaEmbed("#speeding", speeding);
+vegaEmbed("#dangerousTime", dangerousTime);
+vegaEmbed("#controlRural", controlRural);
+vegaEmbed("#controlLocal", controlLocal);
+vegaEmbed("#rescueUrban", rescueUrban);
+vegaEmbed("#rescueRural", rescueRural);
+vegaEmbed("#rescueEMS", rescueEMS);
