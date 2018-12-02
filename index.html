@@ -6,9 +6,7 @@
       <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script src="https://d3js.org/d3.v5.min.js"></script>
-      <!--
-      <link rel="shortcut icon" href="img/favicon.png">
-      -->
+      <link rel="shortcut icon" href="img/favicon.ico">
       <link rel="stylesheet" href="css/3dmap.css">
       <link rel="stylesheet" href="css/main.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
@@ -114,13 +112,8 @@
         <p class="g-body">
           Motor vehicle travel is a major means of transportation in the United States, yet for all its advantages,
           motor vehicle crashes are the leading cause of death for persons every age from 5 to 32 years old [1].
-          A motor vehicle crash results from a combination of factors related to the components of the system
-          comprising roads, the environment, vehicles and road users, and the way they interact.
-
-          Identifying the top risk factors that contribute to fatal motor vehicle crashes is important in developing
-          interventions that can reduce the risks associated with those factors.
           We deep dived into the fatal car crash records in the U.S. in year 2016, collected by National Highway
-          Traffic Safety Administration (NHSTA) [2] and encoded using the
+          Traffic Safety Administration (NHSTA) [2] and encoded using the government's
           <a target="_blank" class="tooltipped" data-position="right" data-tooltip="<div class='custom-tooltip'>Fatality Analysis Reporting System is a nationwide census providing <br> NHTSA (National Highway Traffic Safety Administration), Congress <br> and the American public yearly data regarding fatal injuries suffered <br> in motor vehicle traffic crashes.<br><br>Click the link to view how data are encoded using the FARS system.</div>"
           href="https://ire.org/media/uploads/files/datalibrary/samplefiles/DOT%20Fatality%20Analysis%20Reporting%20System%20-%20Simplified/USERGUIDE-2013.pdf">Fatality Analysis Reporting System</a> and identified the top factors that are highly correlated to fatality in motor vehicle crashes.
 
@@ -205,19 +198,20 @@
         </div>
 
         <p class="g-body">
-            A road traffic crash results from a
-            combination of factors related to the
-            components of the system comprising roads, the
-            environment, vehicles and road users, and the
-            way they interact. Some factors contribute to the
+            A motor vehicle crash results from a combination of factors related to the components of the system
+            comprising roads, the environment, vehicles and road users, and the way they interact.
+
+            Some factors contribute to the
             occurrence of a collision and are therefore part of
             crash causation. Other factors aggravate the
             effects of the collision and thus contribute to
             trauma severity. Some
             causes are immediate, but they may be
             underpinned by medium-term and long-term
-            structural causes.
+            structural causes. Identifying the top risk factors that contribute to fatal motor vehicle crashes is important in developing
+            interventions that can reduce the risks associated with those factors.
 
+            <br>
             <br>
             As we explore how different variables correlate with fatality risk of a person,
             and it is important to look at how fatality risk should be defined, based on the data available.
@@ -395,6 +389,8 @@
                   </p>
                 </div>
                 <div class="text">
+                  https://www.cars.com/articles/older-cars-are-more-likely-to-kill-you-federal-safety-regulators-warn-1420699919959/
+
                   There is a clear trend that the proportion who were fatally injured increases with vehicle age.
                 </div>
               </div>
@@ -408,11 +404,23 @@
                   <p>Hover on bars to view details.</p>
 
                   <div class="">
+                    <!--
+                    While we had expected lower fatality rate associated with airbags deployed,
+                    on the surface the data seem to show otherwise. Our hypothesis for this result
+                    is that both air bags are generally designed to deploy only in moderate to severe crashes,
+                    so when the airbags are observed to be deployed, we can assume that the crash is
+                    much more severe than when airbags are not deployed and is inherently much
+                    more dangerous. Hence it's not a fair conclusion from this chart that airbags
+                    are not effective. In fact, NHTSA estimated [3] that 2,756 lives were saved by frontal air bags in 2016. This visualization is not to show that airbags are useless in terms of protecting vehicle occupants safety. Rather, a fair conclusion is when an airbag is observed to be deployed during a car crash, it increases the odds of observing a fatality as well, hence airbag deployment can be used as an indicator of the crash severity (correlation not causation).
+                    -->
+
                     On the surface, it seems that the portion of fatal injuries are
                     higher in scenarios where the airbag is deployed than when it is not.
                     Keep in mind though, that frontal and side air bags
                     are generally designed to deploy in moderate to severe crashes
-                    (may deploy in a minor crash). In fact, <a href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812494" target="_blank"> NHTSA estimated </a> that 2,756 lives were saved by frontal air bags in 2016.
+                    (may deploy in a minor crash).
+
+                    In fact, <a href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812494" target="_blank"> NHTSA estimated </a> that 2,756 lives were saved by frontal air bags in 2016.
                     This visualization is not to show that airbags are useless in terms of protecting vehicle occupants safety, as it can be
                     assumed that the crash severity level
                     on average is higher when airbags are deployed than when they are not.
