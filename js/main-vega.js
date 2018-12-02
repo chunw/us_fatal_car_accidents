@@ -6501,6 +6501,246 @@ const weather =
     ]
   }
 };
+const ped =
+{
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-20c922cfd6dd90632bb285b843b9d21f"},
+  "mark": "point",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "manner_of_collision_name",
+      "legend": {"title": "Manner of Collision"}
+    },
+    "tooltip": [
+      {"type": "nominal", "field": "non_motorist_action_circumstances_name"},
+      {"type": "nominal", "field": "manner_of_collision_name"},
+      {"type": "quantitative", "field": "cnt"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "axis": {"title": "Crash Count"},
+      "field": "cnt"
+    },
+    "y": {
+      "type": "nominal",
+      "axis": {"title": ""},
+      "field": "non_motorist_action_circumstances_name"
+    }
+  },
+  "height": 300,
+  "title": "",
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-20c922cfd6dd90632bb285b843b9d21f": [
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Adjacent to Shoulder/Median",
+        "manner_of_collision_name": "Sideswipe – Same Direction",
+        "cnt": 18
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Adjacent to Shoulder/Median",
+        "manner_of_collision_name": "Angle",
+        "cnt": 15
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Adjacent to Shoulder/Median",
+        "manner_of_collision_name": "Front-to-Rear",
+        "cnt": 14
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Adjacent to Shoulder/Median",
+        "manner_of_collision_name": "Sideswipe – Opposite Direction",
+        "cnt": 4
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Adjacent to Shoulder/Median",
+        "manner_of_collision_name": "Front-to-Front",
+        "cnt": 1
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Cross Roadway",
+        "manner_of_collision_name": "Angle",
+        "cnt": 7
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Cross Roadway",
+        "manner_of_collision_name": "Front-to-Rear",
+        "cnt": 6
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Cross Roadway",
+        "manner_of_collision_name": "Front-to-Front",
+        "cnt": 2
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Disabled Vehicle Related",
+        "manner_of_collision_name": "Front-to-Rear",
+        "cnt": 52
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Disabled Vehicle Related",
+        "manner_of_collision_name": "Sideswipe – Same Direction",
+        "cnt": 30
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Disabled Vehicle Related",
+        "manner_of_collision_name": "Angle",
+        "cnt": 22
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Disabled Vehicle Related",
+        "manner_of_collision_name": "Front-to-Front",
+        "cnt": 3
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Disabled Vehicle Related",
+        "manner_of_collision_name": "Other (End-Swipes and Others)",
+        "cnt": 1
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Disabled Vehicle Related",
+        "manner_of_collision_name": "Sideswipe – Opposite Direction",
+        "cnt": 1
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Enter/Exit a Stopped Vehicle",
+        "manner_of_collision_name": "Front-to-Rear",
+        "cnt": 4
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Enter/Exit a Stopped Vehicle",
+        "manner_of_collision_name": "Sideswipe – Same Direction",
+        "cnt": 2
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Enter/Exit a Stopped Vehicle",
+        "manner_of_collision_name": "Angle",
+        "cnt": 1
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Work/Play in Roadway",
+        "manner_of_collision_name": "Front-to-Rear",
+        "cnt": 20
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Work/Play in Roadway",
+        "manner_of_collision_name": "Angle",
+        "cnt": 7
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Work/Play in Roadway",
+        "manner_of_collision_name": "Sideswipe – Same Direction",
+        "cnt": 5
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Work/Play in Roadway",
+        "manner_of_collision_name": "Sideswipe – Opposite Direction",
+        "cnt": 4
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Work/Play in Roadway",
+        "manner_of_collision_name": "Front-to-Front",
+        "cnt": 1
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Jog/Run",
+        "manner_of_collision_name": "Angle",
+        "cnt": 1
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Move Along Roadway Against Traffic",
+        "manner_of_collision_name": "Angle",
+        "cnt": 3
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Move Along Roadway Against Traffic",
+        "manner_of_collision_name": "Sideswipe – Opposite Direction",
+        "cnt": 1
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Move Along Roadway With Traffic",
+        "manner_of_collision_name": "Front-to-Rear",
+        "cnt": 5
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Move Along Roadway With Traffic",
+        "manner_of_collision_name": "Angle",
+        "cnt": 3
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Move Along Roadway With Traffic",
+        "manner_of_collision_name": "Front-to-Front",
+        "cnt": 2
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Move Along Roadway unkn Direction",
+        "manner_of_collision_name": "Angle",
+        "cnt": 1
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Wait to Cross Roadway",
+        "manner_of_collision_name": "Angle",
+        "cnt": 6
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Work in Trafficway",
+        "manner_of_collision_name": "Sideswipe – Same Direction",
+        "cnt": 4
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Work in Trafficway",
+        "manner_of_collision_name": "Front-to-Rear",
+        "cnt": 2
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Work in Trafficway",
+        "manner_of_collision_name": "Angle",
+        "cnt": 1
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "non_motorist_action_circumstances_name": "Work in Trafficway",
+        "manner_of_collision_name": "Front-to-Front",
+        "cnt": 1
+      }
+    ]
+  }
+}
 vegaEmbed("#passengerRestraintUse", passengerRestraintUse);
 vegaEmbed("#alcohol", alcohol);
 vegaEmbed("#drug", drug);
@@ -6517,3 +6757,4 @@ vegaEmbed("#rescueUrban", rescueUrban);
 vegaEmbed("#rescueRural", rescueRural);
 vegaEmbed("#rescueEMS", rescueEMS);
 vegaEmbed("#weather", weather);
+vegaEmbed("#ped", ped);
