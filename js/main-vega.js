@@ -2969,7 +2969,8 @@ const controlRural =
       "field": "Absent Ratio (Rural)"
     }
   },
-  "width": 600,
+  "height": 300,
+  "width": 500,
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
   "datasets": {
     "data-579b4809fe1ae1094e2ec266c70169f0": [
@@ -3240,7 +3241,8 @@ const controlLocal =
       "field": "Absent Ratio (Urban, Local)"
     }
   },
-  "width": 600,
+  "height": 300,
+  "width": 500,
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
   "datasets": {
     "data-f66e4395af8ad4d3dd94f23b8d8b840a": [
@@ -5116,6 +5118,1389 @@ const rescueEMS =
     ]
   }
 };
+const weather = 
+{
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-87332e185d6d497b119de6d143e676af"},
+  "mark": "point",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "atmospheric_conditions_name",
+      "legend": {"title": "Weather Condition"}
+    },
+    "tooltip": [
+      {"type": "nominal", "field": "state_name"},
+      {"type": "nominal", "field": "atmospheric_conditions_name"},
+      {"type": "quantitative", "field": "cnt"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "axis": {"title": "Crash Count"},
+      "field": "cnt"
+    },
+    "y": {
+      "type": "nominal",
+      "axis": {"title": ""},
+      "field": "atmospheric_conditions_name"
+    }
+  },
+  "height": 300,
+  "title": "Prevailing Unfavorable Weather Conditions Per State",
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-87332e185d6d497b119de6d143e676af": [
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Alabama",
+        "cnt": 161
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Alabama",
+        "cnt": 67
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Alabama",
+        "cnt": 8
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Alabama",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Alaska",
+        "cnt": 21
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Alaska",
+        "cnt": 11
+      },
+      {"atmospheric_conditions_name": "Snow", "state_name": "Alaska", "cnt": 2},
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "Alaska",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Arizona",
+        "cnt": 78
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Arizona",
+        "cnt": 20
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Arizona",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Arizona",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Arizona",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Arizona",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Arkansas",
+        "cnt": 51
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Arkansas",
+        "cnt": 45
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Arkansas",
+        "cnt": 8
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Arkansas",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Arkansas",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "Arkansas",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "California",
+        "cnt": 419
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "California",
+        "cnt": 169
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "California",
+        "cnt": 25
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "California",
+        "cnt": 9
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "California",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "California",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Colorado",
+        "cnt": 12
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Colorado",
+        "cnt": 12
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Colorado",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Colorado",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Connecticut",
+        "cnt": 19
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Connecticut",
+        "cnt": 16
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Connecticut",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Connecticut",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Connecticut",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "Connecticut",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Connecticut",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "Connecticut",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Delaware",
+        "cnt": 15
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Delaware",
+        "cnt": 7
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Delaware",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "District of Columbia",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Florida",
+        "cnt": 469
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Florida",
+        "cnt": 169
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Florida",
+        "cnt": 42
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "Florida",
+        "cnt": 7
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Florida",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Georgia",
+        "cnt": 245
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Georgia",
+        "cnt": 79
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Georgia",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "Georgia",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Hawaii",
+        "cnt": 11
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Hawaii",
+        "cnt": 9
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Hawaii",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Idaho",
+        "cnt": 47
+      },
+      {"atmospheric_conditions_name": "Rain", "state_name": "Idaho", "cnt": 10},
+      {"atmospheric_conditions_name": "Snow", "state_name": "Idaho", "cnt": 8},
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Idaho",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "Idaho",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Idaho",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Illinois",
+        "cnt": 50
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Illinois",
+        "cnt": 37
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Illinois",
+        "cnt": 18
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Illinois",
+        "cnt": 14
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Illinois",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Illinois",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "Illinois",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "Illinois",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Indiana",
+        "cnt": 161
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Indiana",
+        "cnt": 66
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Indiana",
+        "cnt": 9
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Indiana",
+        "cnt": 7
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Indiana",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "Indiana",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Indiana",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Indiana",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Indiana",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Iowa",
+        "cnt": 67
+      },
+      {"atmospheric_conditions_name": "Rain", "state_name": "Iowa", "cnt": 13},
+      {"atmospheric_conditions_name": "Snow", "state_name": "Iowa", "cnt": 11},
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Iowa",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Iowa",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Iowa",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Iowa",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Kansas",
+        "cnt": 17
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Kansas",
+        "cnt": 8
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Kansas",
+        "cnt": 7
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Kansas",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Kansas",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Kansas",
+        "cnt": 2
+      },
+      {"atmospheric_conditions_name": "Snow", "state_name": "Kansas", "cnt": 1},
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Kentucky",
+        "cnt": 151
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Kentucky",
+        "cnt": 67
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Kentucky",
+        "cnt": 9
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Kentucky",
+        "cnt": 5
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Kentucky",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Kentucky",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "Kentucky",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Louisiana",
+        "cnt": 96
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Louisiana",
+        "cnt": 42
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Louisiana",
+        "cnt": 10
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Louisiana",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Maine",
+        "cnt": 22
+      },
+      {"atmospheric_conditions_name": "Rain", "state_name": "Maine", "cnt": 15},
+      {"atmospheric_conditions_name": "Snow", "state_name": "Maine", "cnt": 4},
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Maine",
+        "cnt": 3
+      },
+      {"atmospheric_conditions_name": "Other", "state_name": "Maine", "cnt": 1},
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Maine",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Maryland",
+        "cnt": 46
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Maryland",
+        "cnt": 37
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Maryland",
+        "cnt": 5
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Maryland",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Maryland",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "Maryland",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "Maryland",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Maryland",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Massachusetts",
+        "cnt": 52
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Massachusetts",
+        "cnt": 27
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Massachusetts",
+        "cnt": 7
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Massachusetts",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Michigan",
+        "cnt": 215
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Michigan",
+        "cnt": 73
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Michigan",
+        "cnt": 57
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Michigan",
+        "cnt": 12
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Michigan",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "Michigan",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Michigan",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Minnesota",
+        "cnt": 83
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Minnesota",
+        "cnt": 23
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Minnesota",
+        "cnt": 16
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Minnesota",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Minnesota",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "Minnesota",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Minnesota",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Minnesota",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "Minnesota",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Mississippi",
+        "cnt": 79
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Mississippi",
+        "cnt": 46
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Mississippi",
+        "cnt": 10
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Mississippi",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Mississippi",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Missouri",
+        "cnt": 180
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Missouri",
+        "cnt": 48
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Missouri",
+        "cnt": 14
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "Missouri",
+        "cnt": 10
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Missouri",
+        "cnt": 5
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Missouri",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Montana",
+        "cnt": 52
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Montana",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Montana",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Montana",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Nebraska",
+        "cnt": 34
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Nebraska",
+        "cnt": 7
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Nebraska",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Nebraska",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Nebraska",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "Nebraska",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Nevada",
+        "cnt": 42
+      },
+      {"atmospheric_conditions_name": "Rain", "state_name": "Nevada", "cnt": 5},
+      {"atmospheric_conditions_name": "Snow", "state_name": "Nevada", "cnt": 3},
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "New Hampshire",
+        "cnt": 31
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "New Hampshire",
+        "cnt": 8
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "New Hampshire",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "New Hampshire",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "New Hampshire",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "New Jersey",
+        "cnt": 41
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "New Jersey",
+        "cnt": 18
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "New Jersey",
+        "cnt": 8
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "New Jersey",
+        "cnt": 5
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "New Jersey",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "New Jersey",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "New Mexico",
+        "cnt": 11
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "New Mexico",
+        "cnt": 8
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "New Mexico",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "New Mexico",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "New Mexico",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "New Mexico",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "New Mexico",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "New Mexico",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "New York",
+        "cnt": 248
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "New York",
+        "cnt": 63
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "New York",
+        "cnt": 29
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "New York",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "New York",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "North Carolina",
+        "cnt": 150
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "North Carolina",
+        "cnt": 112
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "North Carolina",
+        "cnt": 12
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "North Carolina",
+        "cnt": 7
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "North Carolina",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "North Carolina",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "North Carolina",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "North Carolina",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "North Dakota",
+        "cnt": 10
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "North Dakota",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "North Dakota",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "North Dakota",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Ohio",
+        "cnt": 297
+      },
+      {"atmospheric_conditions_name": "Rain", "state_name": "Ohio", "cnt": 59},
+      {"atmospheric_conditions_name": "Snow", "state_name": "Ohio", "cnt": 23},
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Ohio",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Ohio",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Ohio",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Oklahoma",
+        "cnt": 182
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Oklahoma",
+        "cnt": 40
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Oklahoma",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Oklahoma",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Oklahoma",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "Oklahoma",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Oklahoma",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Oregon",
+        "cnt": 106
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Oregon",
+        "cnt": 56
+      },
+      {"atmospheric_conditions_name": "Snow", "state_name": "Oregon", "cnt": 8},
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Oregon",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Oregon",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Oregon",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Pennsylvania",
+        "cnt": 85
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Pennsylvania",
+        "cnt": 27
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Pennsylvania",
+        "cnt": 17
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "Pennsylvania",
+        "cnt": 5
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Pennsylvania",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Pennsylvania",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Pennsylvania",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Rhode Island",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Rhode Island",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Rhode Island",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "South Carolina",
+        "cnt": 53
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "South Carolina",
+        "cnt": 47
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "South Carolina",
+        "cnt": 5
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "South Carolina",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "South Carolina",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "South Dakota",
+        "cnt": 16
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "South Dakota",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "South Dakota",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "South Dakota",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Tennessee",
+        "cnt": 97
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Tennessee",
+        "cnt": 69
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Tennessee",
+        "cnt": 8
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Tennessee",
+        "cnt": 7
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Tennessee",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Tennessee",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Texas",
+        "cnt": 603
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Texas",
+        "cnt": 218
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Texas",
+        "cnt": 44
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Texas",
+        "cnt": 2
+      },
+      {"atmospheric_conditions_name": "Snow", "state_name": "Texas", "cnt": 1},
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Texas",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Texas",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Utah",
+        "cnt": 48
+      },
+      {"atmospheric_conditions_name": "Rain", "state_name": "Utah", "cnt": 12},
+      {"atmospheric_conditions_name": "Snow", "state_name": "Utah", "cnt": 6},
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Utah",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Utah",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Vermont",
+        "cnt": 16
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Vermont",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Vermont",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Vermont",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Vermont",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "Vermont",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Virginia",
+        "cnt": 61
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Virginia",
+        "cnt": 8
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Virginia",
+        "cnt": 7
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Virginia",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Washington",
+        "cnt": 79
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Washington",
+        "cnt": 63
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Washington",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Washington",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "West Virginia",
+        "cnt": 30
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "West Virginia",
+        "cnt": 24
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "West Virginia",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "West Virginia",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "West Virginia",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Other",
+        "state_name": "West Virginia",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "West Virginia",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Wisconsin",
+        "cnt": 182
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Wisconsin",
+        "cnt": 18
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Wisconsin",
+        "cnt": 15
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Wisconsin",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Wisconsin",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "Wisconsin",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Wisconsin",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Wyoming",
+        "cnt": 9
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Wyoming",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Cloudy",
+        "state_name": "Wyoming",
+        "cnt": 2
+      }
+    ]
+  }
+};
 vegaEmbed("#passengerRestraintUse", passengerRestraintUse);
 vegaEmbed("#alcohol", alcohol);
 vegaEmbed("#drug", drug);
@@ -5131,3 +6516,4 @@ vegaEmbed("#controlLocal", controlLocal);
 vegaEmbed("#rescueUrban", rescueUrban);
 vegaEmbed("#rescueRural", rescueRural);
 vegaEmbed("#rescueEMS", rescueEMS);
+vegaEmbed("#weather", weather);
