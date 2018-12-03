@@ -216,41 +216,54 @@
               <div class="g-item g-subhed ">
                 <h2><strong>Time of Crash</strong></h2>
               </div>
+
               <div class="analysis">
-                <div class="viz ">
-                  <div id="dangerousTime"></div>
-                  <p>Hover on circles to view details.</p>
-                  <p class="method">
-                    <strong>Methodology:</strong> The size and color indicates crash frequency during the given hour in the given month.
-
-                    <div class="">
-                    Fatal crashes mostly happen in rush hours with busy traffic caused by commuting, e.g. from <b>17:00 to 19:00</b>. Interestingly, they are also more frequent in winter seasons, e.g. <b>November and Decemeber</b>, which might be related to the terrible weather conditions (snow in the East and rain on the west).
-
-                    <br><br>
-                    Note that we do not observe the same high frequency during rush hours in the morning. We further explore the type/level of light that existed at the time of the crash:
-                    <br><br>
+                  <div class="row my-tabs">
+                    <div class="col s12">
+                      <ul class="tabs ">
+                        <li class="tab col s3"><a class="active" href="#timeTab1">All Crashes</a></li>
+                        <li class="tab col s3"><a href="#timeTab2">With Bad Lighting</a></li>
+                      </ul>
                     </div>
-                  </div>
-                <div class="text">
-                </div>
-              </div>
+                    <div id="timeTab1" class="col s12 my-tab">
+                      <div class="analysis">
+                        <div class="viz ">
+                          <div id="dangerousTime"></div>
+                          <p>Hover on circles to view number of crashes by month and hour.</p>
+                          <p class="method">
+                            <strong>Methodology:</strong> The size and color indicates crash frequency during the given hour in the given month.
 
-              <div class="analysis">
-                  <div class="viz ">
-                      <div id="light"></div>
-                      <p>Hover on circles to view details.</p>
-                      <p class="method">
-                        <strong>Methodology:</strong> This plot only focuses on crashes that happened in a dark and unlighted environment.
-
-                        <div class="">
-                        Nights are longer in winter. We see a bell shaped curve: the "dangerous" period starts early and lasts longer in winter, starts late and lasts shorted in summer.
+                          </p>
+                          <div class="">
+                            Fatal crashes mostly happen in rush hours with busy traffic caused by commuting, e.g. from <b>17:00 to 19:00</b>. Interestingly, they are also more frequent in winter seasons, e.g. <b>November and Decemeber</b>, which might be related to the terrible weather conditions (snow in the East and rain on the west).
+          
+                            <br><br>
+                              Note that we do not observe the same high frequency during rush hours in the morning. We further explore the type/level of light that existed at the time of the crash. (Click on <span style="color:#e36e68">WITH BAD LIGHTING</span> tab to see more details.)
+                            <br><br>
+                          </div>
                         </div>
+                        <div class="text">
+  
+                        </div>
+                      </div>
                     </div>
-                  <div class="text">
-                    Bad light condition might be another contributing factor for accidents in evening rush hours.
+                    <div id="timeTab2" class="col s12 my-tab">
+                      <div class="analysis">
+                        <div class="viz ">
+                          <div id="light"></div>
+                          <p>Hover on circles to view number of crashes (in bad lighting) by month and hour.</p>
+                          <p class="method">
+                            <strong>Methodology:</strong> This plot only focuses on crashes that happened in a dark and unlighted environment.
+                          </p>
+                          <div class="">
+                              <b>Bad light condition</b> appears to be another contributing factor for accidents in evening rush hours. Since nights are usually longer in winter, we see a bell shaped curve: the "dangerous" period starts early and lasts longer in winter, starts late and lasts shorted in summer.
+                          </div>
+  
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-          </section>
+              </div>
 
           <section id="section-weather">
               <div class="g-item g-subhed ">
@@ -766,45 +779,56 @@
                 <h2><strong>Rescue Delay</strong></h2>
               </div>
 
-              <div class="g-item g-subhed ">
-                  <h6><strong>Response Time in Urban Area</strong></h6>
-                </div>
                 <div class="analysis">
-                  <div class="viz ">
-                    <div id="rescueUrban"></div>
-                    <p>Hover on bars to view details.</p>
-                    <p class="method">
-                      <strong>Methodology:</strong> "crash2notification" tracks the time from the crash occurred to the emergency medical service was notified. "notification2arrival" tracks how long it took for the emergence medical service to arrive on the crash scene. "arrival2hospital" tracks how long it took for the emergence medical service to transport victims of the crash to the treatment facility. The time is averaged over all crashes that happened in the urban area of the given state.
-                    </p>
-
-                    <div class="">
-                        In Virginia, Kansas and Vermont, there existed noticeable delay between crashes and notification. In Oklahoma, the emergency service reacted relatively slowly. In Washington, transferring victims from the scene to the treatment facility was a long trip. Sadly, the state also has the longest total response time.
-                    </div>
-                  </div>
-                  <br>
-                  <div class="text">
-                  </div>
-                </div>
-
-                <div class="g-item g-subhed ">
-                    <h6><strong>Response Time in Rural Area</strong></h6>
-                  </div>
-                  <div class="analysis">
-                    <div class="viz ">
-                      <div id="rescueRural"></div>
-                      <p>Hover on bars to view details.</p>
-                      <p class="method">
-                        <strong>Methodology:</strong> The three time intervals are computed in the same fashion as above. The time is averaged over all crashes that happened in the rural area of the given state.
-                      </p>
-
-                      <div class="">
-                          Overall, response time was longer in rural areas, which might be explained by the limited access to emergency and hospital services.
+                    <div class="row my-tabs">
+                      <div class="col s12">
+                        <ul class="tabs ">
+                          <li class="tab col s3"><a class="active" href="#rescueUrbanTab">Urban Area</a></li>
+                          <li class="tab col s3"><a href="#rescueRuralTab">Rural Area</a></li>
+                        </ul>
+                      </div>
+                      <div id="rescueUrbanTab" class="col s12 my-tab">
+                        <div class="g-item g-subhed ">
+                          <h6><strong>Response Time in Urban Area</strong></h6>
+                        </div>
+                        <div class="analysis">
+                          <div class="viz ">
+                            <div id="rescueUrban"></div>
+                            <p>Hover on bars to view average response time in urban area of each state.</p>
+                            <p class="method">
+                              <strong>Methodology:</strong> "crash2notification" tracks the time from the crash occurred to the emergency medical service was notified. "notification2arrival" tracks how long it took for the emergence medical service to arrive on the crash scene. "arrival2hospital" tracks how long it took for the emergence medical service to transport victims of the crash to the treatment facility. The time is averaged over all crashes that happened in the urban area of the given state.
+                            </p>
+                            <div class="">
+                              In Virginia, Kansas and Vermont, there existed noticeable delay between crashes and notification. In Oklahoma, the emergency service reacted relatively slowly. In Washington, transferring victims from the scene to the treatment facility was a long trip. Sadly, the state also has the longest total response time.
+                            </div>
+                          </div>
+                          <div class="text">
+    
+                          </div>
+                        </div>
+                      </div>
+                      <div id="rescueRuralTab" class="col s12 my-tab">
+                        <div class="g-item g-subhed ">
+                          <h6><strong>Response Time in Rural Area</strong></h6>
+                        </div>
+                        <div class="analysis">
+                          <div class="viz ">
+                            <div id="rescueRural"></div>
+                            <p>Hover on bars to view average response time in rural area of each state.</p>
+                            <p class="method">
+                              <strong>Methodology:</strong> The time is averaged over all crashes that happened in the rural area of the given state.
+                            </p>
+                            <div class="">
+                                Overall, response time was <b>longer</b> in rural areas, which might be explained by the limited access to emergency services.
+                            </div>
+                          </div>
+                          <div class="text">
+    
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <br>
-                    <div class="text">
-                    </div>
-                  </div>
+                </div>
 
                   <div class="g-item g-subhed ">
                       <h6><strong>Response Time v.s. Emergency Medical Service (EMS) Facilities</strong></h6>
