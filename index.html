@@ -867,8 +867,21 @@
       <p class='g-body'>
         From the above analysis, we have identified top risk factors that are correlated with fatality in car accidents. Some factors, such as speeding and alcohol or drug impaired driving, contribute to the occurrence of a collision and are therefore part of crash causation. Other factors, such as old vehicles and unused restraints systems, aggravate the effects of the collision and thus contribute to trauma severity.
 
+        As there are a lot of variables involved in a car accident,
+        when we correlate one factor to fatality risk, it is difficult to
+        control other factors and completely rule out their influences.
+        <br>  <br>
+        To overcome this shortcoming, we have built a machine learning model, based on our analysis, for predicting
+        a person's fatality risk in a road traffic crash scenario given input features
+        about this person, such as alcohol usage, seating position, person type, etc. We encourage interested readers
+        to play with <a target="_blank" href="https://colab.research.google.com/drive/1yongqM1eD2E0vypQh0VRG0g9Nt6wHZJP#scrollTo=9NBitblc0E78">our model <img style="width: 15px; margin-right: 4px; margin-top: -2px; vertical-align: middle;" src="img/extern-link.svg"/></a>
+        and see how much changing a factor while keeping other factors the same
+        will increase or descrease fatality risk.
+
+        <br>  <br>
+
         Due to the sheer volume of data present in the NHSTA dataset, our analysis is likely to
-        have overlooked some other risk factors contributing to fatality.
+        have overlooked some other risk factors contributing to fatal car crashes.
 
         For interested readers, below we provide an interactive map of the United States to further explore
         the case details of every fatal car crash recorded in 2016. We encourage you to
@@ -878,17 +891,6 @@
       <div class="threedmap-container">
         <div class="threedmap" id='map' style="position: relative;"></div>
       </div>
-
-      <!--
-      <div class="g-item g-subhed " id="threedmap-header">
-        <h2 style="">
-          <strong>Final words
-          </strong></h2>
-      </div>
-      <p class='g-body'>
-        Statistical model analysis of the relationship between the fatality risk and vehicle model year, seating position etc. that control for other factors such as seat belt use, pessenger age could also be part of future analysis.
-      </p>
-    -->
 
     </main>
 
