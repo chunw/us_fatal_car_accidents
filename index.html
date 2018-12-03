@@ -363,7 +363,7 @@
               <div class="analysis">
                 <div class="viz ">
                   <div id="driverCircumstance"></div>
-                  <p>Hover on bars to view details.</p>
+                  <p>Hover on bars to view count of fatal crash by circumstances.</p>
                   <p class="method">
                     <strong>Methodology:</strong> Circumstances that may have contributed to a crash include distraction, driver's physical impairment, alcohol/drug influence, and impediments to the driver's visual field.
                   </p>
@@ -373,39 +373,52 @@
                 </div>
               </div>
 
-              <div class="g-item g-subhed ">
-                <h6><strong>Alcohol-Impaired Driving</strong></h6>
-              </div>
+              <p class='g-body'>
+              Alcohol and drugs usage is risky for both drivers and pedestrains.
+              Avoid alcohol and drugs when walking and driving; they impair your judgment and coordination.
+
+              </p>
+
               <div class="analysis">
-                <div class="viz ">
-                  <div id="alcohol"></div>
-                  <p>Hover on bars to view details.</p>
-                  <p class="method">
-                    <strong>Methodology:</strong> [todo] Police reported Alcohol involvement
-                  </p>
-                </div>
-                <div class="text">
-                  [todo]
-                </div>
-              </div>
+                <div class="row my-tabs">
+                  <div class="col s12">
+                    <ul class="tabs ">
+                      <li class="tab col s3"><a class="active" href="#test1">Alcohol</a></li>
+                      <li class="tab col s3"><a href="#test2">Drugs</a></li>
+                    </ul>
+                  </div>
+                  <div id="test1" class="col s12 my-tab">
+                    <div class="g-item g-subhed ">
+                      <h6><strong>Alcohol-Impaired Driving</strong></h6>
+                    </div>
+                    <div class="analysis">
+                      <div class="viz ">
+                        <div id="alcohol"></div>
+                        <p>Hover on bars to view count of injuries by alcohol involvement and injury type.</p>
 
+                      </div>
+                      <div class="text">
 
-              <div class="g-item g-subhed ">
-                <h6><strong>Drug-Impaired Driving</strong></h6>
-              </div>
-              <div class="analysis">
-                <div class="viz ">
-                  <div id="drug"></div>
-                  <p>Hover on bars to view details.</p>
-                  <p class="method">
-                    <strong>Methodology:</strong> [todo] Police reported drugs involvement
-                  </p>
-                </div>
-                <div class="text">
-                  [todo]
-                </div>
-              </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="test2" class="col s12 my-tab">
+                    <div class="g-item g-subhed ">
+                      <h6><strong>Drug-Impaired Driving</strong></h6>
+                    </div>
+                    <div class="analysis">
+                      <div class="viz ">
+                        <div id="drug"></div>
+                        <p>Hover on bars to view count of injuries by drugs involvement and injury type.</p>
 
+                      </div>
+                      <div class="text">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
 
               <div class="g-item g-subhed ">
                 <h6><strong>Speeding</strong></h6>
@@ -814,8 +827,8 @@
         From the above analysis, we have identified top risk factors that are correlated with fatality in car accidents. Some factors, such as speeding and alcohol or drug impaired driving, contribute to the occurrence of a collision and are therefore part of crash causation. Other factors, such as old vehicles and unused restraints systems, aggravate the effects of the collision and thus contribute to trauma severity.
         Due to the sheer volume of data provided in the NHSTA data, our analysis is likely to
         have overlooked some other risk factors contributing to fatality.
-        For interested readers, below we provide an interactive U.S. map to further explore
-        every fatal car crash case recorded in 2016. We encourage you to
+        For interested readers, below we provide an interactive map of the United States to further explore
+        the case details of every fatal car crash recorded in 2016. We encourage you to
         <span  ><a target="_blank" href="/3dmap.html">explore this map in fullscreen mode</a>
         <img style="width: 15px; margin-right: 4px; margin-top: -2px; vertical-align: middle;" src="img/extern-link.svg"/>.</span>
       </p>
@@ -823,6 +836,7 @@
         <div class="threedmap" id='map' style="position: relative;"></div>
       </div>
     </main>
+
 
     <!-- Javascripts -->
     <script src="js/main.js"></script>
