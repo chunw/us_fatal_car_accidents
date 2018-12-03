@@ -35,7 +35,7 @@
             </div>
             <div class="icon-block">
               <img class="icon" src="img/weather.svg"/>
-              <div class="text">Weather <br>Condition</div>
+              <a class="text" href="#section-weather">Weather <br>Condition</a>
             </div>
             <div class="icon-block">
               <img class="icon" src="img/roadcondi.svg"/>
@@ -54,7 +54,7 @@
             </div>
             <div class="icon-block">
               <img class="icon" style="width: 20px;" src="img/pedestrain.svg"/>
-              <a class="text">Pedestrian <br>Behavior</a>
+              <a class="text" href="#section-pedestrian">Pedestrian <br>Behavior</a>
             </div>
           </div>
 
@@ -65,7 +65,7 @@
             </div>
             <div class="icon-block" >
               <img class="icon" style="width: 63px; padding-top: 4px;transform: scale(1.4);" src="img/rescue.svg"/>
-              <div class="text" style="margin-top: 10px;">Rescue <br>Delay</div>
+              <a class="text" href="#section-rescue" style="margin-top: 10px;" >Rescue <br>Delay</a>
             </div>
             <div class="icon-block" >
               <img class="icon"  style="width: 32px;" />
@@ -79,12 +79,9 @@
     <!-- HELP -->
     <div id="tooltip-help">
       <div class="g-item g-subhed ">
-        <div style="margin-top: 60px;">
-          [1] <i> Motor Vehicle Traffic Crashes as a Leading Cause of Death in the United States, 2015 </i> (<a href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812499" target="_blank">NHSTA Research Note</a>).
-        </div>
 
-        <div style="margin-top: 100px;">
-          [2] Dataset accessible via <a href="https://bigquery.cloud.google.com/dataset/bigquery-public-data:nhtsa_traffic_fatalities" target="_blank">Google BigQuery</a>.
+        <div style="margin-top: 150px;">
+          [3] Dataset accessible via <a href="https://bigquery.cloud.google.com/dataset/bigquery-public-data:nhtsa_traffic_fatalities" target="_blank">Google BigQuery</a>.
         </div>
 
         <div style="margin-top: 12px;">
@@ -112,9 +109,11 @@
       <div class="g-item g-text ">
         <p class="g-body">
           Motor vehicle travel is a major means of transportation in the United States, yet for all its advantages,
-          motor vehicle crashes are the leading cause of death for persons every age from 5 to 32 years old [1].
+          each year fatal motor vehicle crashes in the U.S. lead to an estimated societal burden of more than
+          $230 billion from medical and other costs <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0001457516303918">[1]</a>.
+          Motor vehicle crashes are also the leading cause of death for persons every age from 5 to 32 years old <a target="_blank" href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812499">[2]</a>.
           We deep dived into the fatal car crash records in the U.S. in year 2016, collected by National Highway
-          Traffic Safety Administration (NHSTA) [2] and encoded using the government's
+          Traffic Safety Administration (NHSTA) [3] and encoded using the government's
           <a target="_blank" class="tooltipped" data-position="right" data-tooltip="<div class='custom-tooltip'>Fatality Analysis Reporting System is a nationwide census providing <br> NHTSA (National Highway Traffic Safety Administration), Congress <br> and the American public yearly data regarding fatal injuries suffered <br> in motor vehicle traffic crashes.<br><br>Click the link to view how data are encoded using the FARS system.</div>"
           href="https://ire.org/media/uploads/files/datalibrary/samplefiles/DOT%20Fatality%20Analysis%20Reporting%20System%20-%20Simplified/USERGUIDE-2013.pdf">Fatality Analysis Reporting System</a> and identified the top factors that are highly correlated to fatality in motor vehicle crashes.
 
@@ -211,11 +210,8 @@
             underpinned by medium-term and long-term
             structural causes. Identifying the top risk factors that contribute to fatal motor vehicle crashes is important in developing
             interventions that can reduce the risks associated with those factors.
-
             <br>
             <br>
-            As we explore how different variables correlate with fatality risk of a person,
-            and it is important to look at how fatality risk should be defined, based on the data available.
         </p>
 
         <!-- Analysis -->
@@ -296,9 +292,10 @@
 
               </div>
 
+              <!--
               <div class="g-item g-subhed ">
                   <h6><strong>Traffic Controls Absence in Rural Area</strong></h6>
-                </div>
+
                 <div class="analysis">
                   <div class="viz ">
                     <div id="controlRural"></div>
@@ -335,6 +332,8 @@
                       For urban local areas, control conditions were much worse in Mississippi, Tennessee and Arkansas.
                     </div>
                   </div>
+              </div>
+            -->
           </section>
 
           <section id="section-driver">
@@ -377,7 +376,7 @@
 
 
               <div class="g-item g-subhed ">
-                <h6><strong>Vehicle Speed v.s. Speeding Record</strong></h6>
+                <h6><strong>Speeding</strong></h6>
               </div>
               <div class="analysis">
                 <div class="viz ">
@@ -444,20 +443,92 @@
               <div class="g-item g-subhed ">
                 <h2><strong>Pedestrian Behavior</strong></h2>
               </div>
+              <p class="g-body">
+                Pedestrians, along with cyclists and persons on personal conveyances,
+                are one of road user groups with highest fatality risks in road traffic crashes.
+                <br>
+                <br>
+                •  In 2016 there were 5,987 pedestrians
+                killed in traffic crashes. This
+                is the highest number of pedestrians
+                killed in one year since 1990. <br>
+                • In 2016, pedestrian deaths
+                accounted for 16% of all
+                traffic fatalities. <br>
+                • On average, a pedestrian was
+                killed in
+                traffic crashes nearly every 1.5 hours in 2016. <br>
+                <br>
+              </p>
+              <div class="analysis">
+                  <div class="viz ">
+                    <div id="pedestrain"></div>
+                    <p>Hover on bars to view details.</p>
+
+                  <div class="text">
+
+                  </div>
+                </div>
+              </div>
+              <p class='g-body'>
+
+                <!--
+                  <strong> 10 Pedestrian Safety Tips: </strong><br>
+                <div  class="my-list">
+                <ul>
+                  <li>
+                      Be predictable. Follow the rules of the road and obey signs and signals.
+                  </li>
+                  <li>
+                      Walk on sidewalks whenever they are available.
+                  </li>
+                  <li>
+                    If there is no sidewalk, walk facing traffic and as far from traffic as possible.
+                  </li>
+                  <li>
+                    Keep alert at all times; don’t be distracted by electronic devices that take your eyes (and ears) off the road.
+                  </li>
+                  <li>
+                    Whenever possible, cross streets at crosswalks or intersections, where drivers expect pedestrians. Look for cars in all directions, including those turning left or right.
+                  </li>
+                  <li>
+                    If a crosswalk or intersection is not available, locate a well-lit area where you have the best view of traffic. Wait for a gap in traffic that allows enough time to cross safely; continue watching for traffic as you cross.
+                  </li>
+                  <li>
+                    Never assume a driver sees you. Make eye contact with drivers as they approach to make sure you are seen.
+                  </li>
+                  <li>
+                    Be visible at all times. Wear bright clothing during the day, and wear reflective materials or use a flashlight at night.
+                  </li>
+                  <li>
+                    Watch for cars entering or exiting driveways, or backing up in parking lots.
+                  </li>
+                  <li>
+                    Avoid alcohol and drugs when walking; they impair your abilities and your judgment.
+                  </li>
+                </ul>
+                </div>
+              -->
+              </p>
+
               <div class="analysis">
                 <div class="viz ">
                   <div id="ped"></div>
                   <p>Hover on circles to view details.</p>
                   <p class="method">
-                    <strong>Methodology:</strong> The data relates the action(s) of the pedestrians immediately prior to their involvement in the crash and the orientation of collision with the striking vehicle.
+                    <strong>Methodology:</strong> This visualization relates the action(s) of the pedestrians immediately prior to their involvement in the crash and the orientation of collision with the striking vehicle.
 
                     <div class="">
 
+
                     </div>
-                  </div>
+                </div>
                 <div class="text">
                 </div>
               </div>
+
+
+
           </section>
 
           <section id="section-vehicle">
@@ -516,27 +587,31 @@
                   <div class="">
                     <!--
                     While we had expected lower fatality rate associated with airbags deployed,
-                    on the surface the data seem to show otherwise. Our hypothesis for this result
+                    on the surface the data seem to show otherwise. Our hypothesis for this pattern
                     is that both air bags are generally designed to deploy only in moderate to severe crashes,
                     so when the airbags are observed to be deployed, we can assume that the crash is
                     much more severe than when airbags are not deployed and is inherently much
                     more dangerous. Hence it's not a fair conclusion from this chart that airbags
                     are not effective. In fact, NHTSA estimated [3] that 2,756 lives were saved by frontal air bags in 2016. This visualization is not to show that airbags are useless in terms of protecting vehicle occupants safety. Rather, a fair conclusion is when an airbag is observed to be deployed during a car crash, it increases the odds of observing a fatality as well, hence airbag deployment can be used as an indicator of the crash severity (correlation not causation).
-                    -->
+
 
                     On the surface, it seems that the portion of fatal injuries are
                     higher in scenarios where the airbag is deployed than when it is not.
                     Keep in mind though, that frontal and side air bags
                     are generally designed to deploy in moderate to severe crashes
-                    (may deploy in a minor crash).
+                    (may deploy in a minor crash).  -->
 
-                    In fact, <a href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812494" target="_blank"> NHTSA estimated </a> that 2,756 lives were saved by frontal air bags in 2016.
-                    This visualization is not to show that airbags are useless in terms of protecting vehicle occupants safety, as it can be
-                    assumed that the crash severity level
-                    on average is higher when airbags are deployed than when they are not.
-
-                    Rather, a fair conclusion is when an airbag is observed to be deployed during a car crash,
-                    it increases the odds of observing a fatality as well, hence airbag deployment is a fair indicator of the crash severity (<i>correlation not causation</i>).
+                    On the surface, the data deviates from our expectation that
+                    airbags deployed are associated with lower fatality rate. Our hypothesis for this
+                    pattern is that airbags are generally designed to deploy only in moderate
+                    to severe crashes, therefore when the airbags are observed to be deployed,
+                    we can assume that the crash is much more severe than when airbags
+                    are not deployed. If factoring in crash severity,
+                    airbags may have been effective in lowering the fatality risk
+                    of vehicle occupants in severe crashes.
+                    In fact, <a href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812494"
+                    target="_blank"> NHTSA estimated </a> that 2,756 lives were saved by
+                    frontal air bags in 2016.
 
                     <br><br>
                     It is important, however, to follow guidance on how to safely position yourself and your passengers,
