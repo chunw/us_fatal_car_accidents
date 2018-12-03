@@ -39,7 +39,7 @@ const passengerRestraintUse = {
     "x": {
       "type": "quantitative",
       "aggregate": "sum",
-      "axis": {"title": "Percent in all types of injuries"},
+      "axis": {"title": "Ratio in all types of injuries"},
       "field": "count",
       "stack": "normalize"
     },
@@ -585,7 +585,7 @@ const ejection = {
     "x": {
       "type": "quantitative",
       "aggregate": "sum",
-      "axis": {"title": "Percent in all types of injuries"},
+      "axis": {"title": "Ratio in all types of injuries"},
       "field": "count",
       "stack": "normalize"
     },
@@ -2114,7 +2114,7 @@ const airbagDeployment =
     "x": {
       "type": "quantitative",
       "aggregate": "sum",
-      "axis": {"title": "Percent in all types of injuries"},
+      "axis": {"title": "Ratio in all types of injuries"},
       "field": "injury_count",
       "stack": "normalize"
     },
@@ -7061,6 +7061,486 @@ const pedestrain = {
     ]
   }
 };
+const seatingposition = {
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-cdef64a86ddba2842534563a5ed29c9f"},
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "injury_severity_name",
+      "legend": {"title": "Injury severity"},
+      "scale": {
+        "range": [
+          "#d73027",
+          "#f46d43",
+          "#fdae61",
+          "#ffffbf",
+          "#ffffbf",
+          "#4575b4"
+        ]
+      },
+      "sort": [
+        "Fatal Injury (K)",
+        "Suspected Serious Injury (A)",
+        "Suspected Minor Injury (B)",
+        "Possible Injury (C)",
+        "Injured, Severity Unknown (U) (Since 1978)",
+        "No Apparent Injury (O)"
+      ]
+    },
+    "order": {"type": "nominal", "field": "order"},
+    "tooltip": [
+      {"type": "quantitative", "aggregate": "sum", "field": "injury_count"},
+      {"type": "nominal", "field": "seating_position_name"},
+      {"type": "nominal", "field": "injury_severity_name"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "aggregate": "sum",
+      "axis": {"title": "Ratio in all types of injuries"},
+      "field": "injury_count",
+      "stack": "normalize"
+    },
+    "y": {
+      "type": "nominal",
+      "axis": {"title": "Seating Position"},
+      "field": "seating_position_name"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "if(datum.injury_severity_name === 'Fatal Injury (K)', 0,            if(datum.injury_severity_name === 'Suspected Serious Injury (A)', 1,            if(datum.injury_severity_name === 'Suspected Minor Injury (B)', 2,            if(datum.injury_severity_name === 'Possible Injury (C)', 3,            if(datum.injury_severity_name === 'Injured, Severity Unknown (U) (Since 1978)', 4,            if(datum.injury_severity_name === 'No Apparent Injury (O)', 5, 6))))))",
+      "as": "order"
+    }
+  ],
+  "width": DEFAULT_GRAPH_WIDTH_MEDIUM,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-cdef64a86ddba2842534563a5ed29c9f": [
+      {
+        "seating_position_name": "Fourth Seat – Left Side",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 1
+      },
+      {
+        "seating_position_name": "Fourth Seat – Left Side",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "injury_count": 3
+      },
+      {
+        "seating_position_name": "Fourth Seat – Left Side",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 2
+      },
+      {
+        "seating_position_name": "Fourth Seat – Middle",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 2
+      },
+      {
+        "seating_position_name": "Fourth Seat – Middle",
+        "injury_severity_name": "Possible Injury (C)",
+        "injury_count": 1
+      },
+      {
+        "seating_position_name": "Fourth Seat – Middle",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 1
+      },
+      {
+        "seating_position_name": "Fourth Seat – Middle",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "injury_count": 5
+      },
+      {
+        "seating_position_name": "Fourth Seat – Right Side",
+        "injury_severity_name": "Possible Injury (C)",
+        "injury_count": 1
+      },
+      {
+        "seating_position_name": "Fourth Seat – Right Side",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 1
+      },
+      {
+        "seating_position_name": "Fourth Seat – Right Side",
+        "injury_severity_name": "Fatal Injury (K)",
+        "injury_count": 1
+      },
+      {
+        "seating_position_name": "Fourth Seat – Right Side",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "injury_count": 2
+      },
+      {
+        "seating_position_name": "Fourth Seat – Right Side",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 1
+      },
+      {
+        "seating_position_name": "Front Seat – Left Side (Driver's Side)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "injury_count": 5048
+      },
+      {
+        "seating_position_name": "Front Seat – Left Side (Driver's Side)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "injury_count": 23747
+      },
+      {
+        "seating_position_name": "Front Seat – Left Side (Driver's Side)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 4163
+      },
+      {
+        "seating_position_name": "Front Seat – Left Side (Driver's Side)",
+        "injury_severity_name": "Possible Injury (C)",
+        "injury_count": 3962
+      },
+      {
+        "seating_position_name": "Front Seat – Left Side (Driver's Side)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 14315
+      },
+      {
+        "seating_position_name": "Front Seat – Left Side (Driver's Side)",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "injury_count": 129
+      },
+      {
+        "seating_position_name": "Front Seat – Middle",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "injury_count": 54
+      },
+      {
+        "seating_position_name": "Front Seat – Middle",
+        "injury_severity_name": "Fatal Injury (K)",
+        "injury_count": 52
+      },
+      {
+        "seating_position_name": "Front Seat – Middle",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 72
+      },
+      {
+        "seating_position_name": "Front Seat – Middle",
+        "injury_severity_name": "Possible Injury (C)",
+        "injury_count": 36
+      },
+      {
+        "seating_position_name": "Front Seat – Middle",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 58
+      },
+      {
+        "seating_position_name": "Front Seat – Middle",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "injury_count": 1
+      },
+      {
+        "seating_position_name": "Front Seat – Right Side",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 3235
+      },
+      {
+        "seating_position_name": "Front Seat – Right Side",
+        "injury_severity_name": "Possible Injury (C)",
+        "injury_count": 1509
+      },
+      {
+        "seating_position_name": "Front Seat – Right Side",
+        "injury_severity_name": "Fatal Injury (K)",
+        "injury_count": 4014
+      },
+      {
+        "seating_position_name": "Front Seat – Right Side",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 2082
+      },
+      {
+        "seating_position_name": "Front Seat – Right Side",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "injury_count": 45
+      },
+      {
+        "seating_position_name": "Front Seat – Right Side",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "injury_count": 2206
+      },
+      {
+        "seating_position_name": "Not a Motor Vehicle Occupant (2005-Later)",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "injury_count": 7
+      },
+      {
+        "seating_position_name": "Not a Motor Vehicle Occupant (2005-Later)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 243
+      },
+      {
+        "seating_position_name": "Not a Motor Vehicle Occupant (2005-Later)",
+        "injury_severity_name": "Possible Injury (C)",
+        "injury_count": 94
+      },
+      {
+        "seating_position_name": "Not a Motor Vehicle Occupant (2005-Later)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 18
+      },
+      {
+        "seating_position_name": "Not a Motor Vehicle Occupant (2005-Later)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "injury_count": 7139
+      },
+      {
+        "seating_position_name": "Not a Motor Vehicle Occupant (2005-Later)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "injury_count": 154
+      },
+      {
+        "seating_position_name": "Riding on Vehicle Exterior",
+        "injury_severity_name": "Possible Injury (C)",
+        "injury_count": 7
+      },
+      {
+        "seating_position_name": "Riding on Vehicle Exterior",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 2
+      },
+      {
+        "seating_position_name": "Riding on Vehicle Exterior",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 21
+      },
+      {
+        "seating_position_name": "Riding on Vehicle Exterior",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "injury_count": 7
+      },
+      {
+        "seating_position_name": "Riding on Vehicle Exterior",
+        "injury_severity_name": "Fatal Injury (K)",
+        "injury_count": 63
+      },
+      {
+        "seating_position_name": "Second Seat – Left Side",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "injury_count": 15
+      },
+      {
+        "seating_position_name": "Second Seat – Left Side",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "injury_count": 739
+      },
+      {
+        "seating_position_name": "Second Seat – Left Side",
+        "injury_severity_name": "Fatal Injury (K)",
+        "injury_count": 1082
+      },
+      {
+        "seating_position_name": "Second Seat – Left Side",
+        "injury_severity_name": "Possible Injury (C)",
+        "injury_count": 499
+      },
+      {
+        "seating_position_name": "Second Seat – Left Side",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 945
+      },
+      {
+        "seating_position_name": "Second Seat – Left Side",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 731
+      },
+      {
+        "seating_position_name": "Second Seat – Middle",
+        "injury_severity_name": "Fatal Injury (K)",
+        "injury_count": 246
+      },
+      {
+        "seating_position_name": "Second Seat – Middle",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 392
+      },
+      {
+        "seating_position_name": "Second Seat – Middle",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 250
+      },
+      {
+        "seating_position_name": "Second Seat – Middle",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "injury_count": 251
+      },
+      {
+        "seating_position_name": "Second Seat – Middle",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "injury_count": 4
+      },
+      {
+        "seating_position_name": "Second Seat – Middle",
+        "injury_severity_name": "Possible Injury (C)",
+        "injury_count": 197
+      },
+      {
+        "seating_position_name": "Second Seat – Right Side",
+        "injury_severity_name": "Possible Injury (C)",
+        "injury_count": 595
+      },
+      {
+        "seating_position_name": "Second Seat – Right Side",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 1185
+      },
+      {
+        "seating_position_name": "Second Seat – Right Side",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 654
+      },
+      {
+        "seating_position_name": "Second Seat – Right Side",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "injury_count": 724
+      },
+      {
+        "seating_position_name": "Second Seat – Right Side",
+        "injury_severity_name": "Fatal Injury (K)",
+        "injury_count": 832
+      },
+      {
+        "seating_position_name": "Second Seat – Right Side",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "injury_count": 20
+      },
+      {
+        "seating_position_name": "Sleeper Section of Cab (Truck)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "injury_count": 13
+      },
+      {
+        "seating_position_name": "Sleeper Section of Cab (Truck)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 78
+      },
+      {
+        "seating_position_name": "Sleeper Section of Cab (Truck)",
+        "injury_severity_name": "Possible Injury (C)",
+        "injury_count": 15
+      },
+      {
+        "seating_position_name": "Sleeper Section of Cab (Truck)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "injury_count": 15
+      },
+      {
+        "seating_position_name": "Sleeper Section of Cab (Truck)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 13
+      },
+      {
+        "seating_position_name": "Third Seat – Left Side",
+        "injury_severity_name": "Fatal Injury (K)",
+        "injury_count": 45
+      },
+      {
+        "seating_position_name": "Third Seat – Left Side",
+        "injury_severity_name": "Possible Injury (C)",
+        "injury_count": 38
+      },
+      {
+        "seating_position_name": "Third Seat – Left Side",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "injury_count": 52
+      },
+      {
+        "seating_position_name": "Third Seat – Left Side",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 67
+      },
+      {
+        "seating_position_name": "Third Seat – Left Side",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 51
+      },
+      {
+        "seating_position_name": "Third Seat – Middle",
+        "injury_severity_name": "Fatal Injury (K)",
+        "injury_count": 22
+      },
+      {
+        "seating_position_name": "Third Seat – Middle",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "injury_count": 1
+      },
+      {
+        "seating_position_name": "Third Seat – Middle",
+        "injury_severity_name": "Possible Injury (C)",
+        "injury_count": 16
+      },
+      {
+        "seating_position_name": "Third Seat – Middle",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 36
+      },
+      {
+        "seating_position_name": "Third Seat – Middle",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 22
+      },
+      {
+        "seating_position_name": "Third Seat – Middle",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "injury_count": 30
+      },
+      {
+        "seating_position_name": "Third Seat – Right Side",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 64
+      },
+      {
+        "seating_position_name": "Third Seat – Right Side",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "injury_count": 1
+      },
+      {
+        "seating_position_name": "Third Seat – Right Side",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 43
+      },
+      {
+        "seating_position_name": "Third Seat – Right Side",
+        "injury_severity_name": "Possible Injury (C)",
+        "injury_count": 46
+      },
+      {
+        "seating_position_name": "Third Seat – Right Side",
+        "injury_severity_name": "Fatal Injury (K)",
+        "injury_count": 33
+      },
+      {
+        "seating_position_name": "Third Seat – Right Side",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "injury_count": 62
+      },
+      {
+        "seating_position_name": "Trailing Unit",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "injury_count": 10
+      },
+      {
+        "seating_position_name": "Trailing Unit",
+        "injury_severity_name": "Fatal Injury (K)",
+        "injury_count": 12
+      },
+      {
+        "seating_position_name": "Trailing Unit",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "injury_count": 8
+      }
+    ]
+  }
+};
 vegaEmbed("#passengerRestraintUse", passengerRestraintUse);
 vegaEmbed("#alcohol", alcohol);
 vegaEmbed("#drug", drug);
@@ -7079,3 +7559,4 @@ vegaEmbed("#rescueEMS", rescueEMS);
 vegaEmbed("#weather", weather);
 vegaEmbed("#ped", ped);
 vegaEmbed("#pedestrain", pedestrain);
+vegaEmbed("#seatingposition", seatingposition);
