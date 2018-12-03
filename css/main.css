@@ -167,6 +167,9 @@ section {
   padding-left: 2em;
   display: table-cell;
   vertical-align: top;
+  font: 400 0.9em 'nyt-franklin', arial, sans-serif;
+    line-height: 1.3em;
+    padding-top: 0.8em;
 }
 
 .anatomy .icon-block .text.active {
