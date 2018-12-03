@@ -1687,6 +1687,10 @@ const fatalityRateByCounty = {
   "mark": "geoshape",
   "encoding": {
     "color": {
+      "scale": {
+        "domain": [0,1,2,3],
+        "range": ["#00335E","#ffffff",'#FFFFBF', "#d73027"]
+      },
       "field": "Fatality rate (%)",
       "type": "quantitative"
     },
@@ -6737,6 +6741,326 @@ const ped =
     ]
   }
 }
+const pedestrain = {
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-51165335cba427a8aa5ca4a2550f7565"},
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "injury_severity_name",
+      "legend": {"title": "Injury severity"},
+      "scale": {
+        "range": [
+          "#d73027",
+          "#f46d43",
+          "#fdae61",
+          "#ffffbf",
+          "#ffffbf",
+          "#4575b4"
+        ]
+      },
+      "sort": [
+        "Fatal Injury (K)",
+        "Suspected Serious Injury (A)",
+        "Suspected Minor Injury (B)",
+        "Possible Injury (C)",
+        "Injured, Severity Unknown (U) (Since 1978)",
+        "No Apparent Injury (O)"
+      ]
+    },
+    "order": {"type": "nominal", "field": "order"},
+    "tooltip": [
+      {"type": "quantitative", "aggregate": "sum", "field": "count"},
+      {"type": "nominal", "field": "person_type_name"},
+      {"type": "nominal", "field": "injury_severity_name"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "aggregate": "sum",
+      "axis": {"title": "Ratio in all types of injuries"},
+      "field": "count",
+      "stack": "normalize"
+    },
+    "y": {
+      "type": "nominal",
+      "axis": {"title": "Person type"},
+      "field": "person_type_name"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "if(datum.injury_severity_name === 'Fatal Injury (K)', 0,            if(datum.injury_severity_name === 'Suspected Serious Injury (A)', 1,            if(datum.injury_severity_name === 'Suspected Minor Injury (B)', 2,            if(datum.injury_severity_name === 'Possible Injury (C)', 3,            if(datum.injury_severity_name === 'Injured, Severity Unknown (U) (Since 1978)', 4,            if(datum.injury_severity_name === 'No Apparent Injury (O)', 5, 6))))))",
+      "as": "order"
+    }
+  ],
+  "width": DEFAULT_GRAPH_WIDTH_MEDIUM,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-51165335cba427a8aa5ca4a2550f7565": [
+      {
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 23715
+      },
+      {
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 14231
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 6821
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 6607
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 6080
+      },
+      {
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 5026
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 4586
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 4240
+      },
+      {
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 4153
+      },
+      {
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 3941
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 3375
+      },
+      {
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 848
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 199
+      },
+      {
+        "person_type_name": "Person on Personal Conveyances (Since 2007)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 176
+      },
+      {
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 175
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 130
+      },
+      {
+        "person_type_name": "Driver of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 129
+      },
+      {
+        "person_type_name": "Passenger of a Motor Vehicle In-Transport",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 102
+      },
+      {
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 77
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 76
+      },
+      {
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 60
+      },
+      {
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 54
+      },
+      {
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 42
+      },
+      {
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 28
+      },
+      {
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 22
+      },
+      {
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 18
+      },
+      {
+        "person_type_name": "Persons In/On Buildings (Since 2007)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 17
+      },
+      {
+        "person_type_name": "Occupant of a Non-Motor Vehicle Transport Device",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 15
+      },
+      {
+        "person_type_name": "Persons In/On Buildings (Since 2007)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 15
+      },
+      {
+        "person_type_name": "Occupant of a Non-Motor Vehicle Transport Device",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 10
+      },
+      {
+        "person_type_name": "Persons In/On Buildings (Since 2007)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 10
+      },
+      {
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 9
+      },
+      {
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 9
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 8
+      },
+      {
+        "person_type_name": "Occupant of a Non-Motor Vehicle Transport Device",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 7
+      },
+      {
+        "person_type_name": "Pedestrian",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 7
+      },
+      {
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 6
+      },
+      {
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 6
+      },
+      {
+        "person_type_name": "Occupant of a Non-Motor Vehicle Transport Device",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 5
+      },
+      {
+        "person_type_name": "Person on Personal Conveyances (Since 2007)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 5
+      },
+      {
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 4
+      },
+      {
+        "person_type_name": "Other Cyclist",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 4
+      },
+      {
+        "person_type_name": "Person on Personal Conveyances (Since 2007)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 4
+      },
+      {
+        "person_type_name": "Persons In/On Buildings (Since 2007)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 4
+      },
+      {
+        "person_type_name": "Unknown Occupant Type in a Motor Vehicle In-Transport",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 4
+      },
+      {
+        "person_type_name": "Bicyclist",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 2
+      },
+      {
+        "person_type_name": "Occupant of a Motor Vehicle Not In-Transport",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 1
+      },
+      {
+        "person_type_name": "Occupant of a Non-Motor Vehicle Transport Device",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 1
+      },
+      {
+        "person_type_name": "Other Cyclist",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1
+      },
+      {
+        "person_type_name": "Person on Personal Conveyances (Since 2007)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1
+      },
+      {
+        "person_type_name": "Unknown Type of Non-Motorist",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 1
+      },
+      {
+        "person_type_name": "Unknown Type of Non-Motorist",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1
+      }
+    ]
+  }
+};
 vegaEmbed("#passengerRestraintUse", passengerRestraintUse);
 vegaEmbed("#alcohol", alcohol);
 vegaEmbed("#drug", drug);
@@ -6754,3 +7078,4 @@ vegaEmbed("#rescueRural", rescueRural);
 vegaEmbed("#rescueEMS", rescueEMS);
 vegaEmbed("#weather", weather);
 vegaEmbed("#ped", ped);
+vegaEmbed("#pedestrain", pedestrain);
