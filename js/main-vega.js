@@ -4867,18 +4867,26 @@ const rescueRural =
 const rescueEMS =
 {
   "config": {"view": {"width": 400, "height": 300}},
-  "data": {"name": "data-9bc763822103e9a7ab3e9edc8e3dd797"},
+  "data": {"name": "data-cdf31b4d511a979a49c967863bcdfa4a"},
   "mark": "point",
   "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "outlier",
+      "legend": null,
+      "scale": {"range": ["#2776d7", "#d73027"]}
+    },
     "tooltip": [
       {"type": "nominal", "field": "State"},
       {"type": "quantitative", "field": "Total Response Time"},
-      {"type": "quantitative", "field": "Number of EMS Stations"}
+      {"type": "quantitative", "field": "Number of EMS Stations"},
+      {"type": "quantitative", "field": "Population"},
+      {"type": "quantitative", "field": "EMS Stations Per Capita"}
     ],
     "x": {
       "type": "quantitative",
-      "axis": {"title": "Number of Emergency Medical Service Stations"},
-      "field": "Number of EMS Stations"
+      "axis": {"title": "EMS per capita"},
+      "field": "EMS Stations Per Capita"
     },
     "y": {
       "type": "quantitative",
@@ -4886,238 +4894,374 @@ const rescueEMS =
       "field": "Total Response Time"
     }
   },
+  "height": 300,
   "width": 600,
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
   "datasets": {
-    "data-9bc763822103e9a7ab3e9edc8e3dd797": [
+    "data-cdf31b4d511a979a49c967863bcdfa4a": [
       {
         "State": "Oregon",
         "Total Response Time": 37.52173913043478,
-        "Number of EMS Stations": 422
+        "Number of EMS Stations": 422,
+        "Population": 3970239,
+        "EMS Stations Per Capita": 0.00010629083035051542,
+        "outlier": ""
       },
       {
         "State": "South Dakota",
         "Total Response Time": 30.75,
-        "Number of EMS Stations": 237
+        "Number of EMS Stations": 237,
+        "Population": 853175,
+        "EMS Stations Per Capita": 0.0002777859173088757,
+        "outlier": ""
       },
       {
         "State": "Wyoming",
         "Total Response Time": 33.416666666666664,
-        "Number of EMS Stations": 173
+        "Number of EMS Stations": 173,
+        "Population": 584153,
+        "EMS Stations Per Capita": 0.0002961552880837726,
+        "outlier": ""
       },
       {
         "State": "West Virginia",
         "Total Response Time": 48.11538461538461,
-        "Number of EMS Stations": 512
+        "Number of EMS Stations": 512,
+        "Population": 1850326,
+        "EMS Stations Per Capita": 0.0002767079963206484,
+        "outlier": ""
       },
       {
         "State": "California",
         "Total Response Time": 33.25,
-        "Number of EMS Stations": 2813
+        "Number of EMS Stations": 2813,
+        "Population": 38802500,
+        "EMS Stations Per Capita": 0.00007249532890921977,
+        "outlier": ""
       },
       {
         "State": "North Dakota",
         "Total Response Time": 43.166666666666664,
-        "Number of EMS Stations": 281
+        "Number of EMS Stations": 281,
+        "Population": 739482,
+        "EMS Stations Per Capita": 0.00037999572673844665,
+        "outlier": ""
       },
       {
         "State": "Vermont",
         "Total Response Time": 73,
-        "Number of EMS Stations": 56
+        "Number of EMS Stations": 56,
+        "Population": 626562,
+        "EMS Stations Per Capita": 0.00008937662992648773,
+        "outlier": "Y"
       },
       {
         "State": "Montana",
         "Total Response Time": 45.75,
-        "Number of EMS Stations": 193
+        "Number of EMS Stations": 193,
+        "Population": 1023579,
+        "EMS Stations Per Capita": 0.0001885540832705634,
+        "outlier": ""
       },
       {
         "State": "New Mexico",
         "Total Response Time": 34.20289855072464,
-        "Number of EMS Stations": 461
+        "Number of EMS Stations": 461,
+        "Population": 2085572,
+        "EMS Stations Per Capita": 0.00022104247659634864,
+        "outlier": ""
       },
       {
         "State": "Maryland",
         "Total Response Time": 44.83870967741936,
-        "Number of EMS Stations": 344
+        "Number of EMS Stations": 344,
+        "Population": 5976407,
+        "EMS Stations Per Capita": 0.00005755966753937609,
+        "outlier": ""
       },
       {
         "State": "Ohio",
         "Total Response Time": 45.62101910828024,
-        "Number of EMS Stations": 1514
+        "Number of EMS Stations": 1514,
+        "Population": 11594163,
+        "EMS Stations Per Capita": 0.00013058294936857452,
+        "outlier": ""
       },
       {
         "State": "Alabama",
         "Total Response Time": 42.15999999999999,
-        "Number of EMS Stations": 762
+        "Number of EMS Stations": 762,
+        "Population": 4849377,
+        "EMS Stations Per Capita": 0.00015713358643801049,
+        "outlier": ""
       },
       {
         "State": "Oklahoma",
         "Total Response Time": 60.32183908045976,
-        "Number of EMS Stations": 635
+        "Number of EMS Stations": 635,
+        "Population": 3878051,
+        "EMS Stations Per Capita": 0.00016374204465077947,
+        "outlier": ""
       },
       {
         "State": "Rhode Island",
         "Total Response Time": 31.333333333333336,
-        "Number of EMS Stations": 90
+        "Number of EMS Stations": 90,
+        "Population": 1055173,
+        "EMS Stations Per Capita": 0.00008529407026146424,
+        "outlier": ""
       },
       {
         "State": "Kansas",
         "Total Response Time": 47.60869565217391,
-        "Number of EMS Stations": 211
+        "Number of EMS Stations": 211,
+        "Population": 2904021,
+        "EMS Stations Per Capita": 0.00007265787678532627,
+        "outlier": ""
       },
       {
         "State": "New Jersey",
         "Total Response Time": 52.16999999999999,
-        "Number of EMS Stations": 1090
+        "Number of EMS Stations": 1090,
+        "Population": 8938175,
+        "EMS Stations Per Capita": 0.00012194883183647669,
+        "outlier": ""
       },
       {
         "State": "Utah",
         "Total Response Time": 40.22222222222223,
-        "Number of EMS Stations": 242
+        "Number of EMS Stations": 242,
+        "Population": 2942902,
+        "EMS Stations Per Capita": 0.00008223175627322962,
+        "outlier": ""
       },
       {
         "State": "Pennsylvania",
         "Total Response Time": 39.428571428571445,
-        "Number of EMS Stations": 2274
+        "Number of EMS Stations": 2274,
+        "Population": 12787209,
+        "EMS Stations Per Capita": 0.00017783395891941706,
+        "outlier": ""
       },
       {
         "State": "Virginia",
         "Total Response Time": 65.52307692307694,
-        "Number of EMS Stations": 599
+        "Number of EMS Stations": 599,
+        "Population": 8326289,
+        "EMS Stations Per Capita": 0.00007194081300805197,
+        "outlier": "Y"
       },
       {
         "State": "Colorado",
         "Total Response Time": 29.383333333333336,
-        "Number of EMS Stations": 629
+        "Number of EMS Stations": 629,
+        "Population": 5355866,
+        "EMS Stations Per Capita": 0.00011744132508169547,
+        "outlier": ""
       },
       {
         "State": "Nebraska",
         "Total Response Time": 28.22727272727273,
-        "Number of EMS Stations": 355
+        "Number of EMS Stations": 355,
+        "Population": 1881503,
+        "EMS Stations Per Capita": 0.00018867894443963152,
+        "outlier": ""
       },
       {
         "State": "Missouri",
         "Total Response Time": 39.323529411764696,
-        "Number of EMS Stations": 1036
+        "Number of EMS Stations": 1036,
+        "Population": 6063589,
+        "EMS Stations Per Capita": 0.0001708559072852728,
+        "outlier": ""
       },
       {
         "State": "Louisiana",
         "Total Response Time": 53.43333333333333,
-        "Number of EMS Stations": 908
+        "Number of EMS Stations": 908,
+        "Population": 4649676,
+        "EMS Stations Per Capita": 0.00019528242397964934,
+        "outlier": ""
       },
       {
         "State": "Kentucky",
         "Total Response Time": 37.725274725274716,
-        "Number of EMS Stations": 890
+        "Number of EMS Stations": 890,
+        "Population": 4413457,
+        "EMS Stations Per Capita": 0.00020165598078784953,
+        "outlier": ""
       },
       {
         "State": "Maine",
         "Total Response Time": 42.470588235294116,
-        "Number of EMS Stations": 200
+        "Number of EMS Stations": 200,
+        "Population": 1330089,
+        "EMS Stations Per Capita": 0.00015036587777208894,
+        "outlier": ""
       },
       {
         "State": "Tennessee",
         "Total Response Time": 47.59740259740261,
-        "Number of EMS Stations": 749
+        "Number of EMS Stations": 749,
+        "Population": 6549352,
+        "EMS Stations Per Capita": 0.0001143624590646525,
+        "outlier": ""
       },
       {
         "State": "Texas",
         "Total Response Time": 45.00359712230215,
-        "Number of EMS Stations": 1828
+        "Number of EMS Stations": 1828,
+        "Population": 26956958,
+        "EMS Stations Per Capita": 0.0000678118057682918,
+        "outlier": ""
       },
       {
         "State": "Wisconsin",
         "Total Response Time": 42.411764705882355,
-        "Number of EMS Stations": 933
+        "Number of EMS Stations": 933,
+        "Population": 5757564,
+        "EMS Stations Per Capita": 0.00016204769933951234,
+        "outlier": ""
       },
       {
         "State": "New York",
         "Total Response Time": 37.463157894736845,
-        "Number of EMS Stations": 2659
+        "Number of EMS Stations": 2659,
+        "Population": 19746227,
+        "EMS Stations Per Capita": 0.00013465863630555852,
+        "outlier": ""
       },
       {
         "State": "Minnesota",
         "Total Response Time": 33.60526315789473,
-        "Number of EMS Stations": 791
+        "Number of EMS Stations": 791,
+        "Population": 5457173,
+        "EMS Stations Per Capita": 0.00014494684335644115,
+        "outlier": ""
       },
       {
         "State": "New Hampshire",
         "Total Response Time": 37.166666666666664,
-        "Number of EMS Stations": 254
+        "Number of EMS Stations": 254,
+        "Population": 1326813,
+        "EMS Stations Per Capita": 0.00019143617073393162,
+        "outlier": ""
       },
       {
         "State": "Alaska",
         "Total Response Time": 36.5,
-        "Number of EMS Stations": 243
+        "Number of EMS Stations": 243,
+        "Population": 736732,
+        "EMS Stations Per Capita": 0.00032983500105872966,
+        "outlier": ""
       },
       {
         "State": "Washington",
         "Total Response Time": 76.85185185185183,
-        "Number of EMS Stations": 981
+        "Number of EMS Stations": 981,
+        "Population": 7061530,
+        "EMS Stations Per Capita": 0.0001389217350914037,
+        "outlier": "Y"
       },
       {
         "State": "Nevada",
         "Total Response Time": 32.22222222222222,
-        "Number of EMS Stations": 194
+        "Number of EMS Stations": 194,
+        "Population": 2839099,
+        "EMS Stations Per Capita": 0.00006833153757582952,
+        "outlier": ""
       },
       {
         "State": "South Carolina",
         "Total Response Time": 42.875,
-        "Number of EMS Stations": 428
+        "Number of EMS Stations": 428,
+        "Population": 4832482,
+        "EMS Stations Per Capita": 0.00008856732420317344,
+        "outlier": ""
       },
       {
         "State": "Connecticut",
         "Total Response Time": 37.46575342465753,
-        "Number of EMS Stations": 458
+        "Number of EMS Stations": 458,
+        "Population": 3596677,
+        "EMS Stations Per Capita": 0.00012733976389873208,
+        "outlier": ""
       },
       {
         "State": "Massachusetts",
         "Total Response Time": 40.88775510204082,
-        "Number of EMS Stations": 772
+        "Number of EMS Stations": 772,
+        "Population": 6745408,
+        "EMS Stations Per Capita": 0.00011444822907672894,
+        "outlier": ""
       },
       {
         "State": "Delaware",
         "Total Response Time": 26.529411764705884,
-        "Number of EMS Stations": 71
+        "Number of EMS Stations": 71,
+        "Population": 935614,
+        "EMS Stations Per Capita": 0.00007588599572045736,
+        "outlier": ""
       },
       {
         "State": "Arkansas",
         "Total Response Time": 40.29032258064517,
-        "Number of EMS Stations": 193
+        "Number of EMS Stations": 193,
+        "Population": 2966369,
+        "EMS Stations Per Capita": 0.00006506270797732852,
+        "outlier": ""
       },
       {
         "State": "North Carolina",
         "Total Response Time": 51.113402061855645,
-        "Number of EMS Stations": 1316
+        "Number of EMS Stations": 1316,
+        "Population": 9943964,
+        "EMS Stations Per Capita": 0.0001323415893299694,
+        "outlier": ""
       },
       {
         "State": "Georgia",
         "Total Response Time": 53.05603448275863,
-        "Number of EMS Stations": 1432
+        "Number of EMS Stations": 1432,
+        "Population": 10097343,
+        "EMS Stations Per Capita": 0.0001418194865718635,
+        "outlier": ""
       },
       {
         "State": "Mississippi",
         "Total Response Time": 48.263157894736835,
-        "Number of EMS Stations": 618
+        "Number of EMS Stations": 618,
+        "Population": 2994079,
+        "EMS Stations Per Capita": 0.00020640737936440554,
+        "outlier": ""
       },
       {
         "State": "Iowa",
         "Total Response Time": 31.799999999999997,
-        "Number of EMS Stations": 681
+        "Number of EMS Stations": 681,
+        "Population": 3107126,
+        "EMS Stations Per Capita": 0.00021917360287287995,
+        "outlier": ""
       },
       {
         "State": "Arizona",
         "Total Response Time": 30.719780219780226,
-        "Number of EMS Stations": 659
+        "Number of EMS Stations": 659,
+        "Population": 6731484,
+        "EMS Stations Per Capita": 0.00009789817520178314,
+        "outlier": ""
       },
       {
         "State": "Hawaii",
         "Total Response Time": 39.588235294117645,
-        "Number of EMS Stations": 80
+        "Number of EMS Stations": 80,
+        "Population": 1419561,
+        "EMS Stations Per Capita": 0.00005635545073441719,
+        "outlier": ""
       }
     ]
   }
-};
+}
 const weather =
 {
   "config": {"view": {"width": 400, "height": 300}},
@@ -7619,7 +7763,376 @@ const seatingposition = {
     ]
   }
 };
-
+const driverCircumstance =
+{
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-5af4ae394a17be542a806d6723114eeb"},
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "condition": {"value": "orange", "test": "(datum.Count > 3000)"},
+      "value": "steelblue"
+    },
+    "tooltip": [
+      {"type": "nominal", "field": "Event"},
+      {"type": "quantitative", "field": "Count"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "axis": {"title": "Crash Count"},
+      "field": "Count"
+    },
+    "y": {
+      "type": "nominal",
+      "axis": {"title": ""},
+      "field": "Event",
+      "sort": {"op": "sum", "field": "Count", "order": "descending"}
+    }
+  },
+  "title": "",
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-5af4ae394a17be542a806d6723114eeb": [
+      {"Count": 6931, "Event": "Alcohol Involved"},
+      {"Count": 3598, "Event": "Drug Involved"},
+      {"Count": 731, "Event": "Asleep or Fatigued"},
+      {"Count": 678, "Event": "Physical Impairment"},
+      {"Count": 624, "Event": "Ill, Blackout"},
+      {"Count": 477, "Event": "Distracted by Cellular Phone"},
+      {"Count": 446, "Event": "Obscured by Rain, Snow, Fog"},
+      {"Count": 254, "Event": "Obscured by Reflected Glare"},
+      {"Count": 216, "Event": "Obscured by Other Moving Vehicle"},
+      {"Count": 212, "Event": "Distracted by Outside Events"},
+      {"Count": 181, "Event": "Distracted by By Other Occupants"},
+      {"Count": 158, "Event": "Obscured by Curve, Hill"},
+      {"Count": 152, "Event": "Depressed, Angry, Disturbed"}
+    ]
+  }
+};
+const light =
+{
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-6dbda72fc8152a0ce121c7ee2418c499"},
+  "mark": "circle",
+  "encoding": {
+    "color": {"type": "quantitative", "aggregate": "sum", "field": "count"},
+    "size": {
+      "type": "quantitative",
+      "aggregate": "sum",
+      "field": "count",
+      "title": "Crash Count"
+    },
+    "tooltip": [
+      {"type": "quantitative", "field": "month_of_crash"},
+      {"type": "quantitative", "field": "hour_of_crash"},
+      {"type": "quantitative", "field": "count"}
+    ],
+    "x": {
+      "type": "ordinal",
+      "axis": {"title": "Hour of Crash"},
+      "field": "hour_of_crash"
+    },
+    "y": {
+      "type": "ordinal",
+      "axis": {"title": "Month of Crash"},
+      "field": "month_of_crash"
+    }
+  },
+  "title": "Light Condition: Dark, Not Lighted",
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-6dbda72fc8152a0ce121c7ee2418c499": [
+      {"month_of_crash": 1, "hour_of_crash": 0, "count": 44},
+      {"month_of_crash": 1, "hour_of_crash": 1, "count": 37},
+      {"month_of_crash": 1, "hour_of_crash": 2, "count": 39},
+      {"month_of_crash": 1, "hour_of_crash": 3, "count": 52},
+      {"month_of_crash": 1, "hour_of_crash": 4, "count": 34},
+      {"month_of_crash": 1, "hour_of_crash": 5, "count": 46},
+      {"month_of_crash": 1, "hour_of_crash": 6, "count": 40},
+      {"month_of_crash": 1, "hour_of_crash": 7, "count": 15},
+      {"month_of_crash": 1, "hour_of_crash": 8, "count": 4},
+      {"month_of_crash": 1, "hour_of_crash": 9, "count": 0},
+      {"month_of_crash": 1, "hour_of_crash": 10, "count": 0},
+      {"month_of_crash": 1, "hour_of_crash": 11, "count": 0},
+      {"month_of_crash": 1, "hour_of_crash": 12, "count": 0},
+      {"month_of_crash": 1, "hour_of_crash": 13, "count": 0},
+      {"month_of_crash": 1, "hour_of_crash": 14, "count": 0},
+      {"month_of_crash": 1, "hour_of_crash": 15, "count": 0},
+      {"month_of_crash": 1, "hour_of_crash": 16, "count": 3},
+      {"month_of_crash": 1, "hour_of_crash": 17, "count": 36},
+      {"month_of_crash": 1, "hour_of_crash": 18, "count": 91},
+      {"month_of_crash": 1, "hour_of_crash": 19, "count": 76},
+      {"month_of_crash": 1, "hour_of_crash": 20, "count": 67},
+      {"month_of_crash": 1, "hour_of_crash": 21, "count": 63},
+      {"month_of_crash": 1, "hour_of_crash": 22, "count": 42},
+      {"month_of_crash": 1, "hour_of_crash": 23, "count": 60},
+      {"month_of_crash": 2, "hour_of_crash": 0, "count": 55},
+      {"month_of_crash": 2, "hour_of_crash": 1, "count": 37},
+      {"month_of_crash": 2, "hour_of_crash": 2, "count": 47},
+      {"month_of_crash": 2, "hour_of_crash": 3, "count": 38},
+      {"month_of_crash": 2, "hour_of_crash": 4, "count": 33},
+      {"month_of_crash": 2, "hour_of_crash": 5, "count": 46},
+      {"month_of_crash": 2, "hour_of_crash": 6, "count": 45},
+      {"month_of_crash": 2, "hour_of_crash": 7, "count": 4},
+      {"month_of_crash": 2, "hour_of_crash": 8, "count": 1},
+      {"month_of_crash": 2, "hour_of_crash": 9, "count": 2},
+      {"month_of_crash": 2, "hour_of_crash": 10, "count": 0},
+      {"month_of_crash": 2, "hour_of_crash": 11, "count": 0},
+      {"month_of_crash": 2, "hour_of_crash": 12, "count": 0},
+      {"month_of_crash": 2, "hour_of_crash": 13, "count": 0},
+      {"month_of_crash": 2, "hour_of_crash": 14, "count": 0},
+      {"month_of_crash": 2, "hour_of_crash": 15, "count": 0},
+      {"month_of_crash": 2, "hour_of_crash": 16, "count": 0},
+      {"month_of_crash": 2, "hour_of_crash": 17, "count": 12},
+      {"month_of_crash": 2, "hour_of_crash": 18, "count": 69},
+      {"month_of_crash": 2, "hour_of_crash": 19, "count": 82},
+      {"month_of_crash": 2, "hour_of_crash": 20, "count": 59},
+      {"month_of_crash": 2, "hour_of_crash": 21, "count": 63},
+      {"month_of_crash": 2, "hour_of_crash": 22, "count": 64},
+      {"month_of_crash": 2, "hour_of_crash": 23, "count": 62},
+      {"month_of_crash": 3, "hour_of_crash": 0, "count": 60},
+      {"month_of_crash": 3, "hour_of_crash": 1, "count": 46},
+      {"month_of_crash": 3, "hour_of_crash": 2, "count": 58},
+      {"month_of_crash": 3, "hour_of_crash": 3, "count": 44},
+      {"month_of_crash": 3, "hour_of_crash": 4, "count": 39},
+      {"month_of_crash": 3, "hour_of_crash": 5, "count": 46},
+      {"month_of_crash": 3, "hour_of_crash": 6, "count": 40},
+      {"month_of_crash": 3, "hour_of_crash": 7, "count": 7},
+      {"month_of_crash": 3, "hour_of_crash": 8, "count": 2},
+      {"month_of_crash": 3, "hour_of_crash": 9, "count": 0},
+      {"month_of_crash": 3, "hour_of_crash": 10, "count": 1},
+      {"month_of_crash": 3, "hour_of_crash": 11, "count": 0},
+      {"month_of_crash": 3, "hour_of_crash": 12, "count": 0},
+      {"month_of_crash": 3, "hour_of_crash": 13, "count": 0},
+      {"month_of_crash": 3, "hour_of_crash": 14, "count": 0},
+      {"month_of_crash": 3, "hour_of_crash": 15, "count": 0},
+      {"month_of_crash": 3, "hour_of_crash": 16, "count": 0},
+      {"month_of_crash": 3, "hour_of_crash": 17, "count": 0},
+      {"month_of_crash": 3, "hour_of_crash": 18, "count": 27},
+      {"month_of_crash": 3, "hour_of_crash": 19, "count": 57},
+      {"month_of_crash": 3, "hour_of_crash": 20, "count": 107},
+      {"month_of_crash": 3, "hour_of_crash": 21, "count": 74},
+      {"month_of_crash": 3, "hour_of_crash": 22, "count": 70},
+      {"month_of_crash": 3, "hour_of_crash": 23, "count": 69},
+      {"month_of_crash": 4, "hour_of_crash": 0, "count": 63},
+      {"month_of_crash": 4, "hour_of_crash": 1, "count": 50},
+      {"month_of_crash": 4, "hour_of_crash": 2, "count": 49},
+      {"month_of_crash": 4, "hour_of_crash": 3, "count": 52},
+      {"month_of_crash": 4, "hour_of_crash": 4, "count": 36},
+      {"month_of_crash": 4, "hour_of_crash": 5, "count": 51},
+      {"month_of_crash": 4, "hour_of_crash": 6, "count": 20},
+      {"month_of_crash": 4, "hour_of_crash": 7, "count": 4},
+      {"month_of_crash": 4, "hour_of_crash": 8, "count": 2},
+      {"month_of_crash": 4, "hour_of_crash": 9, "count": 0},
+      {"month_of_crash": 4, "hour_of_crash": 10, "count": 0},
+      {"month_of_crash": 4, "hour_of_crash": 11, "count": 1},
+      {"month_of_crash": 4, "hour_of_crash": 12, "count": 0},
+      {"month_of_crash": 4, "hour_of_crash": 13, "count": 0},
+      {"month_of_crash": 4, "hour_of_crash": 14, "count": 0},
+      {"month_of_crash": 4, "hour_of_crash": 15, "count": 0},
+      {"month_of_crash": 4, "hour_of_crash": 16, "count": 1},
+      {"month_of_crash": 4, "hour_of_crash": 17, "count": 0},
+      {"month_of_crash": 4, "hour_of_crash": 18, "count": 1},
+      {"month_of_crash": 4, "hour_of_crash": 19, "count": 14},
+      {"month_of_crash": 4, "hour_of_crash": 20, "count": 84},
+      {"month_of_crash": 4, "hour_of_crash": 21, "count": 79},
+      {"month_of_crash": 4, "hour_of_crash": 22, "count": 94},
+      {"month_of_crash": 4, "hour_of_crash": 23, "count": 65},
+      {"month_of_crash": 5, "hour_of_crash": 0, "count": 68},
+      {"month_of_crash": 5, "hour_of_crash": 1, "count": 66},
+      {"month_of_crash": 5, "hour_of_crash": 2, "count": 71},
+      {"month_of_crash": 5, "hour_of_crash": 3, "count": 49},
+      {"month_of_crash": 5, "hour_of_crash": 4, "count": 46},
+      {"month_of_crash": 5, "hour_of_crash": 5, "count": 36},
+      {"month_of_crash": 5, "hour_of_crash": 6, "count": 19},
+      {"month_of_crash": 5, "hour_of_crash": 7, "count": 3},
+      {"month_of_crash": 5, "hour_of_crash": 8, "count": 4},
+      {"month_of_crash": 5, "hour_of_crash": 9, "count": 0},
+      {"month_of_crash": 5, "hour_of_crash": 10, "count": 0},
+      {"month_of_crash": 5, "hour_of_crash": 11, "count": 0},
+      {"month_of_crash": 5, "hour_of_crash": 12, "count": 0},
+      {"month_of_crash": 5, "hour_of_crash": 13, "count": 0},
+      {"month_of_crash": 5, "hour_of_crash": 14, "count": 0},
+      {"month_of_crash": 5, "hour_of_crash": 15, "count": 0},
+      {"month_of_crash": 5, "hour_of_crash": 16, "count": 2},
+      {"month_of_crash": 5, "hour_of_crash": 17, "count": 1},
+      {"month_of_crash": 5, "hour_of_crash": 18, "count": 0},
+      {"month_of_crash": 5, "hour_of_crash": 19, "count": 10},
+      {"month_of_crash": 5, "hour_of_crash": 20, "count": 67},
+      {"month_of_crash": 5, "hour_of_crash": 21, "count": 103},
+      {"month_of_crash": 5, "hour_of_crash": 22, "count": 90},
+      {"month_of_crash": 5, "hour_of_crash": 23, "count": 82},
+      {"month_of_crash": 6, "hour_of_crash": 0, "count": 62},
+      {"month_of_crash": 6, "hour_of_crash": 1, "count": 71},
+      {"month_of_crash": 6, "hour_of_crash": 2, "count": 62},
+      {"month_of_crash": 6, "hour_of_crash": 3, "count": 56},
+      {"month_of_crash": 6, "hour_of_crash": 4, "count": 51},
+      {"month_of_crash": 6, "hour_of_crash": 5, "count": 24},
+      {"month_of_crash": 6, "hour_of_crash": 6, "count": 9},
+      {"month_of_crash": 6, "hour_of_crash": 7, "count": 1},
+      {"month_of_crash": 6, "hour_of_crash": 8, "count": 3},
+      {"month_of_crash": 6, "hour_of_crash": 9, "count": 1},
+      {"month_of_crash": 6, "hour_of_crash": 10, "count": 0},
+      {"month_of_crash": 6, "hour_of_crash": 11, "count": 0},
+      {"month_of_crash": 6, "hour_of_crash": 12, "count": 0},
+      {"month_of_crash": 6, "hour_of_crash": 13, "count": 0},
+      {"month_of_crash": 6, "hour_of_crash": 14, "count": 0},
+      {"month_of_crash": 6, "hour_of_crash": 15, "count": 0},
+      {"month_of_crash": 6, "hour_of_crash": 16, "count": 0},
+      {"month_of_crash": 6, "hour_of_crash": 17, "count": 1},
+      {"month_of_crash": 6, "hour_of_crash": 18, "count": 0},
+      {"month_of_crash": 6, "hour_of_crash": 19, "count": 3},
+      {"month_of_crash": 6, "hour_of_crash": 20, "count": 32},
+      {"month_of_crash": 6, "hour_of_crash": 21, "count": 92},
+      {"month_of_crash": 6, "hour_of_crash": 22, "count": 84},
+      {"month_of_crash": 6, "hour_of_crash": 23, "count": 81},
+      {"month_of_crash": 7, "hour_of_crash": 0, "count": 86},
+      {"month_of_crash": 7, "hour_of_crash": 1, "count": 52},
+      {"month_of_crash": 7, "hour_of_crash": 2, "count": 82},
+      {"month_of_crash": 7, "hour_of_crash": 3, "count": 61},
+      {"month_of_crash": 7, "hour_of_crash": 4, "count": 48},
+      {"month_of_crash": 7, "hour_of_crash": 5, "count": 37},
+      {"month_of_crash": 7, "hour_of_crash": 6, "count": 9},
+      {"month_of_crash": 7, "hour_of_crash": 7, "count": 0},
+      {"month_of_crash": 7, "hour_of_crash": 8, "count": 0},
+      {"month_of_crash": 7, "hour_of_crash": 9, "count": 0},
+      {"month_of_crash": 7, "hour_of_crash": 10, "count": 1},
+      {"month_of_crash": 7, "hour_of_crash": 11, "count": 0},
+      {"month_of_crash": 7, "hour_of_crash": 12, "count": 0},
+      {"month_of_crash": 7, "hour_of_crash": 13, "count": 0},
+      {"month_of_crash": 7, "hour_of_crash": 14, "count": 0},
+      {"month_of_crash": 7, "hour_of_crash": 15, "count": 0},
+      {"month_of_crash": 7, "hour_of_crash": 16, "count": 0},
+      {"month_of_crash": 7, "hour_of_crash": 17, "count": 0},
+      {"month_of_crash": 7, "hour_of_crash": 18, "count": 0},
+      {"month_of_crash": 7, "hour_of_crash": 19, "count": 0},
+      {"month_of_crash": 7, "hour_of_crash": 20, "count": 31},
+      {"month_of_crash": 7, "hour_of_crash": 21, "count": 94},
+      {"month_of_crash": 7, "hour_of_crash": 22, "count": 85},
+      {"month_of_crash": 7, "hour_of_crash": 23, "count": 81},
+      {"month_of_crash": 8, "hour_of_crash": 0, "count": 65},
+      {"month_of_crash": 8, "hour_of_crash": 1, "count": 68},
+      {"month_of_crash": 8, "hour_of_crash": 2, "count": 66},
+      {"month_of_crash": 8, "hour_of_crash": 3, "count": 55},
+      {"month_of_crash": 8, "hour_of_crash": 4, "count": 53},
+      {"month_of_crash": 8, "hour_of_crash": 5, "count": 47},
+      {"month_of_crash": 8, "hour_of_crash": 6, "count": 25},
+      {"month_of_crash": 8, "hour_of_crash": 7, "count": 7},
+      {"month_of_crash": 8, "hour_of_crash": 8, "count": 4},
+      {"month_of_crash": 8, "hour_of_crash": 9, "count": 1},
+      {"month_of_crash": 8, "hour_of_crash": 10, "count": 0},
+      {"month_of_crash": 8, "hour_of_crash": 11, "count": 0},
+      {"month_of_crash": 8, "hour_of_crash": 12, "count": 0},
+      {"month_of_crash": 8, "hour_of_crash": 13, "count": 0},
+      {"month_of_crash": 8, "hour_of_crash": 14, "count": 0},
+      {"month_of_crash": 8, "hour_of_crash": 15, "count": 0},
+      {"month_of_crash": 8, "hour_of_crash": 16, "count": 1},
+      {"month_of_crash": 8, "hour_of_crash": 17, "count": 0},
+      {"month_of_crash": 8, "hour_of_crash": 18, "count": 1},
+      {"month_of_crash": 8, "hour_of_crash": 19, "count": 5},
+      {"month_of_crash": 8, "hour_of_crash": 20, "count": 75},
+      {"month_of_crash": 8, "hour_of_crash": 21, "count": 97},
+      {"month_of_crash": 8, "hour_of_crash": 22, "count": 93},
+      {"month_of_crash": 8, "hour_of_crash": 23, "count": 84},
+      {"month_of_crash": 9, "hour_of_crash": 0, "count": 59},
+      {"month_of_crash": 9, "hour_of_crash": 1, "count": 78},
+      {"month_of_crash": 9, "hour_of_crash": 2, "count": 78},
+      {"month_of_crash": 9, "hour_of_crash": 3, "count": 53},
+      {"month_of_crash": 9, "hour_of_crash": 4, "count": 46},
+      {"month_of_crash": 9, "hour_of_crash": 5, "count": 64},
+      {"month_of_crash": 9, "hour_of_crash": 6, "count": 55},
+      {"month_of_crash": 9, "hour_of_crash": 7, "count": 6},
+      {"month_of_crash": 9, "hour_of_crash": 8, "count": 2},
+      {"month_of_crash": 9, "hour_of_crash": 9, "count": 0},
+      {"month_of_crash": 9, "hour_of_crash": 10, "count": 0},
+      {"month_of_crash": 9, "hour_of_crash": 11, "count": 0},
+      {"month_of_crash": 9, "hour_of_crash": 12, "count": 0},
+      {"month_of_crash": 9, "hour_of_crash": 13, "count": 0},
+      {"month_of_crash": 9, "hour_of_crash": 14, "count": 0},
+      {"month_of_crash": 9, "hour_of_crash": 15, "count": 0},
+      {"month_of_crash": 9, "hour_of_crash": 16, "count": 0},
+      {"month_of_crash": 9, "hour_of_crash": 17, "count": 0},
+      {"month_of_crash": 9, "hour_of_crash": 18, "count": 4},
+      {"month_of_crash": 9, "hour_of_crash": 19, "count": 52},
+      {"month_of_crash": 9, "hour_of_crash": 20, "count": 109},
+      {"month_of_crash": 9, "hour_of_crash": 21, "count": 95},
+      {"month_of_crash": 9, "hour_of_crash": 22, "count": 76},
+      {"month_of_crash": 9, "hour_of_crash": 23, "count": 68},
+      {"month_of_crash": 10, "hour_of_crash": 0, "count": 64},
+      {"month_of_crash": 10, "hour_of_crash": 1, "count": 70},
+      {"month_of_crash": 10, "hour_of_crash": 2, "count": 84},
+      {"month_of_crash": 10, "hour_of_crash": 3, "count": 46},
+      {"month_of_crash": 10, "hour_of_crash": 4, "count": 42},
+      {"month_of_crash": 10, "hour_of_crash": 5, "count": 78},
+      {"month_of_crash": 10, "hour_of_crash": 6, "count": 75},
+      {"month_of_crash": 10, "hour_of_crash": 7, "count": 9},
+      {"month_of_crash": 10, "hour_of_crash": 8, "count": 3},
+      {"month_of_crash": 10, "hour_of_crash": 9, "count": 0},
+      {"month_of_crash": 10, "hour_of_crash": 10, "count": 0},
+      {"month_of_crash": 10, "hour_of_crash": 11, "count": 0},
+      {"month_of_crash": 10, "hour_of_crash": 12, "count": 0},
+      {"month_of_crash": 10, "hour_of_crash": 13, "count": 0},
+      {"month_of_crash": 10, "hour_of_crash": 14, "count": 0},
+      {"month_of_crash": 10, "hour_of_crash": 15, "count": 0},
+      {"month_of_crash": 10, "hour_of_crash": 16, "count": 1},
+      {"month_of_crash": 10, "hour_of_crash": 17, "count": 6},
+      {"month_of_crash": 10, "hour_of_crash": 18, "count": 35},
+      {"month_of_crash": 10, "hour_of_crash": 19, "count": 119},
+      {"month_of_crash": 10, "hour_of_crash": 20, "count": 106},
+      {"month_of_crash": 10, "hour_of_crash": 21, "count": 86},
+      {"month_of_crash": 10, "hour_of_crash": 22, "count": 99},
+      {"month_of_crash": 10, "hour_of_crash": 23, "count": 72},
+      {"month_of_crash": 11, "hour_of_crash": 0, "count": 70},
+      {"month_of_crash": 11, "hour_of_crash": 1, "count": 53},
+      {"month_of_crash": 11, "hour_of_crash": 2, "count": 55},
+      {"month_of_crash": 11, "hour_of_crash": 3, "count": 59},
+      {"month_of_crash": 11, "hour_of_crash": 4, "count": 32},
+      {"month_of_crash": 11, "hour_of_crash": 5, "count": 75},
+      {"month_of_crash": 11, "hour_of_crash": 6, "count": 53},
+      {"month_of_crash": 11, "hour_of_crash": 7, "count": 7},
+      {"month_of_crash": 11, "hour_of_crash": 8, "count": 1},
+      {"month_of_crash": 11, "hour_of_crash": 9, "count": 0},
+      {"month_of_crash": 11, "hour_of_crash": 10, "count": 0},
+      {"month_of_crash": 11, "hour_of_crash": 11, "count": 0},
+      {"month_of_crash": 11, "hour_of_crash": 12, "count": 1},
+      {"month_of_crash": 11, "hour_of_crash": 13, "count": 0},
+      {"month_of_crash": 11, "hour_of_crash": 14, "count": 0},
+      {"month_of_crash": 11, "hour_of_crash": 15, "count": 0},
+      {"month_of_crash": 11, "hour_of_crash": 16, "count": 5},
+      {"month_of_crash": 11, "hour_of_crash": 17, "count": 69},
+      {"month_of_crash": 11, "hour_of_crash": 18, "count": 136},
+      {"month_of_crash": 11, "hour_of_crash": 19, "count": 92},
+      {"month_of_crash": 11, "hour_of_crash": 20, "count": 84},
+      {"month_of_crash": 11, "hour_of_crash": 21, "count": 49},
+      {"month_of_crash": 11, "hour_of_crash": 22, "count": 66},
+      {"month_of_crash": 11, "hour_of_crash": 23, "count": 79},
+      {"month_of_crash": 12, "hour_of_crash": 0, "count": 62},
+      {"month_of_crash": 12, "hour_of_crash": 1, "count": 77},
+      {"month_of_crash": 12, "hour_of_crash": 2, "count": 59},
+      {"month_of_crash": 12, "hour_of_crash": 3, "count": 35},
+      {"month_of_crash": 12, "hour_of_crash": 4, "count": 38},
+      {"month_of_crash": 12, "hour_of_crash": 5, "count": 58},
+      {"month_of_crash": 12, "hour_of_crash": 6, "count": 55},
+      {"month_of_crash": 12, "hour_of_crash": 7, "count": 10},
+      {"month_of_crash": 12, "hour_of_crash": 8, "count": 2},
+      {"month_of_crash": 12, "hour_of_crash": 9, "count": 0},
+      {"month_of_crash": 12, "hour_of_crash": 10, "count": 0},
+      {"month_of_crash": 12, "hour_of_crash": 11, "count": 0},
+      {"month_of_crash": 12, "hour_of_crash": 12, "count": 0},
+      {"month_of_crash": 12, "hour_of_crash": 13, "count": 0},
+      {"month_of_crash": 12, "hour_of_crash": 14, "count": 0},
+      {"month_of_crash": 12, "hour_of_crash": 15, "count": 0},
+      {"month_of_crash": 12, "hour_of_crash": 16, "count": 8},
+      {"month_of_crash": 12, "hour_of_crash": 17, "count": 89},
+      {"month_of_crash": 12, "hour_of_crash": 18, "count": 116},
+      {"month_of_crash": 12, "hour_of_crash": 19, "count": 97},
+      {"month_of_crash": 12, "hour_of_crash": 20, "count": 87},
+      {"month_of_crash": 12, "hour_of_crash": 21, "count": 71},
+      {"month_of_crash": 12, "hour_of_crash": 22, "count": 74},
+      {"month_of_crash": 12, "hour_of_crash": 23, "count": 63}
+    ]
+  }
+};
 vegaEmbed("#passengerRestraintUse", passengerRestraintUse);
 vegaEmbed("#alcohol", alcohol);
 vegaEmbed("#drug", drug);
@@ -7640,3 +8153,5 @@ vegaEmbed("#ped", ped);
 vegaEmbed("#pedestrain", pedestrain);
 vegaEmbed("#overspeed", overspeed);
 vegaEmbed("#seatingposition", seatingposition);
+vegaEmbed("#driverCircumstance", driverCircumstance);
+vegaEmbed("#light", light);
