@@ -37,6 +37,13 @@ body {
   font-size: 11px;
   width: 240px;
 }
+.has-annotation {
+  position: relative;
+}
+.annotation {
+  position: absolute;
+  z-index: 999;
+}
 .g-body {
   font-size: 15px;
   line-height: 1.5;

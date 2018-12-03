@@ -6754,3 +6754,91 @@ vegaEmbed("#rescueRural", rescueRural);
 vegaEmbed("#rescueEMS", rescueEMS);
 vegaEmbed("#weather", weather);
 vegaEmbed("#ped", ped);
+
+const width = 900;
+const height = 500;
+const margin = { top: 180, bottom: 50, left: 50, right: 50};
+const x = d3.scaleTime().range([margin.left, width - margin.right ])
+      .domain([new Date('1/1/1997'), new Date('1/1/2003') ])
+const y = d3.scaleLinear().range([height - margin.bottom, margin.top ])
+      .domain([0, 170])
+/* Code below relevant for annotations */
+        const annotations = [{
+            note: { label: "Steve Jobs Returns" },
+            subject: {
+              y1: margin.top,
+              y2: height - margin.bottom
+            },
+            y: margin.top,
+            data: { x: "7/9/1997"} //position the x based on an x scale
+          },
+          {
+            note: { label: "iMac Release" },
+            subject: {
+              y1: margin.top,
+              y2: height - margin.bottom
+            },
+            y: margin.top,
+            data: { x: "8/15/1998"}
+          },
+          {
+            note: { label: "iPod Release"},
+            subject: {
+              y1: margin.top,
+              y2: height - margin.bottom
+            },
+            y: margin.top,
+            data: { x: "10/23/2001"}
+          },
+          {
+            note: { label: "Stock Split 2:1",
+              lineType:"none",
+              orientation: "leftRight",
+              "align": "middle" },
+            className: "anomaly",
+            type: d3.annotationCalloutCircle,
+            subject: { radius: 35 },
+            data: { x: "6/21/2000", y: 76},
+            dx: 40
+          },
+          {
+            note: { label: "Above $100", wrap: 100, },
+            className: "above",
+            disable: ["connector"],
+            subject: {
+              x1: x( new Date('10/1/1999')),
+              x2: x( new Date('8/1/2000'))
+            },
+            x: x( new Date('10/1/1999')),
+            dx: -30,
+            data: { y: 100}
+          }
+
+        ];
+
+//An example of taking the XYThreshold and merging it
+//with custom settings so you don't have to
+//repeat yourself in the annotations Objects
+const type = d3.annotationCustomType(
+  d3.annotationXYThreshold,
+  {"note":{
+      "lineType":"none",
+      "orientation": "top",
+      "align":"middle"}
+  }
+)
+
+const makeAnnotations = d3.annotation()
+  .type(type)
+  //Gives you access to any data objects in the annotations array
+  .accessors({
+    x: function(d){ return x(new Date(d.x))},
+    y: function(d){ return y(d.y) }
+  })
+  .annotations(annotations)
+  .textWrap(30)
+
+d3.select('#dangerousTime canvas')
+  .append("g")
+  .attr("class", "annotation-group")
+  .call(makeAnnotations)
