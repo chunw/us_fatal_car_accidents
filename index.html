@@ -228,12 +228,32 @@
                     <strong>Methodology:</strong> The size and color indicates crash frequency during the given hour in the given month.
 
                     <div class="">
-                    Fatal crashes mostly happen in rush hours with busy traffic caused by commuting, e.g. from <b>17:00 to 19:00</b>. Interestingly, they are also more frequent in winter seasons, e.g. <b>November, Decemeber and Janurary</b>, which might be related to the terrible weather conditions (snow in the East and rain on the west).
+                    Fatal crashes mostly happen in rush hours with busy traffic caused by commuting, e.g. from <b>17:00 to 19:00</b>. Interestingly, they are also more frequent in winter seasons, e.g. <b>November and Decemeber</b>, which might be related to the terrible weather conditions (snow in the East and rain on the west).
+                    
+                    <br><br>
+                    Note that we do not observe the same high frequency during rush hours in the morning. We further explore the type/level of light that existed at the time of the crash:
+                    <br><br> 
                     </div>
                   </div>
                 <div class="text">
                 </div>
               </div>
+
+              <div class="analysis">
+                  <div class="viz ">
+                      <div id="light"></div>
+                      <p>Hover on circles to view details.</p>
+                      <p class="method">
+                        <strong>Methodology:</strong> This plot only focuses on crashes that happened in a dark and unlighted environment.
+    
+                        <div class="">
+                        Nights are longer in winter. We see a bell shaped curve: the "dangerous" period starts early and lasts longer in winter, starts late and lasts shorted in summer.
+                        </div>  
+                    </div>
+                  <div class="text">
+                    Bad light condition might be another contributing factor for accidents in evening rush hours. 
+                  </div>
+                </div>
           </section>
 
           <section id="section-weather">
@@ -339,6 +359,22 @@
           <section id="section-driver">
               <div class="g-item g-subhed ">
                 <h2><strong>Driver Behavior</strong></h2>
+              </div>
+
+              <div class="g-item g-subhed ">
+                <h6><strong>Driver Circumstances</strong></h6>
+              </div>
+              <div class="analysis">
+                <div class="viz ">
+                  <div id="driverCircumstance"></div>
+                  <p>Hover on bars to view details.</p>
+                  <p class="method">
+                    <strong>Methodology:</strong> Circumstances that may have contributed to a crash include distraction, driver's physical impairment, alcohol/drug influence, and impediments to the driver's visual field. 
+                  </p>
+                </div>
+                <div class="text">
+                  Alcohol and drug stand out as the most common contributing circumstances.
+                </div>
               </div>
 
               <div class="g-item g-subhed ">
@@ -728,7 +764,7 @@
                   </div>
 
                   <div class="g-item g-subhed ">
-                      <h6><strong>Response Time v.s. Emergency Medical Service Facilities</strong></h6>
+                      <h6><strong>Response Time v.s. Emergency Medical Service (EMS) Facilities</strong></h6>
                     </div>
                     <div class="analysis">
                       <div class="viz ">
@@ -745,6 +781,7 @@
                       </div>
                       <br>
                       <div class="text">
+                        Fewer EMS stations per capita might explain long delay in Washington, Vermont and Virginia (red circles).
                       </div>
                     </div>
           </section>
