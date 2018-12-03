@@ -1,5 +1,5 @@
 // Global variables
-const scrollSpyOffset = 80;
+const scrollSpyOffset = 0;
 
 // Init Materialize components
 M.AutoInit();
@@ -38,8 +38,8 @@ function showHideNav() {
 
 function selectInNav() {
   var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+  console.log("scrollPosition + scrollSpyOffset = " + (scrollPosition + scrollSpyOffset));
   for (i in sections) {
-
     if (sections[i] <= scrollPosition + scrollSpyOffset) {
       console.log(i);
       const active = document.querySelector('.active');
