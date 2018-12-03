@@ -7061,6 +7061,84 @@ const pedestrain = {
     ]
   }
 };
+const overspeed = {
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-e8609c4e3c7c3a6b5ae4f8973b85d5c0"},
+  "mark": "point",
+  "encoding": {
+    "order": {"type": "nominal", "field": "order"},
+    "tooltip": [
+      {"type": "nominal", "field": "overspeed_range"},
+      {"type": "quantitative", "field": "avg_fatality_percent"},
+      {"type": "quantitative", "field": "crash_count"},
+      {"type": "quantitative", "field": "avg_overspeed_amount"}
+    ],
+    "x": {
+      "type": "nominal",
+      "axis": {"title": "Overspeeding amount (MPH) at time of crash"},
+      "field": "overspeed_range"
+    },
+    "y": {
+      "type": "quantitative",
+      "axis": {"title": "Average fatality percentage in the vehicle"},
+      "field": "avg_fatality_percent"
+    }
+  },
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-e8609c4e3c7c3a6b5ae4f8973b85d5c0": [
+      {
+        "avg_fatality_percent": 41.2325433313135,
+        "crash_count": 1098,
+        "avg_overspeed_amount": 7,
+        "overspeed_range": "05-10"
+      },
+      {
+        "avg_fatality_percent": 60.965862215292304,
+        "crash_count": 786,
+        "avg_overspeed_amount": 17,
+        "overspeed_range": "10-20"
+      },
+      {
+        "avg_fatality_percent": 59.30419109593792,
+        "crash_count": 993,
+        "avg_overspeed_amount": 24.500000000000004,
+        "overspeed_range": "20-30"
+      },
+      {
+        "avg_fatality_percent": 53.907824074074085,
+        "crash_count": 840,
+        "avg_overspeed_amount": 12,
+        "overspeed_range": "10-15"
+      },
+      {
+        "avg_fatality_percent": 61.24423244793614,
+        "crash_count": 576,
+        "avg_overspeed_amount": 34.5,
+        "overspeed_range": "30-40"
+      },
+      {
+        "avg_fatality_percent": 65.65896642850255,
+        "crash_count": 368,
+        "avg_overspeed_amount": 44.5,
+        "overspeed_range": "40-50"
+      },
+      {
+        "avg_fatality_percent": 32.43730925842995,
+        "crash_count": 372,
+        "avg_overspeed_amount": 2.5,
+        "overspeed_range": "05 and under"
+      },
+      {
+        "avg_fatality_percent": 64.13125061151376,
+        "crash_count": 287,
+        "avg_overspeed_amount": 69.94594594594595,
+        "overspeed_range": "50 and above"
+      }
+    ]
+  }
+};
 const seatingposition = {
   "config": {"view": {"width": 400, "height": 300}},
   "data": {"name": "data-cdef64a86ddba2842534563a5ed29c9f"},
@@ -7541,6 +7619,7 @@ const seatingposition = {
     ]
   }
 };
+
 vegaEmbed("#passengerRestraintUse", passengerRestraintUse);
 vegaEmbed("#alcohol", alcohol);
 vegaEmbed("#drug", drug);
@@ -7559,4 +7638,5 @@ vegaEmbed("#rescueEMS", rescueEMS);
 vegaEmbed("#weather", weather);
 vegaEmbed("#ped", ped);
 vegaEmbed("#pedestrain", pedestrain);
+vegaEmbed("#overspeed", overspeed);
 vegaEmbed("#seatingposition", seatingposition);

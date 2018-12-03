@@ -80,11 +80,7 @@
     <div id="tooltip-help">
       <div class="g-item g-subhed ">
 
-        <div style="margin-top: 150px;">
-          [3] Dataset accessible via <a href="https://bigquery.cloud.google.com/dataset/bigquery-public-data:nhtsa_traffic_fatalities" target="_blank">Google BigQuery</a>.
-        </div>
-
-        <div style="margin-top: 12px;">
+        <div style="margin-top: 0px;">
           <strong>Tip:</strong><br>Hover on
           <span class="fake-tooltipped" >text of this color</span>
           to view tooltip.
@@ -113,7 +109,7 @@
           $230 billion from medical and other costs <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0001457516303918">[1]</a>.
           Motor vehicle crashes are also the leading cause of death for persons every age from 5 to 32 years old <a target="_blank" href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812499">[2]</a>.
           We deep dived into the fatal car crash records in the U.S. in year 2016, collected by National Highway
-          Traffic Safety Administration (NHSTA) [3] and encoded using the government's
+          Traffic Safety Administration (NHSTA) <a target="_blank" href="https://bigquery.cloud.google.com/dataset/bigquery-public-data:nhtsa_traffic_fatalities">[3]</a> and encoded using the government's
           <a target="_blank" class="tooltipped" data-position="right" data-tooltip="<div class='custom-tooltip'>Fatality Analysis Reporting System is a nationwide census providing <br> NHTSA (National Highway Traffic Safety Administration), Congress <br> and the American public yearly data regarding fatal injuries suffered <br> in motor vehicle traffic crashes.<br><br>Click the link to view how data are encoded using the FARS system.</div>"
           href="https://ire.org/media/uploads/files/datalibrary/samplefiles/DOT%20Fatality%20Analysis%20Reporting%20System%20-%20Simplified/USERGUIDE-2013.pdf">Fatality Analysis Reporting System</a> and identified the top factors that are highly correlated to fatality in motor vehicle crashes.
 
@@ -378,6 +374,25 @@
               <div class="g-item g-subhed ">
                 <h6><strong>Speeding</strong></h6>
               </div>
+              <p class='g-body'>
+              How much does speeding have an impact on fatality risk of the vehicle occupants?
+              </p>
+              <div class="analysis">
+                <div class="viz ">
+                  <div id="overspeed"></div>
+                  <p>Hover on circles to view count of fatal crashes and average overspeeding amount (MPH) for the selected overspeed range.</p>
+                  <p class="method">
+                    <strong>Methodology:</strong>
+                   The over-speeding amount of a vehicle is computed as <span class="formula">{[vehicle travel speed] - [road speed limit]}</span> at the time of crash.
+                  </p>
+                </div>
+                <div class="text">
+                  It can be observed that as vehicle's overspeeding amount goes up, there is also a higher fatality risk associated. <br>
+
+                </div>
+
+              </div>
+
               <div class="analysis">
                 <div class="viz ">
                   <div id="speeding"></div>
