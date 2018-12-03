@@ -70,7 +70,8 @@ strong {
   padding-top: 12px;
 }
 #case-details-body {
-  max-height: 500px;
+      max-height: calc(100% - 150px);
+
   overflow-y: scroll;
   padding-top: 4px;
   font-size: 0.8em;
