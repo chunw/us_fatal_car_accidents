@@ -8133,6 +8133,1501 @@ const light =
     ]
   }
 };
+const vehicleBodyType = {
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-f12efd0844c051951835728d415a943b"},
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "injury_severity_name",
+      "legend": {"title": "Injury severity"},
+      "scale": {
+        "range": [
+          "#d73027",
+          "#f46d43",
+          "#fdae61",
+          "#ffffbf",
+          "#ffffbf",
+          "#4575b4"
+        ]
+      },
+      "sort": [
+        "Fatal Injury (K)",
+        "Suspected Serious Injury (A)",
+        "Suspected Minor Injury (B)",
+        "Possible Injury (C)",
+        "Injured, Severity Unknown (U) (Since 1978)",
+        "No Apparent Injury (O)"
+      ]
+    },
+    "order": {"type": "nominal", "field": "order"},
+    "tooltip": [
+      {"type": "nominal", "field": "body_type_name"},
+      {"type": "nominal", "field": "injury_severity_name"},
+      {"type": "quantitative", "aggregate": "sum", "field": "count"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "aggregate": "sum",
+      "axis": {"title": "Ratio in all types of injuries"},
+      "field": "count",
+      "stack": "normalize"
+    },
+    "y": {
+      "type": "nominal",
+      "axis": {"title": "Vehicle body type"},
+      "field": "body_type_name"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "if(datum.injury_severity_name === 'Fatal Injury (K)', 0,            if(datum.injury_severity_name === 'Suspected Serious Injury (A)', 1,            if(datum.injury_severity_name === 'Suspected Minor Injury (B)', 2,            if(datum.injury_severity_name === 'Possible Injury (C)', 3,            if(datum.injury_severity_name === 'Injured, Severity Unknown (U) (Since 1978)', 4,            if(datum.injury_severity_name === 'No Apparent Injury (O)', 5, 6))))))",
+      "as": "order"
+    }
+  ],
+  "width": DEFAULT_GRAPH_WIDTH_MEDIUM,
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-f12efd0844c051951835728d415a943b": [
+      {
+        "body_type_name": "2-Door Sedan/Hardtop/Coupe",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 447
+      },
+      {
+        "body_type_name": "2-Door Sedan/Hardtop/Coupe",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 387
+      },
+      {
+        "body_type_name": "2-Door Sedan/Hardtop/Coupe",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 8
+      },
+      {
+        "body_type_name": "2-Door Sedan/Hardtop/Coupe",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 647
+      },
+      {
+        "body_type_name": "2-Door Sedan/Hardtop/Coupe",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 1636
+      },
+      {
+        "body_type_name": "2-Door Sedan/Hardtop/Coupe",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 258
+      },
+      {
+        "body_type_name": "3-Door Coupe",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 4
+      },
+      {
+        "body_type_name": "3-Door Coupe",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 16
+      },
+      {
+        "body_type_name": "3-Door Coupe",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 2
+      },
+      {
+        "body_type_name": "3-Door Coupe",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1
+      },
+      {
+        "body_type_name": "3-Door/2-Door Hatchback",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 90
+      },
+      {
+        "body_type_name": "3-Door/2-Door Hatchback",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 6
+      },
+      {
+        "body_type_name": "3-Door/2-Door Hatchback",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 478
+      },
+      {
+        "body_type_name": "3-Door/2-Door Hatchback",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 49
+      },
+      {
+        "body_type_name": "3-Door/2-Door Hatchback",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 93
+      },
+      {
+        "body_type_name": "3-Door/2-Door Hatchback",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 148
+      },
+      {
+        "body_type_name": "4-Door Sedan/Hardtop",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 9674
+      },
+      {
+        "body_type_name": "4-Door Sedan/Hardtop",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 2690
+      },
+      {
+        "body_type_name": "4-Door Sedan/Hardtop",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 5404
+      },
+      {
+        "body_type_name": "4-Door Sedan/Hardtop",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 2715
+      },
+      {
+        "body_type_name": "4-Door Sedan/Hardtop",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 2052
+      },
+      {
+        "body_type_name": "4-Door Sedan/Hardtop",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 80
+      },
+      {
+        "body_type_name": "5-Door/4-Door Hatchback",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 153
+      },
+      {
+        "body_type_name": "5-Door/4-Door Hatchback",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 320
+      },
+      {
+        "body_type_name": "5-Door/4-Door Hatchback",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 127
+      },
+      {
+        "body_type_name": "5-Door/4-Door Hatchback",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 145
+      },
+      {
+        "body_type_name": "5-Door/4-Door Hatchback",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 5
+      },
+      {
+        "body_type_name": "5-Door/4-Door Hatchback",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 465
+      },
+      {
+        "body_type_name": "ATV (All-Terrain Vehicle; Includes 3 or 4 Wheels)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 23
+      },
+      {
+        "body_type_name": "ATV (All-Terrain Vehicle; Includes 3 or 4 Wheels)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 45
+      },
+      {
+        "body_type_name": "ATV (All-Terrain Vehicle; Includes 3 or 4 Wheels)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 354
+      },
+      {
+        "body_type_name": "ATV (All-Terrain Vehicle; Includes 3 or 4 Wheels)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 37
+      },
+      {
+        "body_type_name": "ATV (All-Terrain Vehicle; Includes 3 or 4 Wheels)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 17
+      },
+      {
+        "body_type_name": "Auto-Based Pickup",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 3
+      },
+      {
+        "body_type_name": "Auto-Based Pickup",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Auto-Based Pickup",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 14
+      },
+      {
+        "body_type_name": "Cab Chassis-Based (Includes Light Stake, Light Dump, Light Tow, Rescue\nVehicles)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 86
+      },
+      {
+        "body_type_name": "Cab Chassis-Based (Includes Light Stake, Light Dump, Light Tow, Rescue\nVehicles)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 24
+      },
+      {
+        "body_type_name": "Cab Chassis-Based (Includes Light Stake, Light Dump, Light Tow, Rescue\nVehicles)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 26
+      },
+      {
+        "body_type_name": "Cab Chassis-Based (Includes Light Stake, Light Dump, Light Tow, Rescue\nVehicles)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 77
+      },
+      {
+        "body_type_name": "Cab Chassis-Based (Includes Light Stake, Light Dump, Light Tow, Rescue\nVehicles)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 28
+      },
+      {
+        "body_type_name": "Camper or Motorhome, Unknown Truck Type",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 2
+      },
+      {
+        "body_type_name": "Camper or Motorhome, Unknown Truck Type",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 3
+      },
+      {
+        "body_type_name": "Camper or Motorhome, Unknown Truck Type",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 8
+      },
+      {
+        "body_type_name": "Camper or Motorhome, Unknown Truck Type",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 2
+      },
+      {
+        "body_type_name": "Camper or Motorhome, Unknown Truck Type",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 14
+      },
+      {
+        "body_type_name": "Compact Pickup (Gross Vehicle Weight, GVWR, < 4,500 lbs)",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 2
+      },
+      {
+        "body_type_name": "Compact Pickup (Gross Vehicle Weight, GVWR, < 4,500 lbs)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 235
+      },
+      {
+        "body_type_name": "Compact Pickup (Gross Vehicle Weight, GVWR, < 4,500 lbs)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 1086
+      },
+      {
+        "body_type_name": "Compact Pickup (Gross Vehicle Weight, GVWR, < 4,500 lbs)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 158
+      },
+      {
+        "body_type_name": "Compact Pickup (Gross Vehicle Weight, GVWR, < 4,500 lbs)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 270
+      },
+      {
+        "body_type_name": "Compact Pickup (Gross Vehicle Weight, GVWR, < 4,500 lbs)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 474
+      },
+      {
+        "body_type_name": "Compact Utility (ANSI D-16 Utility Vehicle Categories “Small” and “Midsize”)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 1399
+      },
+      {
+        "body_type_name": "Compact Utility (ANSI D-16 Utility Vehicle Categories “Small” and “Midsize”)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 2767
+      },
+      {
+        "body_type_name": "Compact Utility (ANSI D-16 Utility Vehicle Categories “Small” and “Midsize”)",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 41
+      },
+      {
+        "body_type_name": "Compact Utility (ANSI D-16 Utility Vehicle Categories “Small” and “Midsize”)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 1086
+      },
+      {
+        "body_type_name": "Compact Utility (ANSI D-16 Utility Vehicle Categories “Small” and “Midsize”)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1314
+      },
+      {
+        "body_type_name": "Compact Utility (ANSI D-16 Utility Vehicle Categories “Small” and “Midsize”)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 3330
+      },
+      {
+        "body_type_name": "Construction Equipment Other Than Trucks (Includes Graders)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 15
+      },
+      {
+        "body_type_name": "Construction Equipment Other Than Trucks (Includes Graders)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Construction Equipment Other Than Trucks (Includes Graders)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Construction Equipment Other Than Trucks (Includes Graders)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 4
+      },
+      {
+        "body_type_name": "Construction Equipment Other Than Trucks (Includes Graders)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Convertible (Excludes Sunroof, T-Bar)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 259
+      },
+      {
+        "body_type_name": "Convertible (Excludes Sunroof, T-Bar)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 35
+      },
+      {
+        "body_type_name": "Convertible (Excludes Sunroof, T-Bar)",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 2
+      },
+      {
+        "body_type_name": "Convertible (Excludes Sunroof, T-Bar)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 88
+      },
+      {
+        "body_type_name": "Convertible (Excludes Sunroof, T-Bar)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 57
+      },
+      {
+        "body_type_name": "Convertible (Excludes Sunroof, T-Bar)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 68
+      },
+      {
+        "body_type_name": "Cross-Country/Intercity Bus (i.e., Greyhound)",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Cross-Country/Intercity Bus (i.e., Greyhound)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 9
+      },
+      {
+        "body_type_name": "Cross-Country/Intercity Bus (i.e., Greyhound)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 31
+      },
+      {
+        "body_type_name": "Cross-Country/Intercity Bus (i.e., Greyhound)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 10
+      },
+      {
+        "body_type_name": "Cross-Country/Intercity Bus (i.e., Greyhound)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 25
+      },
+      {
+        "body_type_name": "Cross-Country/Intercity Bus (i.e., Greyhound)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 45
+      },
+      {
+        "body_type_name": "Farm Equipment Other Than Trucks",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Farm Equipment Other Than Trucks",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 6
+      },
+      {
+        "body_type_name": "Farm Equipment Other Than Trucks",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 11
+      },
+      {
+        "body_type_name": "Farm Equipment Other Than Trucks",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 50
+      },
+      {
+        "body_type_name": "Farm Equipment Other Than Trucks",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 38
+      },
+      {
+        "body_type_name": "Golf Cart (Since 2012)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 2
+      },
+      {
+        "body_type_name": "Golf Cart (Since 2012)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 2
+      },
+      {
+        "body_type_name": "Golf Cart (Since 2012)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 33
+      },
+      {
+        "body_type_name": "Golf Cart (Since 2012)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 4
+      },
+      {
+        "body_type_name": "Golf Cart (Since 2012)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 23
+      },
+      {
+        "body_type_name": "Hatchback, Number of Doors Unknown",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Hatchback, Number of Doors Unknown",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Large Limousine – More Than Four Side Doors or Stretch Chassis",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Large Limousine – More Than Four Side Doors or Stretch Chassis",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 2
+      },
+      {
+        "body_type_name": "Large Limousine – More Than Four Side Doors or Stretch Chassis",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Large Limousine – More Than Four Side Doors or Stretch Chassis",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 4
+      },
+      {
+        "body_type_name": "Large Utility (ANSI D-16 Utility Vehicle Categories “Full Size” and “Large”)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 491
+      },
+      {
+        "body_type_name": "Large Utility (ANSI D-16 Utility Vehicle Categories “Full Size” and “Large”)",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 11
+      },
+      {
+        "body_type_name": "Large Utility (ANSI D-16 Utility Vehicle Categories “Full Size” and “Large”)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 559
+      },
+      {
+        "body_type_name": "Large Utility (ANSI D-16 Utility Vehicle Categories “Full Size” and “Large”)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 966
+      },
+      {
+        "body_type_name": "Large Utility (ANSI D-16 Utility Vehicle Categories “Full Size” and “Large”)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1362
+      },
+      {
+        "body_type_name": "Large Utility (ANSI D-16 Utility Vehicle Categories “Full Size” and “Large”)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 644
+      },
+      {
+        "body_type_name": "Large Van – Includes Van-Based Buses",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 5
+      },
+      {
+        "body_type_name": "Large Van – Includes Van-Based Buses",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 268
+      },
+      {
+        "body_type_name": "Large Van – Includes Van-Based Buses",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 217
+      },
+      {
+        "body_type_name": "Large Van – Includes Van-Based Buses",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 154
+      },
+      {
+        "body_type_name": "Large Van – Includes Van-Based Buses",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 405
+      },
+      {
+        "body_type_name": "Large Van – Includes Van-Based Buses",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 193
+      },
+      {
+        "body_type_name": "Low Speed Vehicle (LSV)/Neighborhood Electric Vehicle (NEV)\n(Since 2011)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Low Speed Vehicle (LSV)/Neighborhood Electric Vehicle (NEV)\n(Since 2011)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 3
+      },
+      {
+        "body_type_name": "Medium/Heavy Pickup (GVWR > 10,000 lbs)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 35
+      },
+      {
+        "body_type_name": "Medium/Heavy Pickup (GVWR > 10,000 lbs)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 39
+      },
+      {
+        "body_type_name": "Medium/Heavy Pickup (GVWR > 10,000 lbs)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 27
+      },
+      {
+        "body_type_name": "Medium/Heavy Pickup (GVWR > 10,000 lbs)",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 3
+      },
+      {
+        "body_type_name": "Medium/Heavy Pickup (GVWR > 10,000 lbs)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 23
+      },
+      {
+        "body_type_name": "Medium/Heavy Pickup (GVWR > 10,000 lbs)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 132
+      },
+      {
+        "body_type_name": "Medium/Heavy Truck-Based Motorhome",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 34
+      },
+      {
+        "body_type_name": "Medium/Heavy Truck-Based Motorhome",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 5
+      },
+      {
+        "body_type_name": "Medium/Heavy Truck-Based Motorhome",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 7
+      },
+      {
+        "body_type_name": "Medium/Heavy Truck-Based Motorhome",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 8
+      },
+      {
+        "body_type_name": "Medium/Heavy Truck-Based Motorhome",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 10
+      },
+      {
+        "body_type_name": "Minivan",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 8
+      },
+      {
+        "body_type_name": "Minivan",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1014
+      },
+      {
+        "body_type_name": "Minivan",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 540
+      },
+      {
+        "body_type_name": "Minivan",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 378
+      },
+      {
+        "body_type_name": "Minivan",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 951
+      },
+      {
+        "body_type_name": "Minivan",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 443
+      },
+      {
+        "body_type_name": "Moped (Motorized Bicycle)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Moped (Motorized Bicycle)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Moped (Motorized Bicycle)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 134
+      },
+      {
+        "body_type_name": "Moped (Motorized Bicycle)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 3
+      },
+      {
+        "body_type_name": "Moped (Motorized Bicycle)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Motorcycle",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 341
+      },
+      {
+        "body_type_name": "Motorcycle",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 86
+      },
+      {
+        "body_type_name": "Motorcycle",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 9
+      },
+      {
+        "body_type_name": "Motorcycle",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 4972
+      },
+      {
+        "body_type_name": "Motorcycle",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 184
+      },
+      {
+        "body_type_name": "Motorcycle",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 68
+      },
+      {
+        "body_type_name": "Not Reported",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Off-Road Motorcycle (2-Wheel)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Off-Road Motorcycle (2-Wheel)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Off-Road Motorcycle (2-Wheel)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 5
+      },
+      {
+        "body_type_name": "Off-Road Motorcycle (2-Wheel)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 52
+      },
+      {
+        "body_type_name": "Other Bus Type",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 89
+      },
+      {
+        "body_type_name": "Other Bus Type",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 62
+      },
+      {
+        "body_type_name": "Other Bus Type",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 10
+      },
+      {
+        "body_type_name": "Other Bus Type",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 27
+      },
+      {
+        "body_type_name": "Other Bus Type",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 49
+      },
+      {
+        "body_type_name": "Other Motored Cycle Type (Mini-Bikes, Motor Scooters, Pocket Motorcycles,\nPocket Bikes) (Since 2008)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Other Motored Cycle Type (Mini-Bikes, Motor Scooters, Pocket Motorcycles,\nPocket Bikes) (Since 2008)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 117
+      },
+      {
+        "body_type_name": "Other Motored Cycle Type (Mini-Bikes, Motor Scooters, Pocket Motorcycles,\nPocket Bikes) (Since 2008)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Other Motored Cycle Type (Mini-Bikes, Motor Scooters, Pocket Motorcycles,\nPocket Bikes) (Since 2008)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 4
+      },
+      {
+        "body_type_name": "Other Motored Cycle Type (Mini-Bikes, Motor Scooters, Pocket Motorcycles,\nPocket Bikes) (Since 2008)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 3
+      },
+      {
+        "body_type_name": "Other Van Type (Hi-Cube Van)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 6
+      },
+      {
+        "body_type_name": "Other Van Type (Hi-Cube Van)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 13
+      },
+      {
+        "body_type_name": "Other Van Type (Hi-Cube Van)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 5
+      },
+      {
+        "body_type_name": "Other Van Type (Hi-Cube Van)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 3
+      },
+      {
+        "body_type_name": "Other Vehicle Type (Includes Go-Cart, Fork-Lift, City Street Sweeper,\nDune/Swamp Buggy, Golf Cart)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 68
+      },
+      {
+        "body_type_name": "Other Vehicle Type (Includes Go-Cart, Fork-Lift, City Street Sweeper,\nDune/Swamp Buggy, Golf Cart)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 8
+      },
+      {
+        "body_type_name": "Other Vehicle Type (Includes Go-Cart, Fork-Lift, City Street Sweeper,\nDune/Swamp Buggy, Golf Cart)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 6
+      },
+      {
+        "body_type_name": "Other Vehicle Type (Includes Go-Cart, Fork-Lift, City Street Sweeper,\nDune/Swamp Buggy, Golf Cart)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 16
+      },
+      {
+        "body_type_name": "Other Vehicle Type (Includes Go-Cart, Fork-Lift, City Street Sweeper,\nDune/Swamp Buggy, Golf Cart)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 33
+      },
+      {
+        "body_type_name": "Other or Unknown Automobile Type",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 58
+      },
+      {
+        "body_type_name": "Other or Unknown Automobile Type",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 13
+      },
+      {
+        "body_type_name": "Other or Unknown Automobile Type",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 7
+      },
+      {
+        "body_type_name": "Other or Unknown Automobile Type",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 53
+      },
+      {
+        "body_type_name": "Other or Unknown Automobile Type",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 11
+      },
+      {
+        "body_type_name": "Pickup with Slide-In Camper",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 14
+      },
+      {
+        "body_type_name": "Pickup with Slide-In Camper",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 16
+      },
+      {
+        "body_type_name": "Pickup with Slide-In Camper",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 3
+      },
+      {
+        "body_type_name": "Pickup with Slide-In Camper",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 5
+      },
+      {
+        "body_type_name": "Pickup with Slide-In Camper",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 4
+      },
+      {
+        "body_type_name": "School Bus",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 2
+      },
+      {
+        "body_type_name": "School Bus",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 63
+      },
+      {
+        "body_type_name": "School Bus",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 11
+      },
+      {
+        "body_type_name": "School Bus",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 10
+      },
+      {
+        "body_type_name": "School Bus",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 127
+      },
+      {
+        "body_type_name": "School Bus",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 76
+      },
+      {
+        "body_type_name": "Sedan/Hardtop, Number of Doors Unknown",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 4
+      },
+      {
+        "body_type_name": "Sedan/Hardtop, Number of Doors Unknown",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 6
+      },
+      {
+        "body_type_name": "Single Unit Straight Truck or Cab-Chassis (GVWR Unknown) (Since 2011)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 178
+      },
+      {
+        "body_type_name": "Single Unit Straight Truck or Cab-Chassis (GVWR Unknown) (Since 2011)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 15
+      },
+      {
+        "body_type_name": "Single Unit Straight Truck or Cab-Chassis (GVWR Unknown) (Since 2011)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 39
+      },
+      {
+        "body_type_name": "Single Unit Straight Truck or Cab-Chassis (GVWR Unknown) (Since 2011)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 35
+      },
+      {
+        "body_type_name": "Single Unit Straight Truck or Cab-Chassis (GVWR Unknown) (Since 2011)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 50
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (10,000 lbs < GVWR <=\n19,500 lbs) (Since 2011)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 32
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (10,000 lbs < GVWR <=\n19,500 lbs) (Since 2011)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 27
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (10,000 lbs < GVWR <=\n19,500 lbs) (Since 2011)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 153
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (10,000 lbs < GVWR <=\n19,500 lbs) (Since 2011)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 39
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (10,000 lbs < GVWR <=\n19,500 lbs) (Since 2011)",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (10,000 lbs < GVWR <=\n19,500 lbs) (Since 2011)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 46
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (19,500 lbs < GVWR <=\n26,000 lbs) (Since 2011)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 30
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (19,500 lbs < GVWR <=\n26,000 lbs) (Since 2011)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 23
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (19,500 lbs < GVWR <=\n26,000 lbs) (Since 2011)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 44
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (19,500 lbs < GVWR <=\n26,000 lbs) (Since 2011)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 13
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (19,500 lbs < GVWR <=\n26,000 lbs) (Since 2011)",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 2
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (19,500 lbs < GVWR <=\n26,000 lbs) (Since 2011)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 120
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (GVWR > 26,000 lbs) (Since 2011)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 79
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (GVWR > 26,000 lbs) (Since 2011)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 76
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (GVWR > 26,000 lbs) (Since 2011)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 54
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (GVWR > 26,000 lbs) (Since 2011)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 346
+      },
+      {
+        "body_type_name": "Single-Unit Straight Truck or Cab-Chassis (GVWR > 26,000 lbs) (Since 2011)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 29
+      },
+      {
+        "body_type_name": "Snowmobile",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Snowmobile",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Snowmobile",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 16
+      },
+      {
+        "body_type_name": "Standard Pickup",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 28
+      },
+      {
+        "body_type_name": "Standard Pickup",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 1092
+      },
+      {
+        "body_type_name": "Standard Pickup",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 3451
+      },
+      {
+        "body_type_name": "Standard Pickup",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1155
+      },
+      {
+        "body_type_name": "Standard Pickup",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 3377
+      },
+      {
+        "body_type_name": "Standard Pickup",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 1556
+      },
+      {
+        "body_type_name": "Station Wagon (Excluding Van and Truck-Based)",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 11
+      },
+      {
+        "body_type_name": "Station Wagon (Excluding Van and Truck-Based)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 281
+      },
+      {
+        "body_type_name": "Station Wagon (Excluding Van and Truck-Based)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 943
+      },
+      {
+        "body_type_name": "Station Wagon (Excluding Van and Truck-Based)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 324
+      },
+      {
+        "body_type_name": "Station Wagon (Excluding Van and Truck-Based)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 397
+      },
+      {
+        "body_type_name": "Station Wagon (Excluding Van and Truck-Based)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 838
+      },
+      {
+        "body_type_name": "Step Van",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 2
+      },
+      {
+        "body_type_name": "Step Van",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 3
+      },
+      {
+        "body_type_name": "Step Van",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Step Van or Walk-In Van",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 5
+      },
+      {
+        "body_type_name": "Step Van or Walk-In Van",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 4
+      },
+      {
+        "body_type_name": "Step Van or Walk-In Van",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 11
+      },
+      {
+        "body_type_name": "Step Van or Walk-In Van",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 11
+      },
+      {
+        "body_type_name": "Step Van or Walk-In Van",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 9
+      },
+      {
+        "body_type_name": "Three-Wheel Motorcycle/Moped- Not All-Terrain Vehicle",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 12
+      },
+      {
+        "body_type_name": "Three-Wheel Motorcycle/Moped- Not All-Terrain Vehicle",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 44
+      },
+      {
+        "body_type_name": "Three-Wheel Motorcycle/Moped- Not All-Terrain Vehicle",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Three-Wheel Motorcycle/Moped- Not All-Terrain Vehicle",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Transit Bus (City Bus)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 115
+      },
+      {
+        "body_type_name": "Transit Bus (City Bus)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 14
+      },
+      {
+        "body_type_name": "Transit Bus (City Bus)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 67
+      },
+      {
+        "body_type_name": "Transit Bus (City Bus)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 87
+      },
+      {
+        "body_type_name": "Transit Bus (City Bus)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 7
+      },
+      {
+        "body_type_name": "Transit Bus (City Bus)",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 5
+      },
+      {
+        "body_type_name": "Truck/Tractor (Cab Only, or with Any Number of Trailing Units: Any Weight)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 295
+      },
+      {
+        "body_type_name": "Truck/Tractor (Cab Only, or with Any Number of Trailing Units: Any Weight)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 108
+      },
+      {
+        "body_type_name": "Truck/Tractor (Cab Only, or with Any Number of Trailing Units: Any Weight)",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 2
+      },
+      {
+        "body_type_name": "Truck/Tractor (Cab Only, or with Any Number of Trailing Units: Any Weight)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 2010
+      },
+      {
+        "body_type_name": "Truck/Tractor (Cab Only, or with Any Number of Trailing Units: Any Weight)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 472
+      },
+      {
+        "body_type_name": "Truck/Tractor (Cab Only, or with Any Number of Trailing Units: Any Weight)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 268
+      },
+      {
+        "body_type_name": "Unknown (Pickup Style) Light Conventional Truck Type",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 11
+      },
+      {
+        "body_type_name": "Unknown (Pickup Style) Light Conventional Truck Type",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 13
+      },
+      {
+        "body_type_name": "Unknown (Pickup Style) Light Conventional Truck Type",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 6
+      },
+      {
+        "body_type_name": "Unknown Body Type",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 6
+      },
+      {
+        "body_type_name": "Unknown Body Type",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 67
+      },
+      {
+        "body_type_name": "Unknown Body Type",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 332
+      },
+      {
+        "body_type_name": "Unknown Body Type",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 7
+      },
+      {
+        "body_type_name": "Unknown Body Type",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 9
+      },
+      {
+        "body_type_name": "Unknown Body Type",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 4
+      },
+      {
+        "body_type_name": "Unknown Bus Type",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 2
+      },
+      {
+        "body_type_name": "Unknown Bus Type",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 6
+      },
+      {
+        "body_type_name": "Unknown Light Truck Type (Since 2013)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 3
+      },
+      {
+        "body_type_name": "Unknown Light Truck Type (Since 2013)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Unknown Light Truck Type (Since 2013)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 7
+      },
+      {
+        "body_type_name": "Unknown Light Truck Type (Since 2013)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 6
+      },
+      {
+        "body_type_name": "Unknown Light Truck Type (Since 2013)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 2
+      },
+      {
+        "body_type_name": "Unknown Light-Vehicle Type (Automobile, Utility Vehicle, Van or Light Truck)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Unknown Light-Vehicle Type (Automobile, Utility Vehicle, Van or Light Truck)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 2
+      },
+      {
+        "body_type_name": "Unknown Light-Vehicle Type (Automobile, Utility Vehicle, Van or Light Truck)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 13
+      },
+      {
+        "body_type_name": "Unknown Light-Vehicle Type (Automobile, Utility Vehicle, Van or Light Truck)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 6
+      },
+      {
+        "body_type_name": "Unknown Light-Vehicle Type (Automobile, Utility Vehicle, Van or Light Truck)",
+        "injury_severity_name": "Injured, Severity Unknown (U) (Since 1978)",
+        "count": 2
+      },
+      {
+        "body_type_name": "Unknown Light-Vehicle Type (Automobile, Utility Vehicle, Van or Light Truck)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 14
+      },
+      {
+        "body_type_name": "Unknown Medium/Heavy Truck Type",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 3
+      },
+      {
+        "body_type_name": "Unknown Medium/Heavy Truck Type",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 27
+      },
+      {
+        "body_type_name": "Unknown Medium/Heavy Truck Type",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 9
+      },
+      {
+        "body_type_name": "Unknown Medium/Heavy Truck Type",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 7
+      },
+      {
+        "body_type_name": "Unknown Medium/Heavy Truck Type",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 6
+      },
+      {
+        "body_type_name": "Unknown Motored Cycle Type",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Unknown Motored Cycle Type",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 19
+      },
+      {
+        "body_type_name": "Unknown Truck Type",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 5
+      },
+      {
+        "body_type_name": "Unknown Van Type",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 2
+      },
+      {
+        "body_type_name": "Unknown Van Type",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 6
+      },
+      {
+        "body_type_name": "Unknown Van Type",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 3
+      },
+      {
+        "body_type_name": "Unknown Van Type",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 32
+      },
+      {
+        "body_type_name": "Unknown Van Type",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 9
+      },
+      {
+        "body_type_name": "Unknown if Single-Unit or Combination-Unit Heavy Truck (GVWR >\n26,000 lbs.)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Unknown if Single-Unit or Combination-Unit Heavy Truck (GVWR >\n26,000 lbs.)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 5
+      },
+      {
+        "body_type_name": "Unknown if Single-Unit or Combination-Unit Heavy Truck (GVWR >\n26,000 lbs.)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 4
+      },
+      {
+        "body_type_name": "Unknown if Single-Unit or Combination-Unit Medium Truck (10,000 lbs <\nGVWR < 26,000 lbs)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 3
+      },
+      {
+        "body_type_name": "Unknown if Single-Unit or Combination-Unit Medium Truck (10,000 lbs <\nGVWR < 26,000 lbs)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Unknown if Single-Unit or Combination-Unit Medium Truck (10,000 lbs <\nGVWR < 26,000 lbs)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Unknown if Single-Unit or Combination-Unit Medium Truck (10,000 lbs <\nGVWR < 26,000 lbs)",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 9
+      },
+      {
+        "body_type_name": "Utility Station Wagon",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 70
+      },
+      {
+        "body_type_name": "Utility Station Wagon",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 81
+      },
+      {
+        "body_type_name": "Utility Station Wagon",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 173
+      },
+      {
+        "body_type_name": "Utility Station Wagon",
+        "injury_severity_name": "No Apparent Injury (O)",
+        "count": 160
+      },
+      {
+        "body_type_name": "Utility Station Wagon",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 126
+      },
+      {
+        "body_type_name": "Van-Based Bus GVWR > 10,000 lbs. (Since 2011)",
+        "injury_severity_name": "Suspected Minor Injury (B)",
+        "count": 7
+      },
+      {
+        "body_type_name": "Van-Based Bus GVWR > 10,000 lbs. (Since 2011)",
+        "injury_severity_name": "Suspected Serious Injury (A)",
+        "count": 1
+      },
+      {
+        "body_type_name": "Van-Based Bus GVWR > 10,000 lbs. (Since 2011)",
+        "injury_severity_name": "Fatal Injury (K)",
+        "count": 3
+      },
+      {
+        "body_type_name": "Van-Based Bus GVWR > 10,000 lbs. (Since 2011)",
+        "injury_severity_name": "Possible Injury (C)",
+        "count": 5
+      }
+    ]
+  }
+};
 vegaEmbed("#passengerRestraintUse", passengerRestraintUse);
 vegaEmbed("#alcohol", alcohol);
 vegaEmbed("#drug", drug);
@@ -8155,3 +9650,4 @@ vegaEmbed("#overspeed", overspeed);
 vegaEmbed("#seatingposition", seatingposition);
 vegaEmbed("#driverCircumstance", driverCircumstance);
 vegaEmbed("#light", light);
+vegaEmbed("#vehicleBodyType", vehicleBodyType);

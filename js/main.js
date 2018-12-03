@@ -1,5 +1,6 @@
 // Global variables
 const scrollSpyOffset = 0;
+var bodyTypeDataVisible = false;
 
 // Init Materialize components
 M.AutoInit();
@@ -55,5 +56,14 @@ function selectInNav() {
         document.querySelector('a[href*=' + i + ']').setAttribute('class', 'text active');
       }
     }
+  }
+}
+
+function onToggleBodyTypeData() {
+  bodyTypeDataVisible = !bodyTypeDataVisible;
+  if (bodyTypeDataVisible) {
+    $("#bodyTypeData").show();
+  } else {
+    $("#bodyTypeData").hide();
   }
 }
