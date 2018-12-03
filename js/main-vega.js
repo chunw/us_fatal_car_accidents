@@ -2632,7 +2632,7 @@ const dangerousTime =
       "type": "quantitative",
       "aggregate": "sum",
       "field": "crash_cnt",
-      "title": "Number of Crashes"
+      "title": "Crash Count"
     },
     "tooltip": [
       {"type": "quantitative", "field": "month_of_crash"},
@@ -2650,7 +2650,7 @@ const dangerousTime =
       "field": "month_of_crash"
     }
   },
-  "title": "Number of fatal crashes by month & hour",
+  "title": "All Fatal Crashes in 2016",
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
   "datasets": {
     "data-a4732e2618053d9ad96e3c4e3eaedc00": [
@@ -7838,7 +7838,7 @@ const light =
       "field": "month_of_crash"
     }
   },
-  "title": "Light Condition: Dark, Not Lighted",
+  "title": "Crashes with Light Condition: Dark, Not Lighted",
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
   "datasets": {
     "data-6dbda72fc8152a0ce121c7ee2418c499": [
