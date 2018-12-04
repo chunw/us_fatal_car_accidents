@@ -437,20 +437,27 @@
             <div class="g-item g-subhed ">
               <h6><strong>Speeding</strong></h6>
             </div>
+
             <p class='g-body'>
               Speeding endangers everyone on the road: According to NHSTA, for more than two decades,
               speeding has been involved in approximately one-third of all motor vehicle fatalities.
-              In 2016,</p>
-              <div class="my-list g-body">
-                <ul>
-                  <li>
-                    Speeding killed 10,111 people, accounting for more than a quarter (27%) of all traffic fatalities.
-                  </li>
-                  <li>
-                    37% percent of all speeding drivers were alcohol-impaired in fatal crashes.
-                  </li>
-                </ul>
-             </div>
+              In 2016,
+            </p>
+            <div class="my-list g-body">
+              <ul>
+                <li>
+                  Speeding killed 10,111 people, accounting for more than a quarter (27%) of all traffic fatalities.
+                </li>
+                <li>
+                  37% percent of all speeding drivers were alcohol-impaired in fatal crashes.
+                </li>
+              </ul>
+           </div>
+           <div class="analysis">
+               <div class="viz ">
+                 <div id="commonCausesWithSpeedingHighlighted"></div>
+               </div>
+           </div>
             <p class="g-body">
               How much does speeding have an impact on fatality risk of the vehicle occupants?
             </p>
@@ -618,24 +625,36 @@
             <div class="g-item g-subhed ">
               <h2><strong>Pedestrian Behavior</strong></h2>
             </div>
-            <p class="g-body">
+            <p class="g-body">In 2016,
 
-
-              •  In 2016 there were 5,987 pedestrians
-              killed in traffic crashes. This
-              is the highest number of pedestrians
-              killed in one year since 1990. <br>
-              • In 2016, pedestrian deaths
-              accounted for 16% of all
-              traffic fatalities. <br>
+              <br>
+              •  5,987 pedestrians were
+              killed in traffic crashes,
+              accounting for 16% of all
+              traffic fatalities.
+              <br>
               • On average, a pedestrian was
               killed in
-              traffic crashes nearly every 1.5 hours in 2016.
-
-
+              traffic crashes nearly every 1.5 hours.
             </p>
             <div class="analysis">
                 <div class="viz ">
+                  <div id="commonCausesWithPedestrainsHighlighted"></div>
+                </div>
+            </div>
+            <div class="analysis">
+                <div class="viz has-annotation">
+                  <div class="annotation" style="right: 179px;
+                    top: 129px;
+                    transform: rotate(32deg);">
+                    <img style="width: 18px;" src="img/line.png">
+                  </div>
+                  <div class="annotation bordered" style="    max-width: 100px;
+                    right: 76px;
+                    top: 125px;">
+                    <b>Pedestrians</b>, along with cyclists and persons on personal conveyances,
+                    are one of the road user groups with the highest fatality risks in road traffic crashes.
+                  </div>
                   <div id="pedestrain"></div>
                   <p>Hover on bars to view injury counts.</p>
 
@@ -644,52 +663,20 @@
                 </div>
               </div>
             </div>
+            <div class="annotation" style="    right: 40px;
+              font-size: 12px;
+              padding-top: 16px;
+              font-family: inherit;">
+              See <a target="_blank" href="https://www.nhtsa.gov/road-safety/pedestrian-safety">
+              Pedestrian Safety Tips from NHSTA</a>.
+            </div>
+
             <p class='g-body'>
               <b>Pedestrians</b>, along with cyclists and persons on personal conveyances,
               are one of the road user groups with the highest fatality risks in road traffic crashes.
 
-              See <a target="_blank" href="https://www.nhtsa.gov/road-safety/pedestrian-safety">
-              Pedestrian Safety Tips from NHSTA</a>.
-              <br>
               Below we show how the number of fatal crashes correlate to pedestrian actions immediately prior to
-              the crash and how the actions relate to the orientation of their collision w.r.t. the striking vehicle.
-              <!--
-                <strong> 10 Pedestrian Safety Tips: </strong><br>
-              <div  class="my-list">
-              <ul>
-                <li>
-                    Be predictable. Follow the rules of the road and obey signs and signals.
-                </li>
-                <li>
-                    Walk on sidewalks whenever they are available.
-                </li>
-                <li>
-                  If there is no sidewalk, walk facing traffic and as far from traffic as possible.
-                </li>
-                <li>
-                  Keep alert at all times; don’t be distracted by electronic devices that take your eyes (and ears) off the road.
-                </li>
-                <li>
-                  Whenever possible, cross streets at crosswalks or intersections, where drivers expect pedestrians. Look for cars in all directions, including those turning left or right.
-                </li>
-                <li>
-                  If a crosswalk or intersection is not available, locate a well-lit area where you have the best view of traffic. Wait for a gap in traffic that allows enough time to cross safely; continue watching for traffic as you cross.
-                </li>
-                <li>
-                  Never assume a driver sees you. Make eye contact with drivers as they approach to make sure you are seen.
-                </li>
-                <li>
-                  Be visible at all times. Wear bright clothing during the day, and wear reflective materials or use a flashlight at night.
-                </li>
-                <li>
-                  Watch for cars entering or exiting driveways, or backing up in parking lots.
-                </li>
-                <li>
-                  Avoid alcohol and drugs when walking; they impair your abilities and your judgment.
-                </li>
-              </ul>
-              </div>
-            -->
+              the crash and how the actions relate to the orientation of their collision with respect to the striking vehicle.
             </p>
 
             <div class="analysis">
@@ -713,37 +700,48 @@
               conditions in fatal crashes.
             </p>
             <!-- The analysis shows that among all passenger vehicle (passenger cars, SUVs, pickup trucks or vans) occu- pants involved in a fatal crash, the proportion who were fatally injured increases with vehicle age, i.e., the propor- tion was higher among occupants of older vehicles as compared to the occupants of newer vehicles. Also, the pro- portion of occupants who were fatally injured was higher among occupants of older model year vehicles as compared to the occupants of newer model year vehicles. -->
-            <div class="g-item g-subhed ">
-              <h6><strong>Vehicle Model Year</strong></h6>
-            </div>
-            <div class="analysis">
-              <div class="viz ">
-                <div id="vehicleModelYear"></div>
-                <p>Hover on circles to view details.</p>
-                <p class="method">
-                  <strong>Methodology:</strong> The average fatality percentage for a vehicle model year is computed as <span class="formula">{[fatality in vehicle] / [all occupants in vehicle]} × 100% </span>averaged over all vehicles of that model year involved in fatal car crashes.</p>
-                </p>
+            <div class="row my-tabs">
+              <div class="col s12">
+                <ul class="tabs ">
+                  <li class="tab col s3"><a class="active" href="#modelyeartab">Model year</a></li>
+                  <li class="tab col s3"><a href="#modelagetab">vehicle age</a></li>
+                </ul>
               </div>
-              <div class="text">
-                A higher proportion of the occupants of older model-year vehicles suffered fatality or a fatal injury.
+              <div id="modelyeartab" class="col s12 my-tab">
+                <div class="g-item g-subhed ">
+                  <h6><strong>Vehicle Model Year</strong></h6>
+                </div>
+                <div class="analysis">
+                  <div class="viz ">
+                    <div id="vehicleModelYear"></div>
+                    <p>Hover on circles to view details.</p>
+                    <p class="method">
+                      <strong>Methodology:</strong> The average fatality percentage for a vehicle model year is computed as <span class="formula">{[fatality in vehicle] / [all occupants in vehicle]} × 100% </span>averaged over all vehicles of that model year involved in fatal car crashes.</p>
+                    </p>
+                  </div>
+                  <div class="text">
+                    A higher proportion of the occupants of older model-year vehicles suffered fatality or a fatal injury.
+                  </div>
+                </div>
               </div>
-            </div>
+              <div id="modelagetab" class="col s12 my-tab">
+                <div class="g-item g-subhed ">
+                  <h6><strong>Vehicle Age</strong></h6>
+                </div>
+                <div class="analysis">
+                  <div class="viz">
+                    <div id="vehicleAge"></div>
+                    <p>Hover on circles to view details.</p>
+                    <p class="method">
+                      <strong>Methodology:</strong> The age of a vehicle is measured by subtracting the vehicle model year from the calendar year at the time of the crash (vehicle whose age was calculated to be -1 was recoded to be age 0). <br>
+                      The average fatality percentage for a vehicle age is computed as <span class="formula">{[fatality in vehicle] / [all occupants in vehicle]} × 100% </span>averaged over all vehicles of that vehicle age involved in fatal car crashes.</p>
+                    </p>
+                  </div>
+                  <div class="text">
+                    There is a trend that the proportion who were fatally injured increases with vehicle age.
+                  </div>
+                </div>
 
-            <div class="g-item g-subhed ">
-              <h6><strong>Vehicle Age</strong></h6>
-            </div>
-            <div class="analysis">
-              <div class="viz">
-                <div id="vehicleAge"></div>
-                <p>Hover on circles to view details.</p>
-                <p class="method">
-                  <strong>Methodology:</strong> The age of a vehicle is measured by subtracting the vehicle model year from the calendar year at the time of the crash (vehicle whose age was calculated to be -1 was recoded to be age 0). <br>
-                  The average fatality percentage for a vehicle age is computed as <span class="formula">{[fatality in vehicle] / [all occupants in vehicle]} × 100% </span>averaged over all vehicles of that vehicle age involved in fatal car crashes.</p>
-                </p>
-              </div>
-              <div class="text">
-
-                There is a trend that the proportion who were fatally injured increases with vehicle age.
               </div>
             </div>
 

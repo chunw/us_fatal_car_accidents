@@ -9678,6 +9678,140 @@ const vehicleBodyType = {
     ]
   }
 };
+const commonCausesWithSpeedingHighlighted =
+  {
+  "title": "Top 10 most-common critical pre-crash events in fatal crashes",
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-c2d091d6bc118aa15de38c3fadc223c8"},
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "condition": {"value": "orange", "test": "(datum.cnt === 2679)"},
+      "value": "steelblue"
+    },
+    "tooltip": [
+      {"type": "nominal", "field": "critical_event_precrash_name"},
+      {"type": "quantitative", "field": "cnt"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "axis": {"title": "Crash Count"},
+      "field": "cnt"
+    },
+    "y": {
+      "type": "nominal",
+      "axis": {"title": ""},
+      "field": "critical_event_precrash_name",
+      "sort": {"op": "sum", "field": "cnt", "order": "descending"}
+    }
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-c2d091d6bc118aa15de38c3fadc223c8": [
+      {
+        "critical_event_precrash_name": "From Opposite Direction Over Left Lane Line",
+        "cnt": 6215
+      },
+      {
+        "critical_event_precrash_name": "Off the Edge of the Road on the Right Side",
+        "cnt": 5415
+      },
+      {"critical_event_precrash_name": "Pedestrian in Road", "cnt": 5408},
+      {
+        "critical_event_precrash_name": "Over the Lane Line on Left Side of Travel Lane",
+        "cnt": 3695
+      },
+      {
+        "critical_event_precrash_name": "Off the Edge of the Road on the Left Side",
+        "cnt": 3617
+      },
+      {
+        "critical_event_precrash_name": "Traveling In Same Direction with Higher Speed",
+        "cnt": 3132
+      },
+      {
+        "critical_event_precrash_name": "Crossing Over (Passing Through) Intersection",
+        "cnt": 2798
+      },
+      {
+        "critical_event_precrash_name": "Traveling Too Fast For Conditions",
+        "cnt": 2679
+      },
+      {"critical_event_precrash_name": "Turning Left at Junction", "cnt": 2585},
+      {
+        "critical_event_precrash_name": "From Crossing Street, Across Path",
+        "cnt": 2329
+      }
+    ]
+  }
+};
+const commonCausesWithPedestrainsHighlighted = {
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {"name": "data-c2d091d6bc118aa15de38c3fadc223c8"},
+  "title": "Top 10 most-common critical pre-crash events in fatal crashes",
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "condition": {"value": "orange", "test": "(datum.cnt === 5408)"},
+      "value": "steelblue"
+    },
+    "tooltip": [
+      {"type": "nominal", "field": "critical_event_precrash_name"},
+      {"type": "quantitative", "field": "cnt"}
+    ],
+    "x": {
+      "type": "quantitative",
+      "axis": {"title": "Crash Count"},
+      "field": "cnt"
+    },
+    "y": {
+
+      "type": "nominal",
+      "axis": {"title": ""},
+      "field": "critical_event_precrash_name",
+      "sort": {"op": "sum", "field": "cnt", "order": "descending"}
+    }
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "datasets": {
+    "data-c2d091d6bc118aa15de38c3fadc223c8": [
+      {
+        "critical_event_precrash_name": "From Opposite Direction Over Left Lane Line",
+        "cnt": 6215
+      },
+      {
+        "critical_event_precrash_name": "Off the Edge of the Road on the Right Side",
+        "cnt": 5415
+      },
+      {"critical_event_precrash_name": "Pedestrian in Road", "cnt": 5408},
+      {
+        "critical_event_precrash_name": "Over the Lane Line on Left Side of Travel Lane",
+        "cnt": 3695
+      },
+      {
+        "critical_event_precrash_name": "Off the Edge of the Road on the Left Side",
+        "cnt": 3617
+      },
+      {
+        "critical_event_precrash_name": "Traveling In Same Direction with Higher Speed",
+        "cnt": 3132
+      },
+      {
+        "critical_event_precrash_name": "Crossing Over (Passing Through) Intersection",
+        "cnt": 2798
+      },
+      {
+        "critical_event_precrash_name": "Traveling Too Fast For Conditions",
+        "cnt": 2679
+      },
+      {"critical_event_precrash_name": "Turning Left at Junction", "cnt": 2585},
+      {
+        "critical_event_precrash_name": "From Crossing Street, Across Path",
+        "cnt": 2329
+      }
+    ]
+  }
+};
 vegaEmbed("#passengerRestraintUse", passengerRestraintUse);
 vegaEmbed("#alcohol", alcohol);
 vegaEmbed("#drug", drug);
@@ -9701,3 +9835,5 @@ vegaEmbed("#seatingposition", seatingposition);
 vegaEmbed("#driverCircumstance", driverCircumstance);
 vegaEmbed("#light", light);
 vegaEmbed("#vehicleBodyType", vehicleBodyType);
+vegaEmbed("#commonCausesWithSpeedingHighlighted", commonCausesWithSpeedingHighlighted);
+vegaEmbed("#commonCausesWithPedestrainsHighlighted", commonCausesWithPedestrainsHighlighted);
