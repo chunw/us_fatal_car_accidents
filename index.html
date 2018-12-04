@@ -410,6 +410,7 @@
                       <p>Hover on bars to view count of injuries by alcohol involvement and injury type.</p>
 
                     </div>
+
                     <div class="text">
 
                     </div>
@@ -445,28 +446,40 @@
                 <p>Hover on circles to view count of fatal crashes and average overspeeding amount (MPH) for the selected overspeed range.</p>
                 <p class="method">
                   <strong>Methodology:</strong>
-                 The over-speeding amount of a vehicle is computed as <span class="formula">{[vehicle travel speed] - [road speed limit]}</span> at the time of crash.
+                  The overspeeding amount of a vehicle is computed as <span class="formula">{[vehicle travel speed] - [road speed limit]}</span> at the time of crash.
+                  The average fatality percentage for a overspeeding range is computed as <span class="formula">{[fatality in vehicle] / [all occupants in vehicle]} × 100% </span>averaged over all vehicles involved in fatal crashes in that overspeeding range at the time of crash.</p>
+
                 </p>
               </div>
               <div class="text">
-                There is a clear trend that as vehicle's overspeeding amount goes up, there is also a higher fatality risk associated. <br>
-
+                There is a clear trend that as vehicle's overspeeding amount goes up, there is also a higher fatality risk associated for vehicle occupants.
               </div>
-
             </div>
 
+            <p class='g-body'>
+              Speeding tickets are the most commonly used tool to deter speeders,
+              but are they actually effective at reducing fatal car crashes related to speeding?
+            </p>
+
             <div class="analysis">
-              <div class="viz ">
+              <div class="viz has-annotation">
+                <div class="annotation" style="left: 273px;
+                    top: 14px;
+                    transform: rotate(90deg);">
+                  <img style="    width: 18px;" src="img/arrow_annotation.png"/>
+                </div>
                 <div id="speeding"></div>
                 <p>Hover on bars to view details.</p>
                 <p class="method">
-                  <strong>Methodology:</strong> This visualization relates the vehicle's travel speed at time of crash to the driver’s past speeding records.
-                  The overspeeding amount is computed by substracting the road speed limit from the vehicle's travel speed at the time of crash. e.g. '20+' means the vehicle was traveling 20 MPH more than the speed limit.
-                  Speeding record is represented by the number of previous speeding convictions for the driver that occurred within five years of the crash date, ranging from 0 to 7.
+                  <strong>Methodology:</strong> This visualization relates the vehicle's overspeeding amount at the time of crash to the driver’s past speeding convictions.
+                  Speeding convictions of the driver that occurred within five years from the crash date are counted.
                 </p>
 
                 <div class="">
-                Overall, the green bars (“no speeding”) display a downward trend, i.e. drivers who kept a good record in the past tend to behave well all the time. Note that no-speeding ratio increases significantly when the number of previous speeding convictions rises to 6. This suggests that drivers who frequently made mistakes may receive either punishment or education so that they started to respect the speed rule. The red bars (“severe speeding”) first reach a peak and then decrease. This suggests that wild drivers are less likely to be deterred from defying the rule.
+                  It can be observed from the visualization above that
+                  speeding citations are effective at reducing the likelihood of
+                  receiving subsequent speeding tickets.
+                  Overall, the green bars (“no speeding”) display a downward trend, i.e. drivers who kept a good record in the past tend to behave well all the time. Note that no-speeding ratio increases significantly when the number of previous speeding convictions rises to 6. This suggests that drivers who frequently made mistakes may receive either punishment or education so that they started to respect the speed rule. The red bars (“severe speeding”) first reach a peak and then decrease. This suggests that wild drivers are less likely to be deterred from defying the rule.
                 </div>
               </div>
               <div class="text">
