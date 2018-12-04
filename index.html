@@ -477,7 +477,7 @@
             </div>
 
             <p class='g-body'>
-              Speeding is a indeed a pressing problem.
+              Speeding is indeed a pressing problem.
               Speeding tickets are the most commonly used tool to deter speeders,
               but do they actually have an impact on driver's behaviors (and reducing car crashes related to speeding)?
             </p>
@@ -699,53 +699,56 @@
               vehicle occupant fatality correlates to various vehicle
               conditions in fatal crashes.
             </p>
-            <!-- The analysis shows that among all passenger vehicle (passenger cars, SUVs, pickup trucks or vans) occu- pants involved in a fatal crash, the proportion who were fatally injured increases with vehicle age, i.e., the propor- tion was higher among occupants of older vehicles as compared to the occupants of newer vehicles. Also, the pro- portion of occupants who were fatally injured was higher among occupants of older model year vehicles as compared to the occupants of newer model year vehicles. -->
-            <div class="row my-tabs">
-              <div class="col s12">
-                <ul class="tabs ">
-                  <li class="tab col s3"><a class="active" href="#modelyeartab">Model year</a></li>
-                  <li class="tab col s3"><a href="#modelagetab">vehicle age</a></li>
-                </ul>
-              </div>
-              <div id="modelyeartab" class="col s12 my-tab">
-                <div class="g-item g-subhed ">
-                  <h6><strong>Vehicle Model Year</strong></h6>
+            <!--
+            <div class="analysis">
+              <div class="row my-tabs">
+                <div class="col s12">
+                  <ul class="tabs ">
+                    <li class="tab col s3"><a class="active" href="#modelyeartab">Model year</a></li>
+                    <li class="tab col s3"><a href="#modelagetab">vehicle age</a></li>
+                  </ul>
                 </div>
-                <div class="analysis">
-                  <div class="viz ">
-                    <div id="vehicleModelYear"></div>
-                    <p>Hover on circles to view details.</p>
-                    <p class="method">
-                      <strong>Methodology:</strong> The average fatality percentage for a vehicle model year is computed as <span class="formula">{[fatality in vehicle] / [all occupants in vehicle]} × 100% </span>averaged over all vehicles of that model year involved in fatal car crashes.</p>
-                    </p>
+                <div id="modelyeartab" class="col s12 my-tab">-->
+                  <div class="g-item g-subhed ">
+                    <h6><strong>Vehicle Model Year</strong></h6>
                   </div>
-                  <div class="text">
-                    A higher proportion of the occupants of older model-year vehicles suffered fatality or a fatal injury.
+                  <div class="analysis">
+                    <div class="viz ">
+                      <div id="vehicleModelYear"></div>
+                      <p>Hover on circles to view details.</p>
+                      <p class="method">
+                        <strong>Methodology:</strong> The average fatality percentage for a vehicle model year is computed as <span class="formula">{[fatality in vehicle] / [all occupants in vehicle]} × 100% </span>averaged over all vehicles of that model year involved in fatal car crashes.</p>
+                      </p>
+                    </div>
+                    <div class="text">
+                      A higher proportion of the occupants of older model-year vehicles suffered fatality or a fatal injury.
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div id="modelagetab" class="col s12 my-tab">
-                <div class="g-item g-subhed ">
-                  <h6><strong>Vehicle Age</strong></h6>
-                </div>
-                <div class="analysis">
-                  <div class="viz">
-                    <div id="vehicleAge"></div>
-                    <p>Hover on circles to view details.</p>
-                    <p class="method">
-                      <strong>Methodology:</strong> The age of a vehicle is measured by subtracting the vehicle model year from the calendar year at the time of the crash (vehicle whose age was calculated to be -1 was recoded to be age 0). <br>
-                      The average fatality percentage for a vehicle age is computed as <span class="formula">{[fatality in vehicle] / [all occupants in vehicle]} × 100% </span>averaged over all vehicles of that vehicle age involved in fatal car crashes.</p>
-                    </p>
-                  </div>
-                  <div class="text">
-                    There is a trend that the proportion who were fatally injured increases with vehicle age.
-                  </div>
-                </div>
+                <!--</div>
 
+                <div id="modelagetab" class="col s12 my-tab">-->
+                  <div class="g-item g-subhed ">
+                    <h6><strong>Vehicle Age</strong></h6>
+                  </div>
+                  <div class="analysis">
+                    <div class="viz">
+                      <div id="vehicleAge"></div>
+                      <p>Hover on circles to view details.</p>
+                      <p class="method">
+                        <strong>Methodology:</strong> The age of a vehicle is measured by subtracting the vehicle model year from the calendar year at the time of the crash (vehicle whose age was calculated to be -1 was recoded to be age 0). <br>
+                        The average fatality percentage for a vehicle age is computed as <span class="formula">{[fatality in vehicle] / [all occupants in vehicle]} × 100% </span>averaged over all vehicles of that vehicle age involved in fatal car crashes.</p>
+                      </p>
+                    </div>
+                    <div class="text">
+                      There is a trend that the proportion who were fatally injured increases with vehicle age.
+                    </div>
+                  </div>
+                <!--
+                </div>
               </div>
-            </div>
-
+            </div>-->
             <p class="g-body">
+              The analysis shows that among all passenger vehicle (passenger cars, SUVs, pickup trucks or vans) occupants involved in a fatal crash, the proportion who were fatally injured increases with vehicle age, i.e., the proportion was higher among occupants of older vehicles as compared to the occupants of newer vehicles. Also, the proportion of occupants who were fatally injured was higher among occupants of older model year vehicles as compared to the occupants of newer model year vehicles.<br><br>
               The improved quality of cars is a bit of a double-edged
               sword when it comes to the age issue.
               As cars get better on multiple fronts, such as
