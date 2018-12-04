@@ -377,7 +377,7 @@
             <div class="analysis">
               <div class="viz ">
                 <div id="driverCircumstance"></div>
-                <p>Hover on bars to view count of fatal crash by circumstances.</p>
+                <p>Hover on bars to view crash counts by circumstances.</p>
                 <p class="method">
                   <strong>Methodology:</strong> Circumstances that may have contributed to a crash include distraction, driver's physical impairment, alcohol/drug influence, and impediments to the driver's visual field.
                 </p>
@@ -407,7 +407,7 @@
                   <div class="analysis">
                     <div class="viz ">
                       <div id="alcohol"></div>
-                      <p>Hover on bars to view count of injuries by alcohol involvement and injury type.</p>
+                      <p>Hover on bars to view injury counts.</p>
 
                     </div>
 
@@ -423,7 +423,7 @@
                   <div class="analysis">
                     <div class="viz ">
                       <div id="drug"></div>
-                      <p>Hover on bars to view count of injuries by drugs involvement and injury type.</p>
+                      <p>Hover on bars to view injury counts.</p>
 
                     </div>
                     <div class="text">
@@ -438,12 +438,26 @@
               <h6><strong>Speeding</strong></h6>
             </div>
             <p class='g-body'>
-            How much does speeding have an impact on fatality risk of the vehicle occupants?
+              Speeding endangers everyone on the road: According to NHSTA, for more than two decades,
+              speeding has been involved in approximately one-third of all motor vehicle fatalities.
+              In 2016,</p>
+              <div class="my-list g-body">
+                <ul>
+                  <li>
+                    Speeding killed 10,111 people, accounting for more than a quarter (27%) of all traffic fatalities.
+                  </li>
+                  <li>
+                    37% percent of all speeding drivers were alcohol-impaired in fatal crashes.
+                  </li>
+                </ul>
+             </div>
+            <p class="g-body">
+              How much does speeding have an impact on fatality risk of the vehicle occupants?
             </p>
             <div class="analysis">
               <div class="viz ">
                 <div id="overspeed"></div>
-                <p>Hover on circles to view count of fatal crashes and average overspeeding amount (MPH) for the selected overspeed range.</p>
+                <p>Hover on circles to view crash counts and average overspeeding amount (MPH) for the selected overspeed range.</p>
                 <p class="method">
                   <strong>Methodology:</strong>
                   The overspeeding amount of a vehicle is computed as <span class="formula">{[vehicle travel speed] - [road speed limit]}</span> at the time of crash.
@@ -458,28 +472,65 @@
 
             <p class='g-body'>
               Speeding tickets are the most commonly used tool to deter speeders,
-              but are they actually effective at reducing fatal car crashes related to speeding?
+              but do they actually have an impact on driver's behaviors (and reducing car crashes related to speeding)?
             </p>
 
             <div class="analysis">
               <div class="viz has-annotation">
-                <div class="annotation" style="left: 273px;
+                <div class="annotation" style="left: 278px;
                     top: 14px;
                     transform: rotate(90deg);">
-                  <img style="    width: 18px;" src="img/arrow_annotation.png"/>
+                  <img style="width: 18px;" src="img/arrow_annotation.png"/>
+                </div>
+                <div class="annotation" style="right: 24px;
+                  top: 77px;
+                  transform: rotate(41deg);">
+                  <img style="width: 18px;" src="img/line.png">
+                </div>
+                <div class="annotation" style="right: 46px;
+                  top: 77px;
+                  transform: rotate(41deg);">
+                  <img style="width: 18px;" src="img/line.png"/>
+                </div>
+                <div class="annotation" style="right: 75px;
+    top: 134px;
+    transform: rotate(90deg);">
+                  <img style="width: 18px;" src="img/line.png"/>
+                </div>
+                <div class="annotation" style="right: 61px;
+    top: 150px;
+    transform: rotate(90deg);">
+                  <img style="width: 18px;" src="img/line.png"/>
+                </div>
+                <div class="annotation bordered" style="max-width: 100px;
+                right: -80px;
+                top: 80px;">
+                   <strong>§ 20-141.</strong> It is a Class 3 Misdemeanor to operate a motor
+                   vehicle either greater than 15 MPH above the posted speed
+                   limit.
+                </div>
+                <div class="annotation bordered" style="max-width: 100px; right: 0; top: 171px;">
+                   <strong>§ 20-141.</strong> A person will be charged with reckless driving when the speeding
+                   exceeds 25 MPH above the speed limit.
                 </div>
                 <div id="speeding"></div>
                 <p>Hover on bars to view details.</p>
                 <p class="method">
                   <strong>Methodology:</strong> This visualization relates the vehicle's overspeeding amount at the time of crash to the driver’s past speeding convictions.
-                  Speeding convictions of the driver that occurred within five years from the crash date are counted.
+                  We trace the change in ratio of drivers involved in fatal crashes by the number of previous (within five years from the crash date) speeding convictions of the driver.
                 </p>
 
                 <div class="">
-                  It can be observed from the visualization above that
+                  Overall, it can be observed from the visualization above that
                   speeding citations are effective at reducing the likelihood of
-                  receiving subsequent speeding tickets.
-                  Overall, the green bars (“no speeding”) display a downward trend, i.e. drivers who kept a good record in the past tend to behave well all the time. Note that no-speeding ratio increases significantly when the number of previous speeding convictions rises to 6. This suggests that drivers who frequently made mistakes may receive either punishment or education so that they started to respect the speed rule. The red bars (“severe speeding”) first reach a peak and then decrease. This suggests that wild drivers are less likely to be deterred from defying the rule.
+                  receiving subsequent speeding tickets, as significant drops in number of fatal crashes
+                  for drivers who have previously received speeding citations.
+                  However, while the total speeding-related crash count sees a downward trend,
+                  the absolute crash count
+                  remains significant, especially for reckless speeders (50 fatal crashes), even after 3 previous
+                  speeding citations,
+                  suggesting that speeding citations have limited effects on
+                  deterrence in the context of the current traffic enforcement system.
                 </div>
               </div>
               <div class="text">
@@ -506,7 +557,7 @@
             <div class="analysis">
               <div class="viz ">
                 <div id="passengerRestraintUse"></div>
-                <p>Hover on bars to view details.</p>
+                <p>Hover on bars to view injury counts.</p>
                 <p class="method">
                   <strong>Methodology:</strong>
                   The data describes restraint usage of passengers of a motor vehicle in-transport.
@@ -518,12 +569,12 @@
             <div class="analysis">
               <div class="viz ">
                 <div id="ejection"></div>
-                <p>Hover on bars to view details.</p>
+                <p>Hover on bars to view injury counts.</p>
                 <p class="method">
                   <strong>Methodology:</strong> The ejection scenario describes the ejection status and degree of ejection for this person, excluding motorcycle occupants.
                 </p>
-                <div class="">
-                  Ejection from the vehicle is one of the most injurious events that can happen to a person in a crash. Seat belts are very effective in preventing total ejections; in 2016 only 1 percent of all passenger vehicle occupants (those killed as well as survivors) in fatal crashes reported to have been using restraints were totally ejected, compared to 29% of those unrestrained.
+                <div>
+                  Ejection refers to occupants being totally or partially thrown from the vehicle as a result of an impact or rollover. Ejection from the vehicle is one of the most injurious events that can happen to a person in a crash. Seat belts are very effective in preventing total ejections; in 2016 only 1 percent of all passenger vehicle occupants (those killed as well as survivors) in fatal crashes reported to have been using restraints were totally ejected, compared to 29% of those unrestrained.
                 </div>
               </div>
             </div>
@@ -531,15 +582,6 @@
             <div class="g-item g-subhed ">
               <h6><strong>Seating Position</strong></h6>
             </div>
-            <div class="analysis">
-              <div class="viz">
-                <div id="seatingposition"></div>
-                <p>Hover on bars to view details.</p>
-              </div>
-              <div class="text">
-              </div>
-            </div>
-
             <p class="g-body">
               Among all vehicle occupants, people riding on vehicle exterior
               have the highest fatality rate, followed by passengers sitting in cargo
@@ -548,6 +590,16 @@
               are shown to be more dangerous than seats in
               the back row (Third Seat, Fourth Seat positions).
             </p>
+            <div class="analysis">
+              <div class="viz">
+                <div id="seatingposition"></div>
+                <p>Hover on bars to view injury counts.</p>
+              </div>
+              <div class="text">
+              </div>
+            </div>
+
+
         </section>
 
         <section id="section-pedestrian">
@@ -573,7 +625,7 @@
             <div class="analysis">
                 <div class="viz ">
                   <div id="pedestrain"></div>
-                  <p>Hover on bars to view details.</p>
+                  <p>Hover on bars to view injury counts.</p>
 
                 <div class="text">
 

@@ -2430,14 +2430,16 @@ const airbagDeployment =
 const speeding =
 {
   "config": {"view": {"width": 400, "height": 300}},
-  "data": {"name": "data-81b933d9d4b63fc38467ed547072996c"},
+  "data": {"name": "data-51e7d4207b4ebb1fef6be27811298178"},
   "mark": "bar",
   "encoding": {
     "color": {
       "type": "nominal",
-      "field": "Speeding Type",
-      "legend": {"title": "Overspeeding Amount (MPH)"},
-      "scale": {"range": ["#98eab0", "#FFFFBF", "#FDAE61", "#d73027"]}
+      "field": "Overspeeding Range",
+      "legend": {"title": "Overspeeding Range"},
+      "scale": {
+        "range": ["#98eab0", "#FFFFBF", "#FDAE61", "#d73027", "#a50026"]
+      }
     },
     "column": {
       "type": "quantitative",
@@ -2448,175 +2450,223 @@ const speeding =
         "type": "quantitative",
         "field": "Number of Previous Speeding Convictions"
       },
-      {"type": "nominal", "field": "Speeding Type"},
-      {"type": "quantitative", "field": "Ratio"}
+      {"type": "nominal", "field": "Overspeeding Range"},
+      {"type": "quantitative", "field": "Crash Count"}
     ],
-    "x": {"type": "nominal", "axis": {"title": ""}, "field": "Speeding Type"},
-    "y": {"type": "quantitative", "axis": {"grid": false}, "field": "Ratio"}
+    "x": {
+      "type": "nominal",
+      "axis": {"title": ""},
+      "field": "Overspeeding Range"
+    },
+    "y": {
+      "type": "quantitative",
+      "axis": {"grid": false},
+      "field": "Crash Count"
+    }
   },
   "width": 60,
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
   "datasets": {
-    "data-81b933d9d4b63fc38467ed547072996c": [
+    "data-51e7d4207b4ebb1fef6be27811298178": [
       {
         "Number of Previous Speeding Convictions": 0,
-        "Speeding Type": "0 or below",
-        "Ratio": 0.733
-      },
-      {
-        "Number of Previous Speeding Convictions": 0,
-        "Speeding Type": "1 ~ 10",
-        "Ratio": 0.116
+        "Overspeeding Range": "0 ~ 5",
+        "Crash Count": 1019
       },
       {
         "Number of Previous Speeding Convictions": 0,
-        "Speeding Type": "10 ~ 20",
-        "Ratio": 0.069
+        "Overspeeding Range": "05 ~ 15",
+        "Crash Count": 1323
       },
       {
         "Number of Previous Speeding Convictions": 0,
-        "Speeding Type": "20+",
-        "Ratio": 0.082
+        "Overspeeding Range": "15 ~ 20",
+        "Crash Count": 415
+      },
+      {
+        "Number of Previous Speeding Convictions": 0,
+        "Overspeeding Range": "20 ~ 25",
+        "Crash Count": 319
+      },
+      {
+        "Number of Previous Speeding Convictions": 0,
+        "Overspeeding Range": "25+",
+        "Crash Count": 900
       },
       {
         "Number of Previous Speeding Convictions": 1,
-        "Speeding Type": "0 or below",
-        "Ratio": 0.667
+        "Overspeeding Range": "0 ~ 5",
+        "Crash Count": 180
       },
       {
         "Number of Previous Speeding Convictions": 1,
-        "Speeding Type": "1 ~ 10",
-        "Ratio": 0.12
+        "Overspeeding Range": "05 ~ 15",
+        "Crash Count": 292
       },
       {
         "Number of Previous Speeding Convictions": 1,
-        "Speeding Type": "10 ~ 20",
-        "Ratio": 0.086
+        "Overspeeding Range": "15 ~ 20",
+        "Crash Count": 91
       },
       {
         "Number of Previous Speeding Convictions": 1,
-        "Speeding Type": "20+",
-        "Ratio": 0.126
+        "Overspeeding Range": "20 ~ 25",
+        "Crash Count": 105
+      },
+      {
+        "Number of Previous Speeding Convictions": 1,
+        "Overspeeding Range": "25+",
+        "Crash Count": 240
       },
       {
         "Number of Previous Speeding Convictions": 2,
-        "Speeding Type": "0 or below",
-        "Ratio": 0.621
+        "Overspeeding Range": "0 ~ 5",
+        "Crash Count": 44
       },
       {
         "Number of Previous Speeding Convictions": 2,
-        "Speeding Type": "1 ~ 10",
-        "Ratio": 0.121
+        "Overspeeding Range": "05 ~ 15",
+        "Crash Count": 110
       },
       {
         "Number of Previous Speeding Convictions": 2,
-        "Speeding Type": "10 ~ 20",
-        "Ratio": 0.11
+        "Overspeeding Range": "15 ~ 20",
+        "Crash Count": 31
       },
       {
         "Number of Previous Speeding Convictions": 2,
-        "Speeding Type": "20+",
-        "Ratio": 0.148
+        "Overspeeding Range": "20 ~ 25",
+        "Crash Count": 32
+      },
+      {
+        "Number of Previous Speeding Convictions": 2,
+        "Overspeeding Range": "25+",
+        "Crash Count": 87
       },
       {
         "Number of Previous Speeding Convictions": 3,
-        "Speeding Type": "0 or below",
-        "Ratio": 0.548
+        "Overspeeding Range": "0 ~ 5",
+        "Crash Count": 25
       },
       {
         "Number of Previous Speeding Convictions": 3,
-        "Speeding Type": "1 ~ 10",
-        "Ratio": 0.164
+        "Overspeeding Range": "05 ~ 15",
+        "Crash Count": 38
       },
       {
         "Number of Previous Speeding Convictions": 3,
-        "Speeding Type": "10 ~ 20",
-        "Ratio": 0.072
+        "Overspeeding Range": "15 ~ 20",
+        "Crash Count": 9
       },
       {
         "Number of Previous Speeding Convictions": 3,
-        "Speeding Type": "20+",
-        "Ratio": 0.216
+        "Overspeeding Range": "20 ~ 25",
+        "Crash Count": 16
+      },
+      {
+        "Number of Previous Speeding Convictions": 3,
+        "Overspeeding Range": "25+",
+        "Crash Count": 50
       },
       {
         "Number of Previous Speeding Convictions": 4,
-        "Speeding Type": "0 or below",
-        "Ratio": 0.558
+        "Overspeeding Range": "0 ~ 5",
+        "Crash Count": 11
       },
       {
         "Number of Previous Speeding Convictions": 4,
-        "Speeding Type": "1 ~ 10",
-        "Ratio": 0.144
+        "Overspeeding Range": "05 ~ 15",
+        "Crash Count": 11
       },
       {
         "Number of Previous Speeding Convictions": 4,
-        "Speeding Type": "10 ~ 20",
-        "Ratio": 0.115
+        "Overspeeding Range": "15 ~ 20",
+        "Crash Count": 5
       },
       {
         "Number of Previous Speeding Convictions": 4,
-        "Speeding Type": "20+",
-        "Ratio": 0.183
+        "Overspeeding Range": "20 ~ 25",
+        "Crash Count": 4
+      },
+      {
+        "Number of Previous Speeding Convictions": 4,
+        "Overspeeding Range": "25+",
+        "Crash Count": 15
       },
       {
         "Number of Previous Speeding Convictions": 5,
-        "Speeding Type": "0 or below",
-        "Ratio": 0.513
+        "Overspeeding Range": "0 ~ 5",
+        "Crash Count": 2
       },
       {
         "Number of Previous Speeding Convictions": 5,
-        "Speeding Type": "1 ~ 10",
-        "Ratio": 0.179
+        "Overspeeding Range": "05 ~ 15",
+        "Crash Count": 8
       },
       {
         "Number of Previous Speeding Convictions": 5,
-        "Speeding Type": "10 ~ 20",
-        "Ratio": 0.179
+        "Overspeeding Range": "15 ~ 20",
+        "Crash Count": 4
       },
       {
         "Number of Previous Speeding Convictions": 5,
-        "Speeding Type": "20+",
-        "Ratio": 0.128
+        "Overspeeding Range": "20 ~ 25",
+        "Crash Count": 0
+      },
+      {
+        "Number of Previous Speeding Convictions": 5,
+        "Overspeeding Range": "25+",
+        "Crash Count": 5
       },
       {
         "Number of Previous Speeding Convictions": 6,
-        "Speeding Type": "0 or below",
-        "Ratio": 0.812
+        "Overspeeding Range": "0 ~ 5",
+        "Crash Count": 1
       },
       {
         "Number of Previous Speeding Convictions": 6,
-        "Speeding Type": "1 ~ 10",
-        "Ratio": 0.062
+        "Overspeeding Range": "05 ~ 15",
+        "Crash Count": 0
       },
       {
         "Number of Previous Speeding Convictions": 6,
-        "Speeding Type": "10 ~ 20",
-        "Ratio": 0
+        "Overspeeding Range": "15 ~ 20",
+        "Crash Count": 0
       },
       {
         "Number of Previous Speeding Convictions": 6,
-        "Speeding Type": "20+",
-        "Ratio": 0.125
+        "Overspeeding Range": "20 ~ 25",
+        "Crash Count": 0
+      },
+      {
+        "Number of Previous Speeding Convictions": 6,
+        "Overspeeding Range": "25+",
+        "Crash Count": 2
       },
       {
         "Number of Previous Speeding Convictions": 7,
-        "Speeding Type": "0 or below",
-        "Ratio": 0.692
+        "Overspeeding Range": "0 ~ 5",
+        "Crash Count": 1
       },
       {
         "Number of Previous Speeding Convictions": 7,
-        "Speeding Type": "1 ~ 10",
-        "Ratio": 0.077
+        "Overspeeding Range": "05 ~ 15",
+        "Crash Count": 1
       },
       {
         "Number of Previous Speeding Convictions": 7,
-        "Speeding Type": "10 ~ 20",
-        "Ratio": 0.154
+        "Overspeeding Range": "15 ~ 20",
+        "Crash Count": 1
       },
       {
         "Number of Previous Speeding Convictions": 7,
-        "Speeding Type": "20+",
-        "Ratio": 0.077
+        "Overspeeding Range": "20 ~ 25",
+        "Crash Count": 0
+      },
+      {
+        "Number of Previous Speeding Convictions": 7,
+        "Overspeeding Range": "25+",
+        "Crash Count": 1
       }
     ]
   }

@@ -3,6 +3,7 @@ body {
   background: #fffffb;
   font-family: nyt-cheltenham-sh, georgia, times new roman, times, serif;
   padding-bottom: 100px;
+  overflow-x: hidden;
 }
 
 .main {
@@ -43,6 +44,11 @@ body {
 .annotation {
   position: absolute;
   z-index: 999;
+  font: 400 0.6em 'nyt-franklin', arial, sans-serif;
+}
+.annotation.bordered {
+  border: 1px solid #9d9d9d;
+  padding: 0.6em;
 }
 .my-tabs {
   font: 400 0.9em 'nyt-franklin', arial, sans-serif;
