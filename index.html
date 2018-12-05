@@ -108,10 +108,11 @@
           each year fatal motor vehicle crashes in the U.S. lead to an estimated societal burden of more than
           $230 billion from medical and other costs <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0001457516303918">[1]</a>.
           Motor vehicle crashes are also the leading cause of death for persons every age from 5 to 32 years old <a target="_blank" href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812499">[2]</a>.
-          We deep dived into the fatal car crash records in the U.S. in year 2016, collected by National Highway
+          In this project, we deep dived into the fatal car crash records in the U.S. in year 2016, collected by National Highway
           Traffic Safety Administration (NHSTA) <a target="_blank" href="https://bigquery.cloud.google.com/dataset/bigquery-public-data:nhtsa_traffic_fatalities">[3]</a> and encoded using the government's
           <a target="_blank" class="tooltipped" data-position="right" data-tooltip="<div class='custom-tooltip'>Fatality Analysis Reporting System is a nationwide census providing <br> NHTSA (National Highway Traffic Safety Administration), Congress <br> and the American public yearly data regarding fatal injuries suffered <br> in motor vehicle traffic crashes.<br><br>Click the link to view how data are encoded using the FARS system.</div>"
-          href="https://ire.org/media/uploads/files/datalibrary/samplefiles/DOT%20Fatality%20Analysis%20Reporting%20System%20-%20Simplified/USERGUIDE-2013.pdf">Fatality Analysis Reporting System</a>. From this dataset, we identified the top factors that are highly correlated to fatality in motor vehicle crashes.
+          href="https://ire.org/media/uploads/files/datalibrary/samplefiles/DOT%20Fatality%20Analysis%20Reporting%20System%20-%20Simplified/USERGUIDE-2013.pdf">Fatality Analysis Reporting System</a>. By wielding this dataset and related research, we developed this report trying to thoroughly explore the top risk factors that are highly correlated to fatal motor vehicle crashes.
+
 
           <!--
           These reports focus on vehicles, drivers, passengers, pedestrians, and motorcyclists and use that to develop and refine countermeasures to deter unsafe behaviors and promote safe alternatives.
@@ -196,12 +197,8 @@
         <p class="g-body">
             A motor vehicle crash results from a combination of factors related to the components of the system
             comprising roads, the environment, vehicles and road users, and the way they interact.
-
-            Some factors contribute to the
-            occurrence of a collision and are therefore part of
-            crash causation. Other factors aggravate the
-            effects of the collision and thus contribute to
-            trauma severity. Some
+            Some factors, such as speeding and alcohol or drug impaired driving, contribute to the occurrence of a collision and are therefore part of crash causation. Other factors, such as old vehicles and unused restraints systems, aggravate the effects of the collision and thus contribute to trauma severity.
+            Some
             causes are immediate, but they may be
             underpinned by medium-term and long-term
             structural causes. Identifying the top risk factors that contribute to fatal motor vehicle crashes is important in developing
@@ -1012,13 +1009,16 @@ Northeast division of AAA.
           </strong></h2>
       </div>
       <p class='g-body'>
-        From the above analysis, we have identified top risk factors that are correlated with fatality in car accidents. Some factors, such as speeding and alcohol or drug impaired driving, contribute to the occurrence of a collision and are therefore part of crash causation. Other factors, such as old vehicles and unused restraints systems, aggravate the effects of the collision and thus contribute to trauma severity.
 
-        As there are a lot of variables involved in a car accident,
-        when we correlate one factor to fatality risk, it is difficult to
-        control other factors and completely rule out their influences.
+        Analyzing and visualizing the NHSTA traffic record dataset has been a challenging task:
+        the dataset consists of 20 data tables which collectively describe over 400
+        known attributes of 34,619 fatal motor vehicle crashes. Furthermore,
+        as a motor vehicle crash usually results from a combination of factors including
+        vehicles, road users, environment,  and the way they interact, it possess
+        challenges to underpin their individual influences in road traffic fatalities.
+
         <br>  <br>
-        To overcome this shortcoming, we have built a machine learning model, based on our analysis, for predicting
+        To overcome this shortcoming, we have built a <b>predictive model</b> using machine learning, based on our analysis, for predicting
         a person's fatality risk in a road traffic crash scenario given input features
         about this person, such as alcohol usage, seating position, person type, etc. We encourage interested readers
         to play with <a target="_blank" href="https://colab.research.google.com/drive/1yongqM1eD2E0vypQh0VRG0g9Nt6wHZJP#scrollTo=9NBitblc0E78">our model <img style="width: 15px; margin-right: 4px; margin-top: -2px; vertical-align: middle;" src="img/extern-link.svg"/></a>
@@ -1030,8 +1030,8 @@ Northeast division of AAA.
         Due to the sheer volume of data present in the NHSTA dataset, our analysis is likely to
         have overlooked some other risk factors contributing to fatal car crashes.
 
-        We encourage interested readers to further explore our interactive map of the U.S. below
-        to view case details of crashes (
+        We encourage interested readers to further explore our <b>interactive map of the U.S.</b> below
+        to view case details of crashes
         <span>(<a target="_blank" href="/3dmap.html">explore this map in fullscreen mode</a>
         <img style="width: 15px; margin-right: 4px; margin-top: -2px; vertical-align: middle;" src="img/extern-link.svg"/></span>).
       </p>
