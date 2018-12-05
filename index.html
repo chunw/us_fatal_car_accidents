@@ -221,9 +221,10 @@
             <div class="analysis">
                 <div class="row my-tabs">
                   <div class="col s12">
-                    <ul class="tabs ">
+                    <ul class="tabs " >
                       <li class="tab col s3"><a class="active" href="#timeTab1">All Crashes</a></li>
-                      <li class="tab col s3"><a href="#timeTab2">With Bad Lighting</a></li>
+                      <li class="tab col s3"><a href="#timeTab2">under Bad Lighting</a></li>
+                      <li class="tab col s3"><a href="#timeTab3">under Adverse Weather</a></li>
                     </ul>
                   </div>
                   <div id="timeTab1" class="col s12 my-tab">
@@ -236,11 +237,11 @@
 
                         </p>
                         <div class="">
-                          Fatal crashes mostly happen in rush hours with busy traffic caused by commuting, e.g. from <b>17:00 to 19:00</b>. Interestingly, they are also more frequent in winter seasons, e.g. <b>November and Decemeber</b>, where adverse weather conditions (e.g. snow on the East Coast and rain on the West Coast) increase risks.
+                          Fatal crashes mostly happen in rush hours with busy traffic caused by commuting, e.g. from <b>17:00 to 19:00</b>. Interestingly, they also tend to happen more frequent in winter seasons, e.g. <b>November and Decemeber</b>, where adverse weather conditions (e.g. snow on the East Coast and rain on the West Coast) increase risks (click on <span style="color:#e36e68">ADVERSE WEATHER</span> tab to see details.
 
                           <br><br>
-                            Note that we do not observe the same high frequency during rush hours in the morning. We further explore the type/level of light that existed at the time of the crash. (Click on <span style="color:#e36e68">WITH BAD LIGHTING</span> tab to see more details.)
-                          <br><br>
+                            Note that we do not observe the same high frequency during rush hours in the morning. We further explored the type/level of light that existed at the time of the crash (click on <span style="color:#e36e68">AD LIGHTING</span> tab to see more details).
+
                         </div>
                       </div>
                       <div class="text">
@@ -252,14 +253,29 @@
                     <div class="analysis">
                       <div class="viz ">
                         <div id="light"></div>
-                        <p>Hover on circles to view number of crashes (with bad lighting) by month and hour.</p>
+                        <p>Hover on circles to view number of crashes occurred under bad lighting conditions by month and hour.</p>
                         <p class="method">
-                          <strong>Methodology:</strong> This plot highlights crashes that happened in a dark and unlighted environment.
+                          <strong>Methodology:</strong> This plot highlights fatal crashes that happened in a dark and unlighted environment.
                         </p>
-                        <div class="">
-                            <b>Bad light condition</b> appears to be another risk factor during evening rush hours. Due to the changing length of daylight, we see a bell shaped curve: the "dangerous" period starts early and lasts longer in winter, but starts late and lasts shorter in summer.
+                        <div class=""><b>Bad light condition</b> appears to be a risk factor during evening rush hours highly correlated with fatal car crashes. Due to the changing length of daylight, we see a bell shaped curve: the "dangerous" period starts early and lasts longer in winter, but starts late and lasts shorter in summer.
+
                         </div>
 
+                      </div>
+                    </div>
+                  </div>
+                  <div id="timeTab3" class="col s12 my-tab">
+                    <div class="analysis">
+                      <div class="viz ">
+                        <div id="weatherTime"></div>
+                        <p>Hover on circles to view number of crashes under adverse weather by month and hour.</p>
+                        <p class="method">
+                          <strong>Methodology:</strong> Weathers other than clear or cloudy  (i.e., rain, sleet, snow, fog, severe crosswinds, or blowing snow/sand/debris) are considered as adverse weathers.
+
+                        </p>
+                        <div class="">
+                          Weather-related accidents prevail particularly in December.
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -273,13 +289,17 @@
             <div class="analysis">
               <div class="viz ">
                 <div id="weather"></div>
-                <p>Hover on circles to view details.</p>
+                <p>Hover on circles to view fatal crash counts by states.</p>
                 <p class="method">
                   <strong>Methodology:</strong> Occurrence of various adverse atmospheric conditions that existed at the time of the crash is counted for each state.
 
                   <div class="">
-                      <b>Cloud</b> and <b>rain</b> affect driving the most. <b>Texas</b> and <b>Florida</b> had been affected the most. States that experience extreme winters such as <b>Michigan</b>, <b>New York</b>, <b>Pennsylvania</b> and <b>Wisconsin</b> were also impacted by the snow.
-                  </div>
+                      Weather acts through visibility impairments, precipitation, high winds, and temperature extremes to affect driver capabilities, vehicle performance (i.e., traction, stability and maneuverability), pavement friction, roadway infrastructure, crash risk, traffic flow, and agency productivity.
+                      <!--See <a href="https://ops.fhwa.dot.gov/weather/q1_roadimpact.htm" target="_blank">NHSTA's summary</a> of how weather impacts various weather events on roadways, traffic flow, and operational decisions.
+                      -->
+
+The vast majority of most weather-related crashes happen on wet pavement and during <b>rainfall</b>: 70% on wet pavement and 46% during rainfall.</li>
+
                 </div>
               <div class="text">
               </div>
@@ -517,13 +537,13 @@
                 <div class="annotation bordered" style="max-width: 100px;
                 right: -80px;
                 top: 80px;">
-                   <strong>§ 20-141.</strong> It is a Class 3 Misdemeanor to operate a motor
+                   It is a Class 3 Misdemeanor to operate a motor
                    vehicle either greater than 15 MPH above the posted speed
-                   limit.
+                   limit. <strong>§ 20-141</strong>
                 </div>
                 <div class="annotation bordered" style="max-width: 100px; right: 0; top: 171px;">
-                   <strong>§ 20-141.</strong> A person will be charged with reckless driving when the speeding
-                   exceeds 25 MPH above the speed limit.
+                   A person will be charged with reckless driving when the speeding
+                   exceeds 25 MPH above the speed limit. <strong>§ 20-141</strong>
                 </div>
                 <div class="annotation" style="left: 378px;
     top: 316px;
@@ -533,9 +553,7 @@
                 <div class="annotation bordered" style="max-width: 100px;
                 left: 371px;
     top: 263px;">
-                   After 3 previous speeding citations,
-                   still 50 fatal crashes involved
-                   reckless driving.
+                   Still 50 fatal crashes involved reckless drivers who have previously received 3 speeding citations.
                 </div>
 
                 <div id="speeding"></div>
@@ -552,8 +570,7 @@
                   for drivers who have previously received speeding citations.
                   However, while the total speeding-related crash count sees a downward trend,
                   the absolute crash count
-                  remains significant, especially for reckless speeders (50 fatal crashes), even after 3 previous
-                  speeding citations,
+                  remains significant, especially for reckless speeders,
                   suggesting that speeding citations have limited effects on
                   deterrence in the context of the current traffic enforcement system.
                 </div>
@@ -692,16 +709,37 @@
                 <div class="annotation bordered" style="max-width: 132px; right: 190px;top: 10px;">
                   Beware the dangers of pulling over on the side of the road when your car get disabled!
                 </div>
-                <div class="annotation bordered" style="
+                <div class="annotation bordered highlight" style="
                   background:red; width: 550px; height: 30px; opacity: 0.12;
                   right: 180px; top: 58px;">
                 </div>
                 <div id="ped"></div>
                 <p>Hover on circles to view details.</p>
               </div>
-              <div class="text">
-              </div>
+
             </div>
+            <p class='g-body'>
+              Beware the dangers of pulling over on the side of the road.
+              Data show that far more people involved in fatal crashes when dealing with disabled vehicles (see recounts of such incidents <a href="https://toronto.citynews.ca/2007/08/13/what-should-you-do-if-your-car-breaks-down-on-the-highway/" target="_blank">here</a>, <a href="https://www.civtrial.com/blog/beware-the-dangers-of-pulling-over-on-the-side-of-the-road/">here</a> and
+              <a href="https://www.northjersey.com/story/news/morris/rockaway-township/2017/07/05/vehicle-disabled-highway-dont-get-out/453784001/">here</a>).
+              Do you know what to do if your vehicle becomes disabled on a highway?
+              experts offered advise on how to remain safe during a roadside emergency.
+
+<span class="quote">"You are better protected in the car than anywhere else,"</span>
+said Cathleen Lewis, director of Public Affairs and Government Relations for the
+Northeast division of AAA.
+  <br><br>
+  <span class="quote">
+  "If possible, get off the highway before stopping,"</span> said Lt. Theodore Schafer of the New Jersey State Police.
+  <span class="quote">"Is it worth you protecting the rim on your car and pulling over in a dangerous spot versus possibly damaging the rim and making yourself safe? Try to get far enough out of the way and off the main roads so that you won’t be an obstacle for other cars."</span><br><br>
+
+
+  Both experts agree that the best thing to do is call 911. Don’t be shy about it.
+
+ <span class="quote">"There seems to be a misconception that we will be upset with you if you call 911,"</span> Schafer said, <span class="quote">"If your car is broken down on the side of the road to us that constitutes an emergency that requires assistance, so absolutely call 911."</span>
+
+            </p>
+
 
         </section>
 
@@ -775,9 +813,10 @@
               the older a car gets, the less reliable and less safe it becomes.
 
               <br>
-              To help consumers make sense of the myriad vehicle safety and driver assistance
-              systems available on modern cars,
-              NHTSA has released a <a href="https://www.nhtsa.gov/sites/nhtsa.dot.gov/files/documents/13423-vehicletechguide-4x6-brochure_2pagespread_042418_v5-tag.pdf" target="_blank">shopping guide</a>.
+
+              NHTSA has released a <a href="https://www.nhtsa.gov/sites/nhtsa.dot.gov/files/documents/13423-vehicletechguide-4x6-brochure_2pagespread_042418_v5-tag.pdf" target="_blank">shopping guide</a>
+              to help consumers make sense of the myriad vehicle safety and driver assistance
+              systems available on modern cars.
             </p>
 
             <div class="g-item g-subhed ">
@@ -893,9 +932,9 @@
                           <div class="annotation bordered" style="    max-width: 115px;
                             right: 215px;
                             top: 20px;">
-                            Long delay in <b>Washington, Vermont and Virginia.</b>
+                            Long delays in <b>Washington, Vermont and Virginia.</b>
                           </div>
-                          <div class="annotation bordered" style="
+                          <div class="annotation highlight bordered" style="
                             max-width: 115px; background:red; width: 42px; height: 370px; opacity: 0.12;
                             right: 159px; top: 15px;">
                           </div>
@@ -905,7 +944,7 @@
                             <strong>Methodology:</strong> "crash2notification" tracks the time from the crash occurred to the emergency medical service was notified. "notification2arrival" tracks how long it took for the emergence medical service to arrive on the crash scene. "arrival2hospital" tracks how long it took for the emergence medical service to transport victims of the crash to the treatment facility. The time is averaged over all crashes that happened in the urban area of the given state.
                           </p>
                           <div class="">
-                            In Virginia, Kansas and Vermont, there existed noticeable delay between crashes and notification. In Oklahoma, the emergency service reacted relatively slowly. In Washington, transferring victims from the scene to the treatment facility was a long trip. Sadly, the state also has the longest total response time.
+                            In Virginia, Kansas and Vermont, there existed noticeable delays between crashes and notification. In Oklahoma, the emergency service reacted relatively slowly. In Washington, transferring victims from the scene to the treatment facility was a long trip. Sadly, the state also has the longest total response time.
                           </div>
                         </div>
                         <div class="text">
@@ -955,7 +994,7 @@
                     </div>
                     <br>
                     <div class="text">
-                      Fewer EMS stations per capita might explain long delay in Washington, Vermont and Virginia (<span style="color:#e36e68">red</span> circles).
+                      Fewer EMS stations per capita might explain long delays in Washington, Vermont and Virginia (<span style="color:#e36e68">red</span> circles).
                     </div>
                   </div>
         </section>
