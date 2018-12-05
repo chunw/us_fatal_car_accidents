@@ -1027,13 +1027,26 @@ Northeast division of AAA.
         Due to the sheer volume of data present in the NHSTA dataset, our analysis is likely to
         have overlooked some other risk factors contributing to fatal car crashes.
 
-        For interested readers, below we provide an interactive map of the United States to further explore
-        the case details of every fatal car crash recorded in 2016. We encourage you to
-        <span  ><a target="_blank" href="/3dmap.html">explore this map in fullscreen mode</a>
-        <img style="width: 15px; margin-right: 4px; margin-top: -2px; vertical-align: middle;" src="img/extern-link.svg"/>.</span>
+        We encourage interested readers to further explore our interactive map of the U.S. below
+        to view case details of crashes (
+        <span>(<a target="_blank" href="/3dmap.html">explore this map in fullscreen mode</a>
+        <img style="width: 15px; margin-right: 4px; margin-top: -2px; vertical-align: middle;" src="img/extern-link.svg"/></span>).
       </p>
       <div class="threedmap-container">
         <div class="threedmap" id='map' style="position: relative;"></div>
+        <div id='case-details' >
+          <div style="font-weight:bold">There were <span id="total_count">34619</span> fatal car accidents in 2016.</div>
+          <div class="small_link">Zoom in and click on <i id="red-dot" class="tiny material-icons">brightness_1</i> on the map to view case reports. </div>
+
+          <div class="small_link">Click on <i class="filter-icon tiny material-icons">find_in_page</i> (if available) in the report to filter the map by the same condition. </div>
+          <div class="active-filters-area">
+            <div class="active-filters-area-header">Active map filters: <a class="clear-filter-link small_link" onclick="onResetFilters()">clear filter</a>
+            </div>
+            <div id="active-filters"></div>
+          </div>
+          <div id="case-details-header">Case Report</div>
+          <div id="case-details-body"></div>
+        </div>
       </div>
 
     </main>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="3dmappage">
   <head>
       <meta charset='utf-8'/>
       <title>U.S. Fatal Car Accidents 3D Map</title>
@@ -24,8 +24,6 @@
     left: 0;
     width:70%;"></div>
     <div id='case-details'>
-      <!--<a class="small_link data-source-link" target="_blank" href="https://bigquery.cloud.google.com/dataset/bigquery-public-data:nhtsa_traffic_fatalities">data source</a>
-      -->
       <div style="font-weight:bold">There were <span id="total_count">34619</span> fatal car accidents in 2016.</div>
       <div class="small_link">Zoom in and click on <i id="red-dot" class="tiny material-icons">brightness_1</i> on the map to view case reports. </div>
 
@@ -35,37 +33,6 @@
         </div>
         <div id="active-filters"></div>
       </div>
-      <!--<ul class="collapsible">
-        <li>
-          <div class="collapsible-header">Day of Week</div>
-          <div class="collapsible-body">
-            <div class="weekDays-selector">
-              <input type="checkbox" id="weekday-1" class="weekday" />
-              <label for="weekday-mon">M</label>
-              <input type="checkbox" id="weekday-2" class="weekday" />
-              <label for="weekday-tue">T</label>
-              <input type="checkbox" id="weekday-3" class="weekday" />
-              <label for="weekday-wed">W</label>
-              <input type="checkbox" id="weekday-4" class="weekday" />
-              <label for="weekday-thu">T</label>
-              <input type="checkbox" id="weekday-5" class="weekday" />
-              <label for="weekday-fri">F</label>
-              <input type="checkbox" id="weekday-6" class="weekday" />
-              <label for="weekday-sat">S</label>
-              <input type="checkbox" id="weekday-7" class="weekday" />
-              <label for="weekday-sun">S</label>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="collapsible-header">Second</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header">Third</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-      </ul>-->
       <div id="case-details-header">Case Report</div>
       <div id="case-details-body"></div>
     </div>

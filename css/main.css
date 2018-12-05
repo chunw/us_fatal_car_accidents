@@ -144,9 +144,13 @@ section {
 }
 
 .threedmap-container {
-  height: 400px;
+  height: 600px;
+  position: relative;
+  font-family: 'nyt-franklin', arial, sans-serif;
 }
-
+#map {
+      height: 100%;
+}
 .mapboxgl-ctrl-bottom-left {
   display: none;
 }
@@ -257,7 +261,9 @@ section {
   font-weight: 700;
   font-style: italic;
 }
-
+.mapboxgl-ctrl-geocoder input[type='text'] {
+  height:20px !important;
+}
 .byline {
   font-size: 11px;
   font-size: 0.9rem;
