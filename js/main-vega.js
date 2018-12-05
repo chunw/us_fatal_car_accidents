@@ -7543,7 +7543,7 @@ const light =
       "field": "month_of_crash"
     }
   },
-  "title": "Crashes with Light Condition: Dark, Not Lighted",
+  "title": "Crashes Under Light Condition: Dark, Not Lighted",
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
   "datasets": {
     "data-6dbda72fc8152a0ce121c7ee2418c499": [
@@ -9428,7 +9428,7 @@ const weatherTime = {
       "field": "month_of_crash"
     }
   },
-  "title": "Atmospheric condition: Adverse weather",
+  "title": "Crashes Under Adverse Weather",
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
   "datasets": {
     "data-6d5a7b07fa3a856c2501b880708838d8": [
