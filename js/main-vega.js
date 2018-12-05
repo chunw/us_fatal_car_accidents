@@ -5315,7 +5315,7 @@ const rescueEMS =
 const weather =
 {
   "config": {"view": {"width": 400, "height": 300}},
-  "data": {"name": "data-6f7dd293d15ad2a0241e26853e10d7eb"},
+  "data": {"name": "data-fa2e304296eadcf3592cf6ac1f454484"},
   "mark": "point",
   "encoding": {
     "color": {
@@ -5340,5303 +5340,1013 @@ const weather =
     }
   },
   "height": 300,
-  "title": "Prevailing Adverse Weather Conditions Per State",
-  "width": 400,
+  "title": "Prevailing Unfavorable Weather Conditions Per State",
+  "width": 600,
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
   "datasets": {
-    "data-6f7dd293d15ad2a0241e26853e10d7eb": [
+    "data-fa2e304296eadcf3592cf6ac1f454484": [
       {
         "atmospheric_conditions_name": "Rain",
         "state_name": "Alabama",
-        "month_of_crash": 12,
-        "cnt": 15
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Alabama",
-        "month_of_crash": 8,
-        "cnt": 9
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Alabama",
-        "month_of_crash": 4,
-        "cnt": 9
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Alabama",
-        "month_of_crash": 2,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Alabama",
-        "month_of_crash": 6,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Alabama",
-        "month_of_crash": 1,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Alabama",
-        "month_of_crash": 9,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Alabama",
-        "month_of_crash": 3,
-        "cnt": 5
+        "cnt": 67
       },
       {
         "atmospheric_conditions_name": "Fog, Smog, Smoke",
         "state_name": "Alabama",
-        "month_of_crash": 12,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Alabama",
-        "month_of_crash": 5,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Alabama",
-        "month_of_crash": 7,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Alabama",
-        "month_of_crash": 11,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Alabama",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Alabama",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Alabama",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Alabama",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Alabama",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Alabama",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Alaska",
-        "month_of_crash": 7,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Alaska",
-        "month_of_crash": 8,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Alaska",
-        "month_of_crash": 9,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Alaska",
-        "month_of_crash": 10,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Alaska",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Alaska",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arizona",
-        "month_of_crash": 12,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arizona",
-        "month_of_crash": 9,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Arizona",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arizona",
-        "month_of_crash": 8,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arizona",
-        "month_of_crash": 11,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arizona",
-        "month_of_crash": 7,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
-        "state_name": "Arizona",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arizona",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Arizona",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Arizona",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arizona",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Arizona",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arizona",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arizona",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
-        "state_name": "Arizona",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arizona",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arkansas",
-        "month_of_crash": 12,
-        "cnt": 10
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arkansas",
-        "month_of_crash": 3,
-        "cnt": 9
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arkansas",
-        "month_of_crash": 4,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arkansas",
-        "month_of_crash": 8,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arkansas",
-        "month_of_crash": 5,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Arkansas",
-        "month_of_crash": 11,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arkansas",
-        "month_of_crash": 11,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arkansas",
-        "month_of_crash": 6,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arkansas",
-        "month_of_crash": 7,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arkansas",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arkansas",
-        "month_of_crash": 10,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Arkansas",
-        "month_of_crash": 9,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Arkansas",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Arkansas",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Arkansas",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Arkansas",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Arkansas",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
-        "state_name": "Arkansas",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "California",
-        "month_of_crash": 12,
-        "cnt": 48
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "California",
-        "month_of_crash": 3,
-        "cnt": 32
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "California",
-        "month_of_crash": 1,
-        "cnt": 25
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "California",
-        "month_of_crash": 10,
-        "cnt": 22
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "California",
-        "month_of_crash": 11,
-        "cnt": 19
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "California",
-        "month_of_crash": 4,
-        "cnt": 11
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "California",
-        "month_of_crash": 11,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "California",
-        "month_of_crash": 12,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "California",
-        "month_of_crash": 5,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "California",
-        "month_of_crash": 1,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "California",
-        "month_of_crash": 2,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "California",
-        "month_of_crash": 2,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "California",
-        "month_of_crash": 12,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "California",
-        "month_of_crash": 7,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "California",
-        "month_of_crash": 10,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "California",
-        "month_of_crash": 4,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "California",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "California",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "California",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "California",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "California",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "California",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "California",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "California",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "California",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "California",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "California",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "California",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Colorado",
-        "month_of_crash": 8,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Colorado",
-        "month_of_crash": 3,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Colorado",
-        "month_of_crash": 4,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Colorado",
-        "month_of_crash": 5,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Colorado",
-        "month_of_crash": 2,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Colorado",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Colorado",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Colorado",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Colorado",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Colorado",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Colorado",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Colorado",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Colorado",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Connecticut",
-        "month_of_crash": 9,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Connecticut",
-        "month_of_crash": 12,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Connecticut",
-        "month_of_crash": 7,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Connecticut",
-        "month_of_crash": 2,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Connecticut",
-        "month_of_crash": 2,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Connecticut",
-        "month_of_crash": 5,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Connecticut",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Connecticut",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Connecticut",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
-        "state_name": "Connecticut",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Connecticut",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Snow",
-        "state_name": "Connecticut",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Connecticut",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Connecticut",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Connecticut",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Connecticut",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Connecticut",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Delaware",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Delaware",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Delaware",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Delaware",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Delaware",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Delaware",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Delaware",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Delaware",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "District of Columbia",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "District of Columbia",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "District of Columbia",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Florida",
-        "month_of_crash": 1,
-        "cnt": 33
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Florida",
-        "month_of_crash": 8,
-        "cnt": 32
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Florida",
-        "month_of_crash": 6,
-        "cnt": 22
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Florida",
-        "month_of_crash": 12,
-        "cnt": 21
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Florida",
-        "month_of_crash": 3,
-        "cnt": 13
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Florida",
-        "month_of_crash": 2,
-        "cnt": 13
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Florida",
-        "month_of_crash": 12,
-        "cnt": 11
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Florida",
-        "month_of_crash": 10,
-        "cnt": 11
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Florida",
-        "month_of_crash": 9,
-        "cnt": 10
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Florida",
-        "month_of_crash": 5,
-        "cnt": 10
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Florida",
-        "month_of_crash": 7,
         "cnt": 8
       },
       {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Florida",
-        "month_of_crash": 1,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Florida",
-        "month_of_crash": 2,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Florida",
-        "month_of_crash": 4,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Florida",
-        "month_of_crash": 10,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Florida",
-        "month_of_crash": 3,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Florida",
-        "month_of_crash": 7,
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Alabama",
         "cnt": 1
       },
       {
         "atmospheric_conditions_name": "Rain",
-        "state_name": "Florida",
-        "month_of_crash": 11,
-        "cnt": 1
+        "state_name": "Alaska",
+        "cnt": 11
       },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Florida",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Florida",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Florida",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
-        "state_name": "Florida",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
+      {"atmospheric_conditions_name": "Snow", "state_name": "Alaska", "cnt": 2},
       {
         "atmospheric_conditions_name": "Rain",
-        "state_name": "Georgia",
-        "month_of_crash": 12,
+        "state_name": "Arizona",
         "cnt": 20
       },
       {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Georgia",
-        "month_of_crash": 1,
-        "cnt": 10
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Georgia",
-        "month_of_crash": 2,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Georgia",
-        "month_of_crash": 3,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Georgia",
-        "month_of_crash": 7,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Georgia",
-        "month_of_crash": 8,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Georgia",
-        "month_of_crash": 4,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Georgia",
-        "month_of_crash": 5,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Georgia",
-        "month_of_crash": 11,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Georgia",
-        "month_of_crash": 9,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Georgia",
-        "month_of_crash": 6,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Georgia",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Georgia",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Georgia",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Georgia",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Georgia",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Hawaii",
-        "month_of_crash": 4,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Hawaii",
-        "month_of_crash": 7,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Hawaii",
-        "month_of_crash": 11,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Hawaii",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Hawaii",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Hawaii",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
         "atmospheric_conditions_name": "Snow",
-        "state_name": "Idaho",
-        "month_of_crash": 12,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Idaho",
-        "month_of_crash": 9,
+        "state_name": "Arizona",
         "cnt": 2
       },
       {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Idaho",
-        "month_of_crash": 7,
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Arizona",
         "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Snow",
-        "state_name": "Idaho",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Idaho",
-        "month_of_crash": 5,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Idaho",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Idaho",
-        "month_of_crash": 10,
-        "cnt": 1
       },
       {
         "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Idaho",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Idaho",
-        "month_of_crash": 2,
-        "cnt": 1
+        "state_name": "Arizona",
+        "cnt": 2
       },
       {
         "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Idaho",
-        "month_of_crash": 5,
+        "state_name": "Arizona",
         "cnt": 1
       },
       {
         "atmospheric_conditions_name": "Rain",
-        "state_name": "Idaho",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Idaho",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Idaho",
-        "month_of_crash": 11,
-        "cnt": 1
+        "state_name": "Arkansas",
+        "cnt": 51
       },
       {
         "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Idaho",
-        "month_of_crash": 1,
+        "state_name": "Arkansas",
+        "cnt": 8
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Arkansas",
         "cnt": 1
       },
       {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Idaho",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Idaho",
-        "month_of_crash": 11,
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Arkansas",
         "cnt": 1
       },
       {
         "atmospheric_conditions_name": "Rain",
-        "state_name": "Illinois",
-        "month_of_crash": 4,
+        "state_name": "California",
+        "cnt": 169
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "California",
+        "cnt": 25
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "California",
         "cnt": 9
       },
       {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Illinois",
-        "month_of_crash": 5,
-        "cnt": 8
-      },
-      {
         "atmospheric_conditions_name": "Snow",
-        "state_name": "Illinois",
-        "month_of_crash": 12,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Illinois",
-        "month_of_crash": 1,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Illinois",
-        "month_of_crash": 8,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Illinois",
-        "month_of_crash": 2,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Illinois",
-        "month_of_crash": 12,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Illinois",
-        "month_of_crash": 12,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Illinois",
-        "month_of_crash": 11,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Illinois",
-        "month_of_crash": 3,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Illinois",
-        "month_of_crash": 7,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Illinois",
-        "month_of_crash": 5,
+        "state_name": "California",
         "cnt": 3
       },
       {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Illinois",
-        "month_of_crash": 1,
-        "cnt": 3
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Colorado",
+        "cnt": 12
       },
       {
         "atmospheric_conditions_name": "Rain",
-        "state_name": "Illinois",
-        "month_of_crash": 10,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Illinois",
-        "month_of_crash": 8,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Illinois",
-        "month_of_crash": 9,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Illinois",
-        "month_of_crash": 6,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Illinois",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Illinois",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Illinois",
-        "month_of_crash": 2,
-        "cnt": 1
+        "state_name": "Colorado",
+        "cnt": 12
       },
       {
         "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Illinois",
-        "month_of_crash": 12,
+        "state_name": "Colorado",
         "cnt": 1
       },
       {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Illinois",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Illinois",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Snow",
-        "state_name": "Illinois",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Illinois",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Illinois",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Illinois",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Illinois",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Illinois",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Illinois",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Indiana",
-        "month_of_crash": 12,
-        "cnt": 13
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Indiana",
-        "month_of_crash": 3,
-        "cnt": 9
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Indiana",
-        "month_of_crash": 11,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Indiana",
-        "month_of_crash": 4,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Indiana",
-        "month_of_crash": 5,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Indiana",
-        "month_of_crash": 6,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Indiana",
-        "month_of_crash": 9,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Indiana",
-        "month_of_crash": 12,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Indiana",
-        "month_of_crash": 1,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Indiana",
-        "month_of_crash": 2,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Indiana",
-        "month_of_crash": 2,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Indiana",
-        "month_of_crash": 12,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Indiana",
-        "month_of_crash": 8,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Snow",
-        "state_name": "Indiana",
-        "month_of_crash": 2,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Indiana",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Indiana",
-        "month_of_crash": 9,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Indiana",
-        "month_of_crash": 10,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
-        "state_name": "Indiana",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Indiana",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Indiana",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Indiana",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Indiana",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Indiana",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
-        "state_name": "Indiana",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Indiana",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
-        "state_name": "Indiana",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Indiana",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Indiana",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Iowa",
-        "month_of_crash": 1,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Iowa",
-        "month_of_crash": 5,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
-        "state_name": "Iowa",
-        "month_of_crash": 12,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Iowa",
-        "month_of_crash": 3,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Iowa",
-        "month_of_crash": 4,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Iowa",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Iowa",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Iowa",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Iowa",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Iowa",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
-        "state_name": "Iowa",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Iowa",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Iowa",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Iowa",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Iowa",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Iowa",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Iowa",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Iowa",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Iowa",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Kansas",
-        "month_of_crash": 4,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kansas",
-        "month_of_crash": 9,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kansas",
-        "month_of_crash": 11,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kansas",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kansas",
-        "month_of_crash": 4,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
-        "state_name": "Kansas",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kansas",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kansas",
-        "month_of_crash": 6,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Kansas",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Kansas",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Kansas",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Kansas",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Kansas",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Kansas",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Kansas",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Kansas",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Kansas",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kansas",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Kansas",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kansas",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Kansas",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Kansas",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Kansas",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Kansas",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
-        "state_name": "Kansas",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kentucky",
-        "month_of_crash": 12,
-        "cnt": 15
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kentucky",
-        "month_of_crash": 8,
-        "cnt": 9
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kentucky",
-        "month_of_crash": 5,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kentucky",
-        "month_of_crash": 4,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kentucky",
-        "month_of_crash": 7,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kentucky",
-        "month_of_crash": 2,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kentucky",
-        "month_of_crash": 11,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kentucky",
-        "month_of_crash": 10,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Kentucky",
-        "month_of_crash": 2,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Kentucky",
-        "month_of_crash": 9,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kentucky",
-        "month_of_crash": 9,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kentucky",
-        "month_of_crash": 6,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kentucky",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Kentucky",
-        "month_of_crash": 3,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Kentucky",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Kentucky",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Kentucky",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Snow",
-        "state_name": "Kentucky",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Kentucky",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Kentucky",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
-        "state_name": "Kentucky",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Kentucky",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Kentucky",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Louisiana",
-        "month_of_crash": 12,
-        "cnt": 10
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Louisiana",
-        "month_of_crash": 3,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Louisiana",
-        "month_of_crash": 1,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Louisiana",
-        "month_of_crash": 9,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Louisiana",
-        "month_of_crash": 6,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Louisiana",
-        "month_of_crash": 1,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Louisiana",
-        "month_of_crash": 5,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Louisiana",
-        "month_of_crash": 8,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Louisiana",
-        "month_of_crash": 2,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Louisiana",
-        "month_of_crash": 7,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Louisiana",
-        "month_of_crash": 11,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
-        "state_name": "Louisiana",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Louisiana",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Louisiana",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Louisiana",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Louisiana",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Louisiana",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Louisiana",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Louisiana",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maine",
-        "month_of_crash": 5,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maine",
-        "month_of_crash": 11,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maine",
-        "month_of_crash": 8,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Maine",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Maine",
-        "month_of_crash": 3,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maine",
-        "month_of_crash": 10,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Maine",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maine",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Maine",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
         "atmospheric_conditions_name": "Rain",
-        "state_name": "Maine",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Maine",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maine",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
-        "state_name": "Maine",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maine",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maryland",
-        "month_of_crash": 12,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maryland",
-        "month_of_crash": 9,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maryland",
-        "month_of_crash": 2,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maryland",
-        "month_of_crash": 4,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maryland",
-        "month_of_crash": 5,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maryland",
-        "month_of_crash": 7,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maryland",
-        "month_of_crash": 8,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Maryland",
-        "month_of_crash": 10,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maryland",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maryland",
-        "month_of_crash": 10,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maryland",
-        "month_of_crash": 11,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Maryland",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Maryland",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Maryland",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Maryland",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Maryland",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Maryland",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Maryland",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Maryland",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Maryland",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Snow",
-        "state_name": "Maryland",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Maryland",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Massachusetts",
-        "month_of_crash": 10,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Massachusetts",
-        "month_of_crash": 11,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Massachusetts",
-        "month_of_crash": 5,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Massachusetts",
-        "month_of_crash": 8,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Massachusetts",
-        "month_of_crash": 3,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Massachusetts",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Massachusetts",
-        "month_of_crash": 2,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Massachusetts",
-        "month_of_crash": 3,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Massachusetts",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Massachusetts",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Massachusetts",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Massachusetts",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Massachusetts",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Massachusetts",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Massachusetts",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Michigan",
-        "month_of_crash": 12,
+        "state_name": "Connecticut",
         "cnt": 19
       },
       {
         "atmospheric_conditions_name": "Snow",
-        "state_name": "Michigan",
-        "month_of_crash": 2,
+        "state_name": "Connecticut",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Connecticut",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Connecticut",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Connecticut",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "Connecticut",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Delaware",
+        "cnt": 7
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Delaware",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "District of Columbia",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Florida",
+        "cnt": 169
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Florida",
+        "cnt": 42
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Florida",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Georgia",
+        "cnt": 79
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Georgia",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Hawaii",
+        "cnt": 11
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Hawaii",
+        "cnt": 1
+      },
+      {"atmospheric_conditions_name": "Rain", "state_name": "Idaho", "cnt": 10},
+      {"atmospheric_conditions_name": "Snow", "state_name": "Idaho", "cnt": 8},
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Idaho",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "Idaho",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Idaho",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Illinois",
+        "cnt": 50
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Illinois",
+        "cnt": 18
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Illinois",
         "cnt": 14
       },
       {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Michigan",
-        "month_of_crash": 9,
-        "cnt": 12
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Michigan",
-        "month_of_crash": 11,
-        "cnt": 11
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Michigan",
-        "month_of_crash": 1,
-        "cnt": 11
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Michigan",
-        "month_of_crash": 10,
-        "cnt": 10
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Michigan",
-        "month_of_crash": 4,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Michigan",
-        "month_of_crash": 5,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Michigan",
-        "month_of_crash": 3,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Michigan",
-        "month_of_crash": 3,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Michigan",
-        "month_of_crash": 4,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Michigan",
-        "month_of_crash": 6,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Michigan",
-        "month_of_crash": 11,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Michigan",
-        "month_of_crash": 1,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Michigan",
-        "month_of_crash": 8,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Michigan",
-        "month_of_crash": 12,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Michigan",
-        "month_of_crash": 10,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Michigan",
-        "month_of_crash": 7,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Michigan",
-        "month_of_crash": 6,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Michigan",
-        "month_of_crash": 2,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Michigan",
-        "month_of_crash": 11,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Michigan",
-        "month_of_crash": 9,
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Illinois",
         "cnt": 2
       },
       {
         "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Michigan",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Michigan",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Michigan",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Michigan",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Michigan",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Minnesota",
-        "month_of_crash": 3,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Minnesota",
-        "month_of_crash": 12,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Minnesota",
-        "month_of_crash": 2,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Minnesota",
-        "month_of_crash": 11,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Minnesota",
-        "month_of_crash": 11,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Minnesota",
-        "month_of_crash": 10,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Minnesota",
-        "month_of_crash": 8,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
-        "state_name": "Minnesota",
-        "month_of_crash": 12,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Minnesota",
-        "month_of_crash": 4,
+        "state_name": "Illinois",
         "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Minnesota",
-        "month_of_crash": 5,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Minnesota",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Minnesota",
-        "month_of_crash": 9,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Minnesota",
-        "month_of_crash": 9,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Minnesota",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Minnesota",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Minnesota",
-        "month_of_crash": 11,
-        "cnt": 1
       },
       {
         "atmospheric_conditions_name": "Blowing Snow",
-        "state_name": "Minnesota",
-        "month_of_crash": 2,
+        "state_name": "Illinois",
         "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Indiana",
+        "cnt": 66
       },
       {
         "atmospheric_conditions_name": "Snow",
-        "state_name": "Minnesota",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
-        "state_name": "Minnesota",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Minnesota",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Minnesota",
-        "month_of_crash": 2,
-        "cnt": 1
+        "state_name": "Indiana",
+        "cnt": 9
       },
       {
         "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Minnesota",
-        "month_of_crash": 7,
-        "cnt": 1
+        "state_name": "Indiana",
+        "cnt": 7
       },
       {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Minnesota",
-        "month_of_crash": 7,
-        "cnt": 1
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Indiana",
+        "cnt": 4
       },
       {
         "atmospheric_conditions_name": "Blowing Snow",
-        "state_name": "Minnesota",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Minnesota",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Minnesota",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Minnesota",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Mississippi",
-        "month_of_crash": 3,
-        "cnt": 11
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Mississippi",
-        "month_of_crash": 12,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Mississippi",
-        "month_of_crash": 8,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Mississippi",
-        "month_of_crash": 7,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Mississippi",
-        "month_of_crash": 6,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Mississippi",
-        "month_of_crash": 4,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Mississippi",
-        "month_of_crash": 10,
+        "state_name": "Indiana",
         "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Mississippi",
-        "month_of_crash": 9,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Mississippi",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Mississippi",
-        "month_of_crash": 11,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Mississippi",
-        "month_of_crash": 2,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Mississippi",
-        "month_of_crash": 3,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Mississippi",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Mississippi",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Mississippi",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Mississippi",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Mississippi",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Mississippi",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Mississippi",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Mississippi",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Missouri",
-        "month_of_crash": 12,
-        "cnt": 10
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Missouri",
-        "month_of_crash": 5,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Missouri",
-        "month_of_crash": 7,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Missouri",
-        "month_of_crash": 8,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Missouri",
-        "month_of_crash": 11,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Missouri",
-        "month_of_crash": 3,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Missouri",
-        "month_of_crash": 12,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Missouri",
-        "month_of_crash": 10,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Missouri",
-        "month_of_crash": 9,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Missouri",
-        "month_of_crash": 1,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Missouri",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Missouri",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Missouri",
-        "month_of_crash": 9,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Missouri",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Missouri",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Missouri",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Missouri",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Missouri",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Missouri",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Montana",
-        "month_of_crash": 9,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Montana",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Montana",
-        "month_of_crash": 7,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Montana",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Montana",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Montana",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Montana",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Montana",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Montana",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Nebraska",
-        "month_of_crash": 12,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Nebraska",
-        "month_of_crash": 5,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Nebraska",
-        "month_of_crash": 4,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Nebraska",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Nebraska",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Nebraska",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Nebraska",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Nebraska",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Nevada",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Nevada",
-        "month_of_crash": 10,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Nevada",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Nevada",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Nevada",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Nevada",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Hampshire",
-        "month_of_crash": 3,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "New Hampshire",
-        "month_of_crash": 4,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Hampshire",
-        "month_of_crash": 7,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Hampshire",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Hampshire",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "New Hampshire",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Hampshire",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Hampshire",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "New Hampshire",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
-        "state_name": "New Hampshire",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Jersey",
-        "month_of_crash": 5,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Jersey",
-        "month_of_crash": 3,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Jersey",
-        "month_of_crash": 7,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Jersey",
-        "month_of_crash": 11,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "New Jersey",
-        "month_of_crash": 12,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Jersey",
-        "month_of_crash": 2,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Jersey",
-        "month_of_crash": 10,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Jersey",
-        "month_of_crash": 9,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "New Jersey",
-        "month_of_crash": 2,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Jersey",
-        "month_of_crash": 8,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Jersey",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "New Jersey",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Jersey",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Jersey",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "New Jersey",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "New Jersey",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "New Jersey",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "New Jersey",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Jersey",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "New Jersey",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "New Jersey",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "New Jersey",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Mexico",
-        "month_of_crash": 8,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "New Mexico",
-        "month_of_crash": 12,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "New Mexico",
-        "month_of_crash": 4,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Mexico",
-        "month_of_crash": 9,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "New Mexico",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "New Mexico",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "New Mexico",
-        "month_of_crash": 5,
-        "cnt": 1
       },
       {
         "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
-        "state_name": "New Mexico",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Mexico",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Mexico",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Mexico",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New Mexico",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "New Mexico",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "New Mexico",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New York",
-        "month_of_crash": 10,
-        "cnt": 10
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "New York",
-        "month_of_crash": 12,
-        "cnt": 9
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New York",
-        "month_of_crash": 9,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "New York",
-        "month_of_crash": 1,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New York",
-        "month_of_crash": 12,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New York",
-        "month_of_crash": 5,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New York",
-        "month_of_crash": 4,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New York",
-        "month_of_crash": 11,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New York",
-        "month_of_crash": 2,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "New York",
-        "month_of_crash": 2,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New York",
-        "month_of_crash": 3,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "New York",
-        "month_of_crash": 4,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "New York",
-        "month_of_crash": 11,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New York",
-        "month_of_crash": 6,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New York",
-        "month_of_crash": 1,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New York",
-        "month_of_crash": 8,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "New York",
-        "month_of_crash": 2,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "New York",
-        "month_of_crash": 3,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "New York",
-        "month_of_crash": 11,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "New York",
-        "month_of_crash": 7,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "New York",
-        "month_of_crash": 11,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "New York",
-        "month_of_crash": 10,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "New York",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "New York",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "New York",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "North Carolina",
-        "month_of_crash": 12,
-        "cnt": 15
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "North Carolina",
-        "month_of_crash": 5,
-        "cnt": 14
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "North Carolina",
-        "month_of_crash": 10,
-        "cnt": 12
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "North Carolina",
-        "month_of_crash": 2,
-        "cnt": 12
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "North Carolina",
-        "month_of_crash": 9,
-        "cnt": 12
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "North Carolina",
-        "month_of_crash": 3,
-        "cnt": 11
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "North Carolina",
-        "month_of_crash": 6,
-        "cnt": 9
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "North Carolina",
-        "month_of_crash": 7,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "North Carolina",
-        "month_of_crash": 4,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "North Carolina",
-        "month_of_crash": 1,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "North Carolina",
-        "month_of_crash": 8,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "North Carolina",
-        "month_of_crash": 2,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "North Carolina",
-        "month_of_crash": 1,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "North Carolina",
-        "month_of_crash": 11,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "North Carolina",
-        "month_of_crash": 9,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
-        "state_name": "North Carolina",
-        "month_of_crash": 12,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "North Carolina",
-        "month_of_crash": 10,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "North Carolina",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "North Carolina",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "North Carolina",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "North Carolina",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "North Carolina",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "North Carolina",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "North Carolina",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "North Carolina",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "North Carolina",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "North Carolina",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "North Carolina",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "North Carolina",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "North Dakota",
-        "month_of_crash": 9,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "North Dakota",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "North Dakota",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "North Dakota",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Ohio",
-        "month_of_crash": 12,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Ohio",
-        "month_of_crash": 3,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Ohio",
-        "month_of_crash": 12,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Ohio",
-        "month_of_crash": 5,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Ohio",
-        "month_of_crash": 2,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Ohio",
-        "month_of_crash": 1,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Ohio",
-        "month_of_crash": 4,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Ohio",
-        "month_of_crash": 11,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Ohio",
-        "month_of_crash": 10,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Ohio",
-        "month_of_crash": 2,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Ohio",
-        "month_of_crash": 9,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Ohio",
-        "month_of_crash": 11,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Ohio",
-        "month_of_crash": 8,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Ohio",
-        "month_of_crash": 4,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Ohio",
-        "month_of_crash": 7,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Ohio",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Ohio",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Ohio",
-        "month_of_crash": 6,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Ohio",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
-        "state_name": "Ohio",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Ohio",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Ohio",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oklahoma",
-        "month_of_crash": 6,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oklahoma",
-        "month_of_crash": 4,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oklahoma",
-        "month_of_crash": 8,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oklahoma",
-        "month_of_crash": 3,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oklahoma",
-        "month_of_crash": 5,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oklahoma",
-        "month_of_crash": 11,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oklahoma",
-        "month_of_crash": 10,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oklahoma",
-        "month_of_crash": 9,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Oklahoma",
-        "month_of_crash": 4,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oklahoma",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oklahoma",
-        "month_of_crash": 2,
+        "state_name": "Indiana",
         "cnt": 2
       },
       {
         "atmospheric_conditions_name": "Freezing Rain or Drizzle",
-        "state_name": "Oklahoma",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Oklahoma",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Oklahoma",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Oklahoma",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oklahoma",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oklahoma",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Oklahoma",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Oklahoma",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oregon",
-        "month_of_crash": 11,
-        "cnt": 15
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oregon",
-        "month_of_crash": 10,
-        "cnt": 9
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oregon",
-        "month_of_crash": 1,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Oregon",
-        "month_of_crash": 12,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Oregon",
-        "month_of_crash": 1,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oregon",
-        "month_of_crash": 3,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oregon",
-        "month_of_crash": 2,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oregon",
-        "month_of_crash": 4,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oregon",
-        "month_of_crash": 6,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oregon",
-        "month_of_crash": 9,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oregon",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oregon",
-        "month_of_crash": 7,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Oregon",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Oregon",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Oregon",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Oregon",
-        "month_of_crash": 1,
+        "state_name": "Indiana",
         "cnt": 1
       },
       {
         "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Oregon",
-        "month_of_crash": 5,
+        "state_name": "Indiana",
         "cnt": 1
       },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Oregon",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Oregon",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Oregon",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 5,
-        "cnt": 16
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 2,
-        "cnt": 11
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 11,
-        "cnt": 11
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 2,
-        "cnt": 10
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 12,
-        "cnt": 9
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 4,
-        "cnt": 9
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 10,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 9,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 6,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 8,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 1,
-        "cnt": 5
-      },
+      {"atmospheric_conditions_name": "Rain", "state_name": "Iowa", "cnt": 13},
+      {"atmospheric_conditions_name": "Snow", "state_name": "Iowa", "cnt": 11},
       {
         "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 10,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 3,
+        "state_name": "Iowa",
         "cnt": 4
       },
       {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 9,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 12,
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Iowa",
         "cnt": 3
       },
       {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 11,
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Iowa",
         "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 2,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 7,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 11,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 11,
-        "cnt": 1
       },
       {
         "atmospheric_conditions_name": "Freezing Rain or Drizzle",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Pennsylvania",
-        "month_of_crash": 6,
+        "state_name": "Iowa",
         "cnt": 1
       },
       {
         "atmospheric_conditions_name": "Rain",
-        "state_name": "Rhode Island",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Rhode Island",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Rhode Island",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "South Carolina",
-        "month_of_crash": 5,
-        "cnt": 11
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "South Carolina",
-        "month_of_crash": 12,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "South Carolina",
-        "month_of_crash": 2,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "South Carolina",
-        "month_of_crash": 9,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "South Carolina",
-        "month_of_crash": 1,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "South Carolina",
-        "month_of_crash": 3,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "South Carolina",
-        "month_of_crash": 4,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "South Carolina",
-        "month_of_crash": 6,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "South Carolina",
-        "month_of_crash": 8,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "South Carolina",
-        "month_of_crash": 11,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Snow",
-        "state_name": "South Carolina",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "South Carolina",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "South Carolina",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "South Carolina",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "South Carolina",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "South Carolina",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "South Carolina",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "South Carolina",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "South Carolina",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "South Dakota",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "South Dakota",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Blowing Snow",
-        "state_name": "South Dakota",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Tennessee",
-        "month_of_crash": 12,
-        "cnt": 14
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Tennessee",
-        "month_of_crash": 2,
-        "cnt": 11
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Tennessee",
-        "month_of_crash": 8,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Tennessee",
-        "month_of_crash": 6,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Tennessee",
-        "month_of_crash": 4,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Tennessee",
-        "month_of_crash": 3,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Tennessee",
-        "month_of_crash": 5,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Tennessee",
-        "month_of_crash": 2,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Tennessee",
-        "month_of_crash": 1,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Tennessee",
-        "month_of_crash": 9,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Tennessee",
-        "month_of_crash": 2,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Tennessee",
-        "month_of_crash": 10,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Tennessee",
-        "month_of_crash": 1,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Tennessee",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Tennessee",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Tennessee",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Tennessee",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Tennessee",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Tennessee",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Tennessee",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Tennessee",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Tennessee",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Tennessee",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Tennessee",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Tennessee",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Tennessee",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Texas",
-        "month_of_crash": 12,
-        "cnt": 38
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Texas",
-        "month_of_crash": 11,
-        "cnt": 27
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Texas",
-        "month_of_crash": 5,
-        "cnt": 25
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Texas",
-        "month_of_crash": 8,
-        "cnt": 23
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Texas",
-        "month_of_crash": 4,
-        "cnt": 22
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Texas",
-        "month_of_crash": 3,
-        "cnt": 21
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Texas",
-        "month_of_crash": 1,
+        "state_name": "Kansas",
         "cnt": 17
       },
       {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Texas",
-        "month_of_crash": 9,
-        "cnt": 13
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Texas",
-        "month_of_crash": 6,
-        "cnt": 12
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Kansas",
+        "cnt": 8
       },
       {
         "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Texas",
-        "month_of_crash": 12,
-        "cnt": 10
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Texas",
-        "month_of_crash": 2,
-        "cnt": 10
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Texas",
-        "month_of_crash": 1,
+        "state_name": "Kansas",
         "cnt": 7
       },
       {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Texas",
-        "month_of_crash": 7,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Texas",
-        "month_of_crash": 4,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Texas",
-        "month_of_crash": 11,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Texas",
-        "month_of_crash": 5,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Texas",
-        "month_of_crash": 10,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Texas",
-        "month_of_crash": 10,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Texas",
-        "month_of_crash": 2,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Texas",
-        "month_of_crash": 9,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Texas",
-        "month_of_crash": 4,
-        "cnt": 1
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Kansas",
+        "cnt": 3
       },
       {
         "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Texas",
-        "month_of_crash": 3,
-        "cnt": 1
+        "state_name": "Kansas",
+        "cnt": 2
+      },
+      {"atmospheric_conditions_name": "Snow", "state_name": "Kansas", "cnt": 1},
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Kentucky",
+        "cnt": 67
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Kentucky",
+        "cnt": 9
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Kentucky",
+        "cnt": 5
       },
       {
         "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
-        "state_name": "Texas",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Texas",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Texas",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Texas",
-        "month_of_crash": 6,
+        "state_name": "Kentucky",
         "cnt": 1
       },
       {
         "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Texas",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Texas",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Utah",
-        "month_of_crash": 5,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Utah",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Utah",
-        "month_of_crash": 10,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Utah",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Utah",
-        "month_of_crash": 3,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Utah",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Utah",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Utah",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Utah",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Utah",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Utah",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Utah",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Utah",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Utah",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Utah",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Vermont",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Vermont",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Vermont",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
-        "state_name": "Vermont",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Vermont",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Vermont",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
-        "state_name": "Vermont",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Vermont",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Virginia",
-        "month_of_crash": 5,
-        "cnt": 9
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Virginia",
-        "month_of_crash": 2,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Virginia",
-        "month_of_crash": 1,
-        "cnt": 8
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Virginia",
-        "month_of_crash": 4,
-        "cnt": 7
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Virginia",
-        "month_of_crash": 1,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Virginia",
-        "month_of_crash": 9,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Virginia",
-        "month_of_crash": 12,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Virginia",
-        "month_of_crash": 3,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Virginia",
-        "month_of_crash": 6,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Virginia",
-        "month_of_crash": 7,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Virginia",
-        "month_of_crash": 10,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Virginia",
-        "month_of_crash": 11,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Virginia",
-        "month_of_crash": 5,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Virginia",
-        "month_of_crash": 2,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Virginia",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Virginia",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Virginia",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Virginia",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Virginia",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Virginia",
-        "month_of_crash": 7,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Virginia",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Virginia",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Virginia",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Washington",
-        "month_of_crash": 3,
-        "cnt": 14
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Washington",
-        "month_of_crash": 10,
-        "cnt": 11
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Washington",
-        "month_of_crash": 11,
-        "cnt": 10
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Washington",
-        "month_of_crash": 2,
-        "cnt": 9
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Washington",
-        "month_of_crash": 1,
-        "cnt": 6
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Washington",
-        "month_of_crash": 12,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Washington",
-        "month_of_crash": 7,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Washington",
-        "month_of_crash": 9,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Washington",
-        "month_of_crash": 12,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Washington",
-        "month_of_crash": 10,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Washington",
-        "month_of_crash": 6,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Washington",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Washington",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Washington",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Washington",
-        "month_of_crash": 6,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Washington",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Washington",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Washington",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "West Virginia",
-        "month_of_crash": 12,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "West Virginia",
-        "month_of_crash": 6,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "West Virginia",
-        "month_of_crash": 10,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "West Virginia",
-        "month_of_crash": 9,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "West Virginia",
-        "month_of_crash": 5,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "West Virginia",
-        "month_of_crash": 3,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "West Virginia",
-        "month_of_crash": 7,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "West Virginia",
-        "month_of_crash": 1,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "West Virginia",
-        "month_of_crash": 2,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "West Virginia",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "West Virginia",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "West Virginia",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "West Virginia",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "West Virginia",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "West Virginia",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "West Virginia",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "West Virginia",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "West Virginia",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "West Virginia",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Wisconsin",
-        "month_of_crash": 3,
-        "cnt": 5
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Wisconsin",
-        "month_of_crash": 5,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Wisconsin",
-        "month_of_crash": 2,
-        "cnt": 4
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Wisconsin",
-        "month_of_crash": 7,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Wisconsin",
-        "month_of_crash": 4,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Wisconsin",
-        "month_of_crash": 6,
-        "cnt": 3
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Wisconsin",
-        "month_of_crash": 12,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Sleet, Hail",
-        "state_name": "Wisconsin",
-        "month_of_crash": 3,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Wisconsin",
-        "month_of_crash": 4,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Wisconsin",
-        "month_of_crash": 9,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Wisconsin",
-        "month_of_crash": 11,
-        "cnt": 2
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Wisconsin",
-        "month_of_crash": 10,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Wisconsin",
-        "month_of_crash": 2,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Severe Crosswinds",
-        "state_name": "Wisconsin",
-        "month_of_crash": 11,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Wisconsin",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Wisconsin",
-        "month_of_crash": 8,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Fog, Smog, Smoke",
-        "state_name": "Wisconsin",
-        "month_of_crash": 10,
+        "state_name": "Kentucky",
         "cnt": 1
       },
       {
         "atmospheric_conditions_name": "Blowing Snow",
-        "state_name": "Wisconsin",
-        "month_of_crash": 1,
+        "state_name": "Kentucky",
         "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Louisiana",
+        "cnt": 42
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Louisiana",
+        "cnt": 10
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Louisiana",
+        "cnt": 1
+      },
+      {"atmospheric_conditions_name": "Rain", "state_name": "Maine", "cnt": 15},
+      {"atmospheric_conditions_name": "Snow", "state_name": "Maine", "cnt": 4},
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Maine",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Maine",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Maryland",
+        "cnt": 37
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Maryland",
+        "cnt": 5
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Maryland",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Maryland",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "Maryland",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Maryland",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Massachusetts",
+        "cnt": 27
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Massachusetts",
+        "cnt": 7
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Massachusetts",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Michigan",
+        "cnt": 73
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Michigan",
+        "cnt": 57
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Michigan",
+        "cnt": 12
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Michigan",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Michigan",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Minnesota",
+        "cnt": 23
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Minnesota",
+        "cnt": 16
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Minnesota",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Minnesota",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Minnesota",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Minnesota",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "Minnesota",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Mississippi",
+        "cnt": 46
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Mississippi",
+        "cnt": 10
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Mississippi",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Mississippi",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Missouri",
+        "cnt": 48
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Missouri",
+        "cnt": 14
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Missouri",
+        "cnt": 5
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Missouri",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Montana",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Montana",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Montana",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Nebraska",
+        "cnt": 7
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Nebraska",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Nebraska",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Nebraska",
+        "cnt": 1
+      },
+      {"atmospheric_conditions_name": "Rain", "state_name": "Nevada", "cnt": 5},
+      {"atmospheric_conditions_name": "Snow", "state_name": "Nevada", "cnt": 3},
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "New Hampshire",
+        "cnt": 8
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "New Hampshire",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "New Hampshire",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "New Hampshire",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "New Jersey",
+        "cnt": 41
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "New Jersey",
+        "cnt": 8
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "New Jersey",
+        "cnt": 5
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "New Jersey",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "New Mexico",
+        "cnt": 11
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "New Mexico",
+        "cnt": 8
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "New Mexico",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "New Mexico",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "New Mexico",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "New Mexico",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "New York",
+        "cnt": 63
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "New York",
+        "cnt": 29
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "New York",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "New York",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "North Carolina",
+        "cnt": 112
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "North Carolina",
+        "cnt": 12
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "North Carolina",
+        "cnt": 7
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "North Carolina",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "North Carolina",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "North Carolina",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "North Dakota",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "North Dakota",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "North Dakota",
+        "cnt": 1
+      },
+      {"atmospheric_conditions_name": "Rain", "state_name": "Ohio", "cnt": 59},
+      {"atmospheric_conditions_name": "Snow", "state_name": "Ohio", "cnt": 23},
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Ohio",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Ohio",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Ohio",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Oklahoma",
+        "cnt": 40
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Oklahoma",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Oklahoma",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Oklahoma",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Oklahoma",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Oregon",
+        "cnt": 56
+      },
+      {"atmospheric_conditions_name": "Snow", "state_name": "Oregon", "cnt": 8},
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Oregon",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Oregon",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Oregon",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Pennsylvania",
+        "cnt": 85
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Pennsylvania",
+        "cnt": 27
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Pennsylvania",
+        "cnt": 17
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Pennsylvania",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Pennsylvania",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Rhode Island",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Rhode Island",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "South Carolina",
+        "cnt": 53
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "South Carolina",
+        "cnt": 5
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "South Carolina",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "South Carolina",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "South Dakota",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "South Dakota",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "South Dakota",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Tennessee",
+        "cnt": 69
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Tennessee",
+        "cnt": 8
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Tennessee",
+        "cnt": 7
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Tennessee",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Tennessee",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Texas",
+        "cnt": 218
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Texas",
+        "cnt": 44
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Texas",
+        "cnt": 2
+      },
+      {"atmospheric_conditions_name": "Snow", "state_name": "Texas", "cnt": 1},
+      {
+        "atmospheric_conditions_name": "Blowing Sand, Soil, Dirt",
+        "state_name": "Texas",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Texas",
+        "cnt": 1
+      },
+      {"atmospheric_conditions_name": "Rain", "state_name": "Utah", "cnt": 12},
+      {"atmospheric_conditions_name": "Snow", "state_name": "Utah", "cnt": 6},
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Utah",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Utah",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Vermont",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Vermont",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Freezing Rain or Drizzle",
+        "state_name": "Vermont",
+        "cnt": 2
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Vermont",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Virginia",
+        "cnt": 61
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Virginia",
+        "cnt": 8
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Virginia",
+        "cnt": 7
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "Virginia",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Washington",
+        "cnt": 63
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Washington",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "Washington",
+        "cnt": 6
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "West Virginia",
+        "cnt": 24
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "West Virginia",
+        "cnt": 4
+      },
+      {
+        "atmospheric_conditions_name": "Fog, Smog, Smoke",
+        "state_name": "West Virginia",
+        "cnt": 3
+      },
+      {
+        "atmospheric_conditions_name": "Sleet, Hail",
+        "state_name": "West Virginia",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "West Virginia",
+        "cnt": 1
+      },
+      {
+        "atmospheric_conditions_name": "Rain",
+        "state_name": "Wisconsin",
+        "cnt": 18
+      },
+      {
+        "atmospheric_conditions_name": "Snow",
+        "state_name": "Wisconsin",
+        "cnt": 15
       },
       {
         "atmospheric_conditions_name": "Fog, Smog, Smoke",
         "state_name": "Wisconsin",
-        "month_of_crash": 3,
-        "cnt": 1
+        "cnt": 4
       },
       {
-        "atmospheric_conditions_name": "Snow",
+        "atmospheric_conditions_name": "Sleet, Hail",
         "state_name": "Wisconsin",
-        "month_of_crash": 1,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Wyoming",
-        "month_of_crash": 2,
         "cnt": 2
       },
       {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Wyoming",
-        "month_of_crash": 5,
-        "cnt": 2
+        "atmospheric_conditions_name": "Blowing Snow",
+        "state_name": "Wisconsin",
+        "cnt": 1
       },
       {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Wyoming",
-        "month_of_crash": 6,
+        "atmospheric_conditions_name": "Severe Crosswinds",
+        "state_name": "Wisconsin",
         "cnt": 1
       },
       {
         "atmospheric_conditions_name": "Snow",
         "state_name": "Wyoming",
-        "month_of_crash": 11,
-        "cnt": 1
+        "cnt": 9
       },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Wyoming",
-        "month_of_crash": 3,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Wyoming",
-        "month_of_crash": 5,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Wyoming",
-        "month_of_crash": 12,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Rain",
-        "state_name": "Wyoming",
-        "month_of_crash": 9,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Wyoming",
-        "month_of_crash": 4,
-        "cnt": 1
-      },
-      {
-        "atmospheric_conditions_name": "Snow",
-        "state_name": "Wyoming",
-        "month_of_crash": 10,
-        "cnt": 1
-      }
+      {"atmospheric_conditions_name": "Rain", "state_name": "Wyoming", "cnt": 3}
     ]
   }
 };
