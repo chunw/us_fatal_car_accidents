@@ -187,15 +187,16 @@ function updateActiveFiltersDisplay() {
   const container = $("#active-filters");
   let tag = ``;
   const filters = map.getFilter("accidents");   // e.g.["==", "hour_of_crash", 14]
+  let feature_name, feature_value, feature_relation, filteredDataLength, percent;
   if (filters) {
-    const feature_name = filters[1];
-    const feature_value = filters[2];
-    const feature_relation = filters[0];
+    feature_name = filters[1];
+    feature_value = filters[2];
+    feature_relation = filters[0];
     tag = `<span class="cap-first-letter">${normalizeFeatureName(feature_name)}</span> ${feature_relation} ${feature_value}`;
-    const filteredDataLength = window.csvData_2016.filter(d => {
+    filteredDataLength = window.csvData_2016.filter(d => {
       return d[feature_name] == feature_value;
     }).length;
-    const percent = (filteredDataLength/window.total_accident_count_2016*100).toFixed(2);
+    percent = (filteredDataLength/window.total_accident_count_2016*100).toFixed(2);
   }
   var html = tag? `
   <div class="chip filter-chip">
