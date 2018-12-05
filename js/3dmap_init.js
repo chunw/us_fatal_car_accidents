@@ -93,7 +93,20 @@ map.on('load', function() {
        const properties = e.features[0].properties;
        var coordinates = [properties.longitude, properties.latitude];
        const description = `
-        <strong>Case Number</strong>: ${properties.consecutive_number}`;
+        <strong>Case number</strong>: ${properties.consecutive_number}<br>
+        <strong>Number of fatalities</strong>: 1<br>
+        <strong>Day of week</strong>: ${properties.day_of_week}<br>
+        <strong>Hour of crash</strong>: ${properties.hour_of_crash}<br>
+        <strong>Atmospheric condition</strong>: ${properties.atmospheric_conditions_2_name}<br>
+        <strong>Light condition</strong>: ${properties.light_condition_name}<br>
+        <strong>Critical precrash event</strong>: ${properties.critical_event_precrash_name}<br>
+        <strong>First harmful event</strong>: ${properties.first_harmful_event_name}<br>
+        <strong>Driver maneuver to avoid crash</strong>: ${properties.driver_maneuvered_to_avoid_name}<br>
+        <strong>Restraint system usage </strong>: ${properties.restraint_system_helmet_use_name}<br>
+        <strong>Make</strong>: ${properties.make_name}<br>
+        <strong>Model</strong>: ${properties.model_code}<br>
+        <strong>Driver license type </strong>: ${properties.non_cdl_license_type}
+        `;
        // Ensure that if the map is zoomed out such that multiple
        // copies of the feature are visible, the popup appears
        // over the copy being pointed to.

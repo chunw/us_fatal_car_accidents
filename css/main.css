@@ -46,6 +46,9 @@ body {
   z-index: 999;
   font: 400 0.6em 'nyt-franklin', arial, sans-serif;
 }
+.annotation.highlight {
+  z-index: -1;
+}
 .annotation.bordered {
   border: 1px solid #9d9d9d;
   padding: 0.6em;
@@ -273,4 +276,7 @@ section {
   font-style: normal;
   font-family: nyt-cheltenham-sh, georgia, times new roman, times, serif;
   color: #000;
+}
+#commonCausesWithPedestrainsHighlighted {
+      margin-left: 16px;
 }
