@@ -6,6 +6,9 @@ strong {
 #3dmappage {
   overflow-y: hidden;
 }
+.mapboxgl-popup-anchor-top-left .mapboxgl-popup-content {
+  max-width: 500px;
+}
 .mapboxgl-popup-content {
   padding: 10px 20px 10px 10px;
 }
