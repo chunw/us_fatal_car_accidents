@@ -13718,7 +13718,7 @@ const weatherTime = {
       "field": "month_of_crash"
     }
   },
-  "title": "Atmospheric condition: adverse weather",
+  "title": "Atmospheric condition: Adverse weather",
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
   "datasets": {
     "data-6d5a7b07fa3a856c2501b880708838d8": [
