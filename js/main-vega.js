@@ -5341,7 +5341,7 @@ const weather =
   },
   "height": 300,
   "title": "Prevailing Unfavorable Weather Conditions Per State",
-  "width": 600,
+  "width": DEFAULT_GRAPH_WIDTH_MEDIUM,
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
   "datasets": {
     "data-fa2e304296eadcf3592cf6ac1f454484": [
