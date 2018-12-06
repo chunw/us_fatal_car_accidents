@@ -8,6 +8,7 @@ strong {
 }
 .mapboxgl-popup-anchor-top-left .mapboxgl-popup-content {
   max-width: 500px;
+  z-index: 999;
 }
 .mapboxgl-popup-content {
   padding: 10px 20px 10px 10px;
