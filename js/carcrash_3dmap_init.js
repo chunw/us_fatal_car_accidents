@@ -1,7 +1,7 @@
 const FEATURES = ['day_of_week', 'hour_of_crash', 'light_condition_name', 'first_harmful_event_name', 'atmospheric_conditions_2_name', 'non_cdl_license_type', 'restraint_system_helmet_use_name', 'critical_event_precrash_name', 'model_code', 'make_name', 'driver_maneuvered_to_avoid_name'];
 
 // Fetch all case details
-d3.csv("/data/all-2016.csv").then(function(data) {
+d3.csv("/data/carcrash/all-2016.csv").then(function(data) {
   window.csvData_2016 = data;
   window.total_accident_count_2016 = data.length;
   $("#total_count").html(window.total_accident_count_2016);
