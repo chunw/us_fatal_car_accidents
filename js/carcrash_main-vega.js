@@ -1659,7 +1659,7 @@ const fatalityRateByCounty = {
   "width": 500,
   "height": 300,
   "data": {
-    "url": "data/vega/us-10m.json",
+    "url": "data/carcrash/vega/us-10m.json",
     "format": {
       "type": "topojson",
       "feature": "counties"
@@ -1669,7 +1669,7 @@ const fatalityRateByCounty = {
     "lookup": "id",
     "from": {
       "data": {
-        "url": "data/county/county_fatality_data_viz.csv"
+        "url": "data/carcrash/county/county_fatality_data_viz.csv"
       },
       "key": "County code",
       "fields": [
